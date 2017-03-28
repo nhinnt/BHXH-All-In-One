@@ -1,0 +1,5 @@
+D:\Dropbox\Projects\BHXH\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll
+D:\Dropbox\Projects\BHXH\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.pdb
+D:\Dropbox\Projects\BHXH\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.dll
+D:\Dropbox\Projects\BHXH\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.pdb
+D:\Dropbox\Projects\BHXH\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.csprojResolveAssemblyReference.cache

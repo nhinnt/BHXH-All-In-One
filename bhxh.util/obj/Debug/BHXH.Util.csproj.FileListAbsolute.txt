@@ -1,0 +1,5 @@
+D:\Dropbox\Projects\BHXH\TTS.Util\bin\Debug\BHXH.Util.dll
+D:\Dropbox\Projects\BHXH\TTS.Util\bin\Debug\BHXH.Util.pdb
+D:\Dropbox\Projects\BHXH\TTS.Util\obj\Debug\BHXH.Util.csprojResolveAssemblyReference.cache
+D:\Dropbox\Projects\BHXH\TTS.Util\obj\Debug\BHXH.Util.dll
+D:\Dropbox\Projects\BHXH\TTS.Util\obj\Debug\BHXH.Util.pdb
