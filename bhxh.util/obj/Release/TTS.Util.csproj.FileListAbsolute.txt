@@ -1,0 +1,5 @@
+D:\Dropbox\Projects\TraCuuBHXH\TTS\TTS.Util\bin\Release\TSS.Util.dll
+D:\Dropbox\Projects\TraCuuBHXH\TTS\TTS.Util\bin\Release\TSS.Util.pdb
+D:\Dropbox\Projects\TraCuuBHXH\TTS\TTS.Util\obj\Release\TSS.Util.dll
+D:\Dropbox\Projects\TraCuuBHXH\TTS\TTS.Util\obj\Release\TSS.Util.pdb
+D:\Dropbox\Projects\TraCuuBHXH\TTS\TTS.Util\obj\Release\TTS.Util.csprojResolveAssemblyReference.cache
