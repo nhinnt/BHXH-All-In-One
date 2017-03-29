@@ -31,5 +31,10 @@ CREATE TABLE ListDistricts
 ()
 CREATE TABLE ListCommunes
 ()
-Create TABLE ListUnits
+CREATE TABLE ListUnits
+()
+CREATE TABLE HrEmployees
+()
+
+CREATE TABLE HrHistory
 ()
