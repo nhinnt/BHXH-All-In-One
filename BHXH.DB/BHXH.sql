@@ -1,8 +1,9 @@
 ﻿
 /*
-Created by: Le Nho Man
-Created Date : 20170328
-Edited Date
+Created by		: Le Nho Man
+Created Date	: 20170328
+Edited Date		:
+Edited By		:
 */
 
 CREATE DATABASE BHXH
