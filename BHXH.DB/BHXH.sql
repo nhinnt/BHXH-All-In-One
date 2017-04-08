@@ -1,14 +1,20 @@
 ﻿
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
 Created by: Le Nho Man
 Created Date : 20170328
 Edited Date
 =======
+=======
+>>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
 Created by		: Le Nho Man
 Created Date	: 20170328
 Edited Date		:
 Edited By		:
+<<<<<<< HEAD
+>>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
+=======
 >>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
 */
 
