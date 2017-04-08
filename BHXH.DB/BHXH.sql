@@ -1,8 +1,15 @@
 ﻿
 /*
+<<<<<<< HEAD
 Created by: Le Nho Man
 Created Date : 20170328
 Edited Date
+=======
+Created by		: Le Nho Man
+Created Date	: 20170328
+Edited Date		:
+Edited By		:
+>>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
 */
 
 CREATE DATABASE BHXH
@@ -31,5 +38,10 @@ CREATE TABLE ListDistricts
 ()
 CREATE TABLE ListCommunes
 ()
-Create TABLE ListUnits
+CREATE TABLE ListUnits
+()
+CREATE TABLE HrEmployees
+()
+
+CREATE TABLE HrHistory
 ()
