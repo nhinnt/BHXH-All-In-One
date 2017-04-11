@@ -10,3 +10,6 @@ FROM NhanSu_DaNang.dbo.DMQuan q
 INSERT INTO ListCommunes ( DistrictID,  CommuneID,  CommuneName, CommuneCode)
 SELECT IDquan DistrictID, IDPhuong CommuneID, TenPhuong CommuneName,MaPhuong CommuneCode
 FROM NhanSu_DaNang.dbo.DMPhuong
+
+  INSERT INTO [BHXH].[dbo].[ListEthnics]
+SELECT * FROM Mis.dbo.ListEthnic
