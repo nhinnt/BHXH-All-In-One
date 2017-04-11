@@ -8,5 +8,9 @@ namespace BHXH.Common.Business
 {
     class Menu
     {
+        public static void DisableAll()
+        { }
+        public static void DoSecure()
+        { }
     }
 }

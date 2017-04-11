@@ -23,7 +23,7 @@ USE BHXH
 ------------
 CREATE TABLE [SysUsers]
 ( UserID  uniqueidentifier  DEFAULT (NEWID()) PRIMARY KEY,
-LoginName NVARCHAR(50) NOT NULL,
+LoginName NVARCHAR(50) NOT NULL UNIQUE,
 Pwd VARCHAR(32),
 LastLogin DATETIME,
 LastPwdChange DATETIME,
@@ -43,7 +43,7 @@ CreatedDate DATETIME DEFAULT GETDATE()
 CREATE TABLE SysRoles
 (
 RoleID  uniqueidentifier  DEFAULT (NEWID()) PRIMARY KEY,
-RoleName NVARCHAR (255) NOT NULL,
+RoleName NVARCHAR (255) NOT NULL UNIQUE,
 ParentRoleID  uniqueidentifier ,
 Descriptions NVARCHAR(255),
 CreatedDate Datetime DEFAULT (GETDATE())
@@ -62,16 +62,33 @@ GrantedDate DATETIME DEFAULT GETDATE()
 
 
 CREATE TABLE ListNationality
-()
+(
+NationalityCode CHAR(2)   PRIMARY KEY,
+NationalityName NVARCHAR(255) UNIQUE
+)
 CREATE TABLE ListEthnics
-()
+(
+[EthnicCode] CHAR (2) PRIMARY KEY,
+[EthnicName] NVARCHAR(255) UNIQUE
+)
 
 CREATE TABLE ListProvinces
-()
+(ProvinceCode NCHAR(2) PRIMARY KEY,
+ProvinceName NVARCHAR(255) UNIQUE
+)
 CREATE TABLE ListDistricts
-()
+(
+DistrictID NUMERIC (18) PRIMARY KEY ,
+DistrictCode NCHAR(2) ,
+DistrictName NVARCHAR(2) UNIQUE,
+ProvinceCode NCHAR(2) FOREIGN KEY REFERENCES ListProvinces(ProviceCode)
+)
 CREATE TABLE ListCommunes
-()
+(
+CommuneID uniqueidentifier PRIMARY KEY DEFAULT NEWID(),
+CommuneCode NCHAR(2),
+DistrictID FOREIGN KEY REFERENCES ListDistricts(DistrictID)
+)
 CREATE TABLE ListUnits
 ()
 CREATE TABLE HrEmployees
