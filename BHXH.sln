@@ -21,9 +21,11 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BHXH.DB", "BHXH.DB\BHXH.DB.sqlproj", "{F44B9A2B-8A9A-4D0B-8AF7-903CE13B780E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHXH.CommonList", "BHXH.List\BHXH.CommonList.csproj", "{52FD76B4-CABD-4DED-88DB-F85624AB9265}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHXH.List.UI", "BHXH.List\BHXH.List.UI.csproj", "{52FD76B4-CABD-4DED-88DB-F85624AB9265}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHXH.Util", "BHXH.Util\BHXH.Util.csproj", "{0AE919E2-C617-4D57-A2A3-0CD4A3B32804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHXH.List.Business", "BHXH.List.Business\BHXH.List.Business.csproj", "{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +123,14 @@ Global
 		{0AE919E2-C617-4D57-A2A3-0CD4A3B32804}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0AE919E2-C617-4D57-A2A3-0CD4A3B32804}.Release|x64.ActiveCfg = Release|x64
 		{0AE919E2-C617-4D57-A2A3-0CD4A3B32804}.Release|x64.Build.0 = Release|x64
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Debug|x64.Build.0 = Debug|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Release|x64.ActiveCfg = Release|Any CPU
+		{AF5E7F70-0405-4B4C-8D6D-21BD726D5B71}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
