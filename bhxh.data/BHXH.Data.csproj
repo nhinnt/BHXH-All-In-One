@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="BHXH.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +91,9 @@
     <Compile Include="ListProvinces.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Program.cs" />
+>>>>>>> e2df9d3a7348c4726950bf2acd3391b45284d0e0
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +104,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EntityDeploy Include="BHXH.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BHXH.Designer.cs</LastGenOutput>
@@ -108,6 +113,8 @@
     <None Include="BHXH.edmx.diagram">
       <DependentUpon>BHXH.edmx</DependentUpon>
     </None>
+=======
+>>>>>>> e2df9d3a7348c4726950bf2acd3391b45284d0e0
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,6 +130,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="BHXH.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BHXH.edmx</DependentUpon>
@@ -133,6 +141,9 @@
       <DependentUpon>BHXH.edmx</DependentUpon>
       <LastGenOutput>BHXH.cs</LastGenOutput>
     </Content>
+=======
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+>>>>>>> e2df9d3a7348c4726950bf2acd3391b45284d0e0
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
