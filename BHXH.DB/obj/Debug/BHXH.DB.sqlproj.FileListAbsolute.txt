@@ -1,0 +1,9 @@
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\bin\Debug\BHXH.DB.dacpac
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\bin\Debug\BHXH.DB.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\bin\Debug\BHXH.DB.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\obj\Debug\Model.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\obj\Debug\refactor.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\obj\Debug\postdeploy.sql
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\obj\Debug\predeploy.sql
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\obj\Debug\BHXH.DB.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.DB\obj\Debug\BHXH.DB.pdb

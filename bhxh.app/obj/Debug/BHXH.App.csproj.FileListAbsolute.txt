@@ -17,6 +17,7 @@ D:\Dropbox\Projects\BHXH\BHXH.App\obj\Debug\BHXH.App.csprojResolveAssemblyRefere
 D:\Dropbox\Projects\BHXH\BHXH.App\obj\Debug\BHXH.App.frmMain.resources
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\BHXH.Data.dll
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\BHXH.HR.UI.dll
+<<<<<<< HEAD
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\DevExpress.Data.v16.1.dll
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\DevExpress.Utils.v16.1.dll
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\DevExpress.XtraBars.v16.1.dll
@@ -60,3 +61,30 @@ D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resourc
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
 D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
 D:\Dropbox\Projects\BHXH\BHXH.App\obj\Debug\BHXH.App.exe.licenses
+=======
+D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\BHXH.Util.dll
+D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\BHXH.Util.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.App.exe.config
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.exe
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.App.exe
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.App.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.Common.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.Common.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.Data.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.HR.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.HR.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.Data.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.HR.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.HR.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.Common.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\BHXH.Common.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.csprojResolveAssemblyReference.cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.frmMain.resources
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.Properties.Resources.resources
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.csproj.GenerateResource.Cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\EntityFramework.SqlServer.xml
+>>>>>>> origin/master

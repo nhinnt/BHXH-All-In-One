@@ -60,7 +60,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BHXH.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHXH.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BHXH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BHXH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHXH.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ListCommunes.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListDistricts.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListEthnics.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListNationality.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListProvinces.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +100,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="BHXH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BHXH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="BHXH.edmx.diagram">
+      <DependentUpon>BHXH.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,9 +120,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BHXH.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BHXH.edmx</DependentUpon>
+      <LastGenOutput>BHXH.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BHXH.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BHXH.edmx</DependentUpon>
+      <LastGenOutput>BHXH.cs</LastGenOutput>
+    </Content>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

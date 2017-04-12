@@ -6,4 +6,17 @@ D:\Dropbox\Projects\BHXH\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.dll
 D:\Dropbox\Projects\BHXH\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.pdb
 D:\Dropbox\Projects\BHXH\BHXH.Sys.Business\obj\Debug\BHXH.Common.Business.dll
 D:\Dropbox\Projects\BHXH\BHXH.Sys.Business\obj\Debug\BHXH.Common.Business.pdb
+<<<<<<< HEAD
 D:\Dropbox\Projects\BHXH\BHXH.Sys.Business\obj\Debug\BHXH.Sys.Business.csprojResolveAssemblyReference.cache
+=======
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\obj\Debug\BHXH.Common.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\obj\Debug\BHXH.Common.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.dll.config
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.Business\obj\Debug\BHXH.Sys.Business.csprojResolveAssemblyReference.cache
+>>>>>>> origin/master
