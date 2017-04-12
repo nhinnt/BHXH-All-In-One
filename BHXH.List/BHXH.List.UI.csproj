@@ -7,8 +7,8 @@
     <ProjectGuid>{52FD76B4-CABD-4DED-88DB-F85624AB9265}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BHXH.List</RootNamespace>
-    <AssemblyName>BHXH.List</AssemblyName>
+    <RootNamespace>BHXH.List.UI</RootNamespace>
+    <AssemblyName>BHXH.List.UI</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -68,6 +68,14 @@
     <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -82,25 +90,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BHXHDataSet.cs">
-      <DependentUpon>BHXHDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BHXHDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BHXHDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PersistentClasses1.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DMQuocgia.cs">
+    <Compile Include="frmListNationlity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DMQuocgia.Designer.cs">
-      <DependentUpon>DMQuocgia.cs</DependentUpon>
+    <Compile Include="frmListNationlity.Designer.cs">
+      <DependentUpon>frmListNationlity.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DMQuocgia.resx">
-      <DependentUpon>DMQuocgia.cs</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmListNationlity.resx">
+      <DependentUpon>frmListNationlity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,18 +109,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="BHXHDataSet.xsc">
-      <DependentUpon>BHXHDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BHXHDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BHXHDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BHXHDataSet.xss">
-      <DependentUpon>BHXHDataSet.xsd</DependentUpon>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,9 +126,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BHXH.Data\BHXH.Data.csproj">
+      <Project>{330b2510-d272-4ca8-835b-127c9c759db0}</Project>
+      <Name>BHXH.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BHXH.HR.UI\BHXH.HR.UI.csproj">
       <Project>{F2DB2941-BF8D-43A3-8AE1-8C297684B46C}</Project>
       <Name>BHXH.HR.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.List.Business\BHXH.List.Business.csproj">
+      <Project>{af5e7f70-0405-4b4c-8d6d-21bd726d5b71}</Project>
+      <Name>BHXH.List.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

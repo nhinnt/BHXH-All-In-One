@@ -40,3 +40,5 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.csprojResolveAssemb
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.frmMain.resources
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.Properties.Resources.resources
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.csproj.GenerateResource.Cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\bin\Debug\EntityFramework.SqlServer.xml

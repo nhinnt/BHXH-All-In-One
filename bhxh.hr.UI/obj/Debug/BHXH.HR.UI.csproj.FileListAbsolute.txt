@@ -9,8 +9,11 @@ D:\Dropbox\Projects\BHXH\BHXH.HR.UI\obj\Debug\BHXH.HR.UI.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\BHXH.HR.UI.dll.config
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\BHXH.HR.UI.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\BHXH.HR.UI.pdb
-D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\obj\Debug\BHXH.HR.UI.csprojResolveAssemblyReference.cache
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\obj\Debug\BHXH.HR.UI.Properties.Resources.resources
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\obj\Debug\BHXH.HR.UI.csproj.GenerateResource.Cache
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\obj\Debug\BHXH.HR.UI.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\obj\Debug\BHXH.HR.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.UI\bin\Debug\EntityFramework.SqlServer.xml
