@@ -5,14 +5,71 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="BHXHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ListBangCap">
+          <Key>
+            <PropertyRef Name="MaBangCap" />
+          </Key>
+          <Property Name="MaBangCap" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenBangCap" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListCapKTKL">
+          <Key>
+            <PropertyRef Name="MaCapKTKL" />
+          </Key>
+          <Property Name="MaCapKTKL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenCapKTKL" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListCMDaoTao">
+          <Key>
+            <PropertyRef Name="MaCMDaoTao" />
+          </Key>
+          <Property Name="MaCMDaoTao" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenCMDaoTao" Type="nvarchar" MaxLength="255" />
+          <Property Name="LoaiCMDaoTao" Type="nvarchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="ListCommunes">
           <Key>
             <PropertyRef Name="CommuneID" />
           </Key>
           <Property Name="CommuneID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="CommuneCode" Type="nchar" MaxLength="2" />
+          <Property Name="CommuneCode" Type="nvarchar" MaxLength="2" />
           <Property Name="CommuneName" Type="nvarchar" MaxLength="255" />
           <Property Name="DistrictID" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="ListChiBo">
+          <Key>
+            <PropertyRef Name="MaChiBo" />
+          </Key>
+          <Property Name="MaChiBo" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenChiBo" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListChucDanh">
+          <Key>
+            <PropertyRef Name="MaChucDanh" />
+          </Key>
+          <Property Name="MaChucDanh" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenChucDanh" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListChucVu">
+          <Key>
+            <PropertyRef Name="MaChucVu" />
+          </Key>
+          <Property Name="MaChucVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenChucVu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListChucVuDang">
+          <Key>
+            <PropertyRef Name="MaChucVu" />
+          </Key>
+          <Property Name="MaChucVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenChucVu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListDienCS">
+          <Key>
+            <PropertyRef Name="MaDienCS" />
+          </Key>
+          <Property Name="MaDienCS" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenDienCS" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="ListDistricts">
           <Key>
@@ -30,12 +87,77 @@
           <Property Name="EthnicCode" Type="char" MaxLength="2" Nullable="false" />
           <Property Name="EthnicName" Type="nvarchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="ListHonNhan">
+          <Key>
+            <PropertyRef Name="MaHonNhan" />
+          </Key>
+          <Property Name="MaHonNhan" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenHonNhan" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListHopDong">
+          <Key>
+            <PropertyRef Name="MaHopDong" />
+          </Key>
+          <Property Name="MaHopDong" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenHopDong" Type="nvarchar" MaxLength="255" />
+          <Property Name="LoaiHopDong" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ListKTKL">
+          <Key>
+            <PropertyRef Name="MaKTKL" />
+          </Key>
+          <Property Name="MaKTKL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenKTKL" Type="nvarchar" MaxLength="255" />
+          <Property Name="LoaiKTKL" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ListLHDaoTao">
+          <Key>
+            <PropertyRef Name="MaLHDaoTao" />
+          </Key>
+          <Property Name="MaLHDaoTao" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenLHDaoTao" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListLoaiTB">
+          <Key>
+            <PropertyRef Name="MaLoaiTB" />
+          </Key>
+          <Property Name="MaLoaiTB" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenLoaiTB" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="ListNationality">
           <Key>
             <PropertyRef Name="NationalityCode" />
           </Key>
           <Property Name="NationalityCode" Type="char" MaxLength="2" Nullable="false" />
           <Property Name="NationalityName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListNoiKCB">
+          <Key>
+            <PropertyRef Name="MaNoiKCB" />
+          </Key>
+          <Property Name="MaNoiKCB" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenNoiKCB" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListNganHang">
+          <Key>
+            <PropertyRef Name="MaNganHang" />
+          </Key>
+          <Property Name="MaNganHang" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenNganHang" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListNghiepVu">
+          <Key>
+            <PropertyRef Name="MaNghiepVu" />
+          </Key>
+          <Property Name="MaNghiepVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenNghiepVu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListNgoaiNgu">
+          <Key>
+            <PropertyRef Name="MaNgoaiNgu" />
+          </Key>
+          <Property Name="MaNgoaiNgu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenNgoaiNgu" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="ListProvinces">
           <Key>
@@ -44,7 +166,84 @@
           <Property Name="ProvinceCode" Type="nchar" MaxLength="2" Nullable="false" />
           <Property Name="ProvinceName" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <Association Name="FK__ListCommu__Distr__719CDDE7">
+        <EntityType Name="ListPhongBan">
+          <Key>
+            <PropertyRef Name="MaPhongBan" />
+          </Key>
+          <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenPhongBan" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListQuan">
+          <Key>
+            <PropertyRef Name="MaQuan" />
+          </Key>
+          <Property Name="MaQuan" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenQuan" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListQuanHeGD">
+          <Key>
+            <PropertyRef Name="MaQuanHeGD" />
+          </Key>
+          <Property Name="MaQuanHeGD" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenQuanHeGD" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListQuocGia">
+          <Key>
+            <PropertyRef Name="MaQuocGia" />
+          </Key>
+          <Property Name="MaQuocGia" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenQuocGia" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListTDDaoTao">
+          <Key>
+            <PropertyRef Name="MaTDDaoTao" />
+          </Key>
+          <Property Name="MaTDDaoTao" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenTDDaoTao" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListTDLLCT">
+          <Key>
+            <PropertyRef Name="MaTDLLCT" />
+          </Key>
+          <Property Name="MaTDLLCT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenTDLLCT" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListTDNgoaiNgu">
+          <Key>
+            <PropertyRef Name="MaTDNgoaiNgu" />
+          </Key>
+          <Property Name="MaTDNgoaiNgu" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenTDNgoaiNgu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListTDQLNN">
+          <Key>
+            <PropertyRef Name="MaTDQLNN" />
+          </Key>
+          <Property Name="MaTDQLNN" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenTDQLNN" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListTDVanHoa">
+          <Key>
+            <PropertyRef Name="MaTDVanHoa" />
+          </Key>
+          <Property Name="MaTDVanHoa" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenTDVanHoa" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListTonGiao">
+          <Key>
+            <PropertyRef Name="MaTonGiao" />
+          </Key>
+          <Property Name="MaTonGiao" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenTonGiao" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ListThanhPhanGD">
+          <Key>
+            <PropertyRef Name="MaThanhPhanGD" />
+          </Key>
+          <Property Name="MaThanhPhanGD" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenThanhPhanGD" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK__ListCommu__Distr__1D7B6025">
           <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="0..1" />
           <End Role="ListCommunes" Type="Self.ListCommunes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -56,7 +255,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ListDistr__Provi__6CD828CA">
+        <Association Name="FK__ListDistr__Provi__13F1F5EB">
           <End Role="ListProvinces" Type="Self.ListProvinces" Multiplicity="0..1" />
           <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,45 +330,45 @@
         <Function Name="f_Unicode2TCVN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
           <Parameter Name="strInput" Type="nvarchar" Mode="In" />
         </Function>
-        <Function Name="GETQUATRINH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="SOBHXH" Type="varchar" Mode="In" />
-        </Function>
-        <Function Name="thu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="UpdateSoSo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="soso" Type="nvarchar" Mode="In" />
-          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
-          <Parameter Name="Birthday" Type="datetime" Mode="In" />
-        </Function>
-        <Function Name="XemQuaTrinh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
-          <Parameter Name="Birthday" Type="datetime" Mode="In" />
-        </Function>
-        <Function Name="XemQuaTrinhNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
-          <Parameter Name="Birthday" Type="datetime" Mode="In" />
-        </Function>
-        <Function Name="XemQuaTrinhNewAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
-          <Parameter Name="Birthday" Type="datetime" Mode="In" />
-          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
-          <Parameter Name="SOCMND" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="XemQuaTrinhThatNghiep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Sobhxh" Type="nvarchar" Mode="In" />
-        </Function>
         <EntityContainer Name="BHXHModelStoreContainer">
+          <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListCommunes" EntityType="Self.ListCommunes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListChiBo" EntityType="Self.ListChiBo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListChucDanh" EntityType="Self.ListChucDanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListChucVu" EntityType="Self.ListChucVu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListChucVuDang" EntityType="Self.ListChucVuDang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListDienCS" EntityType="Self.ListDienCS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListDistricts" EntityType="Self.ListDistricts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListEthnics" EntityType="Self.ListEthnics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListHonNhan" EntityType="Self.ListHonNhan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListHopDong" EntityType="Self.ListHopDong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListKTKL" EntityType="Self.ListKTKL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListLHDaoTao" EntityType="Self.ListLHDaoTao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListLoaiTB" EntityType="Self.ListLoaiTB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListNationality" EntityType="Self.ListNationality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListNoiKCB" EntityType="Self.ListNoiKCB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListNganHang" EntityType="Self.ListNganHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListNghiepVu" EntityType="Self.ListNghiepVu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListNgoaiNgu" EntityType="Self.ListNgoaiNgu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListProvinces" EntityType="Self.ListProvinces" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__ListCommu__Distr__719CDDE7" Association="Self.FK__ListCommu__Distr__719CDDE7">
+          <EntitySet Name="ListPhongBan" EntityType="Self.ListPhongBan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListQuan" EntityType="Self.ListQuan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListQuanHeGD" EntityType="Self.ListQuanHeGD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListQuocGia" EntityType="Self.ListQuocGia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTDDaoTao" EntityType="Self.ListTDDaoTao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTDLLCT" EntityType="Self.ListTDLLCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTDNgoaiNgu" EntityType="Self.ListTDNgoaiNgu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTDQLNN" EntityType="Self.ListTDQLNN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTDVanHoa" EntityType="Self.ListTDVanHoa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ListCommu__Distr__1D7B6025" Association="Self.FK__ListCommu__Distr__1D7B6025">
             <End Role="ListDistricts" EntitySet="ListDistricts" />
             <End Role="ListCommunes" EntitySet="ListCommunes" />
           </AssociationSet>
-          <AssociationSet Name="FK__ListDistr__Provi__6CD828CA" Association="Self.FK__ListDistr__Provi__6CD828CA">
+          <AssociationSet Name="FK__ListDistr__Provi__13F1F5EB" Association="Self.FK__ListDistr__Provi__13F1F5EB">
             <End Role="ListProvinces" EntitySet="ListProvinces" />
             <End Role="ListDistricts" EntitySet="ListDistricts" />
           </AssociationSet>
@@ -179,15 +378,72 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BHXHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ListBangCap">
+          <Key>
+            <PropertyRef Name="MaBangCap" />
+          </Key>
+          <Property Name="MaBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListCapKTKL">
+          <Key>
+            <PropertyRef Name="MaCapKTKL" />
+          </Key>
+          <Property Name="MaCapKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenCapKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListCMDaoTao">
+          <Key>
+            <PropertyRef Name="MaCMDaoTao" />
+          </Key>
+          <Property Name="MaCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LoaiCMDaoTao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="ListCommunes">
           <Key>
             <PropertyRef Name="CommuneID" />
           </Key>
           <Property Name="CommuneID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="CommuneCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="CommuneCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
           <Property Name="CommuneName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="DistrictID" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="ListDistricts" Relationship="Self.FK__ListCommu__Distr__719CDDE7" FromRole="ListCommunes" ToRole="ListDistricts" />
+          <NavigationProperty Name="ListDistricts" Relationship="Self.FK__ListCommu__Distr__1D7B6025" FromRole="ListCommunes" ToRole="ListDistricts" />
+        </EntityType>
+        <EntityType Name="ListChiBo">
+          <Key>
+            <PropertyRef Name="MaChiBo" />
+          </Key>
+          <Property Name="MaChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListChucDanh">
+          <Key>
+            <PropertyRef Name="MaChucDanh" />
+          </Key>
+          <Property Name="MaChucDanh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenChucDanh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListChucVu">
+          <Key>
+            <PropertyRef Name="MaChucVu" />
+          </Key>
+          <Property Name="MaChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListChucVuDang">
+          <Key>
+            <PropertyRef Name="MaChucVu" />
+          </Key>
+          <Property Name="MaChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListDienCS">
+          <Key>
+            <PropertyRef Name="MaDienCS" />
+          </Key>
+          <Property Name="MaDienCS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenDienCS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ListDistricts">
           <Key>
@@ -197,8 +453,8 @@
           <Property Name="DistrictCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
           <Property Name="DistrictName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ProvinceCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="ListCommunes" Relationship="Self.FK__ListCommu__Distr__719CDDE7" FromRole="ListDistricts" ToRole="ListCommunes" />
-          <NavigationProperty Name="ListProvinces" Relationship="Self.FK__ListDistr__Provi__6CD828CA" FromRole="ListDistricts" ToRole="ListProvinces" />
+          <NavigationProperty Name="ListCommunes" Relationship="Self.FK__ListCommu__Distr__1D7B6025" FromRole="ListDistricts" ToRole="ListCommunes" />
+          <NavigationProperty Name="ListProvinces" Relationship="Self.FK__ListDistr__Provi__13F1F5EB" FromRole="ListDistricts" ToRole="ListProvinces" />
         </EntityType>
         <EntityType Name="ListEthnics">
           <Key>
@@ -207,6 +463,43 @@
           <Property Name="EthnicCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="EthnicName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="ListHonNhan">
+          <Key>
+            <PropertyRef Name="MaHonNhan" />
+          </Key>
+          <Property Name="MaHonNhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenHonNhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListHopDong">
+          <Key>
+            <PropertyRef Name="MaHopDong" />
+          </Key>
+          <Property Name="MaHopDong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenHopDong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LoaiHopDong" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListKTKL">
+          <Key>
+            <PropertyRef Name="MaKTKL" />
+          </Key>
+          <Property Name="MaKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LoaiKTKL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListLHDaoTao">
+          <Key>
+            <PropertyRef Name="MaLHDaoTao" />
+          </Key>
+          <Property Name="MaLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListLoaiTB">
+          <Key>
+            <PropertyRef Name="MaLoaiTB" />
+          </Key>
+          <Property Name="MaLoaiTB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenLoaiTB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="ListNationality">
           <Key>
             <PropertyRef Name="NationalityCode" />
@@ -214,15 +507,120 @@
           <Property Name="NationalityCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="NationalityName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="ListNoiKCB">
+          <Key>
+            <PropertyRef Name="MaNoiKCB" />
+          </Key>
+          <Property Name="MaNoiKCB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNoiKCB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListNganHang">
+          <Key>
+            <PropertyRef Name="MaNganHang" />
+          </Key>
+          <Property Name="MaNganHang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNganHang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListNghiepVu">
+          <Key>
+            <PropertyRef Name="MaNghiepVu" />
+          </Key>
+          <Property Name="MaNghiepVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNghiepVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListNgoaiNgu">
+          <Key>
+            <PropertyRef Name="MaNgoaiNgu" />
+          </Key>
+          <Property Name="MaNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="ListProvinces">
           <Key>
             <PropertyRef Name="ProvinceCode" />
           </Key>
           <Property Name="ProvinceCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="ProvinceName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ListDistricts" Relationship="Self.FK__ListDistr__Provi__6CD828CA" FromRole="ListProvinces" ToRole="ListDistricts" />
+          <NavigationProperty Name="ListDistricts" Relationship="Self.FK__ListDistr__Provi__13F1F5EB" FromRole="ListProvinces" ToRole="ListDistricts" />
         </EntityType>
-        <Association Name="FK__ListCommu__Distr__719CDDE7">
+        <EntityType Name="ListPhongBan">
+          <Key>
+            <PropertyRef Name="MaPhongBan" />
+          </Key>
+          <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListQuan">
+          <Key>
+            <PropertyRef Name="MaQuan" />
+          </Key>
+          <Property Name="MaQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenQuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListQuanHeGD">
+          <Key>
+            <PropertyRef Name="MaQuanHeGD" />
+          </Key>
+          <Property Name="MaQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListQuocGia">
+          <Key>
+            <PropertyRef Name="MaQuocGia" />
+          </Key>
+          <Property Name="MaQuocGia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenQuocGia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListTDDaoTao">
+          <Key>
+            <PropertyRef Name="MaTDDaoTao" />
+          </Key>
+          <Property Name="MaTDDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTDDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListTDLLCT">
+          <Key>
+            <PropertyRef Name="MaTDLLCT" />
+          </Key>
+          <Property Name="MaTDLLCT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTDLLCT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListTDNgoaiNgu">
+          <Key>
+            <PropertyRef Name="MaTDNgoaiNgu" />
+          </Key>
+          <Property Name="MaTDNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTDNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListTDQLNN">
+          <Key>
+            <PropertyRef Name="MaTDQLNN" />
+          </Key>
+          <Property Name="MaTDQLNN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTDQLNN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListTDVanHoa">
+          <Key>
+            <PropertyRef Name="MaTDVanHoa" />
+          </Key>
+          <Property Name="MaTDVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTDVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListTonGiao">
+          <Key>
+            <PropertyRef Name="MaTonGiao" />
+          </Key>
+          <Property Name="MaTonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ListThanhPhanGD">
+          <Key>
+            <PropertyRef Name="MaThanhPhanGD" />
+          </Key>
+          <Property Name="MaThanhPhanGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenThanhPhanGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__ListCommu__Distr__1D7B6025">
           <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="0..1" />
           <End Role="ListCommunes" Type="Self.ListCommunes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -234,7 +632,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ListDistr__Provi__6CD828CA">
+        <Association Name="FK__ListDistr__Provi__13F1F5EB">
           <End Role="ListProvinces" Type="Self.ListProvinces" Multiplicity="0..1" />
           <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="*" />
           <ReferentialConstraint>
@@ -246,17 +644,45 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BHXHEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BHXH" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" />
+          <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" />
+          <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" />
           <EntitySet Name="ListCommunes" EntityType="Self.ListCommunes" />
+          <EntitySet Name="ListChiBo" EntityType="Self.ListChiBo" />
+          <EntitySet Name="ListChucDanh" EntityType="Self.ListChucDanh" />
+          <EntitySet Name="ListChucVu" EntityType="Self.ListChucVu" />
+          <EntitySet Name="ListChucVuDang" EntityType="Self.ListChucVuDang" />
+          <EntitySet Name="ListDienCS" EntityType="Self.ListDienCS" />
           <EntitySet Name="ListDistricts" EntityType="Self.ListDistricts" />
           <EntitySet Name="ListEthnics" EntityType="Self.ListEthnics" />
+          <EntitySet Name="ListHonNhan" EntityType="Self.ListHonNhan" />
+          <EntitySet Name="ListHopDong" EntityType="Self.ListHopDong" />
+          <EntitySet Name="ListKTKL" EntityType="Self.ListKTKL" />
+          <EntitySet Name="ListLHDaoTao" EntityType="Self.ListLHDaoTao" />
+          <EntitySet Name="ListLoaiTB" EntityType="Self.ListLoaiTB" />
           <EntitySet Name="ListNationality" EntityType="Self.ListNationality" />
+          <EntitySet Name="ListNoiKCB" EntityType="Self.ListNoiKCB" />
+          <EntitySet Name="ListNganHang" EntityType="Self.ListNganHang" />
+          <EntitySet Name="ListNghiepVu" EntityType="Self.ListNghiepVu" />
+          <EntitySet Name="ListNgoaiNgu" EntityType="Self.ListNgoaiNgu" />
           <EntitySet Name="ListProvinces" EntityType="Self.ListProvinces" />
-          <AssociationSet Name="FK__ListCommu__Distr__719CDDE7" Association="Self.FK__ListCommu__Distr__719CDDE7">
+          <EntitySet Name="ListPhongBan" EntityType="Self.ListPhongBan" />
+          <EntitySet Name="ListQuan" EntityType="Self.ListQuan" />
+          <EntitySet Name="ListQuanHeGD" EntityType="Self.ListQuanHeGD" />
+          <EntitySet Name="ListQuocGia" EntityType="Self.ListQuocGia" />
+          <EntitySet Name="ListTDDaoTao" EntityType="Self.ListTDDaoTao" />
+          <EntitySet Name="ListTDLLCT" EntityType="Self.ListTDLLCT" />
+          <EntitySet Name="ListTDNgoaiNgu" EntityType="Self.ListTDNgoaiNgu" />
+          <EntitySet Name="ListTDQLNN" EntityType="Self.ListTDQLNN" />
+          <EntitySet Name="ListTDVanHoa" EntityType="Self.ListTDVanHoa" />
+          <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" />
+          <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" />
+          <AssociationSet Name="FK__ListCommu__Distr__1D7B6025" Association="Self.FK__ListCommu__Distr__1D7B6025">
             <End Role="ListDistricts" EntitySet="ListDistricts" />
             <End Role="ListCommunes" EntitySet="ListCommunes" />
           </AssociationSet>
-          <AssociationSet Name="FK__ListDistr__Provi__6CD828CA" Association="Self.FK__ListDistr__Provi__6CD828CA">
+          <AssociationSet Name="FK__ListDistr__Provi__13F1F5EB" Association="Self.FK__ListDistr__Provi__13F1F5EB">
             <End Role="ListProvinces" EntitySet="ListProvinces" />
             <End Role="ListDistricts" EntitySet="ListDistricts" />
           </AssociationSet>
@@ -265,41 +691,38 @@
             <Parameter Name="p_strDBNameFrom" Mode="In" Type="String" />
             <Parameter Name="p_strFQNRestoreFileName" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="GETQUATRINH">
-            <Parameter Name="SOBHXH" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="thu">
-            <Parameter Name="SoBHXH" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="UpdateSoSo">
-            <Parameter Name="soso" Mode="In" Type="String" />
-            <Parameter Name="FullName" Mode="In" Type="String" />
-            <Parameter Name="Birthday" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="XemQuaTrinh">
-            <Parameter Name="FullName" Mode="In" Type="String" />
-            <Parameter Name="Birthday" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="XemQuaTrinhNew">
-            <Parameter Name="FullName" Mode="In" Type="String" />
-            <Parameter Name="Birthday" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="XemQuaTrinhNewAll">
-            <Parameter Name="FullName" Mode="In" Type="String" />
-            <Parameter Name="Birthday" Mode="In" Type="DateTime" />
-            <Parameter Name="SoBHXH" Mode="In" Type="String" />
-            <Parameter Name="SOCMND" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="XemQuaTrinhThatNghiep">
-            <Parameter Name="Sobhxh" Mode="In" Type="String" />
-          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BHXHModelStoreContainer" CdmEntityContainer="BHXHEntities">
+        <EntityContainerMapping StorageEntityContainer="BHXHModelStoreContainer" CdmEntityContainer="BHXH">
+          <EntitySetMapping Name="ListBangCap">
+            <EntityTypeMapping TypeName="BHXHModel.ListBangCap">
+              <MappingFragment StoreEntitySet="ListBangCap">
+                <ScalarProperty Name="MaBangCap" ColumnName="MaBangCap" />
+                <ScalarProperty Name="TenBangCap" ColumnName="TenBangCap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListCapKTKL">
+            <EntityTypeMapping TypeName="BHXHModel.ListCapKTKL">
+              <MappingFragment StoreEntitySet="ListCapKTKL">
+                <ScalarProperty Name="MaCapKTKL" ColumnName="MaCapKTKL" />
+                <ScalarProperty Name="TenCapKTKL" ColumnName="TenCapKTKL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListCMDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.ListCMDaoTao">
+              <MappingFragment StoreEntitySet="ListCMDaoTao">
+                <ScalarProperty Name="MaCMDaoTao" ColumnName="MaCMDaoTao" />
+                <ScalarProperty Name="TenCMDaoTao" ColumnName="TenCMDaoTao" />
+                <ScalarProperty Name="LoaiCMDaoTao" ColumnName="LoaiCMDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ListCommunes">
             <EntityTypeMapping TypeName="BHXHModel.ListCommunes">
               <MappingFragment StoreEntitySet="ListCommunes">
@@ -307,6 +730,46 @@
                 <ScalarProperty Name="CommuneCode" ColumnName="CommuneCode" />
                 <ScalarProperty Name="CommuneName" ColumnName="CommuneName" />
                 <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChiBo">
+            <EntityTypeMapping TypeName="BHXHModel.ListChiBo">
+              <MappingFragment StoreEntitySet="ListChiBo">
+                <ScalarProperty Name="MaChiBo" ColumnName="MaChiBo" />
+                <ScalarProperty Name="TenChiBo" ColumnName="TenChiBo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChucDanh">
+            <EntityTypeMapping TypeName="BHXHModel.ListChucDanh">
+              <MappingFragment StoreEntitySet="ListChucDanh">
+                <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
+                <ScalarProperty Name="TenChucDanh" ColumnName="TenChucDanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChucVu">
+            <EntityTypeMapping TypeName="BHXHModel.ListChucVu">
+              <MappingFragment StoreEntitySet="ListChucVu">
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChucVuDang">
+            <EntityTypeMapping TypeName="BHXHModel.ListChucVuDang">
+              <MappingFragment StoreEntitySet="ListChucVuDang">
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListDienCS">
+            <EntityTypeMapping TypeName="BHXHModel.ListDienCS">
+              <MappingFragment StoreEntitySet="ListDienCS">
+                <ScalarProperty Name="MaDienCS" ColumnName="MaDienCS" />
+                <ScalarProperty Name="TenDienCS" ColumnName="TenDienCS" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -328,11 +791,85 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ListHonNhan">
+            <EntityTypeMapping TypeName="BHXHModel.ListHonNhan">
+              <MappingFragment StoreEntitySet="ListHonNhan">
+                <ScalarProperty Name="MaHonNhan" ColumnName="MaHonNhan" />
+                <ScalarProperty Name="TenHonNhan" ColumnName="TenHonNhan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListHopDong">
+            <EntityTypeMapping TypeName="BHXHModel.ListHopDong">
+              <MappingFragment StoreEntitySet="ListHopDong">
+                <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
+                <ScalarProperty Name="TenHopDong" ColumnName="TenHopDong" />
+                <ScalarProperty Name="LoaiHopDong" ColumnName="LoaiHopDong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListKTKL">
+            <EntityTypeMapping TypeName="BHXHModel.ListKTKL">
+              <MappingFragment StoreEntitySet="ListKTKL">
+                <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
+                <ScalarProperty Name="TenKTKL" ColumnName="TenKTKL" />
+                <ScalarProperty Name="LoaiKTKL" ColumnName="LoaiKTKL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListLHDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.ListLHDaoTao">
+              <MappingFragment StoreEntitySet="ListLHDaoTao">
+                <ScalarProperty Name="MaLHDaoTao" ColumnName="MaLHDaoTao" />
+                <ScalarProperty Name="TenLHDaoTao" ColumnName="TenLHDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListLoaiTB">
+            <EntityTypeMapping TypeName="BHXHModel.ListLoaiTB">
+              <MappingFragment StoreEntitySet="ListLoaiTB">
+                <ScalarProperty Name="MaLoaiTB" ColumnName="MaLoaiTB" />
+                <ScalarProperty Name="TenLoaiTB" ColumnName="TenLoaiTB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ListNationality">
             <EntityTypeMapping TypeName="BHXHModel.ListNationality">
               <MappingFragment StoreEntitySet="ListNationality">
                 <ScalarProperty Name="NationalityCode" ColumnName="NationalityCode" />
                 <ScalarProperty Name="NationalityName" ColumnName="NationalityName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNoiKCB">
+            <EntityTypeMapping TypeName="BHXHModel.ListNoiKCB">
+              <MappingFragment StoreEntitySet="ListNoiKCB">
+                <ScalarProperty Name="MaNoiKCB" ColumnName="MaNoiKCB" />
+                <ScalarProperty Name="TenNoiKCB" ColumnName="TenNoiKCB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNganHang">
+            <EntityTypeMapping TypeName="BHXHModel.ListNganHang">
+              <MappingFragment StoreEntitySet="ListNganHang">
+                <ScalarProperty Name="MaNganHang" ColumnName="MaNganHang" />
+                <ScalarProperty Name="TenNganHang" ColumnName="TenNganHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNghiepVu">
+            <EntityTypeMapping TypeName="BHXHModel.ListNghiepVu">
+              <MappingFragment StoreEntitySet="ListNghiepVu">
+                <ScalarProperty Name="MaNghiepVu" ColumnName="MaNghiepVu" />
+                <ScalarProperty Name="TenNghiepVu" ColumnName="TenNghiepVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNgoaiNgu">
+            <EntityTypeMapping TypeName="BHXHModel.ListNgoaiNgu">
+              <MappingFragment StoreEntitySet="ListNgoaiNgu">
+                <ScalarProperty Name="MaNgoaiNgu" ColumnName="MaNgoaiNgu" />
+                <ScalarProperty Name="TenNgoaiNgu" ColumnName="TenNgoaiNgu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -344,14 +881,95 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ListPhongBan">
+            <EntityTypeMapping TypeName="BHXHModel.ListPhongBan">
+              <MappingFragment StoreEntitySet="ListPhongBan">
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+                <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListQuan">
+            <EntityTypeMapping TypeName="BHXHModel.ListQuan">
+              <MappingFragment StoreEntitySet="ListQuan">
+                <ScalarProperty Name="MaQuan" ColumnName="MaQuan" />
+                <ScalarProperty Name="TenQuan" ColumnName="TenQuan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListQuanHeGD">
+            <EntityTypeMapping TypeName="BHXHModel.ListQuanHeGD">
+              <MappingFragment StoreEntitySet="ListQuanHeGD">
+                <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
+                <ScalarProperty Name="TenQuanHeGD" ColumnName="TenQuanHeGD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListQuocGia">
+            <EntityTypeMapping TypeName="BHXHModel.ListQuocGia">
+              <MappingFragment StoreEntitySet="ListQuocGia">
+                <ScalarProperty Name="MaQuocGia" ColumnName="MaQuocGia" />
+                <ScalarProperty Name="TenQuocGia" ColumnName="TenQuocGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDDaoTao">
+              <MappingFragment StoreEntitySet="ListTDDaoTao">
+                <ScalarProperty Name="MaTDDaoTao" ColumnName="MaTDDaoTao" />
+                <ScalarProperty Name="TenTDDaoTao" ColumnName="TenTDDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDLLCT">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDLLCT">
+              <MappingFragment StoreEntitySet="ListTDLLCT">
+                <ScalarProperty Name="MaTDLLCT" ColumnName="MaTDLLCT" />
+                <ScalarProperty Name="TenTDLLCT" ColumnName="TenTDLLCT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDNgoaiNgu">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDNgoaiNgu">
+              <MappingFragment StoreEntitySet="ListTDNgoaiNgu">
+                <ScalarProperty Name="MaTDNgoaiNgu" ColumnName="MaTDNgoaiNgu" />
+                <ScalarProperty Name="TenTDNgoaiNgu" ColumnName="TenTDNgoaiNgu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDQLNN">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDQLNN">
+              <MappingFragment StoreEntitySet="ListTDQLNN">
+                <ScalarProperty Name="MaTDQLNN" ColumnName="MaTDQLNN" />
+                <ScalarProperty Name="TenTDQLNN" ColumnName="TenTDQLNN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDVanHoa">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDVanHoa">
+              <MappingFragment StoreEntitySet="ListTDVanHoa">
+                <ScalarProperty Name="MaTDVanHoa" ColumnName="MaTDVanHoa" />
+                <ScalarProperty Name="TenTDVanHoa" ColumnName="TenTDVanHoa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTonGiao">
+            <EntityTypeMapping TypeName="BHXHModel.ListTonGiao">
+              <MappingFragment StoreEntitySet="ListTonGiao">
+                <ScalarProperty Name="MaTonGiao" ColumnName="MaTonGiao" />
+                <ScalarProperty Name="TenTonGiao" ColumnName="TenTonGiao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListThanhPhanGD">
+            <EntityTypeMapping TypeName="BHXHModel.ListThanhPhanGD">
+              <MappingFragment StoreEntitySet="ListThanhPhanGD">
+                <ScalarProperty Name="MaThanhPhanGD" ColumnName="MaThanhPhanGD" />
+                <ScalarProperty Name="TenThanhPhanGD" ColumnName="TenThanhPhanGD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXHModel.Store.DBA_RestoreDB" />
-          <FunctionImportMapping FunctionImportName="GETQUATRINH" FunctionName="BHXHModel.Store.GETQUATRINH" />
-          <FunctionImportMapping FunctionImportName="thu" FunctionName="BHXHModel.Store.thu" />
-          <FunctionImportMapping FunctionImportName="UpdateSoSo" FunctionName="BHXHModel.Store.UpdateSoSo" />
-          <FunctionImportMapping FunctionImportName="XemQuaTrinh" FunctionName="BHXHModel.Store.XemQuaTrinh" />
-          <FunctionImportMapping FunctionImportName="XemQuaTrinhNew" FunctionName="BHXHModel.Store.XemQuaTrinhNew" />
-          <FunctionImportMapping FunctionImportName="XemQuaTrinhNewAll" FunctionName="BHXHModel.Store.XemQuaTrinhNewAll" />
-          <FunctionImportMapping FunctionImportName="XemQuaTrinhThatNghiep" FunctionName="BHXHModel.Store.XemQuaTrinhThatNghiep" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -10,7 +10,7 @@ namespace BHXH.List.Business
     {
         public static IEnumerable<BHXH.Data.ListNationality> GetAll()
         {
-            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            BHXH.Data.BHXH ctx = new Data.BHXH();
             IEnumerable<BHXH.Data.ListNationality> list;
             var query = from c in ctx.ListNationality select c;
             list = query.ToList();
@@ -22,7 +22,7 @@ namespace BHXH.List.Business
             try
             {
 
-                BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+                BHXH.Data.BHXH ctx = new Data.BHXH();
             BHXH.Data.ListNationality n = new Data.ListNationality();
             n.NationalityCode = NationalityCode;
             n.NationalityName = NationalityName;

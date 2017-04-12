@@ -1,4 +1,0 @@
-D:\Dropbox\Projects\BHXH\BHXH.Common.UI\bin\Debug\BHXH.Common.UI.dll
-D:\Dropbox\Projects\BHXH\BHXH.Common.UI\bin\Debug\BHXH.Common.UI.pdb
-D:\Dropbox\Projects\BHXH\BHXH.Common.UI\obj\Debug\BHXH.Common.UI.dll
-D:\Dropbox\Projects\BHXH\BHXH.Common.UI\obj\Debug\BHXH.Common.UI.pdb

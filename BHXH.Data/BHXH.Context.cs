@@ -15,10 +15,10 @@ namespace BHXH.Data
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class BHXHEntities : DbContext
+    public partial class BHXH : DbContext
     {
-        public BHXHEntities()
-            : base("name=BHXHEntities")
+        public BHXH()
+            : base("name=BHXH")
         {
         }
     
@@ -27,11 +27,39 @@ namespace BHXH.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ListBangCap> ListBangCap { get; set; }
+        public virtual DbSet<ListCapKTKL> ListCapKTKL { get; set; }
+        public virtual DbSet<ListCMDaoTao> ListCMDaoTao { get; set; }
         public virtual DbSet<ListCommunes> ListCommunes { get; set; }
+        public virtual DbSet<ListChiBo> ListChiBo { get; set; }
+        public virtual DbSet<ListChucDanh> ListChucDanh { get; set; }
+        public virtual DbSet<ListChucVu> ListChucVu { get; set; }
+        public virtual DbSet<ListChucVuDang> ListChucVuDang { get; set; }
+        public virtual DbSet<ListDienCS> ListDienCS { get; set; }
         public virtual DbSet<ListDistricts> ListDistricts { get; set; }
         public virtual DbSet<ListEthnics> ListEthnics { get; set; }
+        public virtual DbSet<ListHonNhan> ListHonNhan { get; set; }
+        public virtual DbSet<ListHopDong> ListHopDong { get; set; }
+        public virtual DbSet<ListKTKL> ListKTKL { get; set; }
+        public virtual DbSet<ListLHDaoTao> ListLHDaoTao { get; set; }
+        public virtual DbSet<ListLoaiTB> ListLoaiTB { get; set; }
         public virtual DbSet<ListNationality> ListNationality { get; set; }
+        public virtual DbSet<ListNoiKCB> ListNoiKCB { get; set; }
+        public virtual DbSet<ListNganHang> ListNganHang { get; set; }
+        public virtual DbSet<ListNghiepVu> ListNghiepVu { get; set; }
+        public virtual DbSet<ListNgoaiNgu> ListNgoaiNgu { get; set; }
         public virtual DbSet<ListProvinces> ListProvinces { get; set; }
+        public virtual DbSet<ListPhongBan> ListPhongBan { get; set; }
+        public virtual DbSet<ListQuan> ListQuan { get; set; }
+        public virtual DbSet<ListQuanHeGD> ListQuanHeGD { get; set; }
+        public virtual DbSet<ListQuocGia> ListQuocGia { get; set; }
+        public virtual DbSet<ListTDDaoTao> ListTDDaoTao { get; set; }
+        public virtual DbSet<ListTDLLCT> ListTDLLCT { get; set; }
+        public virtual DbSet<ListTDNgoaiNgu> ListTDNgoaiNgu { get; set; }
+        public virtual DbSet<ListTDQLNN> ListTDQLNN { get; set; }
+        public virtual DbSet<ListTDVanHoa> ListTDVanHoa { get; set; }
+        public virtual DbSet<ListTonGiao> ListTonGiao { get; set; }
+        public virtual DbSet<ListThanhPhanGD> ListThanhPhanGD { get; set; }
     
         public virtual int DBA_RestoreDB(string p_strDBNameTo, string p_strDBNameFrom, string p_strFQNRestoreFileName)
         {
@@ -48,97 +76,6 @@ namespace BHXH.Data
                 new ObjectParameter("p_strFQNRestoreFileName", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DBA_RestoreDB", p_strDBNameToParameter, p_strDBNameFromParameter, p_strFQNRestoreFileNameParameter);
-        }
-    
-        public virtual int GETQUATRINH(string sOBHXH)
-        {
-            var sOBHXHParameter = sOBHXH != null ?
-                new ObjectParameter("SOBHXH", sOBHXH) :
-                new ObjectParameter("SOBHXH", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GETQUATRINH", sOBHXHParameter);
-        }
-    
-        public virtual int thu(string soBHXH)
-        {
-            var soBHXHParameter = soBHXH != null ?
-                new ObjectParameter("SoBHXH", soBHXH) :
-                new ObjectParameter("SoBHXH", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("thu", soBHXHParameter);
-        }
-    
-        public virtual int UpdateSoSo(string soso, string fullName, Nullable<System.DateTime> birthday)
-        {
-            var sosoParameter = soso != null ?
-                new ObjectParameter("soso", soso) :
-                new ObjectParameter("soso", typeof(string));
-    
-            var fullNameParameter = fullName != null ?
-                new ObjectParameter("FullName", fullName) :
-                new ObjectParameter("FullName", typeof(string));
-    
-            var birthdayParameter = birthday.HasValue ?
-                new ObjectParameter("Birthday", birthday) :
-                new ObjectParameter("Birthday", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateSoSo", sosoParameter, fullNameParameter, birthdayParameter);
-        }
-    
-        public virtual int XemQuaTrinh(string fullName, Nullable<System.DateTime> birthday)
-        {
-            var fullNameParameter = fullName != null ?
-                new ObjectParameter("FullName", fullName) :
-                new ObjectParameter("FullName", typeof(string));
-    
-            var birthdayParameter = birthday.HasValue ?
-                new ObjectParameter("Birthday", birthday) :
-                new ObjectParameter("Birthday", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XemQuaTrinh", fullNameParameter, birthdayParameter);
-        }
-    
-        public virtual int XemQuaTrinhNew(string fullName, Nullable<System.DateTime> birthday)
-        {
-            var fullNameParameter = fullName != null ?
-                new ObjectParameter("FullName", fullName) :
-                new ObjectParameter("FullName", typeof(string));
-    
-            var birthdayParameter = birthday.HasValue ?
-                new ObjectParameter("Birthday", birthday) :
-                new ObjectParameter("Birthday", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XemQuaTrinhNew", fullNameParameter, birthdayParameter);
-        }
-    
-        public virtual int XemQuaTrinhNewAll(string fullName, Nullable<System.DateTime> birthday, string soBHXH, string sOCMND)
-        {
-            var fullNameParameter = fullName != null ?
-                new ObjectParameter("FullName", fullName) :
-                new ObjectParameter("FullName", typeof(string));
-    
-            var birthdayParameter = birthday.HasValue ?
-                new ObjectParameter("Birthday", birthday) :
-                new ObjectParameter("Birthday", typeof(System.DateTime));
-    
-            var soBHXHParameter = soBHXH != null ?
-                new ObjectParameter("SoBHXH", soBHXH) :
-                new ObjectParameter("SoBHXH", typeof(string));
-    
-            var sOCMNDParameter = sOCMND != null ?
-                new ObjectParameter("SOCMND", sOCMND) :
-                new ObjectParameter("SOCMND", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XemQuaTrinhNewAll", fullNameParameter, birthdayParameter, soBHXHParameter, sOCMNDParameter);
-        }
-    
-        public virtual int XemQuaTrinhThatNghiep(string sobhxh)
-        {
-            var sobhxhParameter = sobhxh != null ?
-                new ObjectParameter("Sobhxh", sobhxh) :
-                new ObjectParameter("Sobhxh", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XemQuaTrinhThatNghiep", sobhxhParameter);
         }
     }
 }
