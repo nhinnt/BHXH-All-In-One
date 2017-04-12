@@ -3,3 +3,12 @@ D:\Dropbox\Projects\BHXH\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.pdb
 D:\Dropbox\Projects\BHXH\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.dll
 D:\Dropbox\Projects\BHXH\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.pdb
 D:\Dropbox\Projects\BHXH\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.csprojResolveAssemblyReference.cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll.config
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.SqlServer.xml

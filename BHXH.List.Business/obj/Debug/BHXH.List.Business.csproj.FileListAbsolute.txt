@@ -1,0 +1,12 @@
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\BHXH.List.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\BHXH.List.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\obj\Debug\BHXH.List.Business.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\obj\Debug\BHXH.List.Business.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\BHXH.List.Business.dll.config
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\BHXH.Data.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\BHXH.Data.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.List.Business\obj\Debug\BHXH.List.Business.csprojResolveAssemblyReference.cache
