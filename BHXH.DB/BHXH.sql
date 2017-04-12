@@ -1,21 +1,8 @@
 ﻿
 /*
-<<<<<<< HEAD
-<<<<<<< HEAD
 Created by: Le Nho Man
 Created Date : 20170328
 Edited Date
-=======
-=======
->>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
-Created by		: Le Nho Man
-Created Date	: 20170328
-Edited Date		:
-Edited By		:
-<<<<<<< HEAD
->>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
-=======
->>>>>>> 26c6c0ef4d3e103c6f6d4fa57f801715be06d44b
 */
 
 CREATE DATABASE BHXH
@@ -159,9 +146,14 @@ CREATE TABLE [dbo].[ListNgoaiNgu](
 	[MaNgoaiNgu] [nvarchar](255) primary key ,
 	[TenNgoaiNgu] [nvarchar](255) 
  ) 
+
+
 CREATE TABLE [dbo].[ListNoiKCB](
-	[MaNoiKCB] [nvarchar](255) primary key ,
-	[TenNoiKCB] [nvarchar](255) 
+	
+	[MaNoiKCB] [nvarchar](255)  ,
+	[TenNoiKCB] [nvarchar](255) ,
+	ProvinceCode Nchar(2) FOREIGN KEY REFERENCES ListProvinces(ProvinceCode)
+	primary key (ProvinceCode,[MaNoiKCB] )
  ) 
 CREATE TABLE [dbo].[ListPhongBan](
 	[MaPhongBan] [nvarchar](255) primary key ,
