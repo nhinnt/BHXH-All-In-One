@@ -75,7 +75,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BHXH.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ListBangCap.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListCapKTKL.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListChiBo.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucDanh.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVu.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVuDang.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListCMDaoTao.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="ListCommunes.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListDienCS.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="ListDistricts.cs">
@@ -84,10 +108,70 @@
     <Compile Include="ListEthnics.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListHonNhan.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListHopDong.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListKTKL.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListLHDaoTao.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListLoaiTB.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="ListNationality.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListNganHang.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListNghiepVu.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListNgoaiNgu.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListNoiKCB.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListPhongBan.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="ListProvinces.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuan.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHeGD.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuocGia.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDDaoTao.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDLLCT.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDQLNN.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDVanHoa.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListThanhPhanGD.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTonGiao.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,11 +184,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.Config" />
     <EntityDeploy Include="BHXH.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BHXH.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
     <None Include="BHXH.edmx.diagram">
       <DependentUpon>BHXH.edmx</DependentUpon>
     </None>
@@ -123,6 +207,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="BHXH.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BHXH.edmx</DependentUpon>
@@ -133,7 +220,6 @@
       <DependentUpon>BHXH.edmx</DependentUpon>
       <LastGenOutput>BHXH.cs</LastGenOutput>
     </Content>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,0 @@
-D:\Dropbox\Projects\BHXH\BHXH.Common.Business\bin\Debug\BHXH.Common.Business.dll
-D:\Dropbox\Projects\BHXH\BHXH.Common.Business\bin\Debug\BHXH.Common.Business.pdb
-D:\Dropbox\Projects\BHXH\BHXH.Common.Business\obj\Debug\BHXH.Common.Business.dll
-D:\Dropbox\Projects\BHXH\BHXH.Common.Business\obj\Debug\BHXH.Common.Business.pdb
