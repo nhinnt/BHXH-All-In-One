@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BHXHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ListCommunes">
+    <Key>
+      <PropertyRef Name="CommuneID" />
+    </Key>
+    <Property Name="CommuneID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CommuneCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="CommuneName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DistrictID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ListDistricts" Relationship="Self.FK__ListCommu__Distr__719CDDE7" FromRole="ListCommunes" ToRole="ListDistricts" />
+  </EntityType>
+  <EntityType Name="ListDistricts">
+    <Key>
+      <PropertyRef Name="DistrictID" />
+    </Key>
+    <Property Name="DistrictID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DistrictCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="DistrictName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProvinceCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="ListCommunes" Relationship="Self.FK__ListCommu__Distr__719CDDE7" FromRole="ListDistricts" ToRole="ListCommunes" />
+    <NavigationProperty Name="ListProvinces" Relationship="Self.FK__ListDistr__Provi__6CD828CA" FromRole="ListDistricts" ToRole="ListProvinces" />
+  </EntityType>
+  <EntityType Name="ListEthnics">
+    <Key>
+      <PropertyRef Name="EthnicCode" />
+    </Key>
+    <Property Name="EthnicCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EthnicName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListNationality">
+    <Key>
+      <PropertyRef Name="NationalityCode" />
+    </Key>
+    <Property Name="NationalityCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NationalityName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListProvinces">
+    <Key>
+      <PropertyRef Name="ProvinceCode" />
+    </Key>
+    <Property Name="ProvinceCode" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ProvinceName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ListDistricts" Relationship="Self.FK__ListDistr__Provi__6CD828CA" FromRole="ListProvinces" ToRole="ListDistricts" />
+  </EntityType>
+  <Association Name="FK__ListCommu__Distr__719CDDE7">
+    <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="0..1" />
+    <End Role="ListCommunes" Type="Self.ListCommunes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListDistricts">
+        <PropertyRef Name="DistrictID" />
+      </Principal>
+      <Dependent Role="ListCommunes">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListDistr__Provi__6CD828CA">
+    <End Role="ListProvinces" Type="Self.ListProvinces" Multiplicity="0..1" />
+    <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListProvinces">
+        <PropertyRef Name="ProvinceCode" />
+      </Principal>
+      <Dependent Role="ListDistricts">
+        <PropertyRef Name="ProvinceCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BHXHEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ListCommunes" EntityType="Self.ListCommunes" />
+    <EntitySet Name="ListDistricts" EntityType="Self.ListDistricts" />
+    <EntitySet Name="ListEthnics" EntityType="Self.ListEthnics" />
+    <EntitySet Name="ListNationality" EntityType="Self.ListNationality" />
+    <EntitySet Name="ListProvinces" EntityType="Self.ListProvinces" />
+    <AssociationSet Name="FK__ListCommu__Distr__719CDDE7" Association="Self.FK__ListCommu__Distr__719CDDE7">
+      <End Role="ListDistricts" EntitySet="ListDistricts" />
+      <End Role="ListCommunes" EntitySet="ListCommunes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListDistr__Provi__6CD828CA" Association="Self.FK__ListDistr__Provi__6CD828CA">
+      <End Role="ListProvinces" EntitySet="ListProvinces" />
+      <End Role="ListDistricts" EntitySet="ListDistricts" />
+    </AssociationSet>
+    <FunctionImport Name="DBA_RestoreDB">
+      <Parameter Name="p_strDBNameTo" Mode="In" Type="String" />
+      <Parameter Name="p_strDBNameFrom" Mode="In" Type="String" />
+      <Parameter Name="p_strFQNRestoreFileName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GETQUATRINH">
+      <Parameter Name="SOBHXH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="thu">
+      <Parameter Name="SoBHXH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSoSo">
+      <Parameter Name="soso" Mode="In" Type="String" />
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="Birthday" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="XemQuaTrinh">
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="Birthday" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="XemQuaTrinhNew">
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="Birthday" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="XemQuaTrinhNewAll">
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="Birthday" Mode="In" Type="DateTime" />
+      <Parameter Name="SoBHXH" Mode="In" Type="String" />
+      <Parameter Name="SOCMND" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XemQuaTrinhThatNghiep">
+      <Parameter Name="Sobhxh" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

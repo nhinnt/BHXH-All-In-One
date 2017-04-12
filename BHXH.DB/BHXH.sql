@@ -79,3 +79,4 @@ CREATE TABLE HrEmployees
 
 CREATE TABLE HrHistory
 ()
+select * from ListNationality

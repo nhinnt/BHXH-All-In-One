@@ -6,3 +6,7 @@ D:\Dropbox\Projects\BHXH\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.dll
 D:\Dropbox\Projects\BHXH\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.pdb
 D:\Dropbox\Projects\BHXH\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.dll
 D:\Dropbox\Projects\BHXH\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.pdb
