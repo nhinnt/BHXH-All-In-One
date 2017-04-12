@@ -210,8 +210,6 @@ CREATE TABLE [dbo].[ListTonGiao](
 	[TenTonGiao] [nvarchar](255) 
 ) 
 
-
-
 CREATE TABLE ListUnits
 ()
 CREATE TABLE HrEmployees
