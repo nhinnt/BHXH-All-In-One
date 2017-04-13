@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BHXHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ListBangCap">
+    <Key>
+      <PropertyRef Name="MaBangCap" />
+    </Key>
+    <Property Name="MaBangCap" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenBangCap" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListCapKTKL">
+    <Key>
+      <PropertyRef Name="MaCapKTKL" />
+    </Key>
+    <Property Name="MaCapKTKL" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenCapKTKL" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListCMDaoTao">
+    <Key>
+      <PropertyRef Name="MaCMDaoTao" />
+    </Key>
+    <Property Name="MaCMDaoTao" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenCMDaoTao" Type="nvarchar" MaxLength="255" />
+    <Property Name="LoaiCMDaoTao" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ListCommunes">
+    <Key>
+      <PropertyRef Name="CommuneID" />
+    </Key>
+    <Property Name="CommuneID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CommuneCode" Type="nvarchar" MaxLength="2" />
+    <Property Name="CommuneName" Type="nvarchar" MaxLength="255" />
+    <Property Name="DistrictID" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="ListChiBo">
+    <Key>
+      <PropertyRef Name="MaChiBo" />
+    </Key>
+    <Property Name="MaChiBo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenChiBo" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListChucDanh">
+    <Key>
+      <PropertyRef Name="MaChucDanh" />
+    </Key>
+    <Property Name="MaChucDanh" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenChucDanh" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+    </Key>
+    <Property Name="MaChucVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenChucVu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListChucVuDang">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+    </Key>
+    <Property Name="MaChucVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenChucVu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListDienCS">
+    <Key>
+      <PropertyRef Name="MaDienCS" />
+    </Key>
+    <Property Name="MaDienCS" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenDienCS" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListDistricts">
+    <Key>
+      <PropertyRef Name="DistrictID" />
+    </Key>
+    <Property Name="DistrictID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DistrictCode" Type="nvarchar" MaxLength="2" />
+    <Property Name="DistrictName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProvinceCode" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="ListEthnics">
+    <Key>
+      <PropertyRef Name="EthnicCode" />
+    </Key>
+    <Property Name="EthnicCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="EthnicName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListHonNhan">
+    <Key>
+      <PropertyRef Name="MaHonNhan" />
+    </Key>
+    <Property Name="MaHonNhan" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenHonNhan" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListHopDong">
+    <Key>
+      <PropertyRef Name="MaHopDong" />
+    </Key>
+    <Property Name="MaHopDong" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenHopDong" Type="nvarchar" MaxLength="255" />
+    <Property Name="LoaiHopDong" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ListKTKL">
+    <Key>
+      <PropertyRef Name="MaKTKL" />
+    </Key>
+    <Property Name="MaKTKL" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenKTKL" Type="nvarchar" MaxLength="255" />
+    <Property Name="LoaiKTKL" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ListLHDaoTao">
+    <Key>
+      <PropertyRef Name="MaLHDaoTao" />
+    </Key>
+    <Property Name="MaLHDaoTao" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenLHDaoTao" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListLoaiTB">
+    <Key>
+      <PropertyRef Name="MaLoaiTB" />
+    </Key>
+    <Property Name="MaLoaiTB" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenLoaiTB" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListNationality">
+    <Key>
+      <PropertyRef Name="NationalityCode" />
+    </Key>
+    <Property Name="NationalityCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="NationalityName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListNoiKCB">
+    <Key>
+      <PropertyRef Name="MaNoiKCB" />
+    </Key>
+    <Property Name="MaNoiKCB" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenNoiKCB" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListNganHang">
+    <Key>
+      <PropertyRef Name="MaNganHang" />
+    </Key>
+    <Property Name="MaNganHang" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenNganHang" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListNghiepVu">
+    <Key>
+      <PropertyRef Name="MaNghiepVu" />
+    </Key>
+    <Property Name="MaNghiepVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenNghiepVu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListNgoaiNgu">
+    <Key>
+      <PropertyRef Name="MaNgoaiNgu" />
+    </Key>
+    <Property Name="MaNgoaiNgu" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenNgoaiNgu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListProvinces">
+    <Key>
+      <PropertyRef Name="ProvinceCode" />
+    </Key>
+    <Property Name="ProvinceCode" Type="nchar" MaxLength="2" Nullable="false" />
+    <Property Name="ProvinceName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListPhongBan">
+    <Key>
+      <PropertyRef Name="MaPhongBan" />
+    </Key>
+    <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenPhongBan" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListQuan">
+    <Key>
+      <PropertyRef Name="MaQuan" />
+    </Key>
+    <Property Name="MaQuan" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenQuan" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListQuanHeGD">
+    <Key>
+      <PropertyRef Name="MaQuanHeGD" />
+    </Key>
+    <Property Name="MaQuanHeGD" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenQuanHeGD" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListQuocGia">
+    <Key>
+      <PropertyRef Name="MaQuocGia" />
+    </Key>
+    <Property Name="MaQuocGia" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenQuocGia" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListTDDaoTao">
+    <Key>
+      <PropertyRef Name="MaTDDaoTao" />
+    </Key>
+    <Property Name="MaTDDaoTao" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenTDDaoTao" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListTDLLCT">
+    <Key>
+      <PropertyRef Name="MaTDLLCT" />
+    </Key>
+    <Property Name="MaTDLLCT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenTDLLCT" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListTDNgoaiNgu">
+    <Key>
+      <PropertyRef Name="MaTDNgoaiNgu" />
+    </Key>
+    <Property Name="MaTDNgoaiNgu" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenTDNgoaiNgu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListTDQLNN">
+    <Key>
+      <PropertyRef Name="MaTDQLNN" />
+    </Key>
+    <Property Name="MaTDQLNN" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenTDQLNN" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListTDVanHoa">
+    <Key>
+      <PropertyRef Name="MaTDVanHoa" />
+    </Key>
+    <Property Name="MaTDVanHoa" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenTDVanHoa" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListTonGiao">
+    <Key>
+      <PropertyRef Name="MaTonGiao" />
+    </Key>
+    <Property Name="MaTonGiao" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenTonGiao" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ListThanhPhanGD">
+    <Key>
+      <PropertyRef Name="MaThanhPhanGD" />
+    </Key>
+    <Property Name="MaThanhPhanGD" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TenThanhPhanGD" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__ListCommu__Distr__1D7B6025">
+    <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="0..1" />
+    <End Role="ListCommunes" Type="Self.ListCommunes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListDistricts">
+        <PropertyRef Name="DistrictID" />
+      </Principal>
+      <Dependent Role="ListCommunes">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListDistr__Provi__13F1F5EB">
+    <End Role="ListProvinces" Type="Self.ListProvinces" Multiplicity="0..1" />
+    <End Role="ListDistricts" Type="Self.ListDistricts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListProvinces">
+        <PropertyRef Name="ProvinceCode" />
+      </Principal>
+      <Dependent Role="ListDistricts">
+        <PropertyRef Name="ProvinceCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DBA_RestoreDB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_strDBNameTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="p_strDBNameFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="p_strFQNRestoreFileName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="f_Check5Years" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+    <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_Check5Years_1Database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+    <Parameter Name="maquan" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_Check5Years_1Database_New" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+    <Parameter Name="maquan" Type="nvarchar" Mode="In" />
+    <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+    <Parameter Name="SoCMND" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_Check5Years_1Database_SoBHXH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+    <Parameter Name="maquan" Type="nvarchar" Mode="In" />
+    <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_Check5Years2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="f_Check5YearsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+    <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+    <Parameter Name="SoCMND" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_KhongDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="inputVar" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="f_KhongDau_TCVN3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+    <Parameter Name="inputVar" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="f_TCVN3ToUnicode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="strInput" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="f_ToCamelCase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="input" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_TraCuuSoSo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="f_TraCuuSoSoNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Birthday" Type="datetime" Mode="In" />
+    <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+    <Parameter Name="SoCMND" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="f_Unicode2TCVN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="strInput" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="BHXHModelStoreContainer">
+    <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListCommunes" EntityType="Self.ListCommunes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListChiBo" EntityType="Self.ListChiBo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListChucDanh" EntityType="Self.ListChucDanh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListChucVu" EntityType="Self.ListChucVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListChucVuDang" EntityType="Self.ListChucVuDang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListDienCS" EntityType="Self.ListDienCS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListDistricts" EntityType="Self.ListDistricts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListEthnics" EntityType="Self.ListEthnics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListHonNhan" EntityType="Self.ListHonNhan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListHopDong" EntityType="Self.ListHopDong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListKTKL" EntityType="Self.ListKTKL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListLHDaoTao" EntityType="Self.ListLHDaoTao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListLoaiTB" EntityType="Self.ListLoaiTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListNationality" EntityType="Self.ListNationality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListNoiKCB" EntityType="Self.ListNoiKCB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListNganHang" EntityType="Self.ListNganHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListNghiepVu" EntityType="Self.ListNghiepVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListNgoaiNgu" EntityType="Self.ListNgoaiNgu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListProvinces" EntityType="Self.ListProvinces" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListPhongBan" EntityType="Self.ListPhongBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListQuan" EntityType="Self.ListQuan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListQuanHeGD" EntityType="Self.ListQuanHeGD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListQuocGia" EntityType="Self.ListQuocGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListTDDaoTao" EntityType="Self.ListTDDaoTao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListTDLLCT" EntityType="Self.ListTDLLCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListTDNgoaiNgu" EntityType="Self.ListTDNgoaiNgu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListTDQLNN" EntityType="Self.ListTDQLNN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListTDVanHoa" EntityType="Self.ListTDVanHoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ListCommu__Distr__1D7B6025" Association="Self.FK__ListCommu__Distr__1D7B6025">
+      <End Role="ListDistricts" EntitySet="ListDistricts" />
+      <End Role="ListCommunes" EntitySet="ListCommunes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListDistr__Provi__13F1F5EB" Association="Self.FK__ListDistr__Provi__13F1F5EB">
+      <End Role="ListProvinces" EntitySet="ListProvinces" />
+      <End Role="ListDistricts" EntitySet="ListDistricts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
