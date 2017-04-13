@@ -1,1 +1,4 @@
 .vs/BHXH/v14/.suo
+*.cache
+BHXH.DB/BHXH.DB.dbmdl
+*.dbmdl

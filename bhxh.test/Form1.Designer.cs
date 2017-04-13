@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -38,37 +37,37 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.dxErrorProvider2 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider2 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.aBCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
-            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPageCategory2 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageCategory2 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.aBCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
+            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -176,72 +175,6 @@
             this.ribbonControl1.Size = new System.Drawing.Size(679, 143);
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.Image")));
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Hệ thống";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem1);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem2);
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbonControl1;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBCToolStripMenuItem,
-            this.dEFToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.ribbonControl1.SetPopupContextMenu(this.contextMenuStrip1, this.popupMenu1);
-            this.contextMenuStrip1.Size = new System.Drawing.Size(98, 48);
-            // 
-            // aBCToolStripMenuItem
-            // 
-            this.aBCToolStripMenuItem.Name = "aBCToolStripMenuItem";
-            this.aBCToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aBCToolStripMenuItem.Text = "ABC";
-            // 
-            // dEFToolStripMenuItem
-            // 
-            this.dEFToolStripMenuItem.Name = "dEFToolStripMenuItem";
-            this.dEFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.dEFToolStripMenuItem.Text = "DEF";
-            this.dEFToolStripMenuItem.Click += new System.EventHandler(this.dEFToolStripMenuItem_Click);
-            // 
-            // dropDownButton1
-            // 
-            this.dropDownButton1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dropDownButton1.DropDownControl = this.popupMenu1;
-            this.dropDownButton1.Location = new System.Drawing.Point(12, 78);
-            this.dropDownButton1.MenuManager = this.ribbonControl1;
-            this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(107, 23);
-            this.dropDownButton1.TabIndex = 3;
-            this.dropDownButton1.Text = "dropDownButton1";
-            this.dropDownButton1.Click += new System.EventHandler(this.dropDownButton1_Click_1);
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "barButtonItem2";
-            this.barButtonItem2.Id = 2;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // applicationMenu1
             // 
             this.applicationMenu1.ItemLinks.Add(this.barButtonItem3);
@@ -261,6 +194,18 @@
             this.barButtonItem4.Id = 4;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 2;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -269,18 +214,6 @@
             this.ribbonPage4,
             this.ribbonPage5});
             this.ribbonPageCategory1.Text = "ribbonPageCategory1";
-            // 
-            // ribbonPageCategory2
-            // 
-            this.ribbonPageCategory2.Name = "ribbonPageCategory2";
-            this.ribbonPageCategory2.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage6});
-            this.ribbonPageCategory2.Text = "ribbonPageCategory2";
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
             // 
             // ribbonPage3
             // 
@@ -297,10 +230,76 @@
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "ribbonPage5";
             // 
+            // ribbonPageCategory2
+            // 
+            this.ribbonPageCategory2.Name = "ribbonPageCategory2";
+            this.ribbonPageCategory2.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage6});
+            this.ribbonPageCategory2.Text = "ribbonPageCategory2";
+            // 
             // ribbonPage6
             // 
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Text = "ribbonPage6";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.Image")));
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Hệ thống";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aBCToolStripMenuItem,
+            this.dEFToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.ribbonControl1.SetPopupContextMenu(this.contextMenuStrip1, this.popupMenu1);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(98, 48);
+            // 
+            // aBCToolStripMenuItem
+            // 
+            this.aBCToolStripMenuItem.Name = "aBCToolStripMenuItem";
+            this.aBCToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.aBCToolStripMenuItem.Text = "ABC";
+            // 
+            // dEFToolStripMenuItem
+            // 
+            this.dEFToolStripMenuItem.Name = "dEFToolStripMenuItem";
+            this.dEFToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.dEFToolStripMenuItem.Text = "DEF";
+            this.dEFToolStripMenuItem.Click += new System.EventHandler(this.dEFToolStripMenuItem_Click);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem1);
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem2);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl1;
+            // 
+            // dropDownButton1
+            // 
+            this.dropDownButton1.ContextMenuStrip = this.contextMenuStrip1;
+            this.dropDownButton1.DropDownControl = this.popupMenu1;
+            this.dropDownButton1.Location = new System.Drawing.Point(12, 78);
+            this.dropDownButton1.MenuManager = this.ribbonControl1;
+            this.dropDownButton1.Name = "dropDownButton1";
+            this.dropDownButton1.Size = new System.Drawing.Size(107, 23);
+            this.dropDownButton1.TabIndex = 3;
+            this.dropDownButton1.Text = "dropDownButton1";
+            this.dropDownButton1.Click += new System.EventHandler(this.dropDownButton1_Click_1);
             // 
             // Form1
             // 
@@ -318,9 +317,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
