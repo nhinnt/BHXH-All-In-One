@@ -15,10 +15,10 @@ namespace BHXH.Data
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class BHXH : DbContext
+    public partial class BHXHEntities : DbContext
     {
-        public BHXH()
-            : base("name=BHXH")
+        public BHXHEntities()
+            : base("name=BHXHEntities")
         {
         }
     
@@ -30,36 +30,42 @@ namespace BHXH.Data
         public virtual DbSet<ListBangCap> ListBangCap { get; set; }
         public virtual DbSet<ListCapKTKL> ListCapKTKL { get; set; }
         public virtual DbSet<ListCMDaoTao> ListCMDaoTao { get; set; }
-        public virtual DbSet<ListCommunes> ListCommunes { get; set; }
         public virtual DbSet<ListChiBo> ListChiBo { get; set; }
         public virtual DbSet<ListChucDanh> ListChucDanh { get; set; }
         public virtual DbSet<ListChucVu> ListChucVu { get; set; }
         public virtual DbSet<ListChucVuDang> ListChucVuDang { get; set; }
+        public virtual DbSet<ListDanToc> ListDanToc { get; set; }
         public virtual DbSet<ListDienCS> ListDienCS { get; set; }
-        public virtual DbSet<ListDistricts> ListDistricts { get; set; }
-        public virtual DbSet<ListEthnics> ListEthnics { get; set; }
         public virtual DbSet<ListHonNhan> ListHonNhan { get; set; }
         public virtual DbSet<ListHopDong> ListHopDong { get; set; }
         public virtual DbSet<ListKTKL> ListKTKL { get; set; }
         public virtual DbSet<ListLHDaoTao> ListLHDaoTao { get; set; }
         public virtual DbSet<ListLoaiTB> ListLoaiTB { get; set; }
-        public virtual DbSet<ListNationality> ListNationality { get; set; }
         public virtual DbSet<ListNoiKCB> ListNoiKCB { get; set; }
         public virtual DbSet<ListNganHang> ListNganHang { get; set; }
         public virtual DbSet<ListNghiepVu> ListNghiepVu { get; set; }
         public virtual DbSet<ListNgoaiNgu> ListNgoaiNgu { get; set; }
-        public virtual DbSet<ListProvinces> ListProvinces { get; set; }
         public virtual DbSet<ListPhongBan> ListPhongBan { get; set; }
-        public virtual DbSet<ListQuan> ListQuan { get; set; }
         public virtual DbSet<ListQuanHeGD> ListQuanHeGD { get; set; }
+        public virtual DbSet<ListQuanHuyen> ListQuanHuyen { get; set; }
         public virtual DbSet<ListQuocGia> ListQuocGia { get; set; }
         public virtual DbSet<ListTDDaoTao> ListTDDaoTao { get; set; }
         public virtual DbSet<ListTDLLCT> ListTDLLCT { get; set; }
         public virtual DbSet<ListTDNgoaiNgu> ListTDNgoaiNgu { get; set; }
         public virtual DbSet<ListTDQLNN> ListTDQLNN { get; set; }
         public virtual DbSet<ListTDVanHoa> ListTDVanHoa { get; set; }
+        public virtual DbSet<ListTinh> ListTinh { get; set; }
         public virtual DbSet<ListTonGiao> ListTonGiao { get; set; }
         public virtual DbSet<ListThanhPhanGD> ListThanhPhanGD { get; set; }
+        public virtual DbSet<ListXaPhuong> ListXaPhuong { get; set; }
+        public virtual DbSet<NhanVien> NhanVien { get; set; }
+        public virtual DbSet<KhenThuongKyLuat> KhenThuongKyLuat { get; set; }
+        public virtual DbSet<PSBHXH> PSBHXH { get; set; }
+        public virtual DbSet<PSLuong> PSLuong { get; set; }
+        public virtual DbSet<QuanHeGiaDinh> QuanHeGiaDinh { get; set; }
+        public virtual DbSet<QuaTrinhBHXH> QuaTrinhBHXH { get; set; }
+        public virtual DbSet<QuaTrinhCongTac> QuaTrinhCongTac { get; set; }
+        public virtual DbSet<QuaTrinhLuong> QuaTrinhLuong { get; set; }
     
         public virtual int DBA_RestoreDB(string p_strDBNameTo, string p_strDBNameFrom, string p_strFQNRestoreFileName)
         {

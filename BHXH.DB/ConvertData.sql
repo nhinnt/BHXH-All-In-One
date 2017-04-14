@@ -1,18 +1,22 @@
-﻿INSERT INTO listProvinces
-SELECT MaTinh ProvinceCode, TenTinh ProvinceName FROM Nhansu_DaNang.dbo.DMTinh
+﻿INSERT INTO listTinh
+SELECT MaTinh , TenTinh  FROM Nhansu_DaNang.dbo.DMTinh
 
-
-INSERT INTO ListDistricts (ProvinceCode,DistrictID,DistrictCode,DistrictName)
-SELECT   (SELECT MaTinh FROM NhanSu_DaNang.dbo.DMTinh t WHERE t.IDtinh=q.IDTinh )as ProvinceCode ,
-IDquan DistrictID, MaQuan DistrictCode,Tenquan DistrictName
+INSERT INTO ListQuanHuyen (MaTinh,QuanHuyenID,MaQuanHuyen,TenQuanHuyen)
+SELECT   (SELECT MaTinh FROM NhanSu_DaNang.dbo.DMTinh t WHERE t.IDtinh=q.IDTinh )as MaTinh ,
+IDquan QuanHuyenID, MaQuan ,Tenquan 
 FROM NhanSu_DaNang.dbo.DMQuan q
 
-INSERT INTO ListCommunes ( DistrictID,  CommuneID,  CommuneName, CommuneCode)
-SELECT IDquan DistrictID, IDPhuong CommuneID, TenPhuong CommuneName,MaPhuong CommuneCode
+INSERT INTO ListXaPhuong ( QuanHuyenID,  XaPhuongID,  TenXaPhuong, MaXaPhuong)
+SELECT IDquan QuanHuyenID, IDPhuong XaPhuongID, TenPhuong TenXaPhuong,MaPhuong MaXaPhuong
 FROM NhanSu_DaNang.dbo.DMPhuong
 
-INSERT INTO [BHXH].[dbo].[ListEthnics]
-SELECT * FROM Mis.dbo.ListEthnic
+INSERT INTO [BHXH].[dbo].ListDanToc 
+SELECT ethnicCode as MaDanToc, EthnicName as TenDanToc FROM Mis.dbo.ListEthnic
+
+INSERT INTO BHXH.dbo.ListQuocGia (MaQuocGia,TenQuocGia)
+SELECT  nationalityCode MaQuocGia,NationalityName TenQuocGia FROM Mis.dbo.ListNationality
+
+
 
 --Thuy modify 20170412--
 
@@ -108,9 +112,10 @@ SELECT [MaThanhPhanGD],[TenThanhPhanGD]  FROM [NhanSu_DaNang].[dbo].[DMThanhPhan
 INSERT INTO [BHXH].[dbo].[ListTonGiao]  ([MaTonGiao],[TenTonGiao])
 SELECT [MaTonGiao],[TenTonGiao] FROM [NhanSu_DaNang].[dbo].[DMTonGiao]
 
-
-INSERT INTO [BHXH].[dbo].[ListNoiKCB]  ( ProvinceCode, [MaNoiKCB],[TenNoiKCB])
-SELECT  ProvinceCode=(SELECT Matinh FROM NhanSu_DaNang.dbo.DMTinh t WHERE t.IDTinh= k.IDTinh),
-[MaNoiKCB],[TenNoiKCB]  FROM [NhanSu_DaNang].[dbo].[DMNoiKCB] k
+INSERT INTO [BHXH].[dbo].[ListNoiKCB]  ( MaTinh, [MaNoiKCB],[TenNoiKCB],MaKCBDayDu)
+SELECT  MaTinh= CAST((SELECT Matinh FROM NhanSu_DaNang.dbo.DMTinh t WHERE t.IDTinh= k.IDTinh) AS NCHAR(2)),
+[MaNoiKCB],
+[TenNoiKCB],
+MakcbDayDu= CAST((SELECT Matinh FROM NhanSu_DaNang.dbo.DMTinh t WHERE t.IDTinh= k.IDTinh)+[MaNoiKCB] AS NVARCHAR(5))
+FROM [NhanSu_DaNang].[dbo].[DMNoiKCB] k
 WHERE (SELECT Matinh FROM NhanSu_DaNang.dbo.DMTinh t WHERE t.IDTinh= k.IDTinh) IS NOT NULL
-  

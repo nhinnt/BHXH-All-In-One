@@ -106,7 +106,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BHXH.List\BHXH.List.UI.csproj">
+    <ProjectReference Include="..\BHXH.List.UI\BHXH.List.UI.csproj">
       <Project>{52fd76b4-cabd-4ded-88db-f85624ab9265}</Project>
       <Name>BHXH.List.UI</Name>
     </ProjectReference>

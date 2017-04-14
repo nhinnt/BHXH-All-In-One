@@ -46,36 +46,34 @@ Descriptions NVARCHAR(255),
 GrantedUserID uniqueidentifier ,
 GrantedDate DATETIME DEFAULT GETDATE()
 )
-
-
-CREATE TABLE ListNationality
+CREATE TABLE BHXH.dbo.ListQuocGia
 (
-NationalityCode CHAR(2)   PRIMARY KEY,
-NationalityName NVARCHAR(255) UNIQUE
+MaQuocGia CHAR (2) PRIMARY KEY,
+TenQuocGia NVARCHAR(255) UNIQUE
 )
-CREATE TABLE ListEthnics
+CREATE TABLE ListDanToc
 (
-[EthnicCode] CHAR (2) PRIMARY KEY,
-[EthnicName] NVARCHAR(255) UNIQUE
+MaDanToc CHAR (2) PRIMARY KEY,
+TenDanToc NVARCHAR(255) UNIQUE
 )
 
-CREATE TABLE ListProvinces
-(ProvinceCode NCHAR(2) PRIMARY KEY,
-ProvinceName NVARCHAR(255) UNIQUE
+CREATE TABLE ListTinh
+(MaTinh NCHAR(2) PRIMARY KEY,
+TenTinh NVARCHAR(255) UNIQUE
 )
-CREATE TABLE ListDistricts
+CREATE TABLE ListQuanHuyen
 (
-DistrictID NUMERIC (18) PRIMARY KEY ,
-DistrictCode NVARCHAR(2) ,
-DistrictName NVARCHAR(255) ,
-ProvinceCode NCHAR(2) FOREIGN KEY REFERENCES ListProvinces(ProvinceCode)
+QuanHuyenID NUMERIC (18) PRIMARY KEY ,
+MaQuanHuyen NVARCHAR(2) ,
+TenQuanHuyen NVARCHAR(255) ,
+MaTinh NCHAR(2) FOREIGN KEY REFERENCES ListTinh(MaTinh)
 )
-CREATE TABLE ListCommunes
+CREATE TABLE ListXaPhuong
 (
-CommuneID NUMERIC (18) PRIMARY KEY ,
-CommuneCode NCHAR(2),
-CommuneName NVARCHAR(255),
-DistrictID NUMERIC (18) FOREIGN KEY REFERENCES ListDistricts(DistrictID)
+XaPhuongID NUMERIC (18) PRIMARY KEY ,
+MaXaPhuong NCHAR(2),
+TenXaPhuong NVARCHAR(255),
+QuanHuyenID NUMERIC (18) FOREIGN KEY REFERENCES ListQuanHuyen(QuanHuyenID)
 )
 -----
 CREATE TABLE [dbo].[ListBangCap](
@@ -147,13 +145,12 @@ CREATE TABLE [dbo].[ListNgoaiNgu](
 	[TenNgoaiNgu] [nvarchar](255) 
  ) 
 
-
 CREATE TABLE [dbo].[ListNoiKCB](
 	
 	[MaNoiKCB] [nvarchar](255)  ,
 	[TenNoiKCB] [nvarchar](255) ,
-	ProvinceCode Nchar(2) FOREIGN KEY REFERENCES ListProvinces(ProvinceCode)
-	primary key (ProvinceCode,[MaNoiKCB] )
+	MaTinh Nchar(2) FOREIGN KEY REFERENCES ListTinh(MaTinh),
+	MaKCBDayDu NVARCHAR(5) PRIMARY KEY 	
  ) 
 CREATE TABLE [dbo].[ListPhongBan](
 	[MaPhongBan] [nvarchar](255) primary key ,
