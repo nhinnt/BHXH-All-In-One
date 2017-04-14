@@ -71,7 +71,6 @@
             this.gridviewListNationlity.OptionsView.ShowGroupPanel = false;
             this.gridviewListNationlity.OptionsView.ShowViewCaption = true;
             this.gridviewListNationlity.ViewCaption = "Danh mục quốc gia";
-
             // 
             // gridColumn7
             // 
@@ -80,7 +79,7 @@
             this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn7.Caption = "Mã";
-            this.gridColumn7.FieldName = "NationalityCode";
+            this.gridColumn7.FieldName = "MaQuocGia";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
@@ -156,7 +155,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // frmListNationlity
+            // frmListQuocGia
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -168,7 +167,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.gridcontrolListNationlity);
-            this.Name = "frmListNationlity";
+            this.Name = "frmListQuocGia";
             this.Load += new System.EventHandler(this.frmListNationlity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridcontrolListNationlity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewListNationlity)).EndInit();

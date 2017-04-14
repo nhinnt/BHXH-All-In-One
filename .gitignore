@@ -3,3 +3,5 @@
 BHXH.DB/BHXH.DB.dbmdl
 *.dbmdl
 *.dll
+*.exe
+*.pdb
