@@ -1,0 +1,9 @@
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.dll.config
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\BHXH.Common.Business.pdb
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\EntityFramework.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\EntityFramework.xml
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\obj\Debug\BHXH.Common.Business.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.Business\obj\Debug\BHXH.Common.Business.pdb
