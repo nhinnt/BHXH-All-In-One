@@ -2,3 +2,4 @@
 *.cache
 BHXH.DB/BHXH.DB.dbmdl
 *.dbmdl
+*.dll
