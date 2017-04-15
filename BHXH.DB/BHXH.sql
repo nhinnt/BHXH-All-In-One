@@ -15,7 +15,7 @@ Pwd VARCHAR(32),
 LastLogin DATETIME,
 LastPwdChange DATETIME,
 IsActive BIT ,
- EmployeeID  uniqueidentifier  FOREIGN KEY REFERENCES HrEmployees (EmployeeID),
+ MaNhanVien  uniqueidentifier  FOREIGN KEY REFERENCES Hr (EmployeeID),
  CreatedDate DATETIME DEFAULT GETDATE()
 )
 

@@ -61,6 +61,7 @@
   <ItemGroup>
     <None Include="BHXH.sql" />
     <None Include="ConvertData.sql" />
+    <None Include="BHXH20171504.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Database_NhanSu.sql" />
