@@ -64,3 +64,4 @@ C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.App\obj\Debug\BHXH.App.exe.licenses
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.App\obj\Debug\BHXH.App.exe
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.App\obj\Debug\BHXH.App.pdb
+D:\Dropbox\Projects\BHXH\BHXH.App\bin\Debug\BHXH.App.exe.config

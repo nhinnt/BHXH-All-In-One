@@ -213,4 +213,3 @@ C:\Users\Administrator\Documents\GitHub\BHXH-All-In-One\BHXH.UIHelpers\obj\Debug
 C:\Users\Administrator\Documents\GitHub\BHXH-All-In-One\BHXH.UIHelpers\obj\Debug\BHXH.UIHelpers.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\BHXH-All-In-One\BHXH.UIHelpers\obj\Debug\BHXH.UIHelpers.exe
 C:\Users\Administrator\Documents\GitHub\BHXH-All-In-One\BHXH.UIHelpers\obj\Debug\BHXH.UIHelpers.pdb
-D:\Dropbox\Projects\BHXH\BHXH.UIHelpers\bin\Debug\DevExpress.XtraCharts.v16.1.Wizard.dll

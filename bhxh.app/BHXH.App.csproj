@@ -111,6 +111,10 @@
       <Project>{f2db2941-bf8d-43a3-8ae1-8c297684b46c}</Project>
       <Name>BHXH.HR.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BHXH.List.UI\BHXH.List.UI.csproj">
+      <Project>{52fd76b4-cabd-4ded-88db-f85624ab9265}</Project>
+      <Name>BHXH.List.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BHXH.Sys.Business\BHXH.Sys.Business.csproj">
       <Project>{b7335292-dd3a-4626-ba2f-bbe952c39d86}</Project>
       <Name>BHXH.Sys.Business</Name>
@@ -118,6 +122,14 @@
     <ProjectReference Include="..\BHXH.Sys.UI\BHXH.Sys.UI.csproj">
       <Project>{135f85b0-df20-4d79-a0fb-3dd8deafcab6}</Project>
       <Name>BHXH.Sys.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
+      <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
+      <Name>BHXH.UIHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
+      <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
+      <Name>BHXH.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
