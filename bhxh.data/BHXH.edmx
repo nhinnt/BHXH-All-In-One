@@ -4,10 +4,10 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BHXH.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BHXHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.HSLTangThem' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="HSLTangThem">
+warning 6013: The table/view 'BHXH.dbo.HrHSLTangThem' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HrHSLTangThem">
           <Property Name="Nam" Type="varchar" MaxLength="4" />
           <Property Name="Thang01" Type="numeric" Precision="4" Scale="2" />
           <Property Name="Thang02" Type="numeric" Precision="4" Scale="2" />
@@ -23,19 +23,271 @@ warning 6013: The table/view 'BHXH.dbo.HSLTangThem' does not have a primary key 
           <Property Name="Thang12" Type="numeric" Precision="4" Scale="2" />
         </EntityType>-->
         <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.KhenThuongKyLuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="KhenThuongKyLuat">
+warning 6002: The table/view 'BHXH.dbo.HrKhenThuongKyLuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrKhenThuongKyLuat">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="LoaiKTKL" Type="nvarchar" MaxLength="12" />
-          <Property Name="IDKTKL" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MaKTKL" Type="nvarchar" MaxLength="20" />
           <Property Name="Nam" Type="varchar" MaxLength="4" />
           <Property Name="GhiChu" Type="ntext" />
-          <Property Name="IDPhongBan" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MaPhongBan" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'BHXH.dbo.HrLuongToiThieu' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HrLuongToiThieu">
+          <Property Name="NgayTu" Type="datetime" />
+          <Property Name="NgayDen" Type="datetime" />
+          <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'BHXH.dbo.HrNgayCong' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HrNgayCong">
+          <Property Name="Nam" Type="varchar" MaxLength="4" />
+          <Property Name="Thang01" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang02" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang03" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang04" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang05" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang06" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang07" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang08" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang09" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang10" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang11" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Thang12" Type="numeric" Precision="2" Scale="0" />
+        </EntityType>-->
+        <EntityType Name="HrNhanVien">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenNhanVien" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaPhongBan" Type="nvarchar" MaxLength="20" />
+          <Property Name="SoHieuNV" Type="nvarchar" MaxLength="20" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
+          <Property Name="TenKhac" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaCapUy" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaCapUyKiem" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaChucVu" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaChucDanh" Type="nvarchar" MaxLength="20" />
+          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="NgayBoNhiem" Type="datetime" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="NoiSinh" Type="nvarchar" MaxLength="100" />
+          <Property Name="MaTinhQQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaQuanQQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaphuongQQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="MatinhTQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaQuanTQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaPhuongTQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="SoNha" Type="nvarchar" MaxLength="100" />
+          <Property Name="DTNha" Type="nvarchar" MaxLength="50" />
+          <Property Name="DTCoQuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="DTDiDong" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="DTNguoiNha" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenNguoiNha" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaDanToc" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaTonGiao" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaThanhPhanGD" Type="nvarchar" MaxLength="20" />
+          <Property Name="NgheTruocTD" Type="nvarchar" MaxLength="100" />
+          <Property Name="NgayTD" Type="datetime" />
+          <Property Name="NgayCQ" Type="datetime" />
+          <Property Name="CoQuanTD" Type="nvarchar" MaxLength="100" />
+          <Property Name="NgayCM" Type="datetime" />
+          <Property Name="NgayDang" Type="datetime" />
+          <Property Name="NgayDangCT" Type="datetime" />
+          <Property Name="MaChiBo" Type="nvarchar" MaxLength="20" />
+          <Property Name="NgayTCXH" Type="datetime" />
+          <Property Name="NgayNhapNgu" Type="datetime" />
+          <Property Name="NgayXuatNgu" Type="datetime" />
+          <Property Name="QuanHam" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaTDVanHoa" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaTDDaoTao" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaTDLLCT" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaNgoaiNgu" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaTDNgoaiNgu" Type="nvarchar" MaxLength="20" />
+          <Property Name="CVDangLam" Type="nvarchar" MaxLength="100" />
+          <Property Name="MaNgach" Type="nvarchar" MaxLength="20" />
+          <Property Name="Bac" Type="varchar" MaxLength="2" />
+          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="DHDuocPhong" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoTruongCT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CVLamLN" Type="nvarchar" MaxLength="50" />
+          <Property Name="KhenThuong" Type="nvarchar" MaxLength="50" />
+          <Property Name="KyLuat" Type="nvarchar" MaxLength="50" />
+          <Property Name="SucKhoe" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChieuCao" Type="nvarchar" MaxLength="10" />
+          <Property Name="CanNang" Type="nvarchar" MaxLength="10" />
+          <Property Name="NhomMau" Type="nvarchar" MaxLength="10" />
+          <Property Name="SoCMND" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaLoaiTB" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="GDLietSy" Type="bit" />
+          <Property Name="TuDay" Type="ntext" />
+          <Property Name="CheDoCu" Type="ntext" />
+          <Property Name="TCNuocNgoai" Type="ntext" />
+          <Property Name="TNNuocNgoai" Type="ntext" />
+          <Property Name="SoBHXH" Type="varchar" MaxLength="20" />
+          <Property Name="TheBHYT" Type="varchar" MaxLength="20" />
+          <Property Name="MaTinhKCB" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaNoiKCB" Type="nvarchar" MaxLength="20" />
+          <Property Name="TaiKhoanATM" Type="varchar" MaxLength="20" />
+          <Property Name="MaNganHang" Type="nvarchar" MaxLength="20" />
+          <Property Name="NgayCMND" Type="datetime" />
+          <Property Name="NoiCMND" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgayNangLuong" Type="datetime" />
+          <Property Name="DaNLTruocTH" Type="bit" />
+          <Property Name="AnhNV" Type="image" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BHXH.dbo.HrPSBHXH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrPSBHXH">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="Thang" Type="varchar" MaxLength="2" />
+          <Property Name="Nam" Type="varchar" MaxLength="4" />
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MaNgach" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="Bac" Type="varchar" MaxLength="2" />
+          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CongTacPhi" Type="nvarchar" MaxLength="10" />
+          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCDocHai" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="TuThang" Type="varchar" MaxLength="7" />
+          <Property Name="DenThang" Type="varchar" MaxLength="7" />
+          <Property Name="LoaiPS" Type="varchar" MaxLength="2" />
+          <Property Name="IDPhong" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="DotPS" Type="nvarchar" MaxLength="10" />
+          <Property Name="NgayNangLuong" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BHXH.dbo.HrPSLuong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrPSLuong">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="Thang" Type="varchar" MaxLength="2" />
+          <Property Name="Nam" Type="varchar" MaxLength="4" />
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDNgach" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Bac" Type="varchar" MaxLength="2" />
+          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CongTacPhi" Type="nvarchar" MaxLength="10" />
+          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCDocHai" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="TuThang" Type="varchar" MaxLength="7" />
+          <Property Name="DenThang" Type="varchar" MaxLength="7" />
+          <Property Name="LoaiPS" Type="varchar" MaxLength="2" />
+          <Property Name="IDPhongNL" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BHXH.dbo.HrQuanHeGiaDinh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrQuanHeGiaDinh">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="MaQuanHeGD" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+          <Property Name="NamSinh" Type="varchar" MaxLength="4" />
+          <Property Name="ChiTiet" Type="ntext" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhBHXH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrQuaTrinhBHXH">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="Loai" Type="varchar" MaxLength="2" />
+          <Property Name="TuThang" Type="varchar" MaxLength="7" />
+          <Property Name="DenThang" Type="varchar" MaxLength="7" />
+          <Property Name="SoThang" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="MucLuong" Type="numeric" Precision="12" Scale="0" />
+          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCKhuVuc" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="CongViec" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrQuaTrinhCongTac">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="ThoiGian" Type="nvarchar" MaxLength="50" />
+          <Property Name="CongViec" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhLuong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HrQuaTrinhLuong">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="Loai" Type="varchar" MaxLength="2" />
+          <Property Name="TuThang" Type="varchar" MaxLength="7" />
+          <Property Name="DenThang" Type="varchar" MaxLength="7" />
+          <Property Name="SoThang" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="MucLuong" Type="numeric" Precision="12" Scale="0" />
+          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCDocHai" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="PCKhuVuc" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="CongViec" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HrTyLeBHXH">
+          <Property Name="NgayTu" Type="datetime" />
+          <Property Name="NgayDen" Type="datetime" />
+          <Property Name="TyLeBHXH" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeBHXHNLD" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeBHYT" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeBHYTNLD" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeBHTN" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeBHTNNLD" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeKPCD" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TyLeKPCDNLD" Type="numeric" Precision="5" Scale="2" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'BHXH.dbo.HrThangBangLuong' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HrThangBangLuong">
+          <Property Name="MaNgach" Type="nvarchar" MaxLength="10" />
+          <Property Name="TenNgach" Type="nvarchar" MaxLength="100" />
+          <Property Name="ThangNL" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="TongBac" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="Bac01" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac02" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac03" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac04" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac05" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac06" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac07" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac08" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac09" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac10" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac11" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Bac12" Type="numeric" Precision="6" Scale="3" />
+        </EntityType>-->
         <EntityType Name="ListBangCap">
           <Key>
             <PropertyRef Name="MaBangCap" />
@@ -262,259 +514,6 @@ warning 6002: The table/view 'BHXH.dbo.KhenThuongKyLuat' does not have a primary
           <Property Name="TenXaPhuong" Type="nvarchar" MaxLength="255" />
           <Property Name="QuanHuyenID" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.LuongToiThieu' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="LuongToiThieu">
-          <Property Name="NgayTu" Type="datetime" />
-          <Property Name="NgayDen" Type="datetime" />
-          <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.NgayCong' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="NgayCong">
-          <Property Name="Nam" Type="varchar" MaxLength="4" />
-          <Property Name="Thang01" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang02" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang03" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang04" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang05" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang06" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang07" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang08" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang09" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang10" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang11" Type="numeric" Precision="2" Scale="0" />
-          <Property Name="Thang12" Type="numeric" Precision="2" Scale="0" />
-        </EntityType>-->
-        <EntityType Name="NhanVien">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="TenNhanVien" Type="nvarchar" MaxLength="255" />
-          <Property Name="MaPhongBan" Type="nvarchar" MaxLength="20" />
-          <Property Name="SoHieuNV" Type="nvarchar" MaxLength="20" />
-          <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
-          <Property Name="TenKhac" Type="nvarchar" MaxLength="255" />
-          <Property Name="MaCapUy" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaCapUyKiem" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaChucVu" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaChucDanh" Type="nvarchar" MaxLength="20" />
-          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="NgayBoNhiem" Type="datetime" />
-          <Property Name="NgaySinh" Type="datetime" />
-          <Property Name="NoiSinh" Type="nvarchar" MaxLength="100" />
-          <Property Name="MaTinhQQ" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaQuanQQ" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaphuongQQ" Type="nvarchar" MaxLength="20" />
-          <Property Name="MatinhTQ" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaQuanTQ" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaPhuongTQ" Type="nvarchar" MaxLength="20" />
-          <Property Name="SoNha" Type="nvarchar" MaxLength="100" />
-          <Property Name="DTNha" Type="nvarchar" MaxLength="50" />
-          <Property Name="DTCoQuan" Type="nvarchar" MaxLength="50" />
-          <Property Name="DTDiDong" Type="nvarchar" MaxLength="50" />
-          <Property Name="Email" Type="nvarchar" MaxLength="50" />
-          <Property Name="DTNguoiNha" Type="nvarchar" MaxLength="50" />
-          <Property Name="TenNguoiNha" Type="nvarchar" MaxLength="50" />
-          <Property Name="MaDanToc" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaTonGiao" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaThanhPhanGD" Type="nvarchar" MaxLength="20" />
-          <Property Name="NgheTruocTD" Type="nvarchar" MaxLength="100" />
-          <Property Name="NgayTD" Type="datetime" />
-          <Property Name="NgayCQ" Type="datetime" />
-          <Property Name="CoQuanTD" Type="nvarchar" MaxLength="100" />
-          <Property Name="NgayCM" Type="datetime" />
-          <Property Name="NgayDang" Type="datetime" />
-          <Property Name="NgayDangCT" Type="datetime" />
-          <Property Name="MaChiBo" Type="nvarchar" MaxLength="20" />
-          <Property Name="NgayTCXH" Type="datetime" />
-          <Property Name="NgayNhapNgu" Type="datetime" />
-          <Property Name="NgayXuatNgu" Type="datetime" />
-          <Property Name="QuanHam" Type="nvarchar" MaxLength="50" />
-          <Property Name="MaTDVanHoa" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaTDDaoTao" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaTDLLCT" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaNgoaiNgu" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaTDNgoaiNgu" Type="nvarchar" MaxLength="20" />
-          <Property Name="CVDangLam" Type="nvarchar" MaxLength="100" />
-          <Property Name="MaNgach" Type="nvarchar" MaxLength="20" />
-          <Property Name="Bac" Type="varchar" MaxLength="2" />
-          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="DHDuocPhong" Type="nvarchar" MaxLength="50" />
-          <Property Name="SoTruongCT" Type="nvarchar" MaxLength="50" />
-          <Property Name="CVLamLN" Type="nvarchar" MaxLength="50" />
-          <Property Name="KhenThuong" Type="nvarchar" MaxLength="50" />
-          <Property Name="KyLuat" Type="nvarchar" MaxLength="50" />
-          <Property Name="SucKhoe" Type="nvarchar" MaxLength="50" />
-          <Property Name="ChieuCao" Type="nvarchar" MaxLength="10" />
-          <Property Name="CanNang" Type="nvarchar" MaxLength="10" />
-          <Property Name="NhomMau" Type="nvarchar" MaxLength="10" />
-          <Property Name="SoCMND" Type="nvarchar" MaxLength="50" />
-          <Property Name="MaLoaiTB" Type="numeric" Precision="20" Scale="0" />
-          <Property Name="GDLietSy" Type="bit" />
-          <Property Name="TuDay" Type="ntext" />
-          <Property Name="CheDoCu" Type="ntext" />
-          <Property Name="TCNuocNgoai" Type="ntext" />
-          <Property Name="TNNuocNgoai" Type="ntext" />
-          <Property Name="SoBHXH" Type="varchar" MaxLength="20" />
-          <Property Name="TheBHYT" Type="varchar" MaxLength="20" />
-          <Property Name="MaTinhKCB" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaNoiKCB" Type="nvarchar" MaxLength="20" />
-          <Property Name="TaiKhoanATM" Type="varchar" MaxLength="20" />
-          <Property Name="IDNganHang" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="NgayCMND" Type="datetime" />
-          <Property Name="NoiCMND" Type="nvarchar" MaxLength="50" />
-          <Property Name="NgayNangLuong" Type="datetime" />
-          <Property Name="DaNLTruocTH" Type="bit" />
-          <Property Name="AnhNV" Type="image" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.PSBHXH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="PSBHXH">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="Thang" Type="varchar" MaxLength="2" />
-          <Property Name="Nam" Type="varchar" MaxLength="4" />
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="MaNgach" Type="numeric" Precision="20" Scale="0" />
-          <Property Name="Bac" Type="varchar" MaxLength="2" />
-          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CongTacPhi" Type="nvarchar" MaxLength="10" />
-          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCDocHai" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="TuThang" Type="varchar" MaxLength="7" />
-          <Property Name="DenThang" Type="varchar" MaxLength="7" />
-          <Property Name="LoaiPS" Type="varchar" MaxLength="2" />
-          <Property Name="IDPhong" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="DotPS" Type="nvarchar" MaxLength="10" />
-          <Property Name="NgayNangLuong" Type="datetime" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.PSLuong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="PSLuong">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="Thang" Type="varchar" MaxLength="2" />
-          <Property Name="Nam" Type="varchar" MaxLength="4" />
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="IDNgach" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Bac" Type="varchar" MaxLength="2" />
-          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CongTacPhi" Type="nvarchar" MaxLength="10" />
-          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCDocHai" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="TuThang" Type="varchar" MaxLength="7" />
-          <Property Name="DenThang" Type="varchar" MaxLength="7" />
-          <Property Name="LoaiPS" Type="varchar" MaxLength="2" />
-          <Property Name="IDPhongNL" Type="numeric" Precision="18" Scale="0" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.QuanHeGiaDinh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="QuanHeGiaDinh">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="MaQuanHeGD" Type="numeric" Precision="20" Scale="0" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
-          <Property Name="NamSinh" Type="varchar" MaxLength="4" />
-          <Property Name="ChiTiet" Type="ntext" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.QuaTrinhBHXH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="QuaTrinhBHXH">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="Loai" Type="varchar" MaxLength="2" />
-          <Property Name="TuThang" Type="varchar" MaxLength="7" />
-          <Property Name="DenThang" Type="varchar" MaxLength="7" />
-          <Property Name="SoThang" Type="numeric" Precision="3" Scale="0" />
-          <Property Name="MucLuong" Type="numeric" Precision="12" Scale="0" />
-          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCKhuVuc" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="CongViec" Type="nvarchar" MaxLength="255" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.QuaTrinhCongTac' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="QuaTrinhCongTac">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="ThoiGian" Type="nvarchar" MaxLength="50" />
-          <Property Name="CongViec" Type="nvarchar" MaxLength="300" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.QuaTrinhLuong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="QuaTrinhLuong">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="Loai" Type="varchar" MaxLength="2" />
-          <Property Name="TuThang" Type="varchar" MaxLength="7" />
-          <Property Name="DenThang" Type="varchar" MaxLength="7" />
-          <Property Name="SoThang" Type="numeric" Precision="3" Scale="0" />
-          <Property Name="MucLuong" Type="numeric" Precision="12" Scale="0" />
-          <Property Name="HSL" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCChucVu" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCDocHai" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="PCKhuVuc" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="CongViec" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.TyLeBHXH' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="TyLeBHXH">
-          <Property Name="NgayTu" Type="datetime" />
-          <Property Name="NgayDen" Type="datetime" />
-          <Property Name="TyLeBHXH" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeBHXHNLD" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeBHYT" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeBHYTNLD" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeBHTN" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeBHTNNLD" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeKPCD" Type="numeric" Precision="5" Scale="2" />
-          <Property Name="TyLeKPCDNLD" Type="numeric" Precision="5" Scale="2" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="ThangBangLuong">
-          <Property Name="MaNgach" Type="nvarchar" MaxLength="10" />
-          <Property Name="TenNgach" Type="nvarchar" MaxLength="100" />
-          <Property Name="ThangNL" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="TongBac" Type="numeric" Precision="5" Scale="0" />
-          <Property Name="Bac01" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac02" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac03" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac04" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac05" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac06" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac07" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac08" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac09" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac10" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac11" Type="numeric" Precision="6" Scale="3" />
-          <Property Name="Bac12" Type="numeric" Precision="6" Scale="3" />
-        </EntityType>-->
         <Association Name="FK__ListNoiKC__MaTin__54968AE5">
           <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
           <End Role="ListNoiKCB" Type="Self.ListNoiKCB" Multiplicity="*" />
@@ -614,7 +613,8 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
         <Function Name="f_Unicode2TCVN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
           <Parameter Name="strInput" Type="nvarchar" Mode="In" />
         </Function>
-        <EntityContainer Name="BHXHStoreContainer">
+        <EntityContainer Name="BHXHModelStoreContainer">
+          <EntitySet Name="HrNhanVien" EntityType="Self.HrNhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" Schema="dbo" store:Type="Tables" />
@@ -646,111 +646,109 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListXaPhuong" EntityType="Self.ListXaPhuong" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="KhenThuongKyLuat" EntityType="Self.KhenThuongKyLuat" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [KhenThuongKyLuat].[MaNhanVien] AS [MaNhanVien], 
-    [KhenThuongKyLuat].[STT] AS [STT], 
-    [KhenThuongKyLuat].[LoaiKTKL] AS [LoaiKTKL], 
-    [KhenThuongKyLuat].[IDKTKL] AS [IDKTKL], 
-    [KhenThuongKyLuat].[Nam] AS [Nam], 
-    [KhenThuongKyLuat].[GhiChu] AS [GhiChu], 
-    [KhenThuongKyLuat].[IDPhongBan] AS [IDPhongBan]
-    FROM [dbo].[KhenThuongKyLuat] AS [KhenThuongKyLuat]</DefiningQuery>
+    [HrKhenThuongKyLuat].[MaNhanVien] AS [MaNhanVien], 
+    [HrKhenThuongKyLuat].[STT] AS [STT], 
+    [HrKhenThuongKyLuat].[MaKTKL] AS [MaKTKL], 
+    [HrKhenThuongKyLuat].[Nam] AS [Nam], 
+    [HrKhenThuongKyLuat].[GhiChu] AS [GhiChu], 
+    [HrKhenThuongKyLuat].[MaPhongBan] AS [MaPhongBan]
+    FROM [dbo].[HrKhenThuongKyLuat] AS [HrKhenThuongKyLuat]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="PSBHXH" EntityType="Self.PSBHXH" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [PSBHXH].[Thang] AS [Thang], 
-    [PSBHXH].[Nam] AS [Nam], 
-    [PSBHXH].[MaNhanVien] AS [MaNhanVien], 
-    [PSBHXH].[MaNgach] AS [MaNgach], 
-    [PSBHXH].[Bac] AS [Bac], 
-    [PSBHXH].[HSL] AS [HSL], 
-    [PSBHXH].[MucLuong] AS [MucLuong], 
-    [PSBHXH].[CongTacPhi] AS [CongTacPhi], 
-    [PSBHXH].[PCChucVu] AS [PCChucVu], 
-    [PSBHXH].[PCTrachNhiem] AS [PCTrachNhiem], 
-    [PSBHXH].[PCThamNien] AS [PCThamNien], 
-    [PSBHXH].[PCDocHai] AS [PCDocHai], 
-    [PSBHXH].[TuThang] AS [TuThang], 
-    [PSBHXH].[DenThang] AS [DenThang], 
-    [PSBHXH].[LoaiPS] AS [LoaiPS], 
-    [PSBHXH].[IDPhong] AS [IDPhong], 
-    [PSBHXH].[DotPS] AS [DotPS], 
-    [PSBHXH].[NgayNangLuong] AS [NgayNangLuong]
-    FROM [dbo].[PSBHXH] AS [PSBHXH]</DefiningQuery>
+    [HrPSBHXH].[Thang] AS [Thang], 
+    [HrPSBHXH].[Nam] AS [Nam], 
+    [HrPSBHXH].[MaNhanVien] AS [MaNhanVien], 
+    [HrPSBHXH].[MaNgach] AS [MaNgach], 
+    [HrPSBHXH].[Bac] AS [Bac], 
+    [HrPSBHXH].[HSL] AS [HSL], 
+    [HrPSBHXH].[MucLuong] AS [MucLuong], 
+    [HrPSBHXH].[CongTacPhi] AS [CongTacPhi], 
+    [HrPSBHXH].[PCChucVu] AS [PCChucVu], 
+    [HrPSBHXH].[PCTrachNhiem] AS [PCTrachNhiem], 
+    [HrPSBHXH].[PCThamNien] AS [PCThamNien], 
+    [HrPSBHXH].[PCDocHai] AS [PCDocHai], 
+    [HrPSBHXH].[TuThang] AS [TuThang], 
+    [HrPSBHXH].[DenThang] AS [DenThang], 
+    [HrPSBHXH].[LoaiPS] AS [LoaiPS], 
+    [HrPSBHXH].[IDPhong] AS [IDPhong], 
+    [HrPSBHXH].[DotPS] AS [DotPS], 
+    [HrPSBHXH].[NgayNangLuong] AS [NgayNangLuong]
+    FROM [dbo].[HrPSBHXH] AS [HrPSBHXH]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="PSLuong" EntityType="Self.PSLuong" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [PSLuong].[Thang] AS [Thang], 
-    [PSLuong].[Nam] AS [Nam], 
-    [PSLuong].[MaNhanVien] AS [MaNhanVien], 
-    [PSLuong].[IDNgach] AS [IDNgach], 
-    [PSLuong].[Bac] AS [Bac], 
-    [PSLuong].[HSL] AS [HSL], 
-    [PSLuong].[MucLuong] AS [MucLuong], 
-    [PSLuong].[CongTacPhi] AS [CongTacPhi], 
-    [PSLuong].[PCChucVu] AS [PCChucVu], 
-    [PSLuong].[PCTrachNhiem] AS [PCTrachNhiem], 
-    [PSLuong].[PCThamNien] AS [PCThamNien], 
-    [PSLuong].[PCDocHai] AS [PCDocHai], 
-    [PSLuong].[TuThang] AS [TuThang], 
-    [PSLuong].[DenThang] AS [DenThang], 
-    [PSLuong].[LoaiPS] AS [LoaiPS], 
-    [PSLuong].[IDPhongNL] AS [IDPhongNL]
-    FROM [dbo].[PSLuong] AS [PSLuong]</DefiningQuery>
+    [HrPSLuong].[Thang] AS [Thang], 
+    [HrPSLuong].[Nam] AS [Nam], 
+    [HrPSLuong].[MaNhanVien] AS [MaNhanVien], 
+    [HrPSLuong].[IDNgach] AS [IDNgach], 
+    [HrPSLuong].[Bac] AS [Bac], 
+    [HrPSLuong].[HSL] AS [HSL], 
+    [HrPSLuong].[MucLuong] AS [MucLuong], 
+    [HrPSLuong].[CongTacPhi] AS [CongTacPhi], 
+    [HrPSLuong].[PCChucVu] AS [PCChucVu], 
+    [HrPSLuong].[PCTrachNhiem] AS [PCTrachNhiem], 
+    [HrPSLuong].[PCThamNien] AS [PCThamNien], 
+    [HrPSLuong].[PCDocHai] AS [PCDocHai], 
+    [HrPSLuong].[TuThang] AS [TuThang], 
+    [HrPSLuong].[DenThang] AS [DenThang], 
+    [HrPSLuong].[LoaiPS] AS [LoaiPS], 
+    [HrPSLuong].[IDPhongNL] AS [IDPhongNL]
+    FROM [dbo].[HrPSLuong] AS [HrPSLuong]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="QuanHeGiaDinh" EntityType="Self.QuanHeGiaDinh" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [QuanHeGiaDinh].[MaNhanVien] AS [MaNhanVien], 
-    [QuanHeGiaDinh].[STT] AS [STT], 
-    [QuanHeGiaDinh].[MaQuanHeGD] AS [MaQuanHeGD], 
-    [QuanHeGiaDinh].[HoTen] AS [HoTen], 
-    [QuanHeGiaDinh].[NamSinh] AS [NamSinh], 
-    [QuanHeGiaDinh].[ChiTiet] AS [ChiTiet]
-    FROM [dbo].[QuanHeGiaDinh] AS [QuanHeGiaDinh]</DefiningQuery>
+    [HrQuanHeGiaDinh].[MaNhanVien] AS [MaNhanVien], 
+    [HrQuanHeGiaDinh].[STT] AS [STT], 
+    [HrQuanHeGiaDinh].[MaQuanHeGD] AS [MaQuanHeGD], 
+    [HrQuanHeGiaDinh].[HoTen] AS [HoTen], 
+    [HrQuanHeGiaDinh].[NamSinh] AS [NamSinh], 
+    [HrQuanHeGiaDinh].[ChiTiet] AS [ChiTiet]
+    FROM [dbo].[HrQuanHeGiaDinh] AS [HrQuanHeGiaDinh]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="QuaTrinhBHXH" EntityType="Self.QuaTrinhBHXH" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [QuaTrinhBHXH].[MaNhanVien] AS [MaNhanVien], 
-    [QuaTrinhBHXH].[STT] AS [STT], 
-    [QuaTrinhBHXH].[Loai] AS [Loai], 
-    [QuaTrinhBHXH].[TuThang] AS [TuThang], 
-    [QuaTrinhBHXH].[DenThang] AS [DenThang], 
-    [QuaTrinhBHXH].[SoThang] AS [SoThang], 
-    [QuaTrinhBHXH].[MucLuong] AS [MucLuong], 
-    [QuaTrinhBHXH].[HSL] AS [HSL], 
-    [QuaTrinhBHXH].[PCChucVu] AS [PCChucVu], 
-    [QuaTrinhBHXH].[PCThamNien] AS [PCThamNien], 
-    [QuaTrinhBHXH].[PCKhuVuc] AS [PCKhuVuc], 
-    [QuaTrinhBHXH].[CongViec] AS [CongViec]
-    FROM [dbo].[QuaTrinhBHXH] AS [QuaTrinhBHXH]</DefiningQuery>
+    [HrQuaTrinhBHXH].[MaNhanVien] AS [MaNhanVien], 
+    [HrQuaTrinhBHXH].[STT] AS [STT], 
+    [HrQuaTrinhBHXH].[Loai] AS [Loai], 
+    [HrQuaTrinhBHXH].[TuThang] AS [TuThang], 
+    [HrQuaTrinhBHXH].[DenThang] AS [DenThang], 
+    [HrQuaTrinhBHXH].[SoThang] AS [SoThang], 
+    [HrQuaTrinhBHXH].[MucLuong] AS [MucLuong], 
+    [HrQuaTrinhBHXH].[HSL] AS [HSL], 
+    [HrQuaTrinhBHXH].[PCChucVu] AS [PCChucVu], 
+    [HrQuaTrinhBHXH].[PCThamNien] AS [PCThamNien], 
+    [HrQuaTrinhBHXH].[PCKhuVuc] AS [PCKhuVuc], 
+    [HrQuaTrinhBHXH].[CongViec] AS [CongViec]
+    FROM [dbo].[HrQuaTrinhBHXH] AS [HrQuaTrinhBHXH]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="QuaTrinhCongTac" EntityType="Self.QuaTrinhCongTac" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [QuaTrinhCongTac].[MaNhanVien] AS [MaNhanVien], 
-    [QuaTrinhCongTac].[STT] AS [STT], 
-    [QuaTrinhCongTac].[ThoiGian] AS [ThoiGian], 
-    [QuaTrinhCongTac].[CongViec] AS [CongViec]
-    FROM [dbo].[QuaTrinhCongTac] AS [QuaTrinhCongTac]</DefiningQuery>
+    [HrQuaTrinhCongTac].[MaNhanVien] AS [MaNhanVien], 
+    [HrQuaTrinhCongTac].[STT] AS [STT], 
+    [HrQuaTrinhCongTac].[ThoiGian] AS [ThoiGian], 
+    [HrQuaTrinhCongTac].[CongViec] AS [CongViec]
+    FROM [dbo].[HrQuaTrinhCongTac] AS [HrQuaTrinhCongTac]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="QuaTrinhLuong" EntityType="Self.QuaTrinhLuong" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [QuaTrinhLuong].[MaNhanVien] AS [MaNhanVien], 
-    [QuaTrinhLuong].[STT] AS [STT], 
-    [QuaTrinhLuong].[Loai] AS [Loai], 
-    [QuaTrinhLuong].[TuThang] AS [TuThang], 
-    [QuaTrinhLuong].[DenThang] AS [DenThang], 
-    [QuaTrinhLuong].[SoThang] AS [SoThang], 
-    [QuaTrinhLuong].[MucLuong] AS [MucLuong], 
-    [QuaTrinhLuong].[HSL] AS [HSL], 
-    [QuaTrinhLuong].[PCChucVu] AS [PCChucVu], 
-    [QuaTrinhLuong].[PCThamNien] AS [PCThamNien], 
-    [QuaTrinhLuong].[PCDocHai] AS [PCDocHai], 
-    [QuaTrinhLuong].[PCTrachNhiem] AS [PCTrachNhiem], 
-    [QuaTrinhLuong].[PCKhuVuc] AS [PCKhuVuc], 
-    [QuaTrinhLuong].[CongViec] AS [CongViec]
-    FROM [dbo].[QuaTrinhLuong] AS [QuaTrinhLuong]</DefiningQuery>
+    [HrQuaTrinhLuong].[MaNhanVien] AS [MaNhanVien], 
+    [HrQuaTrinhLuong].[STT] AS [STT], 
+    [HrQuaTrinhLuong].[Loai] AS [Loai], 
+    [HrQuaTrinhLuong].[TuThang] AS [TuThang], 
+    [HrQuaTrinhLuong].[DenThang] AS [DenThang], 
+    [HrQuaTrinhLuong].[SoThang] AS [SoThang], 
+    [HrQuaTrinhLuong].[MucLuong] AS [MucLuong], 
+    [HrQuaTrinhLuong].[HSL] AS [HSL], 
+    [HrQuaTrinhLuong].[PCChucVu] AS [PCChucVu], 
+    [HrQuaTrinhLuong].[PCThamNien] AS [PCThamNien], 
+    [HrQuaTrinhLuong].[PCDocHai] AS [PCDocHai], 
+    [HrQuaTrinhLuong].[PCTrachNhiem] AS [PCTrachNhiem], 
+    [HrQuaTrinhLuong].[PCKhuVuc] AS [PCKhuVuc], 
+    [HrQuaTrinhLuong].[CongViec] AS [CongViec]
+    FROM [dbo].[HrQuaTrinhLuong] AS [HrQuaTrinhLuong]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__ListNoiKC__MaTin__54968AE5" Association="Self.FK__ListNoiKC__MaTin__54968AE5">
             <End Role="ListTinh" EntitySet="ListTinh" />
@@ -769,7 +767,90 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BHXH" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="BHXHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HrNhanVien">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="TenNhanVien" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MaPhongBan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SoHieuNV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TenKhac" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MaCapUy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaCapUyKiem" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaChucVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaChucDanh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="NgayBoNhiem" Type="DateTime" Precision="3" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="NoiSinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MaTinhQQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaQuanQQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaphuongQQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MatinhTQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaQuanTQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaPhuongTQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SoNha" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DTNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DTCoQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DTDiDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DTNguoiNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenNguoiNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaDanToc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaTonGiao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaThanhPhanGD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NgheTruocTD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTD" Type="DateTime" Precision="3" />
+          <Property Name="NgayCQ" Type="DateTime" Precision="3" />
+          <Property Name="CoQuanTD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NgayCM" Type="DateTime" Precision="3" />
+          <Property Name="NgayDang" Type="DateTime" Precision="3" />
+          <Property Name="NgayDangCT" Type="DateTime" Precision="3" />
+          <Property Name="MaChiBo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTCXH" Type="DateTime" Precision="3" />
+          <Property Name="NgayNhapNgu" Type="DateTime" Precision="3" />
+          <Property Name="NgayXuatNgu" Type="DateTime" Precision="3" />
+          <Property Name="QuanHam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaTDVanHoa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaTDDaoTao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaTDLLCT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaNgoaiNgu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaTDNgoaiNgu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CVDangLam" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MaNgach" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="DHDuocPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SoTruongCT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CVLamLN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KhenThuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KyLuat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SucKhoe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChieuCao" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CanNang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NhomMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SoCMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaLoaiTB" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="GDLietSy" Type="Boolean" />
+          <Property Name="TuDay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CheDoCu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TCNuocNgoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TNNuocNgoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoBHXH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TheBHYT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MaTinhKCB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaNoiKCB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TaiKhoanATM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MaNganHang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NgayCMND" Type="DateTime" Precision="3" />
+          <Property Name="NoiCMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
+          <Property Name="DaNLTruocTH" Type="Boolean" />
+          <Property Name="AnhNV" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="ListBangCap">
           <Key>
             <PropertyRef Name="MaBangCap" />
@@ -1002,102 +1083,18 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <Property Name="QuanHuyenID" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="ListQuanHuyen" Relationship="Self.FK__ListXaPhu__QuanH__436BFEE3" FromRole="ListXaPhuong" ToRole="ListQuanHuyen" />
         </EntityType>
-        <EntityType Name="NhanVien">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="TenNhanVien" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="MaPhongBan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="SoHieuNV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="TenKhac" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="MaCapUy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaCapUyKiem" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaChucVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaChucDanh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="NgayBoNhiem" Type="DateTime" Precision="3" />
-          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
-          <Property Name="NoiSinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="MaTinhQQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaQuanQQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaphuongQQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MatinhTQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaQuanTQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaPhuongTQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="SoNha" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="DTNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DTCoQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DTDiDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DTNguoiNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TenNguoiNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaDanToc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaTonGiao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaThanhPhanGD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="NgheTruocTD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="NgayTD" Type="DateTime" Precision="3" />
-          <Property Name="NgayCQ" Type="DateTime" Precision="3" />
-          <Property Name="CoQuanTD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="NgayCM" Type="DateTime" Precision="3" />
-          <Property Name="NgayDang" Type="DateTime" Precision="3" />
-          <Property Name="NgayDangCT" Type="DateTime" Precision="3" />
-          <Property Name="MaChiBo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="NgayTCXH" Type="DateTime" Precision="3" />
-          <Property Name="NgayNhapNgu" Type="DateTime" Precision="3" />
-          <Property Name="NgayXuatNgu" Type="DateTime" Precision="3" />
-          <Property Name="QuanHam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaTDVanHoa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaTDDaoTao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaTDLLCT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaNgoaiNgu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaTDNgoaiNgu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="CVDangLam" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="MaNgach" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="DHDuocPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SoTruongCT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CVLamLN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="KhenThuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="KyLuat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SucKhoe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ChieuCao" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="CanNang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="NhomMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="SoCMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaLoaiTB" Type="Decimal" Precision="20" Scale="0" />
-          <Property Name="GDLietSy" Type="Boolean" />
-          <Property Name="TuDay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CheDoCu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="TCNuocNgoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="TNNuocNgoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SoBHXH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="TheBHYT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="MaTinhKCB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaNoiKCB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="TaiKhoanATM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="IDNganHang" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="NgayCMND" Type="DateTime" Precision="3" />
-          <Property Name="NoiCMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
-          <Property Name="DaNLTruocTH" Type="Boolean" />
-          <Property Name="AnhNV" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="KhenThuongKyLuat">
+        <EntityType Name="HrKhenThuongKyLuat">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
           <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
           <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="LoaiKTKL" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="IDKTKL" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MaKTKL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IDPhongBan" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MaPhongBan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="PSBHXH">
+        <EntityType Name="HrPSBHXH">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
@@ -1120,7 +1117,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <Property Name="DotPS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityType Name="PSLuong">
+        <EntityType Name="HrPSLuong">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
@@ -1141,7 +1138,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
           <Property Name="IDPhongNL" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
-        <EntityType Name="QuanHeGiaDinh">
+        <EntityType Name="HrQuanHeGiaDinh">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
@@ -1152,7 +1149,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <Property Name="NamSinh" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="ChiTiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="QuaTrinhBHXH">
+        <EntityType Name="HrQuaTrinhBHXH">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
@@ -1169,7 +1166,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
           <Property Name="CongViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="QuaTrinhCongTac">
+        <EntityType Name="HrQuaTrinhCongTac">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
@@ -1178,7 +1175,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="QuaTrinhLuong">
+        <EntityType Name="HrQuaTrinhLuong">
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
@@ -1234,6 +1231,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="BHXHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HrNhanVien" EntityType="Self.HrNhanVien" />
           <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" />
           <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" />
           <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" />
@@ -1265,14 +1263,13 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
           <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" />
           <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" />
           <EntitySet Name="ListXaPhuong" EntityType="Self.ListXaPhuong" />
-          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
-          <EntitySet Name="KhenThuongKyLuat" EntityType="Self.KhenThuongKyLuat" />
-          <EntitySet Name="PSBHXH" EntityType="Self.PSBHXH" />
-          <EntitySet Name="PSLuong" EntityType="Self.PSLuong" />
-          <EntitySet Name="QuanHeGiaDinh" EntityType="Self.QuanHeGiaDinh" />
-          <EntitySet Name="QuaTrinhBHXH" EntityType="Self.QuaTrinhBHXH" />
-          <EntitySet Name="QuaTrinhCongTac" EntityType="Self.QuaTrinhCongTac" />
-          <EntitySet Name="QuaTrinhLuong" EntityType="Self.QuaTrinhLuong" />
+          <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" />
+          <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" />
+          <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" />
+          <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" />
+          <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" />
+          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
+          <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" />
           <AssociationSet Name="FK__ListNoiKC__MaTin__54968AE5" Association="Self.FK__ListNoiKC__MaTin__54968AE5">
             <End Role="ListTinh" EntitySet="ListTinh" />
             <End Role="ListNoiKCB" EntitySet="ListNoiKCB" />
@@ -1296,267 +1293,10 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BHXHStoreContainer" CdmEntityContainer="BHXHEntities">
-          <EntitySetMapping Name="ListBangCap">
-            <EntityTypeMapping TypeName="BHXH.ListBangCap">
-              <MappingFragment StoreEntitySet="ListBangCap">
-                <ScalarProperty Name="MaBangCap" ColumnName="MaBangCap" />
-                <ScalarProperty Name="TenBangCap" ColumnName="TenBangCap" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListCapKTKL">
-            <EntityTypeMapping TypeName="BHXH.ListCapKTKL">
-              <MappingFragment StoreEntitySet="ListCapKTKL">
-                <ScalarProperty Name="MaCapKTKL" ColumnName="MaCapKTKL" />
-                <ScalarProperty Name="TenCapKTKL" ColumnName="TenCapKTKL" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListCMDaoTao">
-            <EntityTypeMapping TypeName="BHXH.ListCMDaoTao">
-              <MappingFragment StoreEntitySet="ListCMDaoTao">
-                <ScalarProperty Name="MaCMDaoTao" ColumnName="MaCMDaoTao" />
-                <ScalarProperty Name="TenCMDaoTao" ColumnName="TenCMDaoTao" />
-                <ScalarProperty Name="LoaiCMDaoTao" ColumnName="LoaiCMDaoTao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListChiBo">
-            <EntityTypeMapping TypeName="BHXH.ListChiBo">
-              <MappingFragment StoreEntitySet="ListChiBo">
-                <ScalarProperty Name="MaChiBo" ColumnName="MaChiBo" />
-                <ScalarProperty Name="TenChiBo" ColumnName="TenChiBo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListChucDanh">
-            <EntityTypeMapping TypeName="BHXH.ListChucDanh">
-              <MappingFragment StoreEntitySet="ListChucDanh">
-                <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
-                <ScalarProperty Name="TenChucDanh" ColumnName="TenChucDanh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListChucVu">
-            <EntityTypeMapping TypeName="BHXH.ListChucVu">
-              <MappingFragment StoreEntitySet="ListChucVu">
-                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
-                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListChucVuDang">
-            <EntityTypeMapping TypeName="BHXH.ListChucVuDang">
-              <MappingFragment StoreEntitySet="ListChucVuDang">
-                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
-                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListDanToc">
-            <EntityTypeMapping TypeName="BHXH.ListDanToc">
-              <MappingFragment StoreEntitySet="ListDanToc">
-                <ScalarProperty Name="MaDanToc" ColumnName="MaDanToc" />
-                <ScalarProperty Name="TenDanToc" ColumnName="TenDanToc" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListDienCS">
-            <EntityTypeMapping TypeName="BHXH.ListDienCS">
-              <MappingFragment StoreEntitySet="ListDienCS">
-                <ScalarProperty Name="MaDienCS" ColumnName="MaDienCS" />
-                <ScalarProperty Name="TenDienCS" ColumnName="TenDienCS" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListHonNhan">
-            <EntityTypeMapping TypeName="BHXH.ListHonNhan">
-              <MappingFragment StoreEntitySet="ListHonNhan">
-                <ScalarProperty Name="MaHonNhan" ColumnName="MaHonNhan" />
-                <ScalarProperty Name="TenHonNhan" ColumnName="TenHonNhan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListHopDong">
-            <EntityTypeMapping TypeName="BHXH.ListHopDong">
-              <MappingFragment StoreEntitySet="ListHopDong">
-                <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
-                <ScalarProperty Name="TenHopDong" ColumnName="TenHopDong" />
-                <ScalarProperty Name="LoaiHopDong" ColumnName="LoaiHopDong" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListKTKL">
-            <EntityTypeMapping TypeName="BHXH.ListKTKL">
-              <MappingFragment StoreEntitySet="ListKTKL">
-                <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
-                <ScalarProperty Name="TenKTKL" ColumnName="TenKTKL" />
-                <ScalarProperty Name="LoaiKTKL" ColumnName="LoaiKTKL" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListLHDaoTao">
-            <EntityTypeMapping TypeName="BHXH.ListLHDaoTao">
-              <MappingFragment StoreEntitySet="ListLHDaoTao">
-                <ScalarProperty Name="MaLHDaoTao" ColumnName="MaLHDaoTao" />
-                <ScalarProperty Name="TenLHDaoTao" ColumnName="TenLHDaoTao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListLoaiTB">
-            <EntityTypeMapping TypeName="BHXH.ListLoaiTB">
-              <MappingFragment StoreEntitySet="ListLoaiTB">
-                <ScalarProperty Name="MaLoaiTB" ColumnName="MaLoaiTB" />
-                <ScalarProperty Name="TenLoaiTB" ColumnName="TenLoaiTB" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListNoiKCB">
-            <EntityTypeMapping TypeName="BHXH.ListNoiKCB">
-              <MappingFragment StoreEntitySet="ListNoiKCB">
-                <ScalarProperty Name="MaNoiKCB" ColumnName="MaNoiKCB" />
-                <ScalarProperty Name="TenNoiKCB" ColumnName="TenNoiKCB" />
-                <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
-                <ScalarProperty Name="MaKCBDayDu" ColumnName="MaKCBDayDu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListNganHang">
-            <EntityTypeMapping TypeName="BHXH.ListNganHang">
-              <MappingFragment StoreEntitySet="ListNganHang">
-                <ScalarProperty Name="MaNganHang" ColumnName="MaNganHang" />
-                <ScalarProperty Name="TenNganHang" ColumnName="TenNganHang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListNghiepVu">
-            <EntityTypeMapping TypeName="BHXH.ListNghiepVu">
-              <MappingFragment StoreEntitySet="ListNghiepVu">
-                <ScalarProperty Name="MaNghiepVu" ColumnName="MaNghiepVu" />
-                <ScalarProperty Name="TenNghiepVu" ColumnName="TenNghiepVu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListNgoaiNgu">
-            <EntityTypeMapping TypeName="BHXH.ListNgoaiNgu">
-              <MappingFragment StoreEntitySet="ListNgoaiNgu">
-                <ScalarProperty Name="MaNgoaiNgu" ColumnName="MaNgoaiNgu" />
-                <ScalarProperty Name="TenNgoaiNgu" ColumnName="TenNgoaiNgu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListPhongBan">
-            <EntityTypeMapping TypeName="BHXH.ListPhongBan">
-              <MappingFragment StoreEntitySet="ListPhongBan">
-                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
-                <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListQuanHeGD">
-            <EntityTypeMapping TypeName="BHXH.ListQuanHeGD">
-              <MappingFragment StoreEntitySet="ListQuanHeGD">
-                <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
-                <ScalarProperty Name="TenQuanHeGD" ColumnName="TenQuanHeGD" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListQuanHuyen">
-            <EntityTypeMapping TypeName="BHXH.ListQuanHuyen">
-              <MappingFragment StoreEntitySet="ListQuanHuyen">
-                <ScalarProperty Name="QuanHuyenID" ColumnName="QuanHuyenID" />
-                <ScalarProperty Name="MaQuanHuyen" ColumnName="MaQuanHuyen" />
-                <ScalarProperty Name="TenQuanHuyen" ColumnName="TenQuanHuyen" />
-                <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListQuocGia">
-            <EntityTypeMapping TypeName="BHXH.ListQuocGia">
-              <MappingFragment StoreEntitySet="ListQuocGia">
-                <ScalarProperty Name="MaQuocGia" ColumnName="MaQuocGia" />
-                <ScalarProperty Name="TenQuocGia" ColumnName="TenQuocGia" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTDDaoTao">
-            <EntityTypeMapping TypeName="BHXH.ListTDDaoTao">
-              <MappingFragment StoreEntitySet="ListTDDaoTao">
-                <ScalarProperty Name="MaTDDaoTao" ColumnName="MaTDDaoTao" />
-                <ScalarProperty Name="TenTDDaoTao" ColumnName="TenTDDaoTao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTDLLCT">
-            <EntityTypeMapping TypeName="BHXH.ListTDLLCT">
-              <MappingFragment StoreEntitySet="ListTDLLCT">
-                <ScalarProperty Name="MaTDLLCT" ColumnName="MaTDLLCT" />
-                <ScalarProperty Name="TenTDLLCT" ColumnName="TenTDLLCT" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTDNgoaiNgu">
-            <EntityTypeMapping TypeName="BHXH.ListTDNgoaiNgu">
-              <MappingFragment StoreEntitySet="ListTDNgoaiNgu">
-                <ScalarProperty Name="MaTDNgoaiNgu" ColumnName="MaTDNgoaiNgu" />
-                <ScalarProperty Name="TenTDNgoaiNgu" ColumnName="TenTDNgoaiNgu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTDQLNN">
-            <EntityTypeMapping TypeName="BHXH.ListTDQLNN">
-              <MappingFragment StoreEntitySet="ListTDQLNN">
-                <ScalarProperty Name="MaTDQLNN" ColumnName="MaTDQLNN" />
-                <ScalarProperty Name="TenTDQLNN" ColumnName="TenTDQLNN" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTDVanHoa">
-            <EntityTypeMapping TypeName="BHXH.ListTDVanHoa">
-              <MappingFragment StoreEntitySet="ListTDVanHoa">
-                <ScalarProperty Name="MaTDVanHoa" ColumnName="MaTDVanHoa" />
-                <ScalarProperty Name="TenTDVanHoa" ColumnName="TenTDVanHoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTinh">
-            <EntityTypeMapping TypeName="BHXH.ListTinh">
-              <MappingFragment StoreEntitySet="ListTinh">
-                <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
-                <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListTonGiao">
-            <EntityTypeMapping TypeName="BHXH.ListTonGiao">
-              <MappingFragment StoreEntitySet="ListTonGiao">
-                <ScalarProperty Name="MaTonGiao" ColumnName="MaTonGiao" />
-                <ScalarProperty Name="TenTonGiao" ColumnName="TenTonGiao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListThanhPhanGD">
-            <EntityTypeMapping TypeName="BHXH.ListThanhPhanGD">
-              <MappingFragment StoreEntitySet="ListThanhPhanGD">
-                <ScalarProperty Name="MaThanhPhanGD" ColumnName="MaThanhPhanGD" />
-                <ScalarProperty Name="TenThanhPhanGD" ColumnName="TenThanhPhanGD" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ListXaPhuong">
-            <EntityTypeMapping TypeName="BHXH.ListXaPhuong">
-              <MappingFragment StoreEntitySet="ListXaPhuong">
-                <ScalarProperty Name="XaPhuongID" ColumnName="XaPhuongID" />
-                <ScalarProperty Name="MaXaPhuong" ColumnName="MaXaPhuong" />
-                <ScalarProperty Name="TenXaPhuong" ColumnName="TenXaPhuong" />
-                <ScalarProperty Name="QuanHuyenID" ColumnName="QuanHuyenID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NhanVien">
-            <EntityTypeMapping TypeName="BHXH.NhanVien">
-              <MappingFragment StoreEntitySet="NhanVien">
+        <EntityContainerMapping StorageEntityContainer="BHXHModelStoreContainer" CdmEntityContainer="BHXHEntities">
+          <EntitySetMapping Name="HrNhanVien">
+            <EntityTypeMapping TypeName="BHXHModel.HrNhanVien">
+              <MappingFragment StoreEntitySet="HrNhanVien">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
                 <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
@@ -1629,7 +1369,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
                 <ScalarProperty Name="MaTinhKCB" ColumnName="MaTinhKCB" />
                 <ScalarProperty Name="MaNoiKCB" ColumnName="MaNoiKCB" />
                 <ScalarProperty Name="TaiKhoanATM" ColumnName="TaiKhoanATM" />
-                <ScalarProperty Name="IDNganHang" ColumnName="IDNganHang" />
+                <ScalarProperty Name="MaNganHang" ColumnName="MaNganHang" />
                 <ScalarProperty Name="NgayCMND" ColumnName="NgayCMND" />
                 <ScalarProperty Name="NoiCMND" ColumnName="NoiCMND" />
                 <ScalarProperty Name="NgayNangLuong" ColumnName="NgayNangLuong" />
@@ -1638,22 +1378,278 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="KhenThuongKyLuat">
-            <EntityTypeMapping TypeName="BHXH.KhenThuongKyLuat">
-              <MappingFragment StoreEntitySet="KhenThuongKyLuat">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="LoaiKTKL" ColumnName="LoaiKTKL" />
-                <ScalarProperty Name="IDKTKL" ColumnName="IDKTKL" />
-                <ScalarProperty Name="Nam" ColumnName="Nam" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-                <ScalarProperty Name="IDPhongBan" ColumnName="IDPhongBan" />
+          <EntitySetMapping Name="ListBangCap">
+            <EntityTypeMapping TypeName="BHXHModel.ListBangCap">
+              <MappingFragment StoreEntitySet="ListBangCap">
+                <ScalarProperty Name="MaBangCap" ColumnName="MaBangCap" />
+                <ScalarProperty Name="TenBangCap" ColumnName="TenBangCap" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PSBHXH">
-            <EntityTypeMapping TypeName="BHXH.PSBHXH">
-              <MappingFragment StoreEntitySet="PSBHXH">
+          <EntitySetMapping Name="ListCapKTKL">
+            <EntityTypeMapping TypeName="BHXHModel.ListCapKTKL">
+              <MappingFragment StoreEntitySet="ListCapKTKL">
+                <ScalarProperty Name="MaCapKTKL" ColumnName="MaCapKTKL" />
+                <ScalarProperty Name="TenCapKTKL" ColumnName="TenCapKTKL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListCMDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.ListCMDaoTao">
+              <MappingFragment StoreEntitySet="ListCMDaoTao">
+                <ScalarProperty Name="MaCMDaoTao" ColumnName="MaCMDaoTao" />
+                <ScalarProperty Name="TenCMDaoTao" ColumnName="TenCMDaoTao" />
+                <ScalarProperty Name="LoaiCMDaoTao" ColumnName="LoaiCMDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChiBo">
+            <EntityTypeMapping TypeName="BHXHModel.ListChiBo">
+              <MappingFragment StoreEntitySet="ListChiBo">
+                <ScalarProperty Name="MaChiBo" ColumnName="MaChiBo" />
+                <ScalarProperty Name="TenChiBo" ColumnName="TenChiBo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChucDanh">
+            <EntityTypeMapping TypeName="BHXHModel.ListChucDanh">
+              <MappingFragment StoreEntitySet="ListChucDanh">
+                <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
+                <ScalarProperty Name="TenChucDanh" ColumnName="TenChucDanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChucVu">
+            <EntityTypeMapping TypeName="BHXHModel.ListChucVu">
+              <MappingFragment StoreEntitySet="ListChucVu">
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListChucVuDang">
+            <EntityTypeMapping TypeName="BHXHModel.ListChucVuDang">
+              <MappingFragment StoreEntitySet="ListChucVuDang">
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListDanToc">
+            <EntityTypeMapping TypeName="BHXHModel.ListDanToc">
+              <MappingFragment StoreEntitySet="ListDanToc">
+                <ScalarProperty Name="MaDanToc" ColumnName="MaDanToc" />
+                <ScalarProperty Name="TenDanToc" ColumnName="TenDanToc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListDienCS">
+            <EntityTypeMapping TypeName="BHXHModel.ListDienCS">
+              <MappingFragment StoreEntitySet="ListDienCS">
+                <ScalarProperty Name="MaDienCS" ColumnName="MaDienCS" />
+                <ScalarProperty Name="TenDienCS" ColumnName="TenDienCS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListHonNhan">
+            <EntityTypeMapping TypeName="BHXHModel.ListHonNhan">
+              <MappingFragment StoreEntitySet="ListHonNhan">
+                <ScalarProperty Name="MaHonNhan" ColumnName="MaHonNhan" />
+                <ScalarProperty Name="TenHonNhan" ColumnName="TenHonNhan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListHopDong">
+            <EntityTypeMapping TypeName="BHXHModel.ListHopDong">
+              <MappingFragment StoreEntitySet="ListHopDong">
+                <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
+                <ScalarProperty Name="TenHopDong" ColumnName="TenHopDong" />
+                <ScalarProperty Name="LoaiHopDong" ColumnName="LoaiHopDong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListKTKL">
+            <EntityTypeMapping TypeName="BHXHModel.ListKTKL">
+              <MappingFragment StoreEntitySet="ListKTKL">
+                <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
+                <ScalarProperty Name="TenKTKL" ColumnName="TenKTKL" />
+                <ScalarProperty Name="LoaiKTKL" ColumnName="LoaiKTKL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListLHDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.ListLHDaoTao">
+              <MappingFragment StoreEntitySet="ListLHDaoTao">
+                <ScalarProperty Name="MaLHDaoTao" ColumnName="MaLHDaoTao" />
+                <ScalarProperty Name="TenLHDaoTao" ColumnName="TenLHDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListLoaiTB">
+            <EntityTypeMapping TypeName="BHXHModel.ListLoaiTB">
+              <MappingFragment StoreEntitySet="ListLoaiTB">
+                <ScalarProperty Name="MaLoaiTB" ColumnName="MaLoaiTB" />
+                <ScalarProperty Name="TenLoaiTB" ColumnName="TenLoaiTB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNoiKCB">
+            <EntityTypeMapping TypeName="BHXHModel.ListNoiKCB">
+              <MappingFragment StoreEntitySet="ListNoiKCB">
+                <ScalarProperty Name="MaNoiKCB" ColumnName="MaNoiKCB" />
+                <ScalarProperty Name="TenNoiKCB" ColumnName="TenNoiKCB" />
+                <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
+                <ScalarProperty Name="MaKCBDayDu" ColumnName="MaKCBDayDu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNganHang">
+            <EntityTypeMapping TypeName="BHXHModel.ListNganHang">
+              <MappingFragment StoreEntitySet="ListNganHang">
+                <ScalarProperty Name="MaNganHang" ColumnName="MaNganHang" />
+                <ScalarProperty Name="TenNganHang" ColumnName="TenNganHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNghiepVu">
+            <EntityTypeMapping TypeName="BHXHModel.ListNghiepVu">
+              <MappingFragment StoreEntitySet="ListNghiepVu">
+                <ScalarProperty Name="MaNghiepVu" ColumnName="MaNghiepVu" />
+                <ScalarProperty Name="TenNghiepVu" ColumnName="TenNghiepVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListNgoaiNgu">
+            <EntityTypeMapping TypeName="BHXHModel.ListNgoaiNgu">
+              <MappingFragment StoreEntitySet="ListNgoaiNgu">
+                <ScalarProperty Name="MaNgoaiNgu" ColumnName="MaNgoaiNgu" />
+                <ScalarProperty Name="TenNgoaiNgu" ColumnName="TenNgoaiNgu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListPhongBan">
+            <EntityTypeMapping TypeName="BHXHModel.ListPhongBan">
+              <MappingFragment StoreEntitySet="ListPhongBan">
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+                <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListQuanHeGD">
+            <EntityTypeMapping TypeName="BHXHModel.ListQuanHeGD">
+              <MappingFragment StoreEntitySet="ListQuanHeGD">
+                <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
+                <ScalarProperty Name="TenQuanHeGD" ColumnName="TenQuanHeGD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListQuanHuyen">
+            <EntityTypeMapping TypeName="BHXHModel.ListQuanHuyen">
+              <MappingFragment StoreEntitySet="ListQuanHuyen">
+                <ScalarProperty Name="QuanHuyenID" ColumnName="QuanHuyenID" />
+                <ScalarProperty Name="MaQuanHuyen" ColumnName="MaQuanHuyen" />
+                <ScalarProperty Name="TenQuanHuyen" ColumnName="TenQuanHuyen" />
+                <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListQuocGia">
+            <EntityTypeMapping TypeName="BHXHModel.ListQuocGia">
+              <MappingFragment StoreEntitySet="ListQuocGia">
+                <ScalarProperty Name="MaQuocGia" ColumnName="MaQuocGia" />
+                <ScalarProperty Name="TenQuocGia" ColumnName="TenQuocGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDDaoTao">
+              <MappingFragment StoreEntitySet="ListTDDaoTao">
+                <ScalarProperty Name="MaTDDaoTao" ColumnName="MaTDDaoTao" />
+                <ScalarProperty Name="TenTDDaoTao" ColumnName="TenTDDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDLLCT">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDLLCT">
+              <MappingFragment StoreEntitySet="ListTDLLCT">
+                <ScalarProperty Name="MaTDLLCT" ColumnName="MaTDLLCT" />
+                <ScalarProperty Name="TenTDLLCT" ColumnName="TenTDLLCT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDNgoaiNgu">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDNgoaiNgu">
+              <MappingFragment StoreEntitySet="ListTDNgoaiNgu">
+                <ScalarProperty Name="MaTDNgoaiNgu" ColumnName="MaTDNgoaiNgu" />
+                <ScalarProperty Name="TenTDNgoaiNgu" ColumnName="TenTDNgoaiNgu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDQLNN">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDQLNN">
+              <MappingFragment StoreEntitySet="ListTDQLNN">
+                <ScalarProperty Name="MaTDQLNN" ColumnName="MaTDQLNN" />
+                <ScalarProperty Name="TenTDQLNN" ColumnName="TenTDQLNN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTDVanHoa">
+            <EntityTypeMapping TypeName="BHXHModel.ListTDVanHoa">
+              <MappingFragment StoreEntitySet="ListTDVanHoa">
+                <ScalarProperty Name="MaTDVanHoa" ColumnName="MaTDVanHoa" />
+                <ScalarProperty Name="TenTDVanHoa" ColumnName="TenTDVanHoa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTinh">
+            <EntityTypeMapping TypeName="BHXHModel.ListTinh">
+              <MappingFragment StoreEntitySet="ListTinh">
+                <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
+                <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTonGiao">
+            <EntityTypeMapping TypeName="BHXHModel.ListTonGiao">
+              <MappingFragment StoreEntitySet="ListTonGiao">
+                <ScalarProperty Name="MaTonGiao" ColumnName="MaTonGiao" />
+                <ScalarProperty Name="TenTonGiao" ColumnName="TenTonGiao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListThanhPhanGD">
+            <EntityTypeMapping TypeName="BHXHModel.ListThanhPhanGD">
+              <MappingFragment StoreEntitySet="ListThanhPhanGD">
+                <ScalarProperty Name="MaThanhPhanGD" ColumnName="MaThanhPhanGD" />
+                <ScalarProperty Name="TenThanhPhanGD" ColumnName="TenThanhPhanGD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListXaPhuong">
+            <EntityTypeMapping TypeName="BHXHModel.ListXaPhuong">
+              <MappingFragment StoreEntitySet="ListXaPhuong">
+                <ScalarProperty Name="XaPhuongID" ColumnName="XaPhuongID" />
+                <ScalarProperty Name="MaXaPhuong" ColumnName="MaXaPhuong" />
+                <ScalarProperty Name="TenXaPhuong" ColumnName="TenXaPhuong" />
+                <ScalarProperty Name="QuanHuyenID" ColumnName="QuanHuyenID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrKhenThuongKyLuat">
+            <EntityTypeMapping TypeName="BHXHModel.HrKhenThuongKyLuat">
+              <MappingFragment StoreEntitySet="HrKhenThuongKyLuat">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrPSBHXH">
+            <EntityTypeMapping TypeName="BHXHModel.HrPSBHXH">
+              <MappingFragment StoreEntitySet="HrPSBHXH">
                 <ScalarProperty Name="Thang" ColumnName="Thang" />
                 <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
@@ -1675,9 +1671,9 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PSLuong">
-            <EntityTypeMapping TypeName="BHXH.PSLuong">
-              <MappingFragment StoreEntitySet="PSLuong">
+          <EntitySetMapping Name="HrPSLuong">
+            <EntityTypeMapping TypeName="BHXHModel.HrPSLuong">
+              <MappingFragment StoreEntitySet="HrPSLuong">
                 <ScalarProperty Name="Thang" ColumnName="Thang" />
                 <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
@@ -1697,9 +1693,9 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuanHeGiaDinh">
-            <EntityTypeMapping TypeName="BHXH.QuanHeGiaDinh">
-              <MappingFragment StoreEntitySet="QuanHeGiaDinh">
+          <EntitySetMapping Name="HrQuanHeGiaDinh">
+            <EntityTypeMapping TypeName="BHXHModel.HrQuanHeGiaDinh">
+              <MappingFragment StoreEntitySet="HrQuanHeGiaDinh">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
@@ -1709,9 +1705,9 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuaTrinhBHXH">
-            <EntityTypeMapping TypeName="BHXH.QuaTrinhBHXH">
-              <MappingFragment StoreEntitySet="QuaTrinhBHXH">
+          <EntitySetMapping Name="HrQuaTrinhBHXH">
+            <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhBHXH">
+              <MappingFragment StoreEntitySet="HrQuaTrinhBHXH">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="Loai" ColumnName="Loai" />
@@ -1727,9 +1723,9 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuaTrinhCongTac">
-            <EntityTypeMapping TypeName="BHXH.QuaTrinhCongTac">
-              <MappingFragment StoreEntitySet="QuaTrinhCongTac">
+          <EntitySetMapping Name="HrQuaTrinhCongTac">
+            <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhCongTac">
+              <MappingFragment StoreEntitySet="HrQuaTrinhCongTac">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
@@ -1737,9 +1733,9 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuaTrinhLuong">
-            <EntityTypeMapping TypeName="BHXH.QuaTrinhLuong">
-              <MappingFragment StoreEntitySet="QuaTrinhLuong">
+          <EntitySetMapping Name="HrQuaTrinhLuong">
+            <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhLuong">
+              <MappingFragment StoreEntitySet="HrQuaTrinhLuong">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="Loai" ColumnName="Loai" />
@@ -1757,7 +1753,7 @@ warning 6013: The table/view 'BHXH.dbo.ThangBangLuong' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXH.Store.DBA_RestoreDB" />
+          <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXHModel.Store.DBA_RestoreDB" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

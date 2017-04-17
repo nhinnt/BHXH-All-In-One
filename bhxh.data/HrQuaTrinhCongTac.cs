@@ -12,7 +12,7 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class QuaTrinhCongTac
+    public partial class HrQuaTrinhCongTac
     {
         public System.Guid MaNhanVien { get; set; }
         public Nullable<decimal> STT { get; set; }

@@ -12,7 +12,7 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class NhanVien
+    public partial class HrNhanVien
     {
         public System.Guid MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }
@@ -86,7 +86,7 @@ namespace BHXH.Data
         public string MaTinhKCB { get; set; }
         public string MaNoiKCB { get; set; }
         public string TaiKhoanATM { get; set; }
-        public Nullable<decimal> IDNganHang { get; set; }
+        public string MaNganHang { get; set; }
         public Nullable<System.DateTime> NgayCMND { get; set; }
         public string NoiCMND { get; set; }
         public Nullable<System.DateTime> NgayNangLuong { get; set; }

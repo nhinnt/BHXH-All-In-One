@@ -27,6 +27,7 @@ namespace BHXH.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<HrNhanVien> HrNhanVien { get; set; }
         public virtual DbSet<ListBangCap> ListBangCap { get; set; }
         public virtual DbSet<ListCapKTKL> ListCapKTKL { get; set; }
         public virtual DbSet<ListCMDaoTao> ListCMDaoTao { get; set; }
@@ -58,14 +59,13 @@ namespace BHXH.Data
         public virtual DbSet<ListTonGiao> ListTonGiao { get; set; }
         public virtual DbSet<ListThanhPhanGD> ListThanhPhanGD { get; set; }
         public virtual DbSet<ListXaPhuong> ListXaPhuong { get; set; }
-        public virtual DbSet<NhanVien> NhanVien { get; set; }
-        public virtual DbSet<KhenThuongKyLuat> KhenThuongKyLuat { get; set; }
-        public virtual DbSet<PSBHXH> PSBHXH { get; set; }
-        public virtual DbSet<PSLuong> PSLuong { get; set; }
-        public virtual DbSet<QuanHeGiaDinh> QuanHeGiaDinh { get; set; }
-        public virtual DbSet<QuaTrinhBHXH> QuaTrinhBHXH { get; set; }
-        public virtual DbSet<QuaTrinhCongTac> QuaTrinhCongTac { get; set; }
-        public virtual DbSet<QuaTrinhLuong> QuaTrinhLuong { get; set; }
+        public virtual DbSet<HrKhenThuongKyLuat> HrKhenThuongKyLuat { get; set; }
+        public virtual DbSet<HrPSBHXH> HrPSBHXH { get; set; }
+        public virtual DbSet<HrPSLuong> HrPSLuong { get; set; }
+        public virtual DbSet<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
+        public virtual DbSet<HrQuaTrinhBHXH> HrQuaTrinhBHXH { get; set; }
+        public virtual DbSet<HrQuaTrinhCongTac> HrQuaTrinhCongTac { get; set; }
+        public virtual DbSet<HrQuaTrinhLuong> HrQuaTrinhLuong { get; set; }
     
         public virtual int DBA_RestoreDB(string p_strDBNameTo, string p_strDBNameFrom, string p_strFQNRestoreFileName)
         {

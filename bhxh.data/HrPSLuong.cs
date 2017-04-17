@@ -12,21 +12,23 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class QuaTrinhLuong
+    public partial class HrPSLuong
     {
+        public string Thang { get; set; }
+        public string Nam { get; set; }
         public System.Guid MaNhanVien { get; set; }
-        public Nullable<decimal> STT { get; set; }
-        public string Loai { get; set; }
-        public string TuThang { get; set; }
-        public string DenThang { get; set; }
-        public Nullable<decimal> SoThang { get; set; }
-        public Nullable<decimal> MucLuong { get; set; }
+        public Nullable<decimal> IDNgach { get; set; }
+        public string Bac { get; set; }
         public Nullable<decimal> HSL { get; set; }
+        public Nullable<decimal> MucLuong { get; set; }
+        public string CongTacPhi { get; set; }
         public Nullable<decimal> PCChucVu { get; set; }
+        public Nullable<decimal> PCTrachNhiem { get; set; }
         public Nullable<decimal> PCThamNien { get; set; }
         public Nullable<decimal> PCDocHai { get; set; }
-        public Nullable<decimal> PCTrachNhiem { get; set; }
-        public Nullable<decimal> PCKhuVuc { get; set; }
-        public string CongViec { get; set; }
+        public string TuThang { get; set; }
+        public string DenThang { get; set; }
+        public string LoaiPS { get; set; }
+        public Nullable<decimal> IDPhongNL { get; set; }
     }
 }

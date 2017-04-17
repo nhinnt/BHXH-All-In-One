@@ -12,14 +12,13 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class KhenThuongKyLuat
+    public partial class HrQuanHeGiaDinh
     {
         public System.Guid MaNhanVien { get; set; }
         public Nullable<decimal> STT { get; set; }
-        public string LoaiKTKL { get; set; }
-        public Nullable<decimal> IDKTKL { get; set; }
-        public string Nam { get; set; }
-        public string GhiChu { get; set; }
-        public Nullable<decimal> IDPhongBan { get; set; }
+        public Nullable<decimal> MaQuanHeGD { get; set; }
+        public string HoTen { get; set; }
+        public string NamSinh { get; set; }
+        public string ChiTiet { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class PSBHXH
+    public partial class HrPSBHXH
     {
         public string Thang { get; set; }
         public string Nam { get; set; }
