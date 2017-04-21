@@ -27,10 +27,10 @@ namespace BHXH.List.Business
                 return null;
             if (IsExisted(MaQuocGia, TenQuocGia) != null)
                 return IsExisted(MaQuocGia, TenQuocGia);
-            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+              BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             BHXH.Data.ListQuocGia n = new Data.ListQuocGia();
             n.MaQuocGia = MaQuocGia;
-            n.MaQuocGia = TenQuocGia;
+            n.TenQuocGia = TenQuocGia;
             ctx.ListQuocGia.Add(n);
 
             try

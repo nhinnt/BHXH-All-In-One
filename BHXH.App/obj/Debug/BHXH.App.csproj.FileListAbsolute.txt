@@ -64,3 +64,8 @@ C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.App\obj\Debug\BHXH.App.exe.licenses
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.App\obj\Debug\BHXH.App.exe
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.App\obj\Debug\BHXH.App.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.csprojResolveAssemblyReference.cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.Properties.Resources.resources
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.frmMain.resources
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.csproj.GenerateResource.Cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.App\obj\Debug\BHXH.App.exe.licenses
