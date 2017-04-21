@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Data\BHXH.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\BHXH.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

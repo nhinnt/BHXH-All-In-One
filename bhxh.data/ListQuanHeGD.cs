@@ -14,7 +14,16 @@ namespace BHXH.Data
     
     public partial class ListQuanHeGD
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ListQuanHeGD()
+        {
+            this.HrQuanHeGiaDinh = new HashSet<HrQuanHeGiaDinh>();
+        }
+    
         public string MaQuanHeGD { get; set; }
         public string TenQuanHeGD { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
     }
 }

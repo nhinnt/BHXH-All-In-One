@@ -62,6 +62,7 @@
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -90,33 +91,789 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmEditQuocGia.cs">
+    <Compile Include="ListTDVanHoa\frmEditTDVanHoa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditQuocGia.designer.cs">
+    <Compile Include="ListTDVanHoa\frmEditTDVanHoa.designer.cs">
+      <DependentUpon>frmEditTDVanHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDVanHoa\frmListTDVanHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDVanHoa\frmListTDVanHoa.Designer.cs">
+      <DependentUpon>frmListTDVanHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDVanHoa\frmNewTDVanHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDVanHoa\frmNewTDVanHoa.designer.cs">
+      <DependentUpon>frmNewTDVanHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDQLNN\frmEditTDQLNN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDQLNN\frmEditTDQLNN.designer.cs">
+      <DependentUpon>frmEditTDQLNN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDQLNN\frmListTDQLNN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDQLNN\frmListTDQLNN.Designer.cs">
+      <DependentUpon>frmListTDQLNN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDQLNN\frmNewTDQLNN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDQLNN\frmNewTDQLNN.designer.cs">
+      <DependentUpon>frmNewTDQLNN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu\frmEditTDNgoaiNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu\frmEditTDNgoaiNgu.designer.cs">
+      <DependentUpon>frmEditTDNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu\frmListTDNgoaiNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu\frmListTDNgoaiNgu.Designer.cs">
+      <DependentUpon>frmListTDNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu\frmNewTDNgoaiNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDNgoaiNgu\frmNewTDNgoaiNgu.designer.cs">
+      <DependentUpon>frmNewTDNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDLLCT\frmEditTDLLCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDLLCT\frmEditTDLLCT.designer.cs">
+      <DependentUpon>frmEditTDLLCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDLLCT\frmListTDLLCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDLLCT\frmListTDLLCT.Designer.cs">
+      <DependentUpon>frmListTDLLCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDLLCT\frmNewTDLLCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDLLCT\frmNewTDLLCT.designer.cs">
+      <DependentUpon>frmNewTDLLCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDDaoTao\frmEditTDDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDDaoTao\frmEditTDDaoTao.designer.cs">
+      <DependentUpon>frmEditTDDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDDaoTao\frmListTDDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDDaoTao\frmListTDDaoTao.Designer.cs">
+      <DependentUpon>frmListTDDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTDDaoTao\frmNewTDDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTDDaoTao\frmNewTDDaoTao.designer.cs">
+      <DependentUpon>frmNewTDDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHeGD\frmEditQuanHeGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHeGD\frmEditQuanHeGD.designer.cs">
+      <DependentUpon>frmEditQuanHeGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHeGD\frmListQuanHeGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHeGD\frmListQuanHeGD.Designer.cs">
+      <DependentUpon>frmListQuanHeGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHeGD\frmNewQuanHeGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHeGD\frmNewQuanHeGD.designer.cs">
+      <DependentUpon>frmNewQuanHeGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPhongBan\frmEditPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPhongBan\frmEditPhongBan.designer.cs">
+      <DependentUpon>frmEditPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPhongBan\frmListPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPhongBan\frmListPhongBan.Designer.cs">
+      <DependentUpon>frmListPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPhongBan\frmNewPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPhongBan\frmNewPhongBan.designer.cs">
+      <DependentUpon>frmNewPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNgoaiNgu\frmEditNgoaiNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNgoaiNgu\frmEditNgoaiNgu.designer.cs">
+      <DependentUpon>frmEditNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNgoaiNgu\frmListNgoaiNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNgoaiNgu\frmListNgoaiNgu.Designer.cs">
+      <DependentUpon>frmListNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNgoaiNgu\frmNewNgoaiNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNgoaiNgu\frmNewNgoaiNgu.designer.cs">
+      <DependentUpon>frmNewNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNghiepVu\frmEditNghiepVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNghiepVu\frmEditNghiepVu.designer.cs">
+      <DependentUpon>frmEditNghiepVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNghiepVu\frmListNghiepVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNghiepVu\frmListNghiepVu.Designer.cs">
+      <DependentUpon>frmListNghiepVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNghiepVu\frmNewNghiepVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNghiepVu\frmNewNghiepVu.designer.cs">
+      <DependentUpon>frmNewNghiepVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNganHang\frmEditNganHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNganHang\frmEditNganHang.designer.cs">
+      <DependentUpon>frmEditNganHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNganHang\frmListNganHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNganHang\frmListNganHang.Designer.cs">
+      <DependentUpon>frmListNganHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListNganHang\frmNewNganHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNganHang\frmNewNganHang.designer.cs">
+      <DependentUpon>frmNewNganHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLoaiTB\frmEditLoaiTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLoaiTB\frmEditLoaiTB.designer.cs">
+      <DependentUpon>frmEditLoaiTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLoaiTB\frmListLoaiTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLoaiTB\frmListLoaiTB.Designer.cs">
+      <DependentUpon>frmListLoaiTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLoaiTB\frmNewLoaiTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLoaiTB\frmNewLoaiTB.designer.cs">
+      <DependentUpon>frmNewLoaiTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLHDaoTao\frmEditLHDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLHDaoTao\frmEditLHDaoTao.designer.cs">
+      <DependentUpon>frmEditLHDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLHDaoTao\frmListLHDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLHDaoTao\frmListLHDaoTao.Designer.cs">
+      <DependentUpon>frmListLHDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListLHDaoTao\frmNewLHDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLHDaoTao\frmNewLHDaoTao.designer.cs">
+      <DependentUpon>frmNewLHDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListKTKL\frmEditKTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListKTKL\frmEditKTKL.designer.cs">
+      <DependentUpon>frmEditKTKL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListKTKL\frmListKTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListKTKL\frmListKTKL.Designer.cs">
+      <DependentUpon>frmListKTKL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListKTKL\frmNewKTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListKTKL\frmNewKTKL.designer.cs">
+      <DependentUpon>frmNewKTKL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListHopDong\frmEditHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListHopDong\frmEditHopDong.designer.cs">
+      <DependentUpon>frmEditHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListHopDong\frmListHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListHopDong\frmListHopDong.Designer.cs">
+      <DependentUpon>frmListHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListHopDong\frmNewHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListHopDong\frmNewHopDong.designer.cs">
+      <DependentUpon>frmNewHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListHonNhan\frmEditHonNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListHonNhan\frmEditHonNhan.designer.cs">
+      <DependentUpon>frmEditHonNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListHonNhan\frmListHonNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListHonNhan\frmListHonNhan.Designer.cs">
+      <DependentUpon>frmListHonNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListHonNhan\frmNewHonNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListHonNhan\frmNewHonNhan.designer.cs">
+      <DependentUpon>frmNewHonNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDienCS\frmEditDienCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDienCS\frmEditDienCS.designer.cs">
+      <DependentUpon>frmEditDienCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDienCS\frmListDienCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDienCS\frmListDienCS.Designer.cs">
+      <DependentUpon>frmListDienCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDienCS\frmNewDienCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDienCS\frmNewDienCS.designer.cs">
+      <DependentUpon>frmNewDienCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBangCap\frmEditBangCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBangCap\frmEditBangCap.designer.cs">
+      <DependentUpon>frmEditBangCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBangCap\frmNewBangCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBangCap\frmNewBangCap.designer.cs">
+      <DependentUpon>frmNewBangCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCapKTKL\frmEditListCapKTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCapKTKL\frmEditListCapKTKL.designer.cs">
+      <DependentUpon>frmEditListCapKTKL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCapKTKL\frmListCapKTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCapKTKL\frmListCapKTKL.Designer.cs">
+      <DependentUpon>frmListCapKTKL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCapKTKL\frmNewCapKTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCapKTKL\frmNewCapKTKL.designer.cs">
+      <DependentUpon>frmNewCapKTKL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDanToc\frmEditDanToc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDanToc\frmEditDanToc.designer.cs">
+      <DependentUpon>frmEditDanToc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDanToc\frmListDanToc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDanToc\frmListDanToc.Designer.cs">
+      <DependentUpon>frmListDanToc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDanToc\frmNewDanToc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDanToc\frmNewDanToc.designer.cs">
+      <DependentUpon>frmNewDanToc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCMDaoTao\frmEditCMDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCMDaoTao\frmEditCMDaoTao.designer.cs">
+      <DependentUpon>frmEditCMDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCMDaoTao\frmListCMDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCMDaoTao\frmListCMDaoTao.Designer.cs">
+      <DependentUpon>frmListCMDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCMDaoTao\frmNewCMDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCMDaoTao\frmNewCMDaoTao.designer.cs">
+      <DependentUpon>frmNewCMDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVuDang\frmEditChucVuDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucVuDang\frmEditChucVuDang.designer.cs">
+      <DependentUpon>frmEditChucVuDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVuDang\frmListChucVuDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucVuDang\frmListChucVuDang.Designer.cs">
+      <DependentUpon>frmListChucVuDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVuDang\frmNewChucVuDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucVuDang\frmNewChucVuDang.designer.cs">
+      <DependentUpon>frmNewChucVuDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVu\frmEditChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucVu\frmEditChucVu.designer.cs">
+      <DependentUpon>frmEditChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVu\frmListChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucVu\frmListChucVu.Designer.cs">
+      <DependentUpon>frmListChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucVu\frmNewChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucVu\frmNewChucVu.designer.cs">
+      <DependentUpon>frmNewChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucDanh\frmEditChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucDanh\frmEditChucDanh.designer.cs">
+      <DependentUpon>frmEditChucDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucDanh\frmListChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucDanh\frmListChucDanh.Designer.cs">
+      <DependentUpon>frmListChucDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChucDanh\frmNewChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChucDanh\frmNewChucDanh.designer.cs">
+      <DependentUpon>frmNewChucDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChiBo\frmEditChiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChiBo\frmEditChiBo.designer.cs">
+      <DependentUpon>frmEditChiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChiBo\frmListChiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChiBo\frmListChiBo.Designer.cs">
+      <DependentUpon>frmListChiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChiBo\frmNewChiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChiBo\frmNewChiBo.designer.cs">
+      <DependentUpon>frmNewChiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuocGia\frmEditQuocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuocGia\frmEditQuocGia.designer.cs">
       <DependentUpon>frmEditQuocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListQuocGia.cs">
+    <Compile Include="ListBangCap\frmListBangCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListQuocGia.Designer.cs">
+    <Compile Include="ListBangCap\frmListBangCap.Designer.cs">
+      <DependentUpon>frmListBangCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuocGia\frmListQuocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuocGia\frmListQuocGia.Designer.cs">
       <DependentUpon>frmListQuocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewQuocGia.cs">
+    <Compile Include="ListQuocGia\frmNewQuocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewQuocGia.designer.cs">
+    <Compile Include="ListQuocGia\frmNewQuocGia.designer.cs">
       <DependentUpon>frmNewQuocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListThanhPhanGD\frmEditThanhPhanGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListThanhPhanGD\frmEditThanhPhanGD.designer.cs">
+      <DependentUpon>frmEditThanhPhanGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListThanhPhanGD\frmListThanhPhanGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListThanhPhanGD\frmListThanhPhanGD.designer.cs">
+      <DependentUpon>frmListThanhPhanGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListThanhPhanGD\frmNewThanhPhanGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListThanhPhanGD\frmNewThanhPhanGD.designer.cs">
+      <DependentUpon>frmNewThanhPhanGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmEditQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmEditQuanHuyen.designer.cs">
+      <DependentUpon>frmEditQuanHuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmListQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmListQuanHuyen.Designer.cs">
+      <DependentUpon>frmListQuanHuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmNewQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmNewQuanHuyen.designer.cs">
+      <DependentUpon>frmNewQuanHuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTinh\frmEditTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTinh\frmEditTinh.designer.cs">
+      <DependentUpon>frmEditTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTinh\frmListTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTinh\frmListTinh.Designer.cs">
+      <DependentUpon>frmListTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTinh\frmNewTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTinh\frmNewTinh.designer.cs">
+      <DependentUpon>frmNewTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTonGiao\frmEditTonGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTonGiao\frmEditTonGiao.designer.cs">
+      <DependentUpon>frmEditTonGiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTonGiao\frmListTonGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTonGiao\frmListTonGiao.designer.cs">
+      <DependentUpon>frmListTonGiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTonGiao\frmNewTonGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTonGiao\frmNewTonGiao.designer.cs">
+      <DependentUpon>frmNewTonGiao.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmEditQuocGia.resx">
+    <EmbeddedResource Include="ListTDVanHoa\frmEditTDVanHoa.resx">
+      <DependentUpon>frmEditTDVanHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDVanHoa\frmListTDVanHoa.resx">
+      <DependentUpon>frmListTDVanHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDVanHoa\frmNewTDVanHoa.resx">
+      <DependentUpon>frmNewTDVanHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDQLNN\frmEditTDQLNN.resx">
+      <DependentUpon>frmEditTDQLNN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDQLNN\frmListTDQLNN.resx">
+      <DependentUpon>frmListTDQLNN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDQLNN\frmNewTDQLNN.resx">
+      <DependentUpon>frmNewTDQLNN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDNgoaiNgu\frmEditTDNgoaiNgu.resx">
+      <DependentUpon>frmEditTDNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDNgoaiNgu\frmListTDNgoaiNgu.resx">
+      <DependentUpon>frmListTDNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDNgoaiNgu\frmNewTDNgoaiNgu.resx">
+      <DependentUpon>frmNewTDNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDLLCT\frmEditTDLLCT.resx">
+      <DependentUpon>frmEditTDLLCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDLLCT\frmListTDLLCT.resx">
+      <DependentUpon>frmListTDLLCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDLLCT\frmNewTDLLCT.resx">
+      <DependentUpon>frmNewTDLLCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDDaoTao\frmEditTDDaoTao.resx">
+      <DependentUpon>frmEditTDDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDDaoTao\frmListTDDaoTao.resx">
+      <DependentUpon>frmListTDDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTDDaoTao\frmNewTDDaoTao.resx">
+      <DependentUpon>frmNewTDDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuanHeGD\frmEditQuanHeGD.resx">
+      <DependentUpon>frmEditQuanHeGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuanHeGD\frmListQuanHeGD.resx">
+      <DependentUpon>frmListQuanHeGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuanHeGD\frmNewQuanHeGD.resx">
+      <DependentUpon>frmNewQuanHeGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPhongBan\frmEditPhongBan.resx">
+      <DependentUpon>frmEditPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPhongBan\frmListPhongBan.resx">
+      <DependentUpon>frmListPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPhongBan\frmNewPhongBan.resx">
+      <DependentUpon>frmNewPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNgoaiNgu\frmEditNgoaiNgu.resx">
+      <DependentUpon>frmEditNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNgoaiNgu\frmListNgoaiNgu.resx">
+      <DependentUpon>frmListNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNgoaiNgu\frmNewNgoaiNgu.resx">
+      <DependentUpon>frmNewNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNghiepVu\frmEditNghiepVu.resx">
+      <DependentUpon>frmEditNghiepVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNghiepVu\frmListNghiepVu.resx">
+      <DependentUpon>frmListNghiepVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNghiepVu\frmNewNghiepVu.resx">
+      <DependentUpon>frmNewNghiepVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNganHang\frmEditNganHang.resx">
+      <DependentUpon>frmEditNganHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNganHang\frmListNganHang.resx">
+      <DependentUpon>frmListNganHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListNganHang\frmNewNganHang.resx">
+      <DependentUpon>frmNewNganHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLoaiTB\frmEditLoaiTB.resx">
+      <DependentUpon>frmEditLoaiTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLoaiTB\frmListLoaiTB.resx">
+      <DependentUpon>frmListLoaiTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLoaiTB\frmNewLoaiTB.resx">
+      <DependentUpon>frmNewLoaiTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLHDaoTao\frmEditLHDaoTao.resx">
+      <DependentUpon>frmEditLHDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLHDaoTao\frmListLHDaoTao.resx">
+      <DependentUpon>frmListLHDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLHDaoTao\frmNewLHDaoTao.resx">
+      <DependentUpon>frmNewLHDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListKTKL\frmEditKTKL.resx">
+      <DependentUpon>frmEditKTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListKTKL\frmListKTKL.resx">
+      <DependentUpon>frmListKTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListKTKL\frmNewKTKL.resx">
+      <DependentUpon>frmNewKTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListHopDong\frmEditHopDong.resx">
+      <DependentUpon>frmEditHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListHopDong\frmListHopDong.resx">
+      <DependentUpon>frmListHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListHopDong\frmNewHopDong.resx">
+      <DependentUpon>frmNewHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListHonNhan\frmEditHonNhan.resx">
+      <DependentUpon>frmEditHonNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListHonNhan\frmListHonNhan.resx">
+      <DependentUpon>frmListHonNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListHonNhan\frmNewHonNhan.resx">
+      <DependentUpon>frmNewHonNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDienCS\frmEditDienCS.resx">
+      <DependentUpon>frmEditDienCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDienCS\frmListDienCS.resx">
+      <DependentUpon>frmListDienCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDienCS\frmNewDienCS.resx">
+      <DependentUpon>frmNewDienCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBangCap\frmEditBangCap.resx">
+      <DependentUpon>frmEditBangCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBangCap\frmNewBangCap.resx">
+      <DependentUpon>frmNewBangCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCapKTKL\frmEditListCapKTKL.resx">
+      <DependentUpon>frmEditListCapKTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCapKTKL\frmListCapKTKL.resx">
+      <DependentUpon>frmListCapKTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCapKTKL\frmNewCapKTKL.resx">
+      <DependentUpon>frmNewCapKTKL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDanToc\frmEditDanToc.resx">
+      <DependentUpon>frmEditDanToc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDanToc\frmListDanToc.resx">
+      <DependentUpon>frmListDanToc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDanToc\frmNewDanToc.resx">
+      <DependentUpon>frmNewDanToc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCMDaoTao\frmEditCMDaoTao.resx">
+      <DependentUpon>frmEditCMDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCMDaoTao\frmListCMDaoTao.resx">
+      <DependentUpon>frmListCMDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCMDaoTao\frmNewCMDaoTao.resx">
+      <DependentUpon>frmNewCMDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucVuDang\frmEditChucVuDang.resx">
+      <DependentUpon>frmEditChucVuDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucVuDang\frmListChucVuDang.resx">
+      <DependentUpon>frmListChucVuDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucVuDang\frmNewChucVuDang.resx">
+      <DependentUpon>frmNewChucVuDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucVu\frmEditChucVu.resx">
+      <DependentUpon>frmEditChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucVu\frmListChucVu.resx">
+      <DependentUpon>frmListChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucVu\frmNewChucVu.resx">
+      <DependentUpon>frmNewChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucDanh\frmEditChucDanh.resx">
+      <DependentUpon>frmEditChucDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucDanh\frmListChucDanh.resx">
+      <DependentUpon>frmListChucDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChucDanh\frmNewChucDanh.resx">
+      <DependentUpon>frmNewChucDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChiBo\frmEditChiBo.resx">
+      <DependentUpon>frmEditChiBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChiBo\frmListChiBo.resx">
+      <DependentUpon>frmListChiBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChiBo\frmNewChiBo.resx">
+      <DependentUpon>frmNewChiBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuocGia\frmEditQuocGia.resx">
       <DependentUpon>frmEditQuocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListQuocGia.resx">
+    <EmbeddedResource Include="ListBangCap\frmListBangCap.resx">
+      <DependentUpon>frmListBangCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuocGia\frmListQuocGia.resx">
       <DependentUpon>frmListQuocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewQuocGia.resx">
+    <EmbeddedResource Include="ListQuocGia\frmNewQuocGia.resx">
       <DependentUpon>frmNewQuocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListThanhPhanGD\frmEditThanhPhanGD.resx">
+      <DependentUpon>frmEditThanhPhanGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListThanhPhanGD\frmListThanhPhanGD.resx">
+      <DependentUpon>frmListThanhPhanGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListThanhPhanGD\frmNewThanhPhanGD.resx">
+      <DependentUpon>frmNewThanhPhanGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuanHuyen\frmEditQuanHuyen.resx">
+      <DependentUpon>frmEditQuanHuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuanHuyen\frmListQuanHuyen.resx">
+      <DependentUpon>frmListQuanHuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListQuanHuyen\frmNewQuanHuyen.resx">
+      <DependentUpon>frmNewQuanHuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTinh\frmEditTinh.resx">
+      <DependentUpon>frmEditTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTinh\frmListTinh.resx">
+      <DependentUpon>frmListTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTinh\frmNewTinh.resx">
+      <DependentUpon>frmNewTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTonGiao\frmEditTonGiao.resx">
+      <DependentUpon>frmEditTonGiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTonGiao\frmListTonGiao.resx">
+      <DependentUpon>frmListTonGiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTonGiao\frmNewTonGiao.resx">
+      <DependentUpon>frmNewTonGiao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -130,6 +887,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BHXH.Data.ListQuanHuyen.datasource" />
+    <None Include="Properties\DataSources\BHXH.List.Business.ListCMDaoTao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,11 +915,12 @@
       <Project>{af5e7f70-0405-4b4c-8d6d-21bd726d5b71}</Project>
       <Name>BHXH.List.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Dropbox\Projects\BHXH\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
+    <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
       <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
       <Name>BHXH.UIHelpers</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

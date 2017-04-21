@@ -9,3 +9,14 @@ C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Data\obj\Debug\BHXH.Data.csproj.GenerateResource.Cache
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Data\obj\Debug\BHXH.Data.dll
 C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Data\obj\Debug\BHXH.Data.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\BHXH.Data.dll.config
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\BHXH.Data.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\BHXH.Data.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.Properties.Resources.resources
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.csproj.GenerateResource.Cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.pdb

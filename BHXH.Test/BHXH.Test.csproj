@@ -54,10 +54,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.Ribbon, Version=3.5.8.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\officeribbon.3.5.8.4\lib\net20\System.Windows.Forms.Ribbon.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,7 +87,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,9 +104,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BHXH.Data\BHXH.Data.csproj">
+      <Project>{330b2510-d272-4ca8-835b-127c9c759db0}</Project>
+      <Name>BHXH.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BHXH.List.UI\BHXH.List.UI.csproj">
       <Project>{52fd76b4-cabd-4ded-88db-f85624ab9265}</Project>
       <Name>BHXH.List.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
+      <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
+      <Name>BHXH.UIHelpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,6 +17,14 @@ namespace BHXH.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ListQuanHuyen()
         {
+            this.HrNhanVien = new HashSet<HrNhanVien>();
+            this.HrNhanVien1 = new HashSet<HrNhanVien>();
+            this.HrNhanVien2 = new HashSet<HrNhanVien>();
+            this.HrNhanVien3 = new HashSet<HrNhanVien>();
+            this.HrNhanVien4 = new HashSet<HrNhanVien>();
+            this.HrNhanVien5 = new HashSet<HrNhanVien>();
+            this.HrNhanVien6 = new HashSet<HrNhanVien>();
+            this.HrNhanVien7 = new HashSet<HrNhanVien>();
             this.ListXaPhuong = new HashSet<ListXaPhuong>();
         }
     
@@ -25,7 +33,25 @@ namespace BHXH.Data
         public string TenQuanHuyen { get; set; }
         public string MaTinh { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien5 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien6 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien7 { get; set; }
         public virtual ListTinh ListTinh { get; set; }
+        public virtual ListQuanHuyen ListQuanHuyen1 { get; set; }
+        public virtual ListQuanHuyen ListQuanHuyen2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ListXaPhuong> ListXaPhuong { get; set; }
     }
