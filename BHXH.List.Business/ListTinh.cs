@@ -98,11 +98,8 @@ namespace BHXH.List.Business
         public static BHXH.Data.ListTinh GetTinh(string MaTinh)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            var query = from c in ctx.ListTinh
-                        where c.MaTinh == MaTinh
-                        select c;
-
-            return query.ToList().First();
+            return ctx.ListTinh.SingleOrDefault(x => x.MaTinh == MaTinh);
+          //  return query.ToList().First();
 
 
         }
