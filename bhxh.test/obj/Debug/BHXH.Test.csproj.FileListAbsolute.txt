@@ -104,7 +104,9 @@ C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Test.exe.config
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Test.exe
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Test.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Data.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.List.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.UIHelpers.exe
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Data.v16.1.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Printing.v16.1.Core.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
@@ -117,14 +119,14 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.XtraPrinting.v16
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\EntityFramework.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\EntityFramework.SqlServer.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.List.Business.dll
-D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Data.dll
-D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.UIHelpers.exe
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.XtraTreeList.v16.1.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Office.v16.1.Core.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Pdf.v16.1.Drawing.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Data.pdb
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.List.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.UIHelpers.pdb
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Data.v16.1.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Printing.v16.1.Core.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
@@ -137,8 +139,6 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.XtraPrinting.v16
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\EntityFramework.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\EntityFramework.SqlServer.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.List.Business.pdb
-D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.Data.pdb
-D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\BHXH.UIHelpers.pdb
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.RichEdit.v16.1.Core.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\bin\Debug\DevExpress.XtraTreeList.v16.1.xml
