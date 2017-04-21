@@ -86,7 +86,7 @@ namespace BHXH.List.Business
         public static void Delete(string MaTinh)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListTinh obj = GetNationality(MaTinh);
+           //ctx.
             
            ctx.ListTinh.Attach(obj);
             ctx.ListTinh.Remove(obj);

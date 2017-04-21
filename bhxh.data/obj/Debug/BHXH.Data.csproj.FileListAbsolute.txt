@@ -21,3 +21,14 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.Properties.Resour
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.csproj.GenerateResource.Cache
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Data\obj\Debug\BHXH.Data.pdb
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\BHXH.Data.dll.config
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\BHXH.Data.dll
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\BHXH.Data.pdb
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\EntityFramework.dll
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\EntityFramework.xml
+D:\Dropbox\Projects\BHXH\BHXH.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dropbox\Projects\BHXH\BHXH.Data\obj\Debug\BHXH.Data.Properties.Resources.resources
+D:\Dropbox\Projects\BHXH\BHXH.Data\obj\Debug\BHXH.Data.csproj.GenerateResource.Cache
+D:\Dropbox\Projects\BHXH\BHXH.Data\obj\Debug\BHXH.Data.dll
+D:\Dropbox\Projects\BHXH\BHXH.Data\obj\Debug\BHXH.Data.pdb

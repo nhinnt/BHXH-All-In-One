@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BHXHModelStoreContainer" CdmEntityContainer="BHXHEntities">
+  <EntityContainerMapping StorageEntityContainer="BHXHStoreContainer" CdmEntityContainer="BHXHEntities">
     <EntitySetMapping Name="HrNhanVien">
-      <EntityTypeMapping TypeName="BHXHModel.HrNhanVien">
+      <EntityTypeMapping TypeName="BHXH.HrNhanVien">
         <MappingFragment StoreEntitySet="HrNhanVien">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
@@ -86,7 +86,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrThangBangLuong">
-      <EntityTypeMapping TypeName="BHXHModel.HrThangBangLuong">
+      <EntityTypeMapping TypeName="BHXH.HrThangBangLuong">
         <MappingFragment StoreEntitySet="HrThangBangLuong">
           <ScalarProperty Name="MaNgach" ColumnName="MaNgach" />
           <ScalarProperty Name="TenNgach" ColumnName="TenNgach" />
@@ -108,7 +108,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListBangCap">
-      <EntityTypeMapping TypeName="BHXHModel.ListBangCap">
+      <EntityTypeMapping TypeName="BHXH.ListBangCap">
         <MappingFragment StoreEntitySet="ListBangCap">
           <ScalarProperty Name="MaBangCap" ColumnName="MaBangCap" />
           <ScalarProperty Name="TenBangCap" ColumnName="TenBangCap" />
@@ -116,7 +116,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListCapKTKL">
-      <EntityTypeMapping TypeName="BHXHModel.ListCapKTKL">
+      <EntityTypeMapping TypeName="BHXH.ListCapKTKL">
         <MappingFragment StoreEntitySet="ListCapKTKL">
           <ScalarProperty Name="MaCapKTKL" ColumnName="MaCapKTKL" />
           <ScalarProperty Name="TenCapKTKL" ColumnName="TenCapKTKL" />
@@ -124,7 +124,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListCMDaoTao">
-      <EntityTypeMapping TypeName="BHXHModel.ListCMDaoTao">
+      <EntityTypeMapping TypeName="BHXH.ListCMDaoTao">
         <MappingFragment StoreEntitySet="ListCMDaoTao">
           <ScalarProperty Name="MaCMDaoTao" ColumnName="MaCMDaoTao" />
           <ScalarProperty Name="TenCMDaoTao" ColumnName="TenCMDaoTao" />
@@ -133,7 +133,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListChiBo">
-      <EntityTypeMapping TypeName="BHXHModel.ListChiBo">
+      <EntityTypeMapping TypeName="BHXH.ListChiBo">
         <MappingFragment StoreEntitySet="ListChiBo">
           <ScalarProperty Name="MaChiBo" ColumnName="MaChiBo" />
           <ScalarProperty Name="TenChiBo" ColumnName="TenChiBo" />
@@ -141,7 +141,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListChucDanh">
-      <EntityTypeMapping TypeName="BHXHModel.ListChucDanh">
+      <EntityTypeMapping TypeName="BHXH.ListChucDanh">
         <MappingFragment StoreEntitySet="ListChucDanh">
           <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
           <ScalarProperty Name="TenChucDanh" ColumnName="TenChucDanh" />
@@ -149,7 +149,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListChucVu">
-      <EntityTypeMapping TypeName="BHXHModel.ListChucVu">
+      <EntityTypeMapping TypeName="BHXH.ListChucVu">
         <MappingFragment StoreEntitySet="ListChucVu">
           <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
           <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
@@ -157,7 +157,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListChucVuDang">
-      <EntityTypeMapping TypeName="BHXHModel.ListChucVuDang">
+      <EntityTypeMapping TypeName="BHXH.ListChucVuDang">
         <MappingFragment StoreEntitySet="ListChucVuDang">
           <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
           <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
@@ -165,7 +165,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListDanToc">
-      <EntityTypeMapping TypeName="BHXHModel.ListDanToc">
+      <EntityTypeMapping TypeName="BHXH.ListDanToc">
         <MappingFragment StoreEntitySet="ListDanToc">
           <ScalarProperty Name="MaDanToc" ColumnName="MaDanToc" />
           <ScalarProperty Name="TenDanToc" ColumnName="TenDanToc" />
@@ -173,7 +173,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListDienCS">
-      <EntityTypeMapping TypeName="BHXHModel.ListDienCS">
+      <EntityTypeMapping TypeName="BHXH.ListDienCS">
         <MappingFragment StoreEntitySet="ListDienCS">
           <ScalarProperty Name="MaDienCS" ColumnName="MaDienCS" />
           <ScalarProperty Name="TenDienCS" ColumnName="TenDienCS" />
@@ -181,7 +181,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListHonNhan">
-      <EntityTypeMapping TypeName="BHXHModel.ListHonNhan">
+      <EntityTypeMapping TypeName="BHXH.ListHonNhan">
         <MappingFragment StoreEntitySet="ListHonNhan">
           <ScalarProperty Name="MaHonNhan" ColumnName="MaHonNhan" />
           <ScalarProperty Name="TenHonNhan" ColumnName="TenHonNhan" />
@@ -189,7 +189,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListHopDong">
-      <EntityTypeMapping TypeName="BHXHModel.ListHopDong">
+      <EntityTypeMapping TypeName="BHXH.ListHopDong">
         <MappingFragment StoreEntitySet="ListHopDong">
           <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
           <ScalarProperty Name="TenHopDong" ColumnName="TenHopDong" />
@@ -198,7 +198,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListKTKL">
-      <EntityTypeMapping TypeName="BHXHModel.ListKTKL">
+      <EntityTypeMapping TypeName="BHXH.ListKTKL">
         <MappingFragment StoreEntitySet="ListKTKL">
           <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
           <ScalarProperty Name="TenKTKL" ColumnName="TenKTKL" />
@@ -207,7 +207,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListLHDaoTao">
-      <EntityTypeMapping TypeName="BHXHModel.ListLHDaoTao">
+      <EntityTypeMapping TypeName="BHXH.ListLHDaoTao">
         <MappingFragment StoreEntitySet="ListLHDaoTao">
           <ScalarProperty Name="MaLHDaoTao" ColumnName="MaLHDaoTao" />
           <ScalarProperty Name="TenLHDaoTao" ColumnName="TenLHDaoTao" />
@@ -215,7 +215,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListLoaiTB">
-      <EntityTypeMapping TypeName="BHXHModel.ListLoaiTB">
+      <EntityTypeMapping TypeName="BHXH.ListLoaiTB">
         <MappingFragment StoreEntitySet="ListLoaiTB">
           <ScalarProperty Name="MaLoaiTB" ColumnName="MaLoaiTB" />
           <ScalarProperty Name="TenLoaiTB" ColumnName="TenLoaiTB" />
@@ -223,7 +223,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListNoiKCB">
-      <EntityTypeMapping TypeName="BHXHModel.ListNoiKCB">
+      <EntityTypeMapping TypeName="BHXH.ListNoiKCB">
         <MappingFragment StoreEntitySet="ListNoiKCB">
           <ScalarProperty Name="MaNoiKCB" ColumnName="MaNoiKCB" />
           <ScalarProperty Name="TenNoiKCB" ColumnName="TenNoiKCB" />
@@ -233,7 +233,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListNganHang">
-      <EntityTypeMapping TypeName="BHXHModel.ListNganHang">
+      <EntityTypeMapping TypeName="BHXH.ListNganHang">
         <MappingFragment StoreEntitySet="ListNganHang">
           <ScalarProperty Name="MaNganHang" ColumnName="MaNganHang" />
           <ScalarProperty Name="TenNganHang" ColumnName="TenNganHang" />
@@ -241,7 +241,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListNghiepVu">
-      <EntityTypeMapping TypeName="BHXHModel.ListNghiepVu">
+      <EntityTypeMapping TypeName="BHXH.ListNghiepVu">
         <MappingFragment StoreEntitySet="ListNghiepVu">
           <ScalarProperty Name="MaNghiepVu" ColumnName="MaNghiepVu" />
           <ScalarProperty Name="TenNghiepVu" ColumnName="TenNghiepVu" />
@@ -249,7 +249,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListNgoaiNgu">
-      <EntityTypeMapping TypeName="BHXHModel.ListNgoaiNgu">
+      <EntityTypeMapping TypeName="BHXH.ListNgoaiNgu">
         <MappingFragment StoreEntitySet="ListNgoaiNgu">
           <ScalarProperty Name="MaNgoaiNgu" ColumnName="MaNgoaiNgu" />
           <ScalarProperty Name="TenNgoaiNgu" ColumnName="TenNgoaiNgu" />
@@ -257,7 +257,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListPhongBan">
-      <EntityTypeMapping TypeName="BHXHModel.ListPhongBan">
+      <EntityTypeMapping TypeName="BHXH.ListPhongBan">
         <MappingFragment StoreEntitySet="ListPhongBan">
           <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
           <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
@@ -265,7 +265,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListQuanHeGD">
-      <EntityTypeMapping TypeName="BHXHModel.ListQuanHeGD">
+      <EntityTypeMapping TypeName="BHXH.ListQuanHeGD">
         <MappingFragment StoreEntitySet="ListQuanHeGD">
           <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
           <ScalarProperty Name="TenQuanHeGD" ColumnName="TenQuanHeGD" />
@@ -273,7 +273,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListQuanHuyen">
-      <EntityTypeMapping TypeName="BHXHModel.ListQuanHuyen">
+      <EntityTypeMapping TypeName="BHXH.ListQuanHuyen">
         <MappingFragment StoreEntitySet="ListQuanHuyen">
           <ScalarProperty Name="QuanHuyenID" ColumnName="QuanHuyenID" />
           <ScalarProperty Name="MaQuanHuyen" ColumnName="MaQuanHuyen" />
@@ -283,7 +283,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListQuocGia">
-      <EntityTypeMapping TypeName="BHXHModel.ListQuocGia">
+      <EntityTypeMapping TypeName="BHXH.ListQuocGia">
         <MappingFragment StoreEntitySet="ListQuocGia">
           <ScalarProperty Name="MaQuocGia" ColumnName="MaQuocGia" />
           <ScalarProperty Name="TenQuocGia" ColumnName="TenQuocGia" />
@@ -291,7 +291,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTDDaoTao">
-      <EntityTypeMapping TypeName="BHXHModel.ListTDDaoTao">
+      <EntityTypeMapping TypeName="BHXH.ListTDDaoTao">
         <MappingFragment StoreEntitySet="ListTDDaoTao">
           <ScalarProperty Name="MaTDDaoTao" ColumnName="MaTDDaoTao" />
           <ScalarProperty Name="TenTDDaoTao" ColumnName="TenTDDaoTao" />
@@ -299,7 +299,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTDLLCT">
-      <EntityTypeMapping TypeName="BHXHModel.ListTDLLCT">
+      <EntityTypeMapping TypeName="BHXH.ListTDLLCT">
         <MappingFragment StoreEntitySet="ListTDLLCT">
           <ScalarProperty Name="MaTDLLCT" ColumnName="MaTDLLCT" />
           <ScalarProperty Name="TenTDLLCT" ColumnName="TenTDLLCT" />
@@ -307,7 +307,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTDNgoaiNgu">
-      <EntityTypeMapping TypeName="BHXHModel.ListTDNgoaiNgu">
+      <EntityTypeMapping TypeName="BHXH.ListTDNgoaiNgu">
         <MappingFragment StoreEntitySet="ListTDNgoaiNgu">
           <ScalarProperty Name="MaTDNgoaiNgu" ColumnName="MaTDNgoaiNgu" />
           <ScalarProperty Name="TenTDNgoaiNgu" ColumnName="TenTDNgoaiNgu" />
@@ -315,7 +315,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTDQLNN">
-      <EntityTypeMapping TypeName="BHXHModel.ListTDQLNN">
+      <EntityTypeMapping TypeName="BHXH.ListTDQLNN">
         <MappingFragment StoreEntitySet="ListTDQLNN">
           <ScalarProperty Name="MaTDQLNN" ColumnName="MaTDQLNN" />
           <ScalarProperty Name="TenTDQLNN" ColumnName="TenTDQLNN" />
@@ -323,7 +323,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTDVanHoa">
-      <EntityTypeMapping TypeName="BHXHModel.ListTDVanHoa">
+      <EntityTypeMapping TypeName="BHXH.ListTDVanHoa">
         <MappingFragment StoreEntitySet="ListTDVanHoa">
           <ScalarProperty Name="MaTDVanHoa" ColumnName="MaTDVanHoa" />
           <ScalarProperty Name="TenTDVanHoa" ColumnName="TenTDVanHoa" />
@@ -331,7 +331,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTinh">
-      <EntityTypeMapping TypeName="BHXHModel.ListTinh">
+      <EntityTypeMapping TypeName="BHXH.ListTinh">
         <MappingFragment StoreEntitySet="ListTinh">
           <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
           <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
@@ -339,7 +339,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListTonGiao">
-      <EntityTypeMapping TypeName="BHXHModel.ListTonGiao">
+      <EntityTypeMapping TypeName="BHXH.ListTonGiao">
         <MappingFragment StoreEntitySet="ListTonGiao">
           <ScalarProperty Name="MaTonGiao" ColumnName="MaTonGiao" />
           <ScalarProperty Name="TenTonGiao" ColumnName="TenTonGiao" />
@@ -347,7 +347,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListThanhPhanGD">
-      <EntityTypeMapping TypeName="BHXHModel.ListThanhPhanGD">
+      <EntityTypeMapping TypeName="BHXH.ListThanhPhanGD">
         <MappingFragment StoreEntitySet="ListThanhPhanGD">
           <ScalarProperty Name="MaThanhPhanGD" ColumnName="MaThanhPhanGD" />
           <ScalarProperty Name="TenThanhPhanGD" ColumnName="TenThanhPhanGD" />
@@ -355,7 +355,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListXaPhuong">
-      <EntityTypeMapping TypeName="BHXHModel.ListXaPhuong">
+      <EntityTypeMapping TypeName="BHXH.ListXaPhuong">
         <MappingFragment StoreEntitySet="ListXaPhuong">
           <ScalarProperty Name="XaPhuongID" ColumnName="XaPhuongID" />
           <ScalarProperty Name="MaXaPhuong" ColumnName="MaXaPhuong" />
@@ -365,7 +365,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrKhenThuongKyLuat">
-      <EntityTypeMapping TypeName="BHXHModel.HrKhenThuongKyLuat">
+      <EntityTypeMapping TypeName="BHXH.HrKhenThuongKyLuat">
         <MappingFragment StoreEntitySet="HrKhenThuongKyLuat">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="STT" ColumnName="STT" />
@@ -377,7 +377,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrPSBHXH">
-      <EntityTypeMapping TypeName="BHXHModel.HrPSBHXH">
+      <EntityTypeMapping TypeName="BHXH.HrPSBHXH">
         <MappingFragment StoreEntitySet="HrPSBHXH">
           <ScalarProperty Name="Thang" ColumnName="Thang" />
           <ScalarProperty Name="Nam" ColumnName="Nam" />
@@ -401,7 +401,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrPSLuong">
-      <EntityTypeMapping TypeName="BHXHModel.HrPSLuong">
+      <EntityTypeMapping TypeName="BHXH.HrPSLuong">
         <MappingFragment StoreEntitySet="HrPSLuong">
           <ScalarProperty Name="Thang" ColumnName="Thang" />
           <ScalarProperty Name="Nam" ColumnName="Nam" />
@@ -423,7 +423,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrQuanHeGiaDinh">
-      <EntityTypeMapping TypeName="BHXHModel.HrQuanHeGiaDinh">
+      <EntityTypeMapping TypeName="BHXH.HrQuanHeGiaDinh">
         <MappingFragment StoreEntitySet="HrQuanHeGiaDinh">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="STT" ColumnName="STT" />
@@ -435,7 +435,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrQuaTrinhBHXH">
-      <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhBHXH">
+      <EntityTypeMapping TypeName="BHXH.HrQuaTrinhBHXH">
         <MappingFragment StoreEntitySet="HrQuaTrinhBHXH">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="STT" ColumnName="STT" />
@@ -453,7 +453,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrQuaTrinhCongTac">
-      <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhCongTac">
+      <EntityTypeMapping TypeName="BHXH.HrQuaTrinhCongTac">
         <MappingFragment StoreEntitySet="HrQuaTrinhCongTac">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="STT" ColumnName="STT" />
@@ -463,7 +463,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HrQuaTrinhLuong">
-      <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhLuong">
+      <EntityTypeMapping TypeName="BHXH.HrQuaTrinhLuong">
         <MappingFragment StoreEntitySet="HrQuaTrinhLuong">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="STT" ColumnName="STT" />
@@ -482,6 +482,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXHModel.Store.DBA_RestoreDB" />
+    <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXH.Store.DBA_RestoreDB" />
   </EntityContainerMapping>
 </Mapping>
