@@ -90,34 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmEditQuocGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditQuocGia.designer.cs">
-      <DependentUpon>frmEditQuocGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListQuocGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListQuocGia.Designer.cs">
-      <DependentUpon>frmListQuocGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNewQuocGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNewQuocGia.designer.cs">
-      <DependentUpon>frmNewQuocGia.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmEditQuocGia.resx">
-      <DependentUpon>frmEditQuocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListQuocGia.resx">
-      <DependentUpon>frmListQuocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNewQuocGia.resx">
-      <DependentUpon>frmNewQuocGia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
