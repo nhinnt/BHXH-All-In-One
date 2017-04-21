@@ -49,8 +49,7 @@ namespace BHXH.List.UI
            
            
             gridControlTinh.DataSource = BHXH.List.Business.ListTinh.GetAll().ToList();
-            string code= gridViewTinh.GetRowCellValue(gridViewTinh.GetSelectedRows().First(), "MaTinh").ToString();
-            gridcontroListMain.DataSource = BHXH.List.Business.ListQuanHuyen.GetAll(code).ToList();
+            
         }
 
 
@@ -111,5 +110,24 @@ namespace BHXH.List.UI
                 InitData();
             }
         }
+
+        private void gridViewTinh_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+  
+        private void gridViewTinh_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+           
+        }
+
+        private void gridViewTinh_MouseDown(object sender, MouseEventArgs e)
+        {
+            string code = gridViewTinh.GetRowCellValue(gridViewTinh.GetSelectedRows().First(), "MaTinh").ToString();
+           
+            gridcontroListMain.DataSource = BHXH.List.Business.ListQuanHuyen.GetAll(code).ToList();
+        }
     }
 }
+        

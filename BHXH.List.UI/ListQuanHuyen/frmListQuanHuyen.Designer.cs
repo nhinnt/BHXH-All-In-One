@@ -34,6 +34,7 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -43,7 +44,6 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridcontroListMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewListMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTinh)).BeginInit();
@@ -116,6 +116,14 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "MaTinh";
+            this.gridColumn4.FieldName = "MaTinh";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
+            // 
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -174,6 +182,7 @@
             this.gridControlTinh.TabIndex = 27;
             this.gridControlTinh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTinh});
+            this.gridControlTinh.Click += new System.EventHandler(this.gridViewTinh_Click);
             // 
             // gridViewTinh
             // 
@@ -192,6 +201,7 @@
             this.gridViewTinh.OptionsView.ShowGroupPanel = false;
             this.gridViewTinh.OptionsView.ShowViewCaption = true;
             this.gridViewTinh.ViewCaption = "Danh mục Tỉnh";
+            this.gridViewTinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewTinh_MouseDown);
             // 
             // gridColumn1
             // 
@@ -227,14 +237,6 @@
             this.gridColumn3.FieldName = "IDQuocGia";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "MaTinh";
-            this.gridColumn4.FieldName = "MaTinh";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
             // 
             // frmListQuanHuyen
             // 
