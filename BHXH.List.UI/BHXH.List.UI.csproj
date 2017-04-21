@@ -91,9 +91,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="ListTDVanHoa\frmEditTDVanHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -616,7 +613,6 @@
     <Compile Include="ListTonGiao\frmNewTonGiao.designer.cs">
       <DependentUpon>frmNewTonGiao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ListTDVanHoa\frmEditTDVanHoa.resx">
       <DependentUpon>frmEditTDVanHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -884,14 +880,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BHXH.Data.ListQuanHuyen.datasource" />
-    <None Include="Properties\DataSources\BHXH.List.Business.ListCMDaoTao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -923,7 +918,9 @@
       <Name>BHXH.UIHelpers</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,25 +80,22 @@ namespace BHXH.List.Business
             else
                 return null;
 
-
-
         }
 
         public static void Delete(string MaTinh)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-           //ctx.
-            
-           ctx.ListTinh.Attach(obj);
+
+            var obj = new Data.ListTinh { MaTinh = MaTinh };
+            ctx.ListTinh.Attach(obj);
             ctx.ListTinh.Remove(obj);
-          
             
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListTinh GetNationality(string MaTinh)
+        public static BHXH.Data.ListTinh GetTinh(string MaTinh)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListTinh
