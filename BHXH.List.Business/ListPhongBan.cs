@@ -84,17 +84,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaPhongBan)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListPhongBan obj = GetNationality(MaPhongBan);
 
+            var obj = new Data.ListPhongBan { MaPhongBan = MaPhongBan };
             ctx.ListPhongBan.Attach(obj);
             ctx.ListPhongBan.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListPhongBan GetNationality(string MaPhongBan)
+        public static BHXH.Data.ListPhongBan GetData(string MaPhongBan)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListPhongBan

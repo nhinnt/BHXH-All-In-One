@@ -85,7 +85,7 @@ namespace BHXH.List.Business
         public static void Delete(string MaCMDaoTao)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListCMDaoTao obj = GetNationality(MaCMDaoTao);
+            Data.ListCMDaoTao obj = GetData(MaCMDaoTao);
 
             ctx.ListCMDaoTao.Attach(obj);
             ctx.ListCMDaoTao.Remove(obj);
@@ -95,7 +95,7 @@ namespace BHXH.List.Business
 
         }
 
-        public static BHXH.Data.ListCMDaoTao GetNationality(string MaCMDaoTao)
+        public static BHXH.Data.ListCMDaoTao GetData(string MaCMDaoTao)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListCMDaoTao

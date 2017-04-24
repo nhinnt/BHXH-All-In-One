@@ -85,17 +85,16 @@ namespace BHXH.List.Business
         public static void Delete(string MaHopDong)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListHopDong obj = GetNationality(MaHopDong);
 
+            var obj = new Data.ListHopDong { MaHopDong = MaHopDong };
             ctx.ListHopDong.Attach(obj);
             ctx.ListHopDong.Remove(obj);
-            
-            ctx.SaveChanges();
 
+            ctx.SaveChanges();
 
         }
 
-        public static BHXH.Data.ListHopDong GetNationality(string MaHopDong)
+        public static BHXH.Data.ListHopDong GetData(string MaHopDong)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListHopDong

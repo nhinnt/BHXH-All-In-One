@@ -84,17 +84,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaTDLLCT)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListTDLLCT obj = GetNationality(MaTDLLCT);
 
+            var obj = new Data.ListTDLLCT { MaTDLLCT = MaTDLLCT };
             ctx.ListTDLLCT.Attach(obj);
             ctx.ListTDLLCT.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListTDLLCT GetNationality(string MaTDLLCT)
+        public static BHXH.Data.ListTDLLCT GetData(string MaTDLLCT)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListTDLLCT

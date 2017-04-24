@@ -37,7 +37,7 @@ namespace BHXH.List.UI
         {
 
             txtMa.Text = maBangCap;
-            txtTen.Text = BHXH.List.Business.ListBangCap.GetNationality(maBangCap).TenBangCap;
+            txtTen.Text = BHXH.List.Business.ListBangCap.GetData(maBangCap).TenBangCap;
         }
 
         private void SimpleButtonThoat_Click(object sender, EventArgs e)

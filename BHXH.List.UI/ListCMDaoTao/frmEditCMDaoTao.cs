@@ -37,8 +37,8 @@ namespace BHXH.List.UI
         {
 
             txtMa.Text = maCMDaoTao;
-            txtTen.Text = BHXH.List.Business.ListCMDaoTao.GetNationality(maCMDaoTao).TenCMDaoTao;
-            cbbLoai.Text = BHXH.List.Business.ListCMDaoTao.GetNationality(maCMDaoTao).LoaiCMDaoTao;
+            txtTen.Text = BHXH.List.Business.ListCMDaoTao.GetData(maCMDaoTao).TenCMDaoTao;
+            cbbLoai.Text = BHXH.List.Business.ListCMDaoTao.GetData(maCMDaoTao).LoaiCMDaoTao;
         }
 
         private void SimpleButtonThoat_Click(object sender, EventArgs e)

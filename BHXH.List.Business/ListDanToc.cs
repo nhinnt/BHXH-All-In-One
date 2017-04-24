@@ -84,17 +84,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaDanToc)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListDanToc obj = GetNationality(MaDanToc);
 
+            var obj = new Data.ListDanToc { MaDanToc = MaDanToc };
             ctx.ListDanToc.Attach(obj);
             ctx.ListDanToc.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListDanToc GetNationality(string MaDanToc)
+        public static BHXH.Data.ListDanToc GetData(string MaDanToc)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListDanToc
