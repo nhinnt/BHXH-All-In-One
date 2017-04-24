@@ -42,18 +42,18 @@ namespace BHXH.List.UI
 
         }
 
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // frmNewNoiKCB
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "frmNewNoiKCB";
-            this.Load += new System.EventHandler(this.frmNewNoiKCB_Load);
-            this.ResumeLayout(false);
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    // 
+        //    // frmNewNoiKCB
+        //    // 
+        //    this.ClientSize = new System.Drawing.Size(284, 262);
+        //    this.Name = "frmNewNoiKCB";
+        //    this.Load += new System.EventHandler(this.frmNewNoiKCB_Load);
+        //    this.ResumeLayout(false);
 
-        }
+        //}
 
         private void frmNewNoiKCB_Load(object sender, EventArgs e)
         {

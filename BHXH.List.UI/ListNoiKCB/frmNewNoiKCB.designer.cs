@@ -105,8 +105,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmNewNoiKCB";
+            this.Load += new System.EventHandler(this.frmNewNoiKCB_Load);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thêm Tôn Giáo";
+            this.Text = "Thêm nơi khám chữa bệnh";
             this.ResumeLayout(false);
             this.PerformLayout();
 
