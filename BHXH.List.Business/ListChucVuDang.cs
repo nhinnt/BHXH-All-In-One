@@ -97,11 +97,8 @@ namespace BHXH.List.Business
         public static BHXH.Data.ListChucVuDang GetData(string MaChucVu)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            var query = from c in ctx.ListChucVuDang
-                        where c.MaChucVu == MaChucVu
-                        select c;
 
-            return query.ToList().First();
+            return ctx.ListChucVuDang.SingleOrDefault(x=>x.MaChucVu==MaChucVu);
 
 
         }

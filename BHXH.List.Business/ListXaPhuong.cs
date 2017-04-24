@@ -100,17 +100,15 @@ namespace BHXH.List.Business
 
         //}
 
-        //public static BHXH.Data.ListXaPhuong GetData(int XaPhuongID)
-        //{
-        //    BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-        //    var query = from c in ctx.ListXaPhuong
-        //                where c.XaPhuongID == XaPhuongID
-        //                select c;
-
-        //    return query.ToList().First();
+        public static BHXH.Data.ListXaPhuong GetData(int XaPhuongID)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
 
-        //}
+            return ctx.ListXaPhuong.SingleOrDefault(x => x.XaPhuongID == XaPhuongID);
+
+
+        }
         //public void STT()
         //{ }
     }
