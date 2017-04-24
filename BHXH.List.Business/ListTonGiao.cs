@@ -84,11 +84,11 @@ namespace BHXH.List.Business
         public static void Delete(string MaTonGiao)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListTonGiao obj = GetTonGiao(MaTonGiao);
 
+            var obj = new Data.ListTonGiao { MaTonGiao = MaTonGiao };
             ctx.ListTonGiao.Attach(obj);
             ctx.ListTonGiao.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 

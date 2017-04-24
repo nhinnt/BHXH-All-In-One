@@ -45,7 +45,7 @@ namespace BHXH.List.UI
         void InitData()
         {
 
-            gridcontrolListNationlity.DataSource = BHXH.List.Business.ListQuocGia.GetAll().ToList();
+            gridcontrolListNationlity.DataSource = BHXH.List.Business.ListQuocGia.GetAll();
 
         }
 

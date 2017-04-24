@@ -84,17 +84,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaNghiepVu)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListNghiepVu obj = GetNationality(MaNghiepVu);
 
+            var obj = new Data.ListNghiepVu { MaNghiepVu = MaNghiepVu };
             ctx.ListNghiepVu.Attach(obj);
             ctx.ListNghiepVu.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListNghiepVu GetNationality(string MaNghiepVu)
+        public static BHXH.Data.ListNghiepVu GetData(string MaNghiepVu)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListNghiepVu

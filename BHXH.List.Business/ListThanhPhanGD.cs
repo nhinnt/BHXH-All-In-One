@@ -84,11 +84,11 @@ namespace BHXH.List.Business
         public static void Delete(string MaThanhPhanGD)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListThanhPhanGD obj = GetThanhPhanGD(MaThanhPhanGD);
 
+            var obj = new Data.ListThanhPhanGD { MaThanhPhanGD = MaThanhPhanGD };
             ctx.ListThanhPhanGD.Attach(obj);
             ctx.ListThanhPhanGD.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 

@@ -91,6 +91,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListNoiKCB\frmEditNoiKCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNoiKCB\frmEditNoiKCB.designer.cs" />
+    <Compile Include="ListNoiKCB\frmListNoiKCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNoiKCB\frmListNoiKCB.Designer.cs" />
+    <Compile Include="ListNoiKCB\frmNewNoiKCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListNoiKCB\frmNewNoiKCB.designer.cs" />
+    <Compile Include="ListQuanHuyen\frmListQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListQuanHuyen\frmListQuanHuyen.Designer.cs">
+      <DependentUpon>frmListQuanHuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListXaPhuong\frmListXaPhuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListXaPhuong\frmListXaPhuong.Designer.cs">
+      <DependentUpon>frmListXaPhuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListTDVanHoa\frmEditTDVanHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -559,24 +583,6 @@
     <Compile Include="ListThanhPhanGD\frmNewThanhPhanGD.designer.cs">
       <DependentUpon>frmNewThanhPhanGD.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListQuanHuyen\frmEditQuanHuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListQuanHuyen\frmEditQuanHuyen.designer.cs">
-      <DependentUpon>frmEditQuanHuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListQuanHuyen\frmListQuanHuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListQuanHuyen\frmListQuanHuyen.Designer.cs">
-      <DependentUpon>frmListQuanHuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListQuanHuyen\frmNewQuanHuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListQuanHuyen\frmNewQuanHuyen.designer.cs">
-      <DependentUpon>frmNewQuanHuyen.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListTinh\frmEditTinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -613,6 +619,15 @@
     <Compile Include="ListTonGiao\frmNewTonGiao.designer.cs">
       <DependentUpon>frmNewTonGiao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ListNoiKCB\frmEditNoiKCB.resx" />
+    <EmbeddedResource Include="ListNoiKCB\frmListNoiKCB.resx" />
+    <EmbeddedResource Include="ListNoiKCB\frmNewNoiKCB.resx" />
+    <EmbeddedResource Include="ListQuanHuyen\frmListQuanHuyen.resx">
+      <DependentUpon>frmListQuanHuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListXaPhuong\frmListXaPhuong.resx">
+      <DependentUpon>frmListXaPhuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListTDVanHoa\frmEditTDVanHoa.resx">
       <DependentUpon>frmEditTDVanHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -846,15 +861,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListThanhPhanGD\frmNewThanhPhanGD.resx">
       <DependentUpon>frmNewThanhPhanGD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListQuanHuyen\frmEditQuanHuyen.resx">
-      <DependentUpon>frmEditQuanHuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListQuanHuyen\frmListQuanHuyen.resx">
-      <DependentUpon>frmListQuanHuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListQuanHuyen\frmNewQuanHuyen.resx">
-      <DependentUpon>frmNewQuanHuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListTinh\frmEditTinh.resx">
       <DependentUpon>frmEditTinh.cs</DependentUpon>

@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace BHXH.List.UI
 {
-    public partial class frmEditQuanHuyen : Form
+    public partial class frmEditNoiKCB : Form
     {
-        public frmEditQuanHuyen(string MaQuanHuyen)
+        public frmEditNoiKCB(string MaNoiKCB)
         {
             InitializeComponent();
-            maQuanHuyen = MaQuanHuyen;
+            maNoiKCB = MaNoiKCB;
          
         }
-        string maQuanHuyen = "";
+        string maNoiKCB = "";
         private void SimpleButtonGhi_Click(object sender, EventArgs e)
         {
          
-        DialogResult d=    MessageBox.Show("Bạn có muốn sửa Quận Huyện?", "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+        DialogResult d=    MessageBox.Show("Bạn có muốn sửa Nơi Khám chữa bệnh?", "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (d == DialogResult.Yes)
             {
-                BHXH.List.Business.ListQuanHuyen.Edit(txtMa.Text, txtTen.Text);
-            //    BHXH.List.Business.ListQuanHuyen.Edit(txtMa.Text, txtTen.Text);
+                BHXH.List.Business.ListNoiKCB.Edit(txtMa.Text, txtTen.Text);
+            
                
                 MessageBox.Show("Bạn đã sửa thành công", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
@@ -36,8 +36,8 @@ namespace BHXH.List.UI
         void InitData()
         {
 
-            txtMa.Text = maQuanHuyen;
-            txtTen.Text = BHXH.List.Business.ListQuanHuyen.GetNationality(maQuanHuyen).TenQuanHuyen;
+            txtMa.Text = maNoiKCB;
+            txtTen.Text = BHXH.List.Business.ListNoiKCB.GetNoiKCB(maNoiKCB).TenNoiKCB;
         }
 
         private void SimpleButtonThoat_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace BHXH.List.UI
             this.Close();
         }
 
-        private void frmEditListQuanHuyen_Load(object sender, EventArgs e)
+        private void frmEditListBangCap_Load(object sender, EventArgs e)
         {
             InitData();
         }
