@@ -1,0 +1,2273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BHXH" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HrNhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SoHieuNV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TenKhac" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaCapUy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaCapUyKiem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaChucDanh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="NgayBoNhiem" Type="DateTime" Precision="3" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="NoiSinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaTinhQQ" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="QuanHuyenIDQQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="XaPhuongIDQQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MatinhTQ" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="QuanHuyenIDTQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="XaPhuongIDTQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SoNha" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DTNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DTCoQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DTDiDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DTNguoiNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenNguoiNha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaDanToc" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MaTonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaThanhPhanGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NgheTruocTD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTD" Type="DateTime" Precision="3" />
+    <Property Name="NgayCQ" Type="DateTime" Precision="3" />
+    <Property Name="CoQuanTD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCM" Type="DateTime" Precision="3" />
+    <Property Name="NgayDang" Type="DateTime" Precision="3" />
+    <Property Name="NgayDangCT" Type="DateTime" Precision="3" />
+    <Property Name="NgayTCXH" Type="DateTime" Precision="3" />
+    <Property Name="NgayNhapNgu" Type="DateTime" Precision="3" />
+    <Property Name="NgayXuatNgu" Type="DateTime" Precision="3" />
+    <Property Name="QuanHam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaTDVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaTDDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaTDLLCT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaTDNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CVDangLam" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaNgach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="DHDuocPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoTruongCT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CVLamLN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KhenThuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KyLuat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SucKhoe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChieuCao" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CanNang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NhomMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SoCMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaLoaiTB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GDLietSy" Type="Boolean" />
+    <Property Name="TuDay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CheDoCu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TCNuocNgoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TNNuocNgoai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoBHXH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TheBHYT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MaTinhKCB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaNoiKCB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoanATM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MaNganHang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCMND" Type="DateTime" Precision="3" />
+    <Property Name="NoiCMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
+    <Property Name="DaNLTruocTH" Type="Boolean" />
+    <Property Name="AnhNV" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="MaChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrKhenThuongKyLuat" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrNhanVien" ToRole="HrKhenThuongKyLuat" />
+    <NavigationProperty Name="ListChucVuDang" Relationship="Self.FK__HrNhanVie__MaCap__02284B6B" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang1" Relationship="Self.FK__HrNhanVie__MaCap__031C6FA4" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang2" Relationship="Self.FK__HrNhanVie__MaCap__041093DD" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang3" Relationship="Self.FK__HrNhanVie__MaCap__0504B816" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang4" Relationship="Self.FK__HrNhanVie__MaCap__5832119F" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang5" Relationship="Self.FK__HrNhanVie__MaCap__592635D8" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang6" Relationship="Self.FK__HrNhanVie__MaCap__5A1A5A11" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucVuDang7" Relationship="Self.FK__HrNhanVie__MaCap__5B0E7E4A" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
+    <NavigationProperty Name="ListChucDanh" Relationship="Self.FK__HrNhanVie__MaChu__05F8DC4F" FromRole="HrNhanVien" ToRole="ListChucDanh" />
+    <NavigationProperty Name="ListChucDanh1" Relationship="Self.FK__HrNhanVie__MaChu__06ED0088" FromRole="HrNhanVien" ToRole="ListChucDanh" />
+    <NavigationProperty Name="ListChucDanh2" Relationship="Self.FK__HrNhanVie__MaChu__5C02A283" FromRole="HrNhanVien" ToRole="ListChucDanh" />
+    <NavigationProperty Name="ListChucDanh3" Relationship="Self.FK__HrNhanVie__MaChu__5CF6C6BC" FromRole="HrNhanVien" ToRole="ListChucDanh" />
+    <NavigationProperty Name="ListDanToc" Relationship="Self.FK__HrNhanVie__MaDan__07E124C1" FromRole="HrNhanVien" ToRole="ListDanToc" />
+    <NavigationProperty Name="ListDanToc1" Relationship="Self.FK__HrNhanVie__MaDan__08D548FA" FromRole="HrNhanVien" ToRole="ListDanToc" />
+    <NavigationProperty Name="ListDanToc2" Relationship="Self.FK__HrNhanVie__MaDan__5DEAEAF5" FromRole="HrNhanVien" ToRole="ListDanToc" />
+    <NavigationProperty Name="ListDanToc3" Relationship="Self.FK__HrNhanVie__MaDan__5EDF0F2E" FromRole="HrNhanVien" ToRole="ListDanToc" />
+    <NavigationProperty Name="ListNganHang" Relationship="Self.FK__HrNhanVie__MaNga__09C96D33" FromRole="HrNhanVien" ToRole="ListNganHang" />
+    <NavigationProperty Name="ListNganHang1" Relationship="Self.FK__HrNhanVie__MaNga__0ABD916C" FromRole="HrNhanVien" ToRole="ListNganHang" />
+    <NavigationProperty Name="HrThangBangLuong" Relationship="Self.FK__HrNhanVie__MaNga__0BB1B5A5" FromRole="HrNhanVien" ToRole="HrThangBangLuong" />
+    <NavigationProperty Name="HrThangBangLuong1" Relationship="Self.FK__HrNhanVie__MaNga__0CA5D9DE" FromRole="HrNhanVien" ToRole="HrThangBangLuong" />
+    <NavigationProperty Name="ListNganHang2" Relationship="Self.FK__HrNhanVie__MaNga__5FD33367" FromRole="HrNhanVien" ToRole="ListNganHang" />
+    <NavigationProperty Name="ListNganHang3" Relationship="Self.FK__HrNhanVie__MaNga__60C757A0" FromRole="HrNhanVien" ToRole="ListNganHang" />
+    <NavigationProperty Name="HrThangBangLuong2" Relationship="Self.FK__HrNhanVie__MaNga__61BB7BD9" FromRole="HrNhanVien" ToRole="HrThangBangLuong" />
+    <NavigationProperty Name="HrThangBangLuong3" Relationship="Self.FK__HrNhanVie__MaNga__62AFA012" FromRole="HrNhanVien" ToRole="HrThangBangLuong" />
+    <NavigationProperty Name="ListNgoaiNgu" Relationship="Self.FK__HrNhanVie__MaNgo__0D99FE17" FromRole="HrNhanVien" ToRole="ListNgoaiNgu" />
+    <NavigationProperty Name="ListNgoaiNgu1" Relationship="Self.FK__HrNhanVie__MaNgo__0E8E2250" FromRole="HrNhanVien" ToRole="ListNgoaiNgu" />
+    <NavigationProperty Name="ListNgoaiNgu2" Relationship="Self.FK__HrNhanVie__MaNgo__63A3C44B" FromRole="HrNhanVien" ToRole="ListNgoaiNgu" />
+    <NavigationProperty Name="ListNgoaiNgu3" Relationship="Self.FK__HrNhanVie__MaNgo__6497E884" FromRole="HrNhanVien" ToRole="ListNgoaiNgu" />
+    <NavigationProperty Name="ListPhongBan" Relationship="Self.FK__HrNhanVie__MaPho__0F824689" FromRole="HrNhanVien" ToRole="ListPhongBan" />
+    <NavigationProperty Name="ListPhongBan1" Relationship="Self.FK__HrNhanVie__MaPho__10766AC2" FromRole="HrNhanVien" ToRole="ListPhongBan" />
+    <NavigationProperty Name="ListPhongBan2" Relationship="Self.FK__HrNhanVie__MaPho__658C0CBD" FromRole="HrNhanVien" ToRole="ListPhongBan" />
+    <NavigationProperty Name="ListPhongBan3" Relationship="Self.FK__HrNhanVie__MaPho__668030F6" FromRole="HrNhanVien" ToRole="ListPhongBan" />
+    <NavigationProperty Name="ListTDDaoTao" Relationship="Self.FK__HrNhanVie__MaTDD__116A8EFB" FromRole="HrNhanVien" ToRole="ListTDDaoTao" />
+    <NavigationProperty Name="ListTDDaoTao1" Relationship="Self.FK__HrNhanVie__MaTDD__125EB334" FromRole="HrNhanVien" ToRole="ListTDDaoTao" />
+    <NavigationProperty Name="ListTDDaoTao2" Relationship="Self.FK__HrNhanVie__MaTDD__6774552F" FromRole="HrNhanVien" ToRole="ListTDDaoTao" />
+    <NavigationProperty Name="ListTDDaoTao3" Relationship="Self.FK__HrNhanVie__MaTDD__68687968" FromRole="HrNhanVien" ToRole="ListTDDaoTao" />
+    <NavigationProperty Name="ListTDLLCT" Relationship="Self.FK__HrNhanVie__MaTDL__1352D76D" FromRole="HrNhanVien" ToRole="ListTDLLCT" />
+    <NavigationProperty Name="ListTDLLCT1" Relationship="Self.FK__HrNhanVie__MaTDL__1446FBA6" FromRole="HrNhanVien" ToRole="ListTDLLCT" />
+    <NavigationProperty Name="ListTDLLCT2" Relationship="Self.FK__HrNhanVie__MaTDL__695C9DA1" FromRole="HrNhanVien" ToRole="ListTDLLCT" />
+    <NavigationProperty Name="ListTDLLCT3" Relationship="Self.FK__HrNhanVie__MaTDL__6A50C1DA" FromRole="HrNhanVien" ToRole="ListTDLLCT" />
+    <NavigationProperty Name="ListTDNgoaiNgu" Relationship="Self.FK__HrNhanVie__MaTDN__153B1FDF" FromRole="HrNhanVien" ToRole="ListTDNgoaiNgu" />
+    <NavigationProperty Name="ListTDNgoaiNgu1" Relationship="Self.FK__HrNhanVie__MaTDN__162F4418" FromRole="HrNhanVien" ToRole="ListTDNgoaiNgu" />
+    <NavigationProperty Name="ListTDNgoaiNgu2" Relationship="Self.FK__HrNhanVie__MaTDN__6B44E613" FromRole="HrNhanVien" ToRole="ListTDNgoaiNgu" />
+    <NavigationProperty Name="ListTDNgoaiNgu3" Relationship="Self.FK__HrNhanVie__MaTDN__6C390A4C" FromRole="HrNhanVien" ToRole="ListTDNgoaiNgu" />
+    <NavigationProperty Name="ListTDVanHoa" Relationship="Self.FK__HrNhanVie__MaTDV__17236851" FromRole="HrNhanVien" ToRole="ListTDVanHoa" />
+    <NavigationProperty Name="ListTDVanHoa1" Relationship="Self.FK__HrNhanVie__MaTDV__18178C8A" FromRole="HrNhanVien" ToRole="ListTDVanHoa" />
+    <NavigationProperty Name="ListTDVanHoa2" Relationship="Self.FK__HrNhanVie__MaTDV__6D2D2E85" FromRole="HrNhanVien" ToRole="ListTDVanHoa" />
+    <NavigationProperty Name="ListTDVanHoa3" Relationship="Self.FK__HrNhanVie__MaTDV__6E2152BE" FromRole="HrNhanVien" ToRole="ListTDVanHoa" />
+    <NavigationProperty Name="ListTinh" Relationship="Self.FK__HrNhanVie__MaTin__1AF3F935" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh1" Relationship="Self.FK__HrNhanVie__Matin__1BE81D6E" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh2" Relationship="Self.FK__HrNhanVie__Matin__1CDC41A7" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh3" Relationship="Self.FK__HrNhanVie__MaTin__1DD065E0" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh4" Relationship="Self.FK__HrNhanVie__Matin__1EC48A19" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh5" Relationship="Self.FK__HrNhanVie__Matin__1FB8AE52" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh6" Relationship="Self.FK__HrNhanVie__MaTin__70FDBF69" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh7" Relationship="Self.FK__HrNhanVie__Matin__71F1E3A2" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh8" Relationship="Self.FK__HrNhanVie__Matin__72E607DB" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh9" Relationship="Self.FK__HrNhanVie__MaTin__73DA2C14" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh10" Relationship="Self.FK__HrNhanVie__Matin__74CE504D" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTinh11" Relationship="Self.FK__HrNhanVie__Matin__75C27486" FromRole="HrNhanVien" ToRole="ListTinh" />
+    <NavigationProperty Name="ListTonGiao" Relationship="Self.FK__HrNhanVie__MaTon__20ACD28B" FromRole="HrNhanVien" ToRole="ListTonGiao" />
+    <NavigationProperty Name="ListTonGiao1" Relationship="Self.FK__HrNhanVie__MaTon__21A0F6C4" FromRole="HrNhanVien" ToRole="ListTonGiao" />
+    <NavigationProperty Name="ListTonGiao2" Relationship="Self.FK__HrNhanVie__MaTon__76B698BF" FromRole="HrNhanVien" ToRole="ListTonGiao" />
+    <NavigationProperty Name="ListTonGiao3" Relationship="Self.FK__HrNhanVie__MaTon__77AABCF8" FromRole="HrNhanVien" ToRole="ListTonGiao" />
+    <NavigationProperty Name="ListThanhPhanGD" Relationship="Self.FK__HrNhanVie__MaTha__190BB0C3" FromRole="HrNhanVien" ToRole="ListThanhPhanGD" />
+    <NavigationProperty Name="ListThanhPhanGD1" Relationship="Self.FK__HrNhanVie__MaTha__19FFD4FC" FromRole="HrNhanVien" ToRole="ListThanhPhanGD" />
+    <NavigationProperty Name="ListThanhPhanGD2" Relationship="Self.FK__HrNhanVie__MaTha__6F1576F7" FromRole="HrNhanVien" ToRole="ListThanhPhanGD" />
+    <NavigationProperty Name="ListThanhPhanGD3" Relationship="Self.FK__HrNhanVie__MaTha__70099B30" FromRole="HrNhanVien" ToRole="ListThanhPhanGD" />
+    <NavigationProperty Name="ListQuanHuyen" Relationship="Self.FK__HrNhanVie__QuanH__22951AFD" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen1" Relationship="Self.FK__HrNhanVie__QuanH__23893F36" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen2" Relationship="Self.FK__HrNhanVie__QuanH__247D636F" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen3" Relationship="Self.FK__HrNhanVie__QuanH__257187A8" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen4" Relationship="Self.FK__HrNhanVie__QuanH__789EE131" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen5" Relationship="Self.FK__HrNhanVie__QuanH__7993056A" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen6" Relationship="Self.FK__HrNhanVie__QuanH__7A8729A3" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListQuanHuyen7" Relationship="Self.FK__HrNhanVie__QuanH__7B7B4DDC" FromRole="HrNhanVien" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListXaPhuong" Relationship="Self.FK__HrNhanVie__XaPhu__2665ABE1" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong1" Relationship="Self.FK__HrNhanVie__XaPhu__2759D01A" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong2" Relationship="Self.FK__HrNhanVie__XaPhu__284DF453" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong3" Relationship="Self.FK__HrNhanVie__XaPhu__2942188C" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong4" Relationship="Self.FK__HrNhanVie__XaPhu__7C6F7215" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong5" Relationship="Self.FK__HrNhanVie__XaPhu__7D63964E" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong6" Relationship="Self.FK__HrNhanVie__XaPhu__7E57BA87" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="ListXaPhuong7" Relationship="Self.FK__HrNhanVie__XaPhu__7F4BDEC0" FromRole="HrNhanVien" ToRole="ListXaPhuong" />
+    <NavigationProperty Name="HrPSBHXH" Relationship="Self.FK__HrPSBHXH__MaNhan__035179CE" FromRole="HrNhanVien" ToRole="HrPSBHXH" />
+    <NavigationProperty Name="HrPSLuong" Relationship="Self.FK__HrPSLuong__MaNha__07220AB2" FromRole="HrNhanVien" ToRole="HrPSLuong" />
+    <NavigationProperty Name="HrQuanHeGiaDinh" Relationship="Self.FK__HrQuanHeG__MaNha__0AF29B96" FromRole="HrNhanVien" ToRole="HrQuanHeGiaDinh" />
+    <NavigationProperty Name="HrQuaTrinhCongTac" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrNhanVien" ToRole="HrQuaTrinhCongTac" />
+    <NavigationProperty Name="HrQuaTrinhBHXH" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrNhanVien" ToRole="HrQuaTrinhBHXH" />
+    <NavigationProperty Name="HrQuaTrinhLuong" Relationship="Self.FK__HrQuaTrin__MaNha__10AB74EC" FromRole="HrNhanVien" ToRole="HrQuaTrinhLuong" />
+  </EntityType>
+  <EntityType Name="HrThangBangLuong">
+    <Key>
+      <PropertyRef Name="MaNgach" />
+    </Key>
+    <Property Name="MaNgach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNgach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ThangNL" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TongBac" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="Bac01" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac02" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac03" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac04" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac05" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac06" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac07" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac08" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac09" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac10" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac11" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="Bac12" Type="Decimal" Precision="6" Scale="3" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaNga__0BB1B5A5" FromRole="HrThangBangLuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaNga__0CA5D9DE" FromRole="HrThangBangLuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaNga__61BB7BD9" FromRole="HrThangBangLuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaNga__62AFA012" FromRole="HrThangBangLuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrPSBHXH" Relationship="Self.FK__HrPSBHXH__MaNgac__0539C240" FromRole="HrThangBangLuong" ToRole="HrPSBHXH" />
+  </EntityType>
+  <EntityType Name="ListBangCap">
+    <Key>
+      <PropertyRef Name="MaBangCap" />
+    </Key>
+    <Property Name="MaBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListCapKTKL">
+    <Key>
+      <PropertyRef Name="MaCapKTKL" />
+    </Key>
+    <Property Name="MaCapKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenCapKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListCMDaoTao">
+    <Key>
+      <PropertyRef Name="MaCMDaoTao" />
+    </Key>
+    <Property Name="MaCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiCMDaoTao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListChiBo">
+    <Key>
+      <PropertyRef Name="MaChiBo" />
+    </Key>
+    <Property Name="MaChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListChucDanh">
+    <Key>
+      <PropertyRef Name="MaChucDanh" />
+    </Key>
+    <Property Name="MaChucDanh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenChucDanh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaChu__05F8DC4F" FromRole="ListChucDanh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaChu__06ED0088" FromRole="ListChucDanh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaChu__5C02A283" FromRole="ListChucDanh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaChu__5CF6C6BC" FromRole="ListChucDanh" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+    </Key>
+    <Property Name="MaChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListChucVuDang">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+    </Key>
+    <Property Name="MaChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenChucVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaCap__02284B6B" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaCap__031C6FA4" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaCap__041093DD" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaCap__0504B816" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien4" Relationship="Self.FK__HrNhanVie__MaCap__5832119F" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien5" Relationship="Self.FK__HrNhanVie__MaCap__592635D8" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien6" Relationship="Self.FK__HrNhanVie__MaCap__5A1A5A11" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien7" Relationship="Self.FK__HrNhanVie__MaCap__5B0E7E4A" FromRole="ListChucVuDang" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListDanToc">
+    <Key>
+      <PropertyRef Name="MaDanToc" />
+    </Key>
+    <Property Name="MaDanToc" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDanToc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaDan__07E124C1" FromRole="ListDanToc" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaDan__08D548FA" FromRole="ListDanToc" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaDan__5DEAEAF5" FromRole="ListDanToc" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaDan__5EDF0F2E" FromRole="ListDanToc" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListDienCS">
+    <Key>
+      <PropertyRef Name="MaDienCS" />
+    </Key>
+    <Property Name="MaDienCS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenDienCS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListHonNhan">
+    <Key>
+      <PropertyRef Name="MaHonNhan" />
+    </Key>
+    <Property Name="MaHonNhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenHonNhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListHopDong">
+    <Key>
+      <PropertyRef Name="MaHopDong" />
+    </Key>
+    <Property Name="MaHopDong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenHopDong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiHopDong" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListKTKL">
+    <Key>
+      <PropertyRef Name="MaKTKL" />
+    </Key>
+    <Property Name="MaKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiKTKL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrKhenThuongKyLuat" Relationship="Self.FK__HrKhenThu__MaKTK__16644E42" FromRole="ListKTKL" ToRole="HrKhenThuongKyLuat" />
+  </EntityType>
+  <EntityType Name="ListLHDaoTao">
+    <Key>
+      <PropertyRef Name="MaLHDaoTao" />
+    </Key>
+    <Property Name="MaLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListLoaiTB">
+    <Key>
+      <PropertyRef Name="MaLoaiTB" />
+    </Key>
+    <Property Name="MaLoaiTB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenLoaiTB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListNoiKCB">
+    <Key>
+      <PropertyRef Name="MaKCBDayDu" />
+    </Key>
+    <Property Name="MaNoiKCB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TenNoiKCB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaTinh" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="MaKCBDayDu" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ListTinh" Relationship="Self.FK__ListNoiKC__MaTin__54968AE5" FromRole="ListNoiKCB" ToRole="ListTinh" />
+  </EntityType>
+  <EntityType Name="ListNganHang">
+    <Key>
+      <PropertyRef Name="MaNganHang" />
+    </Key>
+    <Property Name="MaNganHang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNganHang" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaNga__09C96D33" FromRole="ListNganHang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaNga__0ABD916C" FromRole="ListNganHang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaNga__5FD33367" FromRole="ListNganHang" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaNga__60C757A0" FromRole="ListNganHang" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListNghiepVu">
+    <Key>
+      <PropertyRef Name="MaNghiepVu" />
+    </Key>
+    <Property Name="MaNghiepVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNghiepVu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListNgoaiNgu">
+    <Key>
+      <PropertyRef Name="MaNgoaiNgu" />
+    </Key>
+    <Property Name="MaNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaNgo__0D99FE17" FromRole="ListNgoaiNgu" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaNgo__0E8E2250" FromRole="ListNgoaiNgu" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaNgo__63A3C44B" FromRole="ListNgoaiNgu" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaNgo__6497E884" FromRole="ListNgoaiNgu" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListPhongBan">
+    <Key>
+      <PropertyRef Name="MaPhongBan" />
+    </Key>
+    <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaPho__0F824689" FromRole="ListPhongBan" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaPho__10766AC2" FromRole="ListPhongBan" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaPho__658C0CBD" FromRole="ListPhongBan" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaPho__668030F6" FromRole="ListPhongBan" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrPSBHXH" Relationship="Self.FK__HrPSBHXH__MaPhon__062DE679" FromRole="ListPhongBan" ToRole="HrPSBHXH" />
+  </EntityType>
+  <EntityType Name="ListQuanHeGD">
+    <Key>
+      <PropertyRef Name="MaQuanHeGD" />
+    </Key>
+    <Property Name="MaQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrQuanHeGiaDinh" Relationship="Self.FK__HrQuanHeG__MaQua__0DCF0841" FromRole="ListQuanHeGD" ToRole="HrQuanHeGiaDinh" />
+  </EntityType>
+  <EntityType Name="ListQuanHuyen">
+    <Key>
+      <PropertyRef Name="QuanHuyenID" />
+    </Key>
+    <Property Name="QuanHuyenID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MaQuanHuyen" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="TenQuanHuyen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaTinh" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__QuanH__22951AFD" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__QuanH__23893F36" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__QuanH__247D636F" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__QuanH__257187A8" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien4" Relationship="Self.FK__HrNhanVie__QuanH__789EE131" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien5" Relationship="Self.FK__HrNhanVie__QuanH__7993056A" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien6" Relationship="Self.FK__HrNhanVie__QuanH__7A8729A3" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien7" Relationship="Self.FK__HrNhanVie__QuanH__7B7B4DDC" FromRole="ListQuanHuyen" ToRole="HrNhanVien" />
+    <NavigationProperty Name="ListTinh" Relationship="Self.FK__ListQuanH__MaTin__30242045" FromRole="ListQuanHuyen" ToRole="ListTinh" />
+    <NavigationProperty Name="ListQuanHuyen1" Relationship="Self.FK__ListQuanH__QuanH__3118447E" FromRole="ListQuanHuyen" ToRole="ListQuanHuyen1" />
+    <NavigationProperty Name="ListQuanHuyen2" Relationship="Self.FK__ListQuanH__QuanH__3118447E" FromRole="ListQuanHuyen1" ToRole="ListQuanHuyen" />
+    <NavigationProperty Name="ListXaPhuong" Relationship="Self.FK__ListXaPhu__QuanH__320C68B7" FromRole="ListQuanHuyen" ToRole="ListXaPhuong" />
+  </EntityType>
+  <EntityType Name="ListQuocGia">
+    <Key>
+      <PropertyRef Name="MaQuocGia" />
+    </Key>
+    <Property Name="MaQuocGia" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenQuocGia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListTDDaoTao">
+    <Key>
+      <PropertyRef Name="MaTDDaoTao" />
+    </Key>
+    <Property Name="MaTDDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTDDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTDD__116A8EFB" FromRole="ListTDDaoTao" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaTDD__125EB334" FromRole="ListTDDaoTao" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaTDD__6774552F" FromRole="ListTDDaoTao" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTDD__68687968" FromRole="ListTDDaoTao" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListTDLLCT">
+    <Key>
+      <PropertyRef Name="MaTDLLCT" />
+    </Key>
+    <Property Name="MaTDLLCT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTDLLCT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTDL__1352D76D" FromRole="ListTDLLCT" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaTDL__1446FBA6" FromRole="ListTDLLCT" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaTDL__695C9DA1" FromRole="ListTDLLCT" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTDL__6A50C1DA" FromRole="ListTDLLCT" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListTDNgoaiNgu">
+    <Key>
+      <PropertyRef Name="MaTDNgoaiNgu" />
+    </Key>
+    <Property Name="MaTDNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTDNgoaiNgu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTDN__153B1FDF" FromRole="ListTDNgoaiNgu" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaTDN__162F4418" FromRole="ListTDNgoaiNgu" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaTDN__6B44E613" FromRole="ListTDNgoaiNgu" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTDN__6C390A4C" FromRole="ListTDNgoaiNgu" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListTDQLNN">
+    <Key>
+      <PropertyRef Name="MaTDQLNN" />
+    </Key>
+    <Property Name="MaTDQLNN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTDQLNN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ListTDVanHoa">
+    <Key>
+      <PropertyRef Name="MaTDVanHoa" />
+    </Key>
+    <Property Name="MaTDVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTDVanHoa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTDV__17236851" FromRole="ListTDVanHoa" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaTDV__18178C8A" FromRole="ListTDVanHoa" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaTDV__6D2D2E85" FromRole="ListTDVanHoa" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTDV__6E2152BE" FromRole="ListTDVanHoa" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListTinh">
+    <Key>
+      <PropertyRef Name="MaTinh" />
+    </Key>
+    <Property Name="MaTinh" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenTinh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTin__1AF3F935" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__Matin__1BE81D6E" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__Matin__1CDC41A7" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTin__1DD065E0" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien4" Relationship="Self.FK__HrNhanVie__Matin__1EC48A19" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien5" Relationship="Self.FK__HrNhanVie__Matin__1FB8AE52" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien6" Relationship="Self.FK__HrNhanVie__MaTin__70FDBF69" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien7" Relationship="Self.FK__HrNhanVie__Matin__71F1E3A2" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien8" Relationship="Self.FK__HrNhanVie__Matin__72E607DB" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien9" Relationship="Self.FK__HrNhanVie__MaTin__73DA2C14" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien10" Relationship="Self.FK__HrNhanVie__Matin__74CE504D" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien11" Relationship="Self.FK__HrNhanVie__Matin__75C27486" FromRole="ListTinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="ListNoiKCB" Relationship="Self.FK__ListNoiKC__MaTin__54968AE5" FromRole="ListTinh" ToRole="ListNoiKCB" />
+    <NavigationProperty Name="ListQuanHuyen" Relationship="Self.FK__ListQuanH__MaTin__30242045" FromRole="ListTinh" ToRole="ListQuanHuyen" />
+  </EntityType>
+  <EntityType Name="ListTonGiao">
+    <Key>
+      <PropertyRef Name="MaTonGiao" />
+    </Key>
+    <Property Name="MaTonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTonGiao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTon__20ACD28B" FromRole="ListTonGiao" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaTon__21A0F6C4" FromRole="ListTonGiao" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaTon__76B698BF" FromRole="ListTonGiao" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTon__77AABCF8" FromRole="ListTonGiao" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListThanhPhanGD">
+    <Key>
+      <PropertyRef Name="MaThanhPhanGD" />
+    </Key>
+    <Property Name="MaThanhPhanGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenThanhPhanGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaTha__190BB0C3" FromRole="ListThanhPhanGD" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaTha__19FFD4FC" FromRole="ListThanhPhanGD" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaTha__6F1576F7" FromRole="ListThanhPhanGD" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__MaTha__70099B30" FromRole="ListThanhPhanGD" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="ListXaPhuong">
+    <Key>
+      <PropertyRef Name="XaPhuongID" />
+    </Key>
+    <Property Name="XaPhuongID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MaXaPhuong" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="TenXaPhuong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="QuanHuyenID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__XaPhu__2665ABE1" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__XaPhu__2759D01A" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__XaPhu__284DF453" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien3" Relationship="Self.FK__HrNhanVie__XaPhu__2942188C" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien4" Relationship="Self.FK__HrNhanVie__XaPhu__7C6F7215" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien5" Relationship="Self.FK__HrNhanVie__XaPhu__7D63964E" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien6" Relationship="Self.FK__HrNhanVie__XaPhu__7E57BA87" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrNhanVien7" Relationship="Self.FK__HrNhanVie__XaPhu__7F4BDEC0" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
+    <NavigationProperty Name="ListQuanHuyen" Relationship="Self.FK__ListXaPhu__QuanH__320C68B7" FromRole="ListXaPhuong" ToRole="ListQuanHuyen" />
+  </EntityType>
+  <EntityType Name="HrKhenThuongKyLuat">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="MaKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrKhenThuongKyLuat" ToRole="HrNhanVien" />
+    <NavigationProperty Name="ListKTKL" Relationship="Self.FK__HrKhenThu__MaKTK__16644E42" FromRole="HrKhenThuongKyLuat" ToRole="ListKTKL" />
+  </EntityType>
+  <EntityType Name="HrPSBHXH">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="MaNgach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CongTacPhi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DotPS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrPSBHXH__MaNhan__035179CE" FromRole="HrPSBHXH" ToRole="HrNhanVien" />
+    <NavigationProperty Name="HrThangBangLuong" Relationship="Self.FK__HrPSBHXH__MaNgac__0539C240" FromRole="HrPSBHXH" ToRole="HrThangBangLuong" />
+    <NavigationProperty Name="ListPhongBan" Relationship="Self.FK__HrPSBHXH__MaPhon__062DE679" FromRole="HrPSBHXH" ToRole="ListPhongBan" />
+  </EntityType>
+  <EntityType Name="HrPSLuong">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="MaNgach" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CongTacPhi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MaPhongNL" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrPSLuong__MaNha__07220AB2" FromRole="HrPSLuong" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="HrQuanHeGiaDinh">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="MaQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NamSinh" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ChiTiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuanHeG__MaNha__0AF29B96" FromRole="HrQuanHeGiaDinh" ToRole="HrNhanVien" />
+    <NavigationProperty Name="ListQuanHeGD" Relationship="Self.FK__HrQuanHeG__MaQua__0DCF0841" FromRole="HrQuanHeGiaDinh" ToRole="ListQuanHeGD" />
+  </EntityType>
+  <EntityType Name="HrQuaTrinhBHXH">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="Loai" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="SoThang" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="MucLuong" Type="Decimal" Precision="12" Scale="0" />
+    <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="CongViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrQuaTrinhBHXH" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="HrQuaTrinhCongTac">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrQuaTrinhCongTac" ToRole="HrNhanVien" />
+  </EntityType>
+  <EntityType Name="HrQuaTrinhLuong">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+    <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="Loai" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="SoThang" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="MucLuong" Type="Decimal" Precision="12" Scale="0" />
+    <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="CongViec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__10AB74EC" FromRole="HrQuaTrinhLuong" ToRole="HrNhanVien" />
+  </EntityType>
+  <Association Name="FK__HrKhenThu__MaNha__119F9925">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrKhenThuongKyLuat">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__02284B6B">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__031C6FA4">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUyKiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__041093DD">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__0504B816">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUyKiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__5832119F">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__592635D8">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUyKiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__5A1A5A11">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaCap__5B0E7E4A">
+    <End Role="ListChucVuDang" Type="Self.ListChucVuDang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucVuDang">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaCapUyKiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaChu__05F8DC4F">
+    <End Role="ListChucDanh" Type="Self.ListChucDanh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucDanh">
+        <PropertyRef Name="MaChucDanh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaChucDanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaChu__06ED0088">
+    <End Role="ListChucDanh" Type="Self.ListChucDanh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucDanh">
+        <PropertyRef Name="MaChucDanh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaChucDanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaChu__5C02A283">
+    <End Role="ListChucDanh" Type="Self.ListChucDanh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucDanh">
+        <PropertyRef Name="MaChucDanh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaChucDanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaChu__5CF6C6BC">
+    <End Role="ListChucDanh" Type="Self.ListChucDanh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListChucDanh">
+        <PropertyRef Name="MaChucDanh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaChucDanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaDan__07E124C1">
+    <End Role="ListDanToc" Type="Self.ListDanToc" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListDanToc">
+        <PropertyRef Name="MaDanToc" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaDanToc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaDan__08D548FA">
+    <End Role="ListDanToc" Type="Self.ListDanToc" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListDanToc">
+        <PropertyRef Name="MaDanToc" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaDanToc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaDan__5DEAEAF5">
+    <End Role="ListDanToc" Type="Self.ListDanToc" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListDanToc">
+        <PropertyRef Name="MaDanToc" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaDanToc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaDan__5EDF0F2E">
+    <End Role="ListDanToc" Type="Self.ListDanToc" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListDanToc">
+        <PropertyRef Name="MaDanToc" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaDanToc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__09C96D33">
+    <End Role="ListNganHang" Type="Self.ListNganHang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNganHang">
+        <PropertyRef Name="MaNganHang" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNganHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__0ABD916C">
+    <End Role="ListNganHang" Type="Self.ListNganHang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNganHang">
+        <PropertyRef Name="MaNganHang" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNganHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__0BB1B5A5">
+    <End Role="HrThangBangLuong" Type="Self.HrThangBangLuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrThangBangLuong">
+        <PropertyRef Name="MaNgach" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__0CA5D9DE">
+    <End Role="HrThangBangLuong" Type="Self.HrThangBangLuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrThangBangLuong">
+        <PropertyRef Name="MaNgach" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__5FD33367">
+    <End Role="ListNganHang" Type="Self.ListNganHang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNganHang">
+        <PropertyRef Name="MaNganHang" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNganHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__60C757A0">
+    <End Role="ListNganHang" Type="Self.ListNganHang" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNganHang">
+        <PropertyRef Name="MaNganHang" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNganHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__61BB7BD9">
+    <End Role="HrThangBangLuong" Type="Self.HrThangBangLuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrThangBangLuong">
+        <PropertyRef Name="MaNgach" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNga__62AFA012">
+    <End Role="HrThangBangLuong" Type="Self.HrThangBangLuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrThangBangLuong">
+        <PropertyRef Name="MaNgach" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNgo__0D99FE17">
+    <End Role="ListNgoaiNgu" Type="Self.ListNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNgoaiNgu">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNgo__0E8E2250">
+    <End Role="ListNgoaiNgu" Type="Self.ListNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNgoaiNgu">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNgo__63A3C44B">
+    <End Role="ListNgoaiNgu" Type="Self.ListNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNgoaiNgu">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaNgo__6497E884">
+    <End Role="ListNgoaiNgu" Type="Self.ListNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListNgoaiNgu">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaPho__0F824689">
+    <End Role="ListPhongBan" Type="Self.ListPhongBan" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListPhongBan">
+        <PropertyRef Name="MaPhongBan" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaPhongBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaPho__10766AC2">
+    <End Role="ListPhongBan" Type="Self.ListPhongBan" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListPhongBan">
+        <PropertyRef Name="MaPhongBan" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaPhongBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaPho__658C0CBD">
+    <End Role="ListPhongBan" Type="Self.ListPhongBan" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListPhongBan">
+        <PropertyRef Name="MaPhongBan" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaPhongBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaPho__668030F6">
+    <End Role="ListPhongBan" Type="Self.ListPhongBan" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListPhongBan">
+        <PropertyRef Name="MaPhongBan" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaPhongBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDD__116A8EFB">
+    <End Role="ListTDDaoTao" Type="Self.ListTDDaoTao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDDaoTao">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDD__125EB334">
+    <End Role="ListTDDaoTao" Type="Self.ListTDDaoTao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDDaoTao">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDD__6774552F">
+    <End Role="ListTDDaoTao" Type="Self.ListTDDaoTao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDDaoTao">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDD__68687968">
+    <End Role="ListTDDaoTao" Type="Self.ListTDDaoTao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDDaoTao">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDDaoTao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDL__1352D76D">
+    <End Role="ListTDLLCT" Type="Self.ListTDLLCT" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDLLCT">
+        <PropertyRef Name="MaTDLLCT" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDLLCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDL__1446FBA6">
+    <End Role="ListTDLLCT" Type="Self.ListTDLLCT" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDLLCT">
+        <PropertyRef Name="MaTDLLCT" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDLLCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDL__695C9DA1">
+    <End Role="ListTDLLCT" Type="Self.ListTDLLCT" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDLLCT">
+        <PropertyRef Name="MaTDLLCT" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDLLCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDL__6A50C1DA">
+    <End Role="ListTDLLCT" Type="Self.ListTDLLCT" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDLLCT">
+        <PropertyRef Name="MaTDLLCT" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDLLCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDN__153B1FDF">
+    <End Role="ListTDNgoaiNgu" Type="Self.ListTDNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDNgoaiNgu">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDN__162F4418">
+    <End Role="ListTDNgoaiNgu" Type="Self.ListTDNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDNgoaiNgu">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDN__6B44E613">
+    <End Role="ListTDNgoaiNgu" Type="Self.ListTDNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDNgoaiNgu">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDN__6C390A4C">
+    <End Role="ListTDNgoaiNgu" Type="Self.ListTDNgoaiNgu" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDNgoaiNgu">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDV__17236851">
+    <End Role="ListTDVanHoa" Type="Self.ListTDVanHoa" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDVanHoa">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDV__18178C8A">
+    <End Role="ListTDVanHoa" Type="Self.ListTDVanHoa" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDVanHoa">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDV__6D2D2E85">
+    <End Role="ListTDVanHoa" Type="Self.ListTDVanHoa" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDVanHoa">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTDV__6E2152BE">
+    <End Role="ListTDVanHoa" Type="Self.ListTDVanHoa" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTDVanHoa">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTDVanHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTin__1AF3F935">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTinhQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__1BE81D6E">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__1CDC41A7">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTin__1DD065E0">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTinhQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__1EC48A19">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__1FB8AE52">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTin__70FDBF69">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTinhQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__71F1E3A2">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__72E607DB">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTin__73DA2C14">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTinhQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__74CE504D">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__Matin__75C27486">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MatinhTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTon__20ACD28B">
+    <End Role="ListTonGiao" Type="Self.ListTonGiao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTonGiao">
+        <PropertyRef Name="MaTonGiao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTonGiao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTon__21A0F6C4">
+    <End Role="ListTonGiao" Type="Self.ListTonGiao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTonGiao">
+        <PropertyRef Name="MaTonGiao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTonGiao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTon__76B698BF">
+    <End Role="ListTonGiao" Type="Self.ListTonGiao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTonGiao">
+        <PropertyRef Name="MaTonGiao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTonGiao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTon__77AABCF8">
+    <End Role="ListTonGiao" Type="Self.ListTonGiao" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTonGiao">
+        <PropertyRef Name="MaTonGiao" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaTonGiao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTha__190BB0C3">
+    <End Role="ListThanhPhanGD" Type="Self.ListThanhPhanGD" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListThanhPhanGD">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTha__19FFD4FC">
+    <End Role="ListThanhPhanGD" Type="Self.ListThanhPhanGD" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListThanhPhanGD">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTha__6F1576F7">
+    <End Role="ListThanhPhanGD" Type="Self.ListThanhPhanGD" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListThanhPhanGD">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__MaTha__70099B30">
+    <End Role="ListThanhPhanGD" Type="Self.ListThanhPhanGD" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListThanhPhanGD">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="MaThanhPhanGD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__22951AFD">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__23893F36">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__247D636F">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__257187A8">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__789EE131">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__7993056A">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__7A8729A3">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__QuanH__7B7B4DDC">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="QuanHuyenIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__2665ABE1">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__2759D01A">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__284DF453">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__2942188C">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__7C6F7215">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__7D63964E">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__7E57BA87">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDQQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrNhanVie__XaPhu__7F4BDEC0">
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="0..1" />
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListXaPhuong">
+        <PropertyRef Name="XaPhuongID" />
+      </Principal>
+      <Dependent Role="HrNhanVien">
+        <PropertyRef Name="XaPhuongIDTQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrPSBHXH__MaNhan__035179CE">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrPSBHXH">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrPSLuong__MaNha__07220AB2">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrPSLuong" Type="Self.HrPSLuong" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrPSLuong">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrQuanHeG__MaNha__0AF29B96">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrQuanHeGiaDinh" Type="Self.HrQuanHeGiaDinh" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrQuanHeGiaDinh">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrQuaTrin__MaNha__0EC32C7A">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrQuaTrinhCongTac">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrQuaTrin__MaNha__0FB750B3">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrQuaTrinhBHXH" Type="Self.HrQuaTrinhBHXH" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrQuaTrinhBHXH">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrQuaTrin__MaNha__10AB74EC">
+    <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+    <End Role="HrQuaTrinhLuong" Type="Self.HrQuaTrinhLuong" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HrNhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HrQuaTrinhLuong">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrPSBHXH__MaNgac__0539C240">
+    <End Role="HrThangBangLuong" Type="Self.HrThangBangLuong" Multiplicity="0..1" />
+    <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrThangBangLuong">
+        <PropertyRef Name="MaNgach" />
+      </Principal>
+      <Dependent Role="HrPSBHXH">
+        <PropertyRef Name="MaNgach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrKhenThu__MaKTK__16644E42">
+    <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
+    <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListKTKL">
+        <PropertyRef Name="MaKTKL" />
+      </Principal>
+      <Dependent Role="HrKhenThuongKyLuat">
+        <PropertyRef Name="MaKTKL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListNoiKC__MaTin__54968AE5">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="ListNoiKCB" Type="Self.ListNoiKCB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="ListNoiKCB">
+        <PropertyRef Name="MaTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrPSBHXH__MaPhon__062DE679">
+    <End Role="ListPhongBan" Type="Self.ListPhongBan" Multiplicity="0..1" />
+    <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListPhongBan">
+        <PropertyRef Name="MaPhongBan" />
+      </Principal>
+      <Dependent Role="HrPSBHXH">
+        <PropertyRef Name="MaPhongBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HrQuanHeG__MaQua__0DCF0841">
+    <End Role="ListQuanHeGD" Type="Self.ListQuanHeGD" Multiplicity="0..1" />
+    <End Role="HrQuanHeGiaDinh" Type="Self.HrQuanHeGiaDinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHeGD">
+        <PropertyRef Name="MaQuanHeGD" />
+      </Principal>
+      <Dependent Role="HrQuanHeGiaDinh">
+        <PropertyRef Name="MaQuanHeGD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListQuanH__MaTin__30242045">
+    <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListTinh">
+        <PropertyRef Name="MaTinh" />
+      </Principal>
+      <Dependent Role="ListQuanHuyen">
+        <PropertyRef Name="MaTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListQuanH__QuanH__3118447E">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="1" />
+    <End Role="ListQuanHuyen1" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="ListQuanHuyen1">
+        <PropertyRef Name="QuanHuyenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListXaPhu__QuanH__320C68B7">
+    <End Role="ListQuanHuyen" Type="Self.ListQuanHuyen" Multiplicity="0..1" />
+    <End Role="ListXaPhuong" Type="Self.ListXaPhuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListQuanHuyen">
+        <PropertyRef Name="QuanHuyenID" />
+      </Principal>
+      <Dependent Role="ListXaPhuong">
+        <PropertyRef Name="QuanHuyenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BHXHEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HrNhanVien" EntityType="Self.HrNhanVien" />
+    <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" />
+    <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" />
+    <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" />
+    <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" />
+    <EntitySet Name="ListChiBo" EntityType="Self.ListChiBo" />
+    <EntitySet Name="ListChucDanh" EntityType="Self.ListChucDanh" />
+    <EntitySet Name="ListChucVu" EntityType="Self.ListChucVu" />
+    <EntitySet Name="ListChucVuDang" EntityType="Self.ListChucVuDang" />
+    <EntitySet Name="ListDanToc" EntityType="Self.ListDanToc" />
+    <EntitySet Name="ListDienCS" EntityType="Self.ListDienCS" />
+    <EntitySet Name="ListHonNhan" EntityType="Self.ListHonNhan" />
+    <EntitySet Name="ListHopDong" EntityType="Self.ListHopDong" />
+    <EntitySet Name="ListKTKL" EntityType="Self.ListKTKL" />
+    <EntitySet Name="ListLHDaoTao" EntityType="Self.ListLHDaoTao" />
+    <EntitySet Name="ListLoaiTB" EntityType="Self.ListLoaiTB" />
+    <EntitySet Name="ListNoiKCB" EntityType="Self.ListNoiKCB" />
+    <EntitySet Name="ListNganHang" EntityType="Self.ListNganHang" />
+    <EntitySet Name="ListNghiepVu" EntityType="Self.ListNghiepVu" />
+    <EntitySet Name="ListNgoaiNgu" EntityType="Self.ListNgoaiNgu" />
+    <EntitySet Name="ListPhongBan" EntityType="Self.ListPhongBan" />
+    <EntitySet Name="ListQuanHeGD" EntityType="Self.ListQuanHeGD" />
+    <EntitySet Name="ListQuanHuyen" EntityType="Self.ListQuanHuyen" />
+    <EntitySet Name="ListQuocGia" EntityType="Self.ListQuocGia" />
+    <EntitySet Name="ListTDDaoTao" EntityType="Self.ListTDDaoTao" />
+    <EntitySet Name="ListTDLLCT" EntityType="Self.ListTDLLCT" />
+    <EntitySet Name="ListTDNgoaiNgu" EntityType="Self.ListTDNgoaiNgu" />
+    <EntitySet Name="ListTDQLNN" EntityType="Self.ListTDQLNN" />
+    <EntitySet Name="ListTDVanHoa" EntityType="Self.ListTDVanHoa" />
+    <EntitySet Name="ListTinh" EntityType="Self.ListTinh" />
+    <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" />
+    <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" />
+    <EntitySet Name="ListXaPhuong" EntityType="Self.ListXaPhuong" />
+    <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" />
+    <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" />
+    <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" />
+    <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" />
+    <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" />
+    <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
+    <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" />
+    <AssociationSet Name="FK__HrKhenThu__MaNha__119F9925" Association="Self.FK__HrKhenThu__MaNha__119F9925">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__02284B6B" Association="Self.FK__HrNhanVie__MaCap__02284B6B">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__031C6FA4" Association="Self.FK__HrNhanVie__MaCap__031C6FA4">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__041093DD" Association="Self.FK__HrNhanVie__MaCap__041093DD">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__0504B816" Association="Self.FK__HrNhanVie__MaCap__0504B816">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__5832119F" Association="Self.FK__HrNhanVie__MaCap__5832119F">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__592635D8" Association="Self.FK__HrNhanVie__MaCap__592635D8">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__5A1A5A11" Association="Self.FK__HrNhanVie__MaCap__5A1A5A11">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaCap__5B0E7E4A" Association="Self.FK__HrNhanVie__MaCap__5B0E7E4A">
+      <End Role="ListChucVuDang" EntitySet="ListChucVuDang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaChu__05F8DC4F" Association="Self.FK__HrNhanVie__MaChu__05F8DC4F">
+      <End Role="ListChucDanh" EntitySet="ListChucDanh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaChu__06ED0088" Association="Self.FK__HrNhanVie__MaChu__06ED0088">
+      <End Role="ListChucDanh" EntitySet="ListChucDanh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaChu__5C02A283" Association="Self.FK__HrNhanVie__MaChu__5C02A283">
+      <End Role="ListChucDanh" EntitySet="ListChucDanh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaChu__5CF6C6BC" Association="Self.FK__HrNhanVie__MaChu__5CF6C6BC">
+      <End Role="ListChucDanh" EntitySet="ListChucDanh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaDan__07E124C1" Association="Self.FK__HrNhanVie__MaDan__07E124C1">
+      <End Role="ListDanToc" EntitySet="ListDanToc" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaDan__08D548FA" Association="Self.FK__HrNhanVie__MaDan__08D548FA">
+      <End Role="ListDanToc" EntitySet="ListDanToc" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaDan__5DEAEAF5" Association="Self.FK__HrNhanVie__MaDan__5DEAEAF5">
+      <End Role="ListDanToc" EntitySet="ListDanToc" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaDan__5EDF0F2E" Association="Self.FK__HrNhanVie__MaDan__5EDF0F2E">
+      <End Role="ListDanToc" EntitySet="ListDanToc" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__09C96D33" Association="Self.FK__HrNhanVie__MaNga__09C96D33">
+      <End Role="ListNganHang" EntitySet="ListNganHang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__0ABD916C" Association="Self.FK__HrNhanVie__MaNga__0ABD916C">
+      <End Role="ListNganHang" EntitySet="ListNganHang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__0BB1B5A5" Association="Self.FK__HrNhanVie__MaNga__0BB1B5A5">
+      <End Role="HrThangBangLuong" EntitySet="HrThangBangLuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__0CA5D9DE" Association="Self.FK__HrNhanVie__MaNga__0CA5D9DE">
+      <End Role="HrThangBangLuong" EntitySet="HrThangBangLuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__5FD33367" Association="Self.FK__HrNhanVie__MaNga__5FD33367">
+      <End Role="ListNganHang" EntitySet="ListNganHang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__60C757A0" Association="Self.FK__HrNhanVie__MaNga__60C757A0">
+      <End Role="ListNganHang" EntitySet="ListNganHang" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__61BB7BD9" Association="Self.FK__HrNhanVie__MaNga__61BB7BD9">
+      <End Role="HrThangBangLuong" EntitySet="HrThangBangLuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNga__62AFA012" Association="Self.FK__HrNhanVie__MaNga__62AFA012">
+      <End Role="HrThangBangLuong" EntitySet="HrThangBangLuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNgo__0D99FE17" Association="Self.FK__HrNhanVie__MaNgo__0D99FE17">
+      <End Role="ListNgoaiNgu" EntitySet="ListNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNgo__0E8E2250" Association="Self.FK__HrNhanVie__MaNgo__0E8E2250">
+      <End Role="ListNgoaiNgu" EntitySet="ListNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNgo__63A3C44B" Association="Self.FK__HrNhanVie__MaNgo__63A3C44B">
+      <End Role="ListNgoaiNgu" EntitySet="ListNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaNgo__6497E884" Association="Self.FK__HrNhanVie__MaNgo__6497E884">
+      <End Role="ListNgoaiNgu" EntitySet="ListNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaPho__0F824689" Association="Self.FK__HrNhanVie__MaPho__0F824689">
+      <End Role="ListPhongBan" EntitySet="ListPhongBan" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaPho__10766AC2" Association="Self.FK__HrNhanVie__MaPho__10766AC2">
+      <End Role="ListPhongBan" EntitySet="ListPhongBan" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaPho__658C0CBD" Association="Self.FK__HrNhanVie__MaPho__658C0CBD">
+      <End Role="ListPhongBan" EntitySet="ListPhongBan" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaPho__668030F6" Association="Self.FK__HrNhanVie__MaPho__668030F6">
+      <End Role="ListPhongBan" EntitySet="ListPhongBan" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDD__116A8EFB" Association="Self.FK__HrNhanVie__MaTDD__116A8EFB">
+      <End Role="ListTDDaoTao" EntitySet="ListTDDaoTao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDD__125EB334" Association="Self.FK__HrNhanVie__MaTDD__125EB334">
+      <End Role="ListTDDaoTao" EntitySet="ListTDDaoTao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDD__6774552F" Association="Self.FK__HrNhanVie__MaTDD__6774552F">
+      <End Role="ListTDDaoTao" EntitySet="ListTDDaoTao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDD__68687968" Association="Self.FK__HrNhanVie__MaTDD__68687968">
+      <End Role="ListTDDaoTao" EntitySet="ListTDDaoTao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDL__1352D76D" Association="Self.FK__HrNhanVie__MaTDL__1352D76D">
+      <End Role="ListTDLLCT" EntitySet="ListTDLLCT" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDL__1446FBA6" Association="Self.FK__HrNhanVie__MaTDL__1446FBA6">
+      <End Role="ListTDLLCT" EntitySet="ListTDLLCT" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDL__695C9DA1" Association="Self.FK__HrNhanVie__MaTDL__695C9DA1">
+      <End Role="ListTDLLCT" EntitySet="ListTDLLCT" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDL__6A50C1DA" Association="Self.FK__HrNhanVie__MaTDL__6A50C1DA">
+      <End Role="ListTDLLCT" EntitySet="ListTDLLCT" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDN__153B1FDF" Association="Self.FK__HrNhanVie__MaTDN__153B1FDF">
+      <End Role="ListTDNgoaiNgu" EntitySet="ListTDNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDN__162F4418" Association="Self.FK__HrNhanVie__MaTDN__162F4418">
+      <End Role="ListTDNgoaiNgu" EntitySet="ListTDNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDN__6B44E613" Association="Self.FK__HrNhanVie__MaTDN__6B44E613">
+      <End Role="ListTDNgoaiNgu" EntitySet="ListTDNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDN__6C390A4C" Association="Self.FK__HrNhanVie__MaTDN__6C390A4C">
+      <End Role="ListTDNgoaiNgu" EntitySet="ListTDNgoaiNgu" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDV__17236851" Association="Self.FK__HrNhanVie__MaTDV__17236851">
+      <End Role="ListTDVanHoa" EntitySet="ListTDVanHoa" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDV__18178C8A" Association="Self.FK__HrNhanVie__MaTDV__18178C8A">
+      <End Role="ListTDVanHoa" EntitySet="ListTDVanHoa" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDV__6D2D2E85" Association="Self.FK__HrNhanVie__MaTDV__6D2D2E85">
+      <End Role="ListTDVanHoa" EntitySet="ListTDVanHoa" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTDV__6E2152BE" Association="Self.FK__HrNhanVie__MaTDV__6E2152BE">
+      <End Role="ListTDVanHoa" EntitySet="ListTDVanHoa" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTin__1AF3F935" Association="Self.FK__HrNhanVie__MaTin__1AF3F935">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__1BE81D6E" Association="Self.FK__HrNhanVie__Matin__1BE81D6E">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__1CDC41A7" Association="Self.FK__HrNhanVie__Matin__1CDC41A7">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTin__1DD065E0" Association="Self.FK__HrNhanVie__MaTin__1DD065E0">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__1EC48A19" Association="Self.FK__HrNhanVie__Matin__1EC48A19">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__1FB8AE52" Association="Self.FK__HrNhanVie__Matin__1FB8AE52">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTin__70FDBF69" Association="Self.FK__HrNhanVie__MaTin__70FDBF69">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__71F1E3A2" Association="Self.FK__HrNhanVie__Matin__71F1E3A2">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__72E607DB" Association="Self.FK__HrNhanVie__Matin__72E607DB">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTin__73DA2C14" Association="Self.FK__HrNhanVie__MaTin__73DA2C14">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__74CE504D" Association="Self.FK__HrNhanVie__Matin__74CE504D">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__Matin__75C27486" Association="Self.FK__HrNhanVie__Matin__75C27486">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTon__20ACD28B" Association="Self.FK__HrNhanVie__MaTon__20ACD28B">
+      <End Role="ListTonGiao" EntitySet="ListTonGiao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTon__21A0F6C4" Association="Self.FK__HrNhanVie__MaTon__21A0F6C4">
+      <End Role="ListTonGiao" EntitySet="ListTonGiao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTon__76B698BF" Association="Self.FK__HrNhanVie__MaTon__76B698BF">
+      <End Role="ListTonGiao" EntitySet="ListTonGiao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTon__77AABCF8" Association="Self.FK__HrNhanVie__MaTon__77AABCF8">
+      <End Role="ListTonGiao" EntitySet="ListTonGiao" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTha__190BB0C3" Association="Self.FK__HrNhanVie__MaTha__190BB0C3">
+      <End Role="ListThanhPhanGD" EntitySet="ListThanhPhanGD" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTha__19FFD4FC" Association="Self.FK__HrNhanVie__MaTha__19FFD4FC">
+      <End Role="ListThanhPhanGD" EntitySet="ListThanhPhanGD" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTha__6F1576F7" Association="Self.FK__HrNhanVie__MaTha__6F1576F7">
+      <End Role="ListThanhPhanGD" EntitySet="ListThanhPhanGD" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__MaTha__70099B30" Association="Self.FK__HrNhanVie__MaTha__70099B30">
+      <End Role="ListThanhPhanGD" EntitySet="ListThanhPhanGD" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__22951AFD" Association="Self.FK__HrNhanVie__QuanH__22951AFD">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__23893F36" Association="Self.FK__HrNhanVie__QuanH__23893F36">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__247D636F" Association="Self.FK__HrNhanVie__QuanH__247D636F">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__257187A8" Association="Self.FK__HrNhanVie__QuanH__257187A8">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__789EE131" Association="Self.FK__HrNhanVie__QuanH__789EE131">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__7993056A" Association="Self.FK__HrNhanVie__QuanH__7993056A">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__7A8729A3" Association="Self.FK__HrNhanVie__QuanH__7A8729A3">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__QuanH__7B7B4DDC" Association="Self.FK__HrNhanVie__QuanH__7B7B4DDC">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__2665ABE1" Association="Self.FK__HrNhanVie__XaPhu__2665ABE1">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__2759D01A" Association="Self.FK__HrNhanVie__XaPhu__2759D01A">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__284DF453" Association="Self.FK__HrNhanVie__XaPhu__284DF453">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__2942188C" Association="Self.FK__HrNhanVie__XaPhu__2942188C">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__7C6F7215" Association="Self.FK__HrNhanVie__XaPhu__7C6F7215">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__7D63964E" Association="Self.FK__HrNhanVie__XaPhu__7D63964E">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__7E57BA87" Association="Self.FK__HrNhanVie__XaPhu__7E57BA87">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrNhanVie__XaPhu__7F4BDEC0" Association="Self.FK__HrNhanVie__XaPhu__7F4BDEC0">
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrPSBHXH__MaNhan__035179CE" Association="Self.FK__HrPSBHXH__MaNhan__035179CE">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrPSBHXH" EntitySet="HrPSBHXH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrPSLuong__MaNha__07220AB2" Association="Self.FK__HrPSLuong__MaNha__07220AB2">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrPSLuong" EntitySet="HrPSLuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrQuanHeG__MaNha__0AF29B96" Association="Self.FK__HrQuanHeG__MaNha__0AF29B96">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrQuanHeGiaDinh" EntitySet="HrQuanHeGiaDinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrQuaTrin__MaNha__0EC32C7A" Association="Self.FK__HrQuaTrin__MaNha__0EC32C7A">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrQuaTrinhCongTac" EntitySet="HrQuaTrinhCongTac" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrQuaTrin__MaNha__0FB750B3" Association="Self.FK__HrQuaTrin__MaNha__0FB750B3">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrQuaTrinhBHXH" EntitySet="HrQuaTrinhBHXH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrQuaTrin__MaNha__10AB74EC" Association="Self.FK__HrQuaTrin__MaNha__10AB74EC">
+      <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+      <End Role="HrQuaTrinhLuong" EntitySet="HrQuaTrinhLuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrPSBHXH__MaNgac__0539C240" Association="Self.FK__HrPSBHXH__MaNgac__0539C240">
+      <End Role="HrThangBangLuong" EntitySet="HrThangBangLuong" />
+      <End Role="HrPSBHXH" EntitySet="HrPSBHXH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
+      <End Role="ListKTKL" EntitySet="ListKTKL" />
+      <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListNoiKC__MaTin__54968AE5" Association="Self.FK__ListNoiKC__MaTin__54968AE5">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="ListNoiKCB" EntitySet="ListNoiKCB" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrPSBHXH__MaPhon__062DE679" Association="Self.FK__HrPSBHXH__MaPhon__062DE679">
+      <End Role="ListPhongBan" EntitySet="ListPhongBan" />
+      <End Role="HrPSBHXH" EntitySet="HrPSBHXH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HrQuanHeG__MaQua__0DCF0841" Association="Self.FK__HrQuanHeG__MaQua__0DCF0841">
+      <End Role="ListQuanHeGD" EntitySet="ListQuanHeGD" />
+      <End Role="HrQuanHeGiaDinh" EntitySet="HrQuanHeGiaDinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListQuanH__MaTin__30242045" Association="Self.FK__ListQuanH__MaTin__30242045">
+      <End Role="ListTinh" EntitySet="ListTinh" />
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListQuanH__QuanH__3118447E" Association="Self.FK__ListQuanH__QuanH__3118447E">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="ListQuanHuyen1" EntitySet="ListQuanHuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListXaPhu__QuanH__320C68B7" Association="Self.FK__ListXaPhu__QuanH__320C68B7">
+      <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
+      <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
+    </AssociationSet>
+    <FunctionImport Name="DBA_RestoreDB">
+      <Parameter Name="p_strDBNameTo" Mode="In" Type="String" />
+      <Parameter Name="p_strDBNameFrom" Mode="In" Type="String" />
+      <Parameter Name="p_strFQNRestoreFileName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

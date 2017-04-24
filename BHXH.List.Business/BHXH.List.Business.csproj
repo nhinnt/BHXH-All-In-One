@@ -55,10 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListNoiKCB.cs" />
     <Compile Include="ListQuanHuyen.cs" />
     <Compile Include="ListQuocGia.cs" />
     <Compile Include="ListTinh.cs" />
-    <Compile Include="ListXaPhuong.cs" />
     <Compile Include="ListTDVanHoa.cs" />
     <Compile Include="ListTDQLNN.cs" />
     <Compile Include="ListTDNgoaiNgu.cs" />
@@ -85,6 +85,7 @@
     <Compile Include="ListBangCap.cs" />
     <Compile Include="ListThanhPhanGD.cs" />
     <Compile Include="ListTonGiao.cs" />
+    <Compile Include="ListXaPhuong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

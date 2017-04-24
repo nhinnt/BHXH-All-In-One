@@ -46,7 +46,7 @@ namespace BHXH.List.UI
         void InitData()
         {
 
-            gridcontroListMain.DataSource = BHXH.List.Business.ListHonNhan.GetAll().ToList();
+            gridcontroListMain.DataSource = BHXH.List.Business.ListHonNhan.GetAll();
 
         }
 

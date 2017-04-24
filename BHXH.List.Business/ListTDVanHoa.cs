@@ -84,17 +84,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaTDVanHoa)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListTDVanHoa obj = GetNationality(MaTDVanHoa);
 
+            var obj = new Data.ListTDVanHoa { MaTDVanHoa = MaTDVanHoa };
             ctx.ListTDVanHoa.Attach(obj);
             ctx.ListTDVanHoa.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListTDVanHoa GetNationality(string MaTDVanHoa)
+        public static BHXH.Data.ListTDVanHoa GetTDVanHoa(string MaTDVanHoa)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListTDVanHoa

@@ -15,14 +15,14 @@ namespace BHXH.List.Business
             IEnumerable<BHXH.Data.ListQuanHuyen> list;
 
             var query = from c in ctx.ListQuanHuyen
-                        where c.MaTinh == code
+                        where c.MaQuanHuyen == code
                         select c;
 
             list = query.ToList();
             return list;
         }
 
-        public static BHXH.Data.ListQuanHuyen New(string MaQuanHuyen, string TenQuanHuyen)
+        public static BHXH.Data.ListQuanHuyen New( string MaQuanHuyen, string TenQuanHuyen)
            
         {
             if (MaQuanHuyen == "" || TenQuanHuyen == "")
@@ -86,17 +86,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaQuanHuyen)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListQuanHuyen obj = GetNationality(MaQuanHuyen);
 
+            var obj = new Data.ListQuanHuyen { MaQuanHuyen = MaQuanHuyen };
             ctx.ListQuanHuyen.Attach(obj);
             ctx.ListQuanHuyen.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListQuanHuyen GetNationality(string MaQuanHuyen)
+        public static BHXH.Data.ListQuanHuyen GetData(string MaQuanHuyen)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListQuanHuyen

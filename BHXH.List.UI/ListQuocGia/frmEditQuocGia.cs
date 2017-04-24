@@ -36,7 +36,7 @@ namespace BHXH.List.UI
         {
 
             txtMa.Text = nationalityCode;
-            txtTen.Text = BHXH.List.Business.ListQuocGia.GetNationality(nationalityCode).TenQuocGia;
+            txtTen.Text = BHXH.List.Business.ListQuocGia.GetData(nationalityCode).TenQuocGia;
         }
 
         private void SimpleButtonThoat_Click(object sender, EventArgs e)

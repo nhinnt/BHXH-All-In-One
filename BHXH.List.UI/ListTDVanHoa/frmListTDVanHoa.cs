@@ -47,7 +47,7 @@ namespace BHXH.List.UI
         void InitData()
         {
 
-            gridcontroListMain.DataSource = BHXH.List.Business.ListTDVanHoa.GetAll().ToList();
+            gridcontroListMain.DataSource = BHXH.List.Business.ListTDVanHoa.GetAll();
 
         }
 
@@ -91,10 +91,12 @@ namespace BHXH.List.UI
             try
             {
                 string code = gridviewListMain.GetRowCellValue(gridviewListMain.GetSelectedRows().First(), "MaTDVanHoa").ToString();
+                MessageBox.Show(code);
                
                 DialogResult d = MessageBox.Show("Bạn có muốn xóa Trình Độ Văn Hóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (d == DialogResult.Yes)
                 {
+             
                     BHXH.List.Business.ListTDVanHoa.Delete(code);
                     MessageBox.Show("Bạn đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     

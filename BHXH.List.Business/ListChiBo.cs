@@ -84,17 +84,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaChiBo)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListChiBo obj = GetNationality(MaChiBo);
 
+            var obj = new Data.ListChiBo { MaChiBo = MaChiBo };
             ctx.ListChiBo.Attach(obj);
             ctx.ListChiBo.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListChiBo GetNationality(string MaChiBo)
+        public static BHXH.Data.ListChiBo GetData(string MaChiBo)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListChiBo

@@ -85,17 +85,17 @@ namespace BHXH.List.Business
         public static void Delete(string MaKTKL)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            Data.ListKTKL obj = GetNationality(MaKTKL);
 
+            var obj = new Data.ListKTKL { MaKTKL = MaKTKL };
             ctx.ListKTKL.Attach(obj);
             ctx.ListKTKL.Remove(obj);
-            
+
             ctx.SaveChanges();
 
 
         }
 
-        public static BHXH.Data.ListKTKL GetNationality(string MaKTKL)
+        public static BHXH.Data.ListKTKL GetData(string MaKTKL)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListKTKL
