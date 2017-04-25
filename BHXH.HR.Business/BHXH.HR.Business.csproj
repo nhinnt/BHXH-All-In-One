@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="HrNhanVien.cs" />
+    <Compile Include="HrQuanHeGiaDinh.cs" />
+    <Compile Include="HrQuaTrinhCongTac.cs" />
     <Compile Include="HrThangBangLuong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

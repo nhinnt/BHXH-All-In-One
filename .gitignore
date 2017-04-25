@@ -6,3 +6,4 @@ BHXH.DB/BHXH.DB.dbmdl
 *.exe
 *.pdb
 *.msl
+*.force

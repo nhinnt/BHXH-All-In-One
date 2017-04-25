@@ -108,6 +108,14 @@
       <Project>{330b2510-d272-4ca8-835b-127c9c759db0}</Project>
       <Name>BHXH.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BHXH.HR.Business\BHXH.HR.Business.csproj">
+      <Project>{6377e52a-af1f-43d5-8c9f-6f694feeab77}</Project>
+      <Name>BHXH.HR.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.HR.UI\BHXH.HR.UI.csproj">
+      <Project>{f2db2941-bf8d-43a3-8ae1-8c297684b46c}</Project>
+      <Name>BHXH.HR.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BHXH.List.UI\BHXH.List.UI.csproj">
       <Project>{52fd76b4-cabd-4ded-88db-f85624ab9265}</Project>
       <Name>BHXH.List.UI</Name>
