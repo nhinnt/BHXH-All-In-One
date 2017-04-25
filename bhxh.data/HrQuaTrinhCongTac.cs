@@ -18,7 +18,7 @@ namespace BHXH.Data
         public Nullable<decimal> STT { get; set; }
         public string ThoiGian { get; set; }
         public string CongViec { get; set; }
-        public Nullable<System.Guid> QuaTrinhCongTacID { get; set; }
+        public System.Guid QuaTrinhCongTacID { get; set; }
     
         public virtual HrNhanVien HrNhanVien { get; set; }
     }

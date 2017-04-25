@@ -36,6 +36,7 @@ namespace BHXH.Data
         public virtual DbSet<HrPSLuong> HrPSLuong { get; set; }
         public virtual DbSet<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
         public virtual DbSet<HrQuaTrinhBHXH> HrQuaTrinhBHXH { get; set; }
+        public virtual DbSet<HrQuaTrinhCongTac> HrQuaTrinhCongTac { get; set; }
         public virtual DbSet<HrQuaTrinhLuong> HrQuaTrinhLuong { get; set; }
         public virtual DbSet<HrTyLeBHXH> HrTyLeBHXH { get; set; }
         public virtual DbSet<HrThangBangLuong> HrThangBangLuong { get; set; }
@@ -76,7 +77,6 @@ namespace BHXH.Data
         public virtual DbSet<SysUser> SysUser { get; set; }
         public virtual DbSet<SysUserRoles> SysUserRoles { get; set; }
         public virtual DbSet<SysUserSettings> SysUserSettings { get; set; }
-        public virtual DbSet<HrQuaTrinhCongTac> HrQuaTrinhCongTac { get; set; }
     
         public virtual int DBA_RestoreDB(string p_strDBNameTo, string p_strDBNameFrom, string p_strFQNRestoreFileName)
         {

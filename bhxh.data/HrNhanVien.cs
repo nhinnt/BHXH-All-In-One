@@ -21,6 +21,7 @@ namespace BHXH.Data
             this.HrPSBHXH = new HashSet<HrPSBHXH>();
             this.HrPSLuong = new HashSet<HrPSLuong>();
             this.HrQuanHeGiaDinh = new HashSet<HrQuanHeGiaDinh>();
+            this.HrQuaTrinhCongTac = new HashSet<HrQuaTrinhCongTac>();
             this.HrQuaTrinhBHXH = new HashSet<HrQuaTrinhBHXH>();
             this.HrQuaTrinhLuong = new HashSet<HrQuaTrinhLuong>();
             this.SysUser = new HashSet<SysUser>();
@@ -197,7 +198,8 @@ namespace BHXH.Data
         public virtual ICollection<HrPSLuong> HrPSLuong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
-        public virtual HrQuaTrinhCongTac HrQuaTrinhCongTac { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrQuaTrinhCongTac> HrQuaTrinhCongTac { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HrQuaTrinhBHXH> HrQuaTrinhBHXH { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

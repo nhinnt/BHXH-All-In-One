@@ -224,17 +224,15 @@
           <Property Name="CongViec" Type="nvarchar" MaxLength="255" />
           <Property Name="QuaTrinhBHXHID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrQuaTrinhCongTac">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="QuaTrinhCongTacID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
           <Property Name="ThoiGian" Type="nvarchar" MaxLength="50" />
           <Property Name="CongViec" Type="nvarchar" MaxLength="300" />
-          <Property Name="QuaTrinhCongTacID" Type="uniqueidentifier" />
+          <Property Name="QuaTrinhCongTacID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="HrQuaTrinhLuong">
           <Key>
@@ -1690,7 +1688,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__0EC32C7A">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1924,6 +1922,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" Schema="dbo" store:Type="Tables" />
@@ -1964,15 +1963,6 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUserRoles" EntityType="Self.SysUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUserSettings" EntityType="Self.SysUserSettings" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrQuaTrinhCongTac].[MaNhanVien] AS [MaNhanVien], 
-    [HrQuaTrinhCongTac].[STT] AS [STT], 
-    [HrQuaTrinhCongTac].[ThoiGian] AS [ThoiGian], 
-    [HrQuaTrinhCongTac].[CongViec] AS [CongViec], 
-    [HrQuaTrinhCongTac].[QuaTrinhCongTacID] AS [QuaTrinhCongTacID]
-    FROM [dbo].[HrQuaTrinhCongTac] AS [HrQuaTrinhCongTac]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
             <End Role="ListKTKL" EntitySet="ListKTKL" />
             <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
@@ -2711,6 +2701,17 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="QuaTrinhBHXHID" Type="Guid" Nullable="false" />
           <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrQuaTrinhBHXH" ToRole="HrNhanVien" />
         </EntityType>
+        <EntityType Name="HrQuaTrinhCongTac">
+          <Key>
+            <PropertyRef Name="QuaTrinhCongTacID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="QuaTrinhCongTacID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrQuaTrinhCongTac" ToRole="HrNhanVien" />
+        </EntityType>
         <EntityType Name="HrQuaTrinhLuong">
           <Key>
             <PropertyRef Name="QuaTrinhLuongID" />
@@ -3162,17 +3163,6 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="Setting2" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="SysUser" Relationship="Self.FK__SysUserSe__UserI__2DD1C37F" FromRole="SysUserSettings" ToRole="SysUser" />
-        </EntityType>
-        <EntityType Name="HrQuaTrinhCongTac">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="QuaTrinhCongTacID" Type="Guid" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrQuaTrinhCongTac" ToRole="HrNhanVien" />
         </EntityType>
         <Association Name="FK__HrKhenThu__MaKTK__16644E42">
           <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
@@ -4244,7 +4234,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__0EC32C7A">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -4420,6 +4410,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" />
           <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" />
           <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" />
+          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
           <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" />
           <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" />
@@ -4460,7 +4451,6 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="SysUser" EntityType="Self.SysUser" />
           <EntitySet Name="SysUserRoles" EntityType="Self.SysUserRoles" />
           <EntitySet Name="SysUserSettings" EntityType="Self.SysUserSettings" />
-          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
           <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
             <End Role="ListKTKL" EntitySet="ListKTKL" />
             <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
@@ -5154,6 +5144,17 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="HrQuaTrinhCongTac">
+            <EntityTypeMapping TypeName="BHXH.HrQuaTrinhCongTac">
+              <MappingFragment StoreEntitySet="HrQuaTrinhCongTac">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+                <ScalarProperty Name="QuaTrinhCongTacID" ColumnName="QuaTrinhCongTacID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HrQuaTrinhLuong">
             <EntityTypeMapping TypeName="BHXH.HrQuaTrinhLuong">
               <MappingFragment StoreEntitySet="HrQuaTrinhLuong">
@@ -5539,17 +5540,6 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
                 <ScalarProperty Name="Setting1" ColumnName="Setting1" />
                 <ScalarProperty Name="Setting2" ColumnName="Setting2" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HrQuaTrinhCongTac">
-            <EntityTypeMapping TypeName="BHXH.HrQuaTrinhCongTac">
-              <MappingFragment StoreEntitySet="HrQuaTrinhCongTac">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
-                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
-                <ScalarProperty Name="QuaTrinhCongTacID" ColumnName="QuaTrinhCongTacID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
