@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2DB2941-BF8D-43A3-8AE1-8C297684B46C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{A94E1097-E9EB-4E41-9AC1-0FD8D11A7739}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BHXH.HR.UI</RootNamespace>
-    <AssemblyName>BHXH.HR.UI</AssemblyName>
+    <RootNamespace>BHXH.App</RootNamespace>
+    <AssemblyName>BHXH.App</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,25 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.TreeMap.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeMap.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -73,47 +60,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHrNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHrNhanVien.designer.cs">
-      <DependentUpon>frmHrNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PersistentClasses1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHrNhanVien.resx">
-      <DependentUpon>frmHrNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sys.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
+    <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BHXH.Data\BHXH.Data.csproj">
@@ -124,14 +109,63 @@
       <Project>{6377e52a-af1f-43d5-8c9f-6f694feeab77}</Project>
       <Name>BHXH.HR.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BHXH.List.Business\BHXH.List.Business.csproj">
-      <Project>{af5e7f70-0405-4b4c-8d6d-21bd726d5b71}</Project>
-      <Name>BHXH.List.Business</Name>
+    <ProjectReference Include="..\BHXH.HR.UI\BHXH.HR.UI.csproj">
+      <Project>{f2db2941-bf8d-43a3-8ae1-8c297684b46c}</Project>
+      <Name>BHXH.HR.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.List.UI\BHXH.List.UI.csproj">
+      <Project>{52fd76b4-cabd-4ded-88db-f85624ab9265}</Project>
+      <Name>BHXH.List.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Sys.Business\BHXH.Sys.Business.csproj">
+      <Project>{b7335292-dd3a-4626-ba2f-bbe952c39d86}</Project>
+      <Name>BHXH.Sys.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Sys.UI\BHXH.Sys.UI.csproj">
+      <Project>{135f85b0-df20-4d79-a0fb-3dd8deafcab6}</Project>
+      <Name>BHXH.Sys.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
+      <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
+      <Name>BHXH.UIHelpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
       <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
       <Name>BHXH.Util</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
