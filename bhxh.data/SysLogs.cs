@@ -12,14 +12,16 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class HrQuaTrinhCongTac
+    public partial class SysLogs
     {
-        public System.Guid MaNhanVien { get; set; }
-        public Nullable<decimal> STT { get; set; }
-        public string ThoiGian { get; set; }
-        public string CongViec { get; set; }
-        public Nullable<System.Guid> QuaTrinhCongTacID { get; set; }
+        public System.Guid LogID { get; set; }
+        public string ErrorMessage { get; set; }
+        public string EventType { get; set; }
+        public string Descriptions { get; set; }
+        public Nullable<System.DateTime> EventDate { get; set; }
+        public string UserID { get; set; }
+        public string Postion { get; set; }
     
-        public virtual HrNhanVien HrNhanVien { get; set; }
+        public virtual SysUser SysUser { get; set; }
     }
 }

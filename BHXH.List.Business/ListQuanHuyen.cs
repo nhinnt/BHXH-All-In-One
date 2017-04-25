@@ -83,11 +83,11 @@ namespace BHXH.List.Business
 
         }
 
-        public static void Delete(string MaQuanHuyen)
+        public static void Delete(decimal QuanHuyenID)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
-            var obj = new Data.ListQuanHuyen { MaQuanHuyen = MaQuanHuyen };
+            var obj = new Data.ListQuanHuyen { QuanHuyenID = QuanHuyenID };
             ctx.ListQuanHuyen.Attach(obj);
             ctx.ListQuanHuyen.Remove(obj);
 
@@ -96,14 +96,11 @@ namespace BHXH.List.Business
 
         }
 
-        public static BHXH.Data.ListQuanHuyen GetData(string MaQuanHuyen)
+        public static BHXH.Data.ListQuanHuyen GetData(int QuanHuyenID)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-            var query = from c in ctx.ListQuanHuyen
-                        where c.MaQuanHuyen == MaQuanHuyen
-                        select c;
 
-            return query.ToList().First();
+                        return ctx.ListQuanHuyen.SingleOrDefault(x=>x.QuanHuyenID== QuanHuyenID);
 
 
         }

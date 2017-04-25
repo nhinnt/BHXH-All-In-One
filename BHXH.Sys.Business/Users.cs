@@ -14,13 +14,15 @@ namespace BHXH.Common.Business
         /// <param name="LoginName"></param>
         /// <param name="Password"></param>
         /// <returns>True: Đăng nhập thành công - False: Đăng nhập thất bại</returns>
-        public static bool Login(string LoginName, string Password)
+        public static BHXH.Data.SysUser Login(string LoginName, string Password)
 
         {
             // Ghi lại ngày login vào LastLogin 
 
+            
+            
 
-            return false;
+            return  null;
         }
         /// <summary>
         /// Thay đổi mật khẩu người sử dụng
@@ -32,9 +34,36 @@ namespace BHXH.Common.Business
         {
             return false;
         }
-       /// <summary>
-       /// 
-       /// </summary>
-      // public static IEnumerable <object> GetUserRole(BHXH.)
+        /// <summary>
+        /// 
+        /// </summary>
+
+        public static IEnumerable<BHXH.Data.SysUserRoles> GetUserRoles(string UserID)
+        {
+            return null;
+        }
+        /// <summary>
+        /// Tạo mới user
+        /// </summary>
+        /// <param name="UserID"></param>
+        /// <param name="NhanVienID"></param>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public static BHXH.Data.SysUser NewUser(Guid NhanVienID,  string UserID, string Password)    // Nam tự thêm các tham số
+        {
+         
+            return null;
+        }
+        public static void EditUser(string UserID)
+        {
+
+
+        }
+        public static IEnumerable<BHXH.Data.SysUser> GetUserInPhongBan(string MaPhongBan)
+        {
+            return null;
+        }
+
+
     }
 }

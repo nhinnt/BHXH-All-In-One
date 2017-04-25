@@ -30,6 +30,7 @@ namespace BHXH.Data
         public string DenThang { get; set; }
         public string LoaiPS { get; set; }
         public Nullable<decimal> MaPhongNL { get; set; }
+        public System.Guid PSLuong { get; set; }
     
         public virtual HrNhanVien HrNhanVien { get; set; }
     }

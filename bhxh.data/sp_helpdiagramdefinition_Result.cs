@@ -10,16 +10,10 @@
 namespace BHXH.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class HrQuaTrinhCongTac
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public System.Guid MaNhanVien { get; set; }
-        public Nullable<decimal> STT { get; set; }
-        public string ThoiGian { get; set; }
-        public string CongViec { get; set; }
-        public Nullable<System.Guid> QuaTrinhCongTacID { get; set; }
-    
-        public virtual HrNhanVien HrNhanVien { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

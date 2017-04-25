@@ -50,11 +50,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HrNhanVien.cs" />
+    <Compile Include="HrThangBangLuong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BHXH.Data\BHXH.Data.csproj">
+      <Project>{330b2510-d272-4ca8-835b-127c9c759db0}</Project>
+      <Name>BHXH.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.List.Business\BHXH.List.Business.csproj">
+      <Project>{af5e7f70-0405-4b4c-8d6d-21bd726d5b71}</Project>
+      <Name>BHXH.List.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
+      <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
+      <Name>BHXH.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

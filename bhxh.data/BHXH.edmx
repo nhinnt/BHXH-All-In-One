@@ -5,9 +5,10 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="BHXH.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.HrHSLTangThem' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="HrHSLTangThem">
+          <Key>
+            <PropertyRef Name="HSLTangThemID" />
+          </Key>
           <Property Name="Nam" Type="varchar" MaxLength="4" />
           <Property Name="Thang01" Type="numeric" Precision="4" Scale="2" />
           <Property Name="Thang02" Type="numeric" Precision="4" Scale="2" />
@@ -21,12 +22,11 @@ warning 6013: The table/view 'BHXH.dbo.HrHSLTangThem' does not have a primary ke
           <Property Name="Thang10" Type="numeric" Precision="4" Scale="2" />
           <Property Name="Thang11" Type="numeric" Precision="4" Scale="2" />
           <Property Name="Thang12" Type="numeric" Precision="4" Scale="2" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrKhenThuongKyLuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+          <Property Name="HSLTangThemID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="HrKhenThuongKyLuat">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="KhenThuongKyLuatID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
@@ -34,17 +34,22 @@ warning 6002: The table/view 'BHXH.dbo.HrKhenThuongKyLuat' does not have a prima
           <Property Name="Nam" Type="varchar" MaxLength="4" />
           <Property Name="GhiChu" Type="ntext" />
           <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" />
+          <Property Name="KhenThuongKyLuat" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="KhenThuongKyLuatID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.HrLuongToiThieu' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="HrLuongToiThieu">
+          <Key>
+            <PropertyRef Name="LuongToiThieuID" />
+          </Key>
           <Property Name="NgayTu" Type="datetime" />
           <Property Name="NgayDen" Type="datetime" />
           <Property Name="MucLuong" Type="numeric" Precision="18" Scale="0" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.HrNgayCong' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+          <Property Name="LuongToiThieuID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="HrNgayCong">
+          <Key>
+            <PropertyRef Name="NgayCongID" />
+          </Key>
           <Property Name="Nam" Type="varchar" MaxLength="4" />
           <Property Name="Thang01" Type="numeric" Precision="2" Scale="0" />
           <Property Name="Thang02" Type="numeric" Precision="2" Scale="0" />
@@ -58,7 +63,8 @@ warning 6013: The table/view 'BHXH.dbo.HrNgayCong' does not have a primary key d
           <Property Name="Thang10" Type="numeric" Precision="2" Scale="0" />
           <Property Name="Thang11" Type="numeric" Precision="2" Scale="0" />
           <Property Name="Thang12" Type="numeric" Precision="2" Scale="0" />
-        </EntityType>-->
+          <Property Name="NgayCongID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="HrNhanVien">
           <Key>
             <PropertyRef Name="MaNhanVien" />
@@ -142,11 +148,9 @@ warning 6013: The table/view 'BHXH.dbo.HrNgayCong' does not have a primary key d
           <Property Name="AnhNV" Type="image" />
           <Property Name="MaChiBo" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrPSBHXH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrPSBHXH">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="PSBHXHID" />
           </Key>
           <Property Name="Thang" Type="varchar" MaxLength="2" />
           <Property Name="Nam" Type="varchar" MaxLength="4" />
@@ -166,12 +170,11 @@ warning 6002: The table/view 'BHXH.dbo.HrPSBHXH' does not have a primary key def
           <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" />
           <Property Name="DotPS" Type="nvarchar" MaxLength="10" />
           <Property Name="NgayNangLuong" Type="datetime" />
+          <Property Name="PSBHXHID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrPSLuong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrPSLuong">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="PSLuong" />
           </Key>
           <Property Name="Thang" Type="varchar" MaxLength="2" />
           <Property Name="Nam" Type="varchar" MaxLength="4" />
@@ -189,12 +192,11 @@ warning 6002: The table/view 'BHXH.dbo.HrPSLuong' does not have a primary key de
           <Property Name="DenThang" Type="varchar" MaxLength="7" />
           <Property Name="LoaiPS" Type="varchar" MaxLength="2" />
           <Property Name="MaPhongNL" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PSLuong" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrQuanHeGiaDinh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrQuanHeGiaDinh">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="QuanHeGiaDinhID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
@@ -202,12 +204,11 @@ warning 6002: The table/view 'BHXH.dbo.HrQuanHeGiaDinh' does not have a primary 
           <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
           <Property Name="NamSinh" Type="varchar" MaxLength="4" />
           <Property Name="ChiTiet" Type="ntext" />
+          <Property Name="QuanHeGiaDinhID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhBHXH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrQuaTrinhBHXH">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="QuaTrinhBHXHID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
@@ -221,6 +222,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhBHXH' does not have a primary k
           <Property Name="PCThamNien" Type="numeric" Precision="6" Scale="3" />
           <Property Name="PCKhuVuc" Type="numeric" Precision="6" Scale="3" />
           <Property Name="CongViec" Type="nvarchar" MaxLength="255" />
+          <Property Name="QuaTrinhBHXHID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -232,12 +234,11 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
           <Property Name="ThoiGian" Type="nvarchar" MaxLength="50" />
           <Property Name="CongViec" Type="nvarchar" MaxLength="300" />
+          <Property Name="QuaTrinhCongTacID" Type="uniqueidentifier" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhLuong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrQuaTrinhLuong">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="QuaTrinhLuongID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
@@ -253,10 +254,12 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhLuong' does not have a primary 
           <Property Name="PCTrachNhiem" Type="numeric" Precision="6" Scale="3" />
           <Property Name="PCKhuVuc" Type="numeric" Precision="6" Scale="3" />
           <Property Name="CongViec" Type="nvarchar" MaxLength="100" />
+          <Property Name="QuaTrinhLuongID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="HrTyLeBHXH">
+          <Key>
+            <PropertyRef Name="TyLeBHXHID" />
+          </Key>
           <Property Name="NgayTu" Type="datetime" />
           <Property Name="NgayDen" Type="datetime" />
           <Property Name="TyLeBHXH" Type="numeric" Precision="5" Scale="2" />
@@ -267,7 +270,8 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <Property Name="TyLeBHTNNLD" Type="numeric" Precision="5" Scale="2" />
           <Property Name="TyLeKPCD" Type="numeric" Precision="5" Scale="2" />
           <Property Name="TyLeKPCDNLD" Type="numeric" Precision="5" Scale="2" />
-        </EntityType>-->
+          <Property Name="TyLeBHXHID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="HrThangBangLuong">
           <Key>
             <PropertyRef Name="MaNgach" />
@@ -515,6 +519,71 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <Property Name="TenXaPhuong" Type="nvarchar" MaxLength="255" />
           <Property Name="QuanHuyenID" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="SysLogs">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ErrorMessage" Type="nvarchar(max)" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descriptions" Type="nvarchar" MaxLength="255" />
+          <Property Name="EventDate" Type="datetime" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Postion" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="SysRoles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentRoleID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descriptions" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Pwd" Type="varchar" MaxLength="32" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="LastPwdChange" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="MaNhanVien" Type="uniqueidentifier" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysUserRoles">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+          </Key>
+          <Property Name="UserRoleID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="255" />
+          <Property Name="RoleID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descriptions" Type="nvarchar" MaxLength="255" />
+          <Property Name="GrantedUserID" Type="uniqueidentifier" />
+          <Property Name="GrantedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysUserSettings">
+          <Key>
+            <PropertyRef Name="UserSettingID" />
+          </Key>
+          <Property Name="UserSettingID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Setting1" Type="nvarchar" MaxLength="1" />
+          <Property Name="Setting2" Type="nvarchar" MaxLength="1" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
         <Association Name="FK__HrKhenThu__MaKTK__16644E42">
           <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
           <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
@@ -529,7 +598,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrKhenThu__MaNha__119F9925">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="0..1" />
+          <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1561,7 +1630,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrPSBHXH__MaNhan__035179CE">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="0..1" />
+          <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1585,7 +1654,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrPSLuong__MaNha__07220AB2">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrPSLuong" Type="Self.HrPSLuong" Multiplicity="0..1" />
+          <End Role="HrPSLuong" Type="Self.HrPSLuong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1597,7 +1666,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrQuanHeG__MaNha__0AF29B96">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuanHeGiaDinh" Type="Self.HrQuanHeGiaDinh" Multiplicity="0..1" />
+          <End Role="HrQuanHeGiaDinh" Type="Self.HrQuanHeGiaDinh" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1633,7 +1702,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__0FB750B3">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhBHXH" Type="Self.HrQuaTrinhBHXH" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhBHXH" Type="Self.HrQuaTrinhBHXH" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1645,7 +1714,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__10AB74EC">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhLuong" Type="Self.HrQuaTrinhLuong" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhLuong" Type="Self.HrQuaTrinhLuong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1700,6 +1769,54 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             </Principal>
             <Dependent Role="ListXaPhuong">
               <PropertyRef Name="QuanHuyenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysLogs__UserID__43C1049E">
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+          <End Role="SysLogs" Type="Self.SysLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="SysLogs">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysUser__MaNhanV__2724C5F0">
+          <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="0..1" />
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HrNhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="SysUser">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysUserRo__UserI__3C1FE2D6">
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+          <End Role="SysUserRoles" Type="Self.SysUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="SysUserRoles">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysUserSe__UserI__2DD1C37F">
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+          <End Role="SysUserSettings" Type="Self.SysUserSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="SysUserSettings">
+              <PropertyRef Name="UserID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1766,8 +1883,49 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         <Function Name="f_Unicode2TCVN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
           <Parameter Name="strInput" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BHXHStoreContainer">
+          <EntitySet Name="HrHSLTangThem" EntityType="Self.HrHSLTangThem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrLuongToiThieu" EntityType="Self.HrLuongToiThieu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrNgayCong" EntityType="Self.HrNgayCong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrNhanVien" EntityType="Self.HrNhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" Schema="dbo" store:Type="Tables" />
@@ -1800,109 +1958,20 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListXaPhuong" EntityType="Self.ListXaPhuong" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrKhenThuongKyLuat].[MaNhanVien] AS [MaNhanVien], 
-    [HrKhenThuongKyLuat].[STT] AS [STT], 
-    [HrKhenThuongKyLuat].[MaKTKL] AS [MaKTKL], 
-    [HrKhenThuongKyLuat].[Nam] AS [Nam], 
-    [HrKhenThuongKyLuat].[GhiChu] AS [GhiChu], 
-    [HrKhenThuongKyLuat].[MaPhongBan] AS [MaPhongBan]
-    FROM [dbo].[HrKhenThuongKyLuat] AS [HrKhenThuongKyLuat]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrPSBHXH].[Thang] AS [Thang], 
-    [HrPSBHXH].[Nam] AS [Nam], 
-    [HrPSBHXH].[MaNhanVien] AS [MaNhanVien], 
-    [HrPSBHXH].[MaNgach] AS [MaNgach], 
-    [HrPSBHXH].[Bac] AS [Bac], 
-    [HrPSBHXH].[HSL] AS [HSL], 
-    [HrPSBHXH].[MucLuong] AS [MucLuong], 
-    [HrPSBHXH].[CongTacPhi] AS [CongTacPhi], 
-    [HrPSBHXH].[PCChucVu] AS [PCChucVu], 
-    [HrPSBHXH].[PCTrachNhiem] AS [PCTrachNhiem], 
-    [HrPSBHXH].[PCThamNien] AS [PCThamNien], 
-    [HrPSBHXH].[PCDocHai] AS [PCDocHai], 
-    [HrPSBHXH].[TuThang] AS [TuThang], 
-    [HrPSBHXH].[DenThang] AS [DenThang], 
-    [HrPSBHXH].[LoaiPS] AS [LoaiPS], 
-    [HrPSBHXH].[MaPhongBan] AS [MaPhongBan], 
-    [HrPSBHXH].[DotPS] AS [DotPS], 
-    [HrPSBHXH].[NgayNangLuong] AS [NgayNangLuong]
-    FROM [dbo].[HrPSBHXH] AS [HrPSBHXH]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrPSLuong].[Thang] AS [Thang], 
-    [HrPSLuong].[Nam] AS [Nam], 
-    [HrPSLuong].[MaNhanVien] AS [MaNhanVien], 
-    [HrPSLuong].[MaNgach] AS [MaNgach], 
-    [HrPSLuong].[Bac] AS [Bac], 
-    [HrPSLuong].[HSL] AS [HSL], 
-    [HrPSLuong].[MucLuong] AS [MucLuong], 
-    [HrPSLuong].[CongTacPhi] AS [CongTacPhi], 
-    [HrPSLuong].[PCChucVu] AS [PCChucVu], 
-    [HrPSLuong].[PCTrachNhiem] AS [PCTrachNhiem], 
-    [HrPSLuong].[PCThamNien] AS [PCThamNien], 
-    [HrPSLuong].[PCDocHai] AS [PCDocHai], 
-    [HrPSLuong].[TuThang] AS [TuThang], 
-    [HrPSLuong].[DenThang] AS [DenThang], 
-    [HrPSLuong].[LoaiPS] AS [LoaiPS], 
-    [HrPSLuong].[MaPhongNL] AS [MaPhongNL]
-    FROM [dbo].[HrPSLuong] AS [HrPSLuong]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrQuanHeGiaDinh].[MaNhanVien] AS [MaNhanVien], 
-    [HrQuanHeGiaDinh].[STT] AS [STT], 
-    [HrQuanHeGiaDinh].[MaQuanHeGD] AS [MaQuanHeGD], 
-    [HrQuanHeGiaDinh].[HoTen] AS [HoTen], 
-    [HrQuanHeGiaDinh].[NamSinh] AS [NamSinh], 
-    [HrQuanHeGiaDinh].[ChiTiet] AS [ChiTiet]
-    FROM [dbo].[HrQuanHeGiaDinh] AS [HrQuanHeGiaDinh]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrQuaTrinhBHXH].[MaNhanVien] AS [MaNhanVien], 
-    [HrQuaTrinhBHXH].[STT] AS [STT], 
-    [HrQuaTrinhBHXH].[Loai] AS [Loai], 
-    [HrQuaTrinhBHXH].[TuThang] AS [TuThang], 
-    [HrQuaTrinhBHXH].[DenThang] AS [DenThang], 
-    [HrQuaTrinhBHXH].[SoThang] AS [SoThang], 
-    [HrQuaTrinhBHXH].[MucLuong] AS [MucLuong], 
-    [HrQuaTrinhBHXH].[HSL] AS [HSL], 
-    [HrQuaTrinhBHXH].[PCChucVu] AS [PCChucVu], 
-    [HrQuaTrinhBHXH].[PCThamNien] AS [PCThamNien], 
-    [HrQuaTrinhBHXH].[PCKhuVuc] AS [PCKhuVuc], 
-    [HrQuaTrinhBHXH].[CongViec] AS [CongViec]
-    FROM [dbo].[HrQuaTrinhBHXH] AS [HrQuaTrinhBHXH]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysLogs" EntityType="Self.SysLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysRoles" EntityType="Self.SysRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysUserRoles" EntityType="Self.SysUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysUserSettings" EntityType="Self.SysUserSettings" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [HrQuaTrinhCongTac].[MaNhanVien] AS [MaNhanVien], 
     [HrQuaTrinhCongTac].[STT] AS [STT], 
     [HrQuaTrinhCongTac].[ThoiGian] AS [ThoiGian], 
-    [HrQuaTrinhCongTac].[CongViec] AS [CongViec]
+    [HrQuaTrinhCongTac].[CongViec] AS [CongViec], 
+    [HrQuaTrinhCongTac].[QuaTrinhCongTacID] AS [QuaTrinhCongTacID]
     FROM [dbo].[HrQuaTrinhCongTac] AS [HrQuaTrinhCongTac]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrQuaTrinhLuong].[MaNhanVien] AS [MaNhanVien], 
-    [HrQuaTrinhLuong].[STT] AS [STT], 
-    [HrQuaTrinhLuong].[Loai] AS [Loai], 
-    [HrQuaTrinhLuong].[TuThang] AS [TuThang], 
-    [HrQuaTrinhLuong].[DenThang] AS [DenThang], 
-    [HrQuaTrinhLuong].[SoThang] AS [SoThang], 
-    [HrQuaTrinhLuong].[MucLuong] AS [MucLuong], 
-    [HrQuaTrinhLuong].[HSL] AS [HSL], 
-    [HrQuaTrinhLuong].[PCChucVu] AS [PCChucVu], 
-    [HrQuaTrinhLuong].[PCThamNien] AS [PCThamNien], 
-    [HrQuaTrinhLuong].[PCDocHai] AS [PCDocHai], 
-    [HrQuaTrinhLuong].[PCTrachNhiem] AS [PCTrachNhiem], 
-    [HrQuaTrinhLuong].[PCKhuVuc] AS [PCKhuVuc], 
-    [HrQuaTrinhLuong].[CongViec] AS [CongViec]
-    FROM [dbo].[HrQuaTrinhLuong] AS [HrQuaTrinhLuong]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
             <End Role="ListKTKL" EntitySet="ListKTKL" />
@@ -2300,12 +2369,90 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
             <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
           </AssociationSet>
+          <AssociationSet Name="FK__SysLogs__UserID__43C1049E" Association="Self.FK__SysLogs__UserID__43C1049E">
+            <End Role="SysUser" EntitySet="SysUser" />
+            <End Role="SysLogs" EntitySet="SysLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SysUser__MaNhanV__2724C5F0" Association="Self.FK__SysUser__MaNhanV__2724C5F0">
+            <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+            <End Role="SysUser" EntitySet="SysUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SysUserRo__UserI__3C1FE2D6" Association="Self.FK__SysUserRo__UserI__3C1FE2D6">
+            <End Role="SysUser" EntitySet="SysUser" />
+            <End Role="SysUserRoles" EntitySet="SysUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SysUserSe__UserI__2DD1C37F" Association="Self.FK__SysUserSe__UserI__2DD1C37F">
+            <End Role="SysUser" EntitySet="SysUser" />
+            <End Role="SysUserSettings" EntitySet="SysUserSettings" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BHXH" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HrHSLTangThem">
+          <Key>
+            <PropertyRef Name="HSLTangThemID" />
+          </Key>
+          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Thang01" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang02" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang03" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang04" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang05" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang06" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang07" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang08" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang09" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang10" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang11" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Thang12" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="HSLTangThemID" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HrKhenThuongKyLuat">
+          <Key>
+            <PropertyRef Name="KhenThuongKyLuatID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="MaKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KhenThuongKyLuat" Type="Guid" Nullable="false" />
+          <Property Name="KhenThuongKyLuatID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="ListKTKL" Relationship="Self.FK__HrKhenThu__MaKTK__16644E42" FromRole="HrKhenThuongKyLuat" ToRole="ListKTKL" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrKhenThuongKyLuat" ToRole="HrNhanVien" />
+        </EntityType>
+        <EntityType Name="HrLuongToiThieu">
+          <Key>
+            <PropertyRef Name="LuongToiThieuID" />
+          </Key>
+          <Property Name="NgayTu" Type="DateTime" Precision="3" />
+          <Property Name="NgayDen" Type="DateTime" Precision="3" />
+          <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="LuongToiThieuID" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HrNgayCong">
+          <Key>
+            <PropertyRef Name="NgayCongID" />
+          </Key>
+          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Thang01" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang02" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang03" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang04" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang05" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang06" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang07" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang08" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang09" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang10" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang11" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Thang12" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="NgayCongID" Type="Guid" Nullable="false" />
+        </EntityType>
         <EntityType Name="HrNhanVien">
           <Key>
             <PropertyRef Name="MaNhanVien" />
@@ -2479,6 +2626,127 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <NavigationProperty Name="HrQuaTrinhCongTac" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrNhanVien" ToRole="HrQuaTrinhCongTac" />
           <NavigationProperty Name="HrQuaTrinhBHXH" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrNhanVien" ToRole="HrQuaTrinhBHXH" />
           <NavigationProperty Name="HrQuaTrinhLuong" Relationship="Self.FK__HrQuaTrin__MaNha__10AB74EC" FromRole="HrNhanVien" ToRole="HrQuaTrinhLuong" />
+          <NavigationProperty Name="SysUser" Relationship="Self.FK__SysUser__MaNhanV__2724C5F0" FromRole="HrNhanVien" ToRole="SysUser" />
+        </EntityType>
+        <EntityType Name="HrPSBHXH">
+          <Key>
+            <PropertyRef Name="PSBHXHID" />
+          </Key>
+          <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="MaNgach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CongTacPhi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DotPS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
+          <Property Name="PSBHXHID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrPSBHXH__MaNhan__035179CE" FromRole="HrPSBHXH" ToRole="HrNhanVien" />
+          <NavigationProperty Name="HrThangBangLuong" Relationship="Self.FK__HrPSBHXH__MaNgac__0539C240" FromRole="HrPSBHXH" ToRole="HrThangBangLuong" />
+          <NavigationProperty Name="ListPhongBan" Relationship="Self.FK__HrPSBHXH__MaPhon__062DE679" FromRole="HrPSBHXH" ToRole="ListPhongBan" />
+        </EntityType>
+        <EntityType Name="HrPSLuong">
+          <Key>
+            <PropertyRef Name="PSLuong" />
+          </Key>
+          <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="MaNgach" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CongTacPhi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MaPhongNL" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PSLuong" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrPSLuong__MaNha__07220AB2" FromRole="HrPSLuong" ToRole="HrNhanVien" />
+        </EntityType>
+        <EntityType Name="HrQuanHeGiaDinh">
+          <Key>
+            <PropertyRef Name="QuanHeGiaDinhID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="MaQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NamSinh" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ChiTiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuanHeGiaDinhID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuanHeG__MaNha__0AF29B96" FromRole="HrQuanHeGiaDinh" ToRole="HrNhanVien" />
+          <NavigationProperty Name="ListQuanHeGD" Relationship="Self.FK__HrQuanHeG__MaQua__0DCF0841" FromRole="HrQuanHeGiaDinh" ToRole="ListQuanHeGD" />
+        </EntityType>
+        <EntityType Name="HrQuaTrinhBHXH">
+          <Key>
+            <PropertyRef Name="QuaTrinhBHXHID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="Loai" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="SoThang" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="MucLuong" Type="Decimal" Precision="12" Scale="0" />
+          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="CongViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="QuaTrinhBHXHID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrQuaTrinhBHXH" ToRole="HrNhanVien" />
+        </EntityType>
+        <EntityType Name="HrQuaTrinhLuong">
+          <Key>
+            <PropertyRef Name="QuaTrinhLuongID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="Loai" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="SoThang" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="MucLuong" Type="Decimal" Precision="12" Scale="0" />
+          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="CongViec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="QuaTrinhLuongID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__10AB74EC" FromRole="HrQuaTrinhLuong" ToRole="HrNhanVien" />
+        </EntityType>
+        <EntityType Name="HrTyLeBHXH">
+          <Key>
+            <PropertyRef Name="TyLeBHXHID" />
+          </Key>
+          <Property Name="NgayTu" Type="DateTime" Precision="3" />
+          <Property Name="NgayDen" Type="DateTime" Precision="3" />
+          <Property Name="TyLeBHXH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeBHXHNLD" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeBHYT" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeBHYTNLD" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeBHTN" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeBHTNNLD" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeKPCD" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeKPCDNLD" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TyLeBHXHID" Type="Guid" Nullable="false" />
         </EntityType>
         <EntityType Name="HrThangBangLuong">
           <Key>
@@ -2823,97 +3091,77 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <NavigationProperty Name="HrNhanVien7" Relationship="Self.FK__HrNhanVie__XaPhu__7F4BDEC0" FromRole="ListXaPhuong" ToRole="HrNhanVien" />
           <NavigationProperty Name="ListQuanHuyen" Relationship="Self.FK__ListXaPhu__QuanH__320C68B7" FromRole="ListXaPhuong" ToRole="ListQuanHuyen" />
         </EntityType>
-        <EntityType Name="HrKhenThuongKyLuat">
+        <EntityType Name="sysdiagrams">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="MaKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrKhenThuongKyLuat" ToRole="HrNhanVien" />
-          <NavigationProperty Name="ListKTKL" Relationship="Self.FK__HrKhenThu__MaKTK__16644E42" FromRole="HrKhenThuongKyLuat" ToRole="ListKTKL" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="HrPSBHXH">
+        <EntityType Name="SysLogs">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="LogID" />
           </Key>
-          <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="MaNgach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CongTacPhi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="DotPS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="NgayNangLuong" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrPSBHXH__MaNhan__035179CE" FromRole="HrPSBHXH" ToRole="HrNhanVien" />
-          <NavigationProperty Name="HrThangBangLuong" Relationship="Self.FK__HrPSBHXH__MaNgac__0539C240" FromRole="HrPSBHXH" ToRole="HrThangBangLuong" />
-          <NavigationProperty Name="ListPhongBan" Relationship="Self.FK__HrPSBHXH__MaPhon__062DE679" FromRole="HrPSBHXH" ToRole="ListPhongBan" />
+          <Property Name="LogID" Type="Guid" Nullable="false" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EventType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Descriptions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EventDate" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Postion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SysUser" Relationship="Self.FK__SysLogs__UserID__43C1049E" FromRole="SysLogs" ToRole="SysUser" />
         </EntityType>
-        <EntityType Name="HrPSLuong">
+        <EntityType Name="SysRoles">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="RoleID" />
           </Key>
-          <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="MaNgach" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Bac" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="MucLuong" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CongTacPhi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="LoaiPS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="MaPhongNL" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrPSLuong__MaNha__07220AB2" FromRole="HrPSLuong" ToRole="HrNhanVien" />
+          <Property Name="RoleID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ParentRoleID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Descriptions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityType Name="HrQuanHeGiaDinh">
+        <EntityType Name="SysUser">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="MaQuanHeGD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NamSinh" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="ChiTiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuanHeG__MaNha__0AF29B96" FromRole="HrQuanHeGiaDinh" ToRole="HrNhanVien" />
-          <NavigationProperty Name="ListQuanHeGD" Relationship="Self.FK__HrQuanHeG__MaQua__0DCF0841" FromRole="HrQuanHeGiaDinh" ToRole="ListQuanHeGD" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pwd" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="LastLogin" Type="DateTime" Precision="3" />
+          <Property Name="LastPwdChange" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="MaNhanVien" Type="Guid" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__SysUser__MaNhanV__2724C5F0" FromRole="SysUser" ToRole="HrNhanVien" />
+          <NavigationProperty Name="SysLogs" Relationship="Self.FK__SysLogs__UserID__43C1049E" FromRole="SysUser" ToRole="SysLogs" />
+          <NavigationProperty Name="SysUserRoles" Relationship="Self.FK__SysUserRo__UserI__3C1FE2D6" FromRole="SysUser" ToRole="SysUserRoles" />
+          <NavigationProperty Name="SysUserSettings" Relationship="Self.FK__SysUserSe__UserI__2DD1C37F" FromRole="SysUser" ToRole="SysUserSettings" />
         </EntityType>
-        <EntityType Name="HrQuaTrinhBHXH">
+        <EntityType Name="SysUserRoles">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="UserRoleID" />
           </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="Loai" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="SoThang" Type="Decimal" Precision="3" Scale="0" />
-          <Property Name="MucLuong" Type="Decimal" Precision="12" Scale="0" />
-          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="CongViec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrQuaTrinhBHXH" ToRole="HrNhanVien" />
+          <Property Name="UserRoleID" Type="Guid" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RoleID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Descriptions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GrantedUserID" Type="Guid" />
+          <Property Name="GrantedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="SysUser" Relationship="Self.FK__SysUserRo__UserI__3C1FE2D6" FromRole="SysUserRoles" ToRole="SysUser" />
+        </EntityType>
+        <EntityType Name="SysUserSettings">
+          <Key>
+            <PropertyRef Name="UserSettingID" />
+          </Key>
+          <Property Name="UserSettingID" Type="Guid" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Setting1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Setting2" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="SysUser" Relationship="Self.FK__SysUserSe__UserI__2DD1C37F" FromRole="SysUserSettings" ToRole="SysUser" />
         </EntityType>
         <EntityType Name="HrQuaTrinhCongTac">
           <Key>
@@ -2923,31 +3171,24 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
           <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="QuaTrinhCongTacID" Type="Guid" />
           <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrQuaTrinhCongTac" ToRole="HrNhanVien" />
         </EntityType>
-        <EntityType Name="HrQuaTrinhLuong">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="Loai" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="TuThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="DenThang" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
-          <Property Name="SoThang" Type="Decimal" Precision="3" Scale="0" />
-          <Property Name="MucLuong" Type="Decimal" Precision="12" Scale="0" />
-          <Property Name="HSL" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCChucVu" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCThamNien" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCDocHai" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCTrachNhiem" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="PCKhuVuc" Type="Decimal" Precision="6" Scale="3" />
-          <Property Name="CongViec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__10AB74EC" FromRole="HrQuaTrinhLuong" ToRole="HrNhanVien" />
-        </EntityType>
+        <Association Name="FK__HrKhenThu__MaKTK__16644E42">
+          <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
+          <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListKTKL">
+              <PropertyRef Name="MaKTKL" />
+            </Principal>
+            <Dependent Role="HrKhenThuongKyLuat">
+              <PropertyRef Name="MaKTKL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__HrKhenThu__MaNha__119F9925">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="0..1" />
+          <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -3967,7 +4208,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrPSBHXH__MaNhan__035179CE">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="0..1" />
+          <End Role="HrPSBHXH" Type="Self.HrPSBHXH" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -3979,7 +4220,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrPSLuong__MaNha__07220AB2">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrPSLuong" Type="Self.HrPSLuong" Multiplicity="0..1" />
+          <End Role="HrPSLuong" Type="Self.HrPSLuong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -3991,7 +4232,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrQuanHeG__MaNha__0AF29B96">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuanHeGiaDinh" Type="Self.HrQuanHeGiaDinh" Multiplicity="0..1" />
+          <End Role="HrQuanHeGiaDinh" Type="Self.HrQuanHeGiaDinh" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -4015,7 +4256,7 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__0FB750B3">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhBHXH" Type="Self.HrQuaTrinhBHXH" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhBHXH" Type="Self.HrQuaTrinhBHXH" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -4027,12 +4268,24 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__10AB74EC">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhLuong" Type="Self.HrQuaTrinhLuong" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhLuong" Type="Self.HrQuaTrinhLuong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
             </Principal>
             <Dependent Role="HrQuaTrinhLuong">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysUser__MaNhanV__2724C5F0">
+          <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="0..1" />
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HrNhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="SysUser">
               <PropertyRef Name="MaNhanVien" />
             </Dependent>
           </ReferentialConstraint>
@@ -4046,30 +4299,6 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             </Principal>
             <Dependent Role="HrPSBHXH">
               <PropertyRef Name="MaNgach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__HrKhenThu__MaKTK__16644E42">
-          <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
-          <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ListKTKL">
-              <PropertyRef Name="MaKTKL" />
-            </Principal>
-            <Dependent Role="HrKhenThuongKyLuat">
-              <PropertyRef Name="MaKTKL" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ListNoiKC__MaTin__54968AE5">
-          <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
-          <End Role="ListNoiKCB" Type="Self.ListNoiKCB" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ListTinh">
-              <PropertyRef Name="MaTinh" />
-            </Principal>
-            <Dependent Role="ListNoiKCB">
-              <PropertyRef Name="MaTinh" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4094,6 +4323,18 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             </Principal>
             <Dependent Role="HrQuanHeGiaDinh">
               <PropertyRef Name="MaQuanHeGD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ListNoiKC__MaTin__54968AE5">
+          <End Role="ListTinh" Type="Self.ListTinh" Multiplicity="0..1" />
+          <End Role="ListNoiKCB" Type="Self.ListNoiKCB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListTinh">
+              <PropertyRef Name="MaTinh" />
+            </Principal>
+            <Dependent Role="ListNoiKCB">
+              <PropertyRef Name="MaTinh" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4133,8 +4374,54 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__SysLogs__UserID__43C1049E">
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+          <End Role="SysLogs" Type="Self.SysLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="SysLogs">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysUserRo__UserI__3C1FE2D6">
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+          <End Role="SysUserRoles" Type="Self.SysUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="SysUserRoles">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SysUserSe__UserI__2DD1C37F">
+          <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+          <End Role="SysUserSettings" Type="Self.SysUserSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="SysUserSettings">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="BHXHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HrHSLTangThem" EntityType="Self.HrHSLTangThem" />
+          <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" />
+          <EntitySet Name="HrLuongToiThieu" EntityType="Self.HrLuongToiThieu" />
+          <EntitySet Name="HrNgayCong" EntityType="Self.HrNgayCong" />
           <EntitySet Name="HrNhanVien" EntityType="Self.HrNhanVien" />
+          <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" />
+          <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" />
+          <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" />
+          <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" />
+          <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" />
+          <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" />
           <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" />
           <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" />
@@ -4167,13 +4454,17 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <EntitySet Name="ListTonGiao" EntityType="Self.ListTonGiao" />
           <EntitySet Name="ListThanhPhanGD" EntityType="Self.ListThanhPhanGD" />
           <EntitySet Name="ListXaPhuong" EntityType="Self.ListXaPhuong" />
-          <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" />
-          <EntitySet Name="HrPSBHXH" EntityType="Self.HrPSBHXH" />
-          <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" />
-          <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" />
-          <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="SysLogs" EntityType="Self.SysLogs" />
+          <EntitySet Name="SysRoles" EntityType="Self.SysRoles" />
+          <EntitySet Name="SysUser" EntityType="Self.SysUser" />
+          <EntitySet Name="SysUserRoles" EntityType="Self.SysUserRoles" />
+          <EntitySet Name="SysUserSettings" EntityType="Self.SysUserSettings" />
           <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
-          <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" />
+          <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
+            <End Role="ListKTKL" EntitySet="ListKTKL" />
+            <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
+          </AssociationSet>
           <AssociationSet Name="FK__HrKhenThu__MaNha__119F9925" Association="Self.FK__HrKhenThu__MaNha__119F9925">
             <End Role="HrNhanVien" EntitySet="HrNhanVien" />
             <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
@@ -4538,17 +4829,13 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             <End Role="HrNhanVien" EntitySet="HrNhanVien" />
             <End Role="HrQuaTrinhLuong" EntitySet="HrQuaTrinhLuong" />
           </AssociationSet>
+          <AssociationSet Name="FK__SysUser__MaNhanV__2724C5F0" Association="Self.FK__SysUser__MaNhanV__2724C5F0">
+            <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+            <End Role="SysUser" EntitySet="SysUser" />
+          </AssociationSet>
           <AssociationSet Name="FK__HrPSBHXH__MaNgac__0539C240" Association="Self.FK__HrPSBHXH__MaNgac__0539C240">
             <End Role="HrThangBangLuong" EntitySet="HrThangBangLuong" />
             <End Role="HrPSBHXH" EntitySet="HrPSBHXH" />
-          </AssociationSet>
-          <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
-            <End Role="ListKTKL" EntitySet="ListKTKL" />
-            <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ListNoiKC__MaTin__54968AE5" Association="Self.FK__ListNoiKC__MaTin__54968AE5">
-            <End Role="ListTinh" EntitySet="ListTinh" />
-            <End Role="ListNoiKCB" EntitySet="ListNoiKCB" />
           </AssociationSet>
           <AssociationSet Name="FK__HrPSBHXH__MaPhon__062DE679" Association="Self.FK__HrPSBHXH__MaPhon__062DE679">
             <End Role="ListPhongBan" EntitySet="ListPhongBan" />
@@ -4557,6 +4844,10 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
           <AssociationSet Name="FK__HrQuanHeG__MaQua__0DCF0841" Association="Self.FK__HrQuanHeG__MaQua__0DCF0841">
             <End Role="ListQuanHeGD" EntitySet="ListQuanHeGD" />
             <End Role="HrQuanHeGiaDinh" EntitySet="HrQuanHeGiaDinh" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ListNoiKC__MaTin__54968AE5" Association="Self.FK__ListNoiKC__MaTin__54968AE5">
+            <End Role="ListTinh" EntitySet="ListTinh" />
+            <End Role="ListNoiKCB" EntitySet="ListNoiKCB" />
           </AssociationSet>
           <AssociationSet Name="FK__ListQuanH__MaTin__30242045" Association="Self.FK__ListQuanH__MaTin__30242045">
             <End Role="ListTinh" EntitySet="ListTinh" />
@@ -4570,18 +4861,135 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
             <End Role="ListQuanHuyen" EntitySet="ListQuanHuyen" />
             <End Role="ListXaPhuong" EntitySet="ListXaPhuong" />
           </AssociationSet>
+          <AssociationSet Name="FK__SysLogs__UserID__43C1049E" Association="Self.FK__SysLogs__UserID__43C1049E">
+            <End Role="SysUser" EntitySet="SysUser" />
+            <End Role="SysLogs" EntitySet="SysLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SysUserRo__UserI__3C1FE2D6" Association="Self.FK__SysUserRo__UserI__3C1FE2D6">
+            <End Role="SysUser" EntitySet="SysUser" />
+            <End Role="SysUserRoles" EntitySet="SysUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SysUserSe__UserI__2DD1C37F" Association="Self.FK__SysUserSe__UserI__2DD1C37F">
+            <End Role="SysUser" EntitySet="SysUser" />
+            <End Role="SysUserSettings" EntitySet="SysUserSettings" />
+          </AssociationSet>
           <FunctionImport Name="DBA_RestoreDB">
             <Parameter Name="p_strDBNameTo" Mode="In" Type="String" />
             <Parameter Name="p_strDBNameFrom" Mode="In" Type="String" />
             <Parameter Name="p_strFQNRestoreFileName" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BHXH.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BHXH.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BHXHStoreContainer" CdmEntityContainer="BHXHEntities">
+          <EntitySetMapping Name="HrHSLTangThem">
+            <EntityTypeMapping TypeName="BHXH.HrHSLTangThem">
+              <MappingFragment StoreEntitySet="HrHSLTangThem">
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="Thang01" ColumnName="Thang01" />
+                <ScalarProperty Name="Thang02" ColumnName="Thang02" />
+                <ScalarProperty Name="Thang03" ColumnName="Thang03" />
+                <ScalarProperty Name="Thang04" ColumnName="Thang04" />
+                <ScalarProperty Name="Thang05" ColumnName="Thang05" />
+                <ScalarProperty Name="Thang06" ColumnName="Thang06" />
+                <ScalarProperty Name="Thang07" ColumnName="Thang07" />
+                <ScalarProperty Name="Thang08" ColumnName="Thang08" />
+                <ScalarProperty Name="Thang09" ColumnName="Thang09" />
+                <ScalarProperty Name="Thang10" ColumnName="Thang10" />
+                <ScalarProperty Name="Thang11" ColumnName="Thang11" />
+                <ScalarProperty Name="Thang12" ColumnName="Thang12" />
+                <ScalarProperty Name="HSLTangThemID" ColumnName="HSLTangThemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrKhenThuongKyLuat">
+            <EntityTypeMapping TypeName="BHXH.HrKhenThuongKyLuat">
+              <MappingFragment StoreEntitySet="HrKhenThuongKyLuat">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+                <ScalarProperty Name="KhenThuongKyLuat" ColumnName="KhenThuongKyLuat" />
+                <ScalarProperty Name="KhenThuongKyLuatID" ColumnName="KhenThuongKyLuatID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrLuongToiThieu">
+            <EntityTypeMapping TypeName="BHXH.HrLuongToiThieu">
+              <MappingFragment StoreEntitySet="HrLuongToiThieu">
+                <ScalarProperty Name="NgayTu" ColumnName="NgayTu" />
+                <ScalarProperty Name="NgayDen" ColumnName="NgayDen" />
+                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
+                <ScalarProperty Name="LuongToiThieuID" ColumnName="LuongToiThieuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrNgayCong">
+            <EntityTypeMapping TypeName="BHXH.HrNgayCong">
+              <MappingFragment StoreEntitySet="HrNgayCong">
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="Thang01" ColumnName="Thang01" />
+                <ScalarProperty Name="Thang02" ColumnName="Thang02" />
+                <ScalarProperty Name="Thang03" ColumnName="Thang03" />
+                <ScalarProperty Name="Thang04" ColumnName="Thang04" />
+                <ScalarProperty Name="Thang05" ColumnName="Thang05" />
+                <ScalarProperty Name="Thang06" ColumnName="Thang06" />
+                <ScalarProperty Name="Thang07" ColumnName="Thang07" />
+                <ScalarProperty Name="Thang08" ColumnName="Thang08" />
+                <ScalarProperty Name="Thang09" ColumnName="Thang09" />
+                <ScalarProperty Name="Thang10" ColumnName="Thang10" />
+                <ScalarProperty Name="Thang11" ColumnName="Thang11" />
+                <ScalarProperty Name="Thang12" ColumnName="Thang12" />
+                <ScalarProperty Name="NgayCongID" ColumnName="NgayCongID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HrNhanVien">
             <EntityTypeMapping TypeName="BHXH.HrNhanVien">
               <MappingFragment StoreEntitySet="HrNhanVien">
@@ -4663,6 +5071,124 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
                 <ScalarProperty Name="DaNLTruocTH" ColumnName="DaNLTruocTH" />
                 <ScalarProperty Name="AnhNV" ColumnName="AnhNV" />
                 <ScalarProperty Name="MaChiBo" ColumnName="MaChiBo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrPSBHXH">
+            <EntityTypeMapping TypeName="BHXH.HrPSBHXH">
+              <MappingFragment StoreEntitySet="HrPSBHXH">
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaNgach" ColumnName="MaNgach" />
+                <ScalarProperty Name="Bac" ColumnName="Bac" />
+                <ScalarProperty Name="HSL" ColumnName="HSL" />
+                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
+                <ScalarProperty Name="CongTacPhi" ColumnName="CongTacPhi" />
+                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
+                <ScalarProperty Name="PCTrachNhiem" ColumnName="PCTrachNhiem" />
+                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
+                <ScalarProperty Name="PCDocHai" ColumnName="PCDocHai" />
+                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
+                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
+                <ScalarProperty Name="LoaiPS" ColumnName="LoaiPS" />
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+                <ScalarProperty Name="DotPS" ColumnName="DotPS" />
+                <ScalarProperty Name="NgayNangLuong" ColumnName="NgayNangLuong" />
+                <ScalarProperty Name="PSBHXHID" ColumnName="PSBHXHID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrPSLuong">
+            <EntityTypeMapping TypeName="BHXH.HrPSLuong">
+              <MappingFragment StoreEntitySet="HrPSLuong">
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaNgach" ColumnName="MaNgach" />
+                <ScalarProperty Name="Bac" ColumnName="Bac" />
+                <ScalarProperty Name="HSL" ColumnName="HSL" />
+                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
+                <ScalarProperty Name="CongTacPhi" ColumnName="CongTacPhi" />
+                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
+                <ScalarProperty Name="PCTrachNhiem" ColumnName="PCTrachNhiem" />
+                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
+                <ScalarProperty Name="PCDocHai" ColumnName="PCDocHai" />
+                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
+                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
+                <ScalarProperty Name="LoaiPS" ColumnName="LoaiPS" />
+                <ScalarProperty Name="MaPhongNL" ColumnName="MaPhongNL" />
+                <ScalarProperty Name="PSLuong" ColumnName="PSLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrQuanHeGiaDinh">
+            <EntityTypeMapping TypeName="BHXH.HrQuanHeGiaDinh">
+              <MappingFragment StoreEntitySet="HrQuanHeGiaDinh">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="NamSinh" ColumnName="NamSinh" />
+                <ScalarProperty Name="ChiTiet" ColumnName="ChiTiet" />
+                <ScalarProperty Name="QuanHeGiaDinhID" ColumnName="QuanHeGiaDinhID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrQuaTrinhBHXH">
+            <EntityTypeMapping TypeName="BHXH.HrQuaTrinhBHXH">
+              <MappingFragment StoreEntitySet="HrQuaTrinhBHXH">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="Loai" ColumnName="Loai" />
+                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
+                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
+                <ScalarProperty Name="SoThang" ColumnName="SoThang" />
+                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
+                <ScalarProperty Name="HSL" ColumnName="HSL" />
+                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
+                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
+                <ScalarProperty Name="PCKhuVuc" ColumnName="PCKhuVuc" />
+                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+                <ScalarProperty Name="QuaTrinhBHXHID" ColumnName="QuaTrinhBHXHID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrQuaTrinhLuong">
+            <EntityTypeMapping TypeName="BHXH.HrQuaTrinhLuong">
+              <MappingFragment StoreEntitySet="HrQuaTrinhLuong">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="Loai" ColumnName="Loai" />
+                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
+                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
+                <ScalarProperty Name="SoThang" ColumnName="SoThang" />
+                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
+                <ScalarProperty Name="HSL" ColumnName="HSL" />
+                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
+                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
+                <ScalarProperty Name="PCDocHai" ColumnName="PCDocHai" />
+                <ScalarProperty Name="PCTrachNhiem" ColumnName="PCTrachNhiem" />
+                <ScalarProperty Name="PCKhuVuc" ColumnName="PCKhuVuc" />
+                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+                <ScalarProperty Name="QuaTrinhLuongID" ColumnName="QuaTrinhLuongID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrTyLeBHXH">
+            <EntityTypeMapping TypeName="BHXH.HrTyLeBHXH">
+              <MappingFragment StoreEntitySet="HrTyLeBHXH">
+                <ScalarProperty Name="NgayTu" ColumnName="NgayTu" />
+                <ScalarProperty Name="NgayDen" ColumnName="NgayDen" />
+                <ScalarProperty Name="TyLeBHXH" ColumnName="TyLeBHXH" />
+                <ScalarProperty Name="TyLeBHXHNLD" ColumnName="TyLeBHXHNLD" />
+                <ScalarProperty Name="TyLeBHYT" ColumnName="TyLeBHYT" />
+                <ScalarProperty Name="TyLeBHYTNLD" ColumnName="TyLeBHYTNLD" />
+                <ScalarProperty Name="TyLeBHTN" ColumnName="TyLeBHTN" />
+                <ScalarProperty Name="TyLeBHTNNLD" ColumnName="TyLeBHTNNLD" />
+                <ScalarProperty Name="TyLeKPCD" ColumnName="TyLeKPCD" />
+                <ScalarProperty Name="TyLeKPCDNLD" ColumnName="TyLeKPCDNLD" />
+                <ScalarProperty Name="TyLeBHXHID" ColumnName="TyLeBHXHID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4945,91 +5471,74 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HrKhenThuongKyLuat">
-            <EntityTypeMapping TypeName="BHXH.HrKhenThuongKyLuat">
-              <MappingFragment StoreEntitySet="HrKhenThuongKyLuat">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
-                <ScalarProperty Name="Nam" ColumnName="Nam" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BHXH.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HrPSBHXH">
-            <EntityTypeMapping TypeName="BHXH.HrPSBHXH">
-              <MappingFragment StoreEntitySet="HrPSBHXH">
-                <ScalarProperty Name="Thang" ColumnName="Thang" />
-                <ScalarProperty Name="Nam" ColumnName="Nam" />
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="MaNgach" ColumnName="MaNgach" />
-                <ScalarProperty Name="Bac" ColumnName="Bac" />
-                <ScalarProperty Name="HSL" ColumnName="HSL" />
-                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
-                <ScalarProperty Name="CongTacPhi" ColumnName="CongTacPhi" />
-                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
-                <ScalarProperty Name="PCTrachNhiem" ColumnName="PCTrachNhiem" />
-                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
-                <ScalarProperty Name="PCDocHai" ColumnName="PCDocHai" />
-                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
-                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
-                <ScalarProperty Name="LoaiPS" ColumnName="LoaiPS" />
-                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
-                <ScalarProperty Name="DotPS" ColumnName="DotPS" />
-                <ScalarProperty Name="NgayNangLuong" ColumnName="NgayNangLuong" />
+          <EntitySetMapping Name="SysLogs">
+            <EntityTypeMapping TypeName="BHXH.SysLogs">
+              <MappingFragment StoreEntitySet="SysLogs">
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Postion" ColumnName="Postion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HrPSLuong">
-            <EntityTypeMapping TypeName="BHXH.HrPSLuong">
-              <MappingFragment StoreEntitySet="HrPSLuong">
-                <ScalarProperty Name="Thang" ColumnName="Thang" />
-                <ScalarProperty Name="Nam" ColumnName="Nam" />
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="MaNgach" ColumnName="MaNgach" />
-                <ScalarProperty Name="Bac" ColumnName="Bac" />
-                <ScalarProperty Name="HSL" ColumnName="HSL" />
-                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
-                <ScalarProperty Name="CongTacPhi" ColumnName="CongTacPhi" />
-                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
-                <ScalarProperty Name="PCTrachNhiem" ColumnName="PCTrachNhiem" />
-                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
-                <ScalarProperty Name="PCDocHai" ColumnName="PCDocHai" />
-                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
-                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
-                <ScalarProperty Name="LoaiPS" ColumnName="LoaiPS" />
-                <ScalarProperty Name="MaPhongNL" ColumnName="MaPhongNL" />
+          <EntitySetMapping Name="SysRoles">
+            <EntityTypeMapping TypeName="BHXH.SysRoles">
+              <MappingFragment StoreEntitySet="SysRoles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="ParentRoleID" ColumnName="ParentRoleID" />
+                <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HrQuanHeGiaDinh">
-            <EntityTypeMapping TypeName="BHXH.HrQuanHeGiaDinh">
-              <MappingFragment StoreEntitySet="HrQuanHeGiaDinh">
+          <EntitySetMapping Name="SysUser">
+            <EntityTypeMapping TypeName="BHXH.SysUser">
+              <MappingFragment StoreEntitySet="SysUser">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="LastPwdChange" ColumnName="LastPwdChange" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="MaQuanHeGD" ColumnName="MaQuanHeGD" />
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="NamSinh" ColumnName="NamSinh" />
-                <ScalarProperty Name="ChiTiet" ColumnName="ChiTiet" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HrQuaTrinhBHXH">
-            <EntityTypeMapping TypeName="BHXH.HrQuaTrinhBHXH">
-              <MappingFragment StoreEntitySet="HrQuaTrinhBHXH">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="Loai" ColumnName="Loai" />
-                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
-                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
-                <ScalarProperty Name="SoThang" ColumnName="SoThang" />
-                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
-                <ScalarProperty Name="HSL" ColumnName="HSL" />
-                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
-                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
-                <ScalarProperty Name="PCKhuVuc" ColumnName="PCKhuVuc" />
-                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+          <EntitySetMapping Name="SysUserRoles">
+            <EntityTypeMapping TypeName="BHXH.SysUserRoles">
+              <MappingFragment StoreEntitySet="SysUserRoles">
+                <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+                <ScalarProperty Name="GrantedUserID" ColumnName="GrantedUserID" />
+                <ScalarProperty Name="GrantedDate" ColumnName="GrantedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysUserSettings">
+            <EntityTypeMapping TypeName="BHXH.SysUserSettings">
+              <MappingFragment StoreEntitySet="SysUserSettings">
+                <ScalarProperty Name="UserSettingID" ColumnName="UserSettingID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Setting1" ColumnName="Setting1" />
+                <ScalarProperty Name="Setting2" ColumnName="Setting2" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5040,30 +5549,35 @@ warning 6013: The table/view 'BHXH.dbo.HrTyLeBHXH' does not have a primary key d
                 <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
                 <ScalarProperty Name="CongViec" ColumnName="CongViec" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HrQuaTrinhLuong">
-            <EntityTypeMapping TypeName="BHXH.HrQuaTrinhLuong">
-              <MappingFragment StoreEntitySet="HrQuaTrinhLuong">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="Loai" ColumnName="Loai" />
-                <ScalarProperty Name="TuThang" ColumnName="TuThang" />
-                <ScalarProperty Name="DenThang" ColumnName="DenThang" />
-                <ScalarProperty Name="SoThang" ColumnName="SoThang" />
-                <ScalarProperty Name="MucLuong" ColumnName="MucLuong" />
-                <ScalarProperty Name="HSL" ColumnName="HSL" />
-                <ScalarProperty Name="PCChucVu" ColumnName="PCChucVu" />
-                <ScalarProperty Name="PCThamNien" ColumnName="PCThamNien" />
-                <ScalarProperty Name="PCDocHai" ColumnName="PCDocHai" />
-                <ScalarProperty Name="PCTrachNhiem" ColumnName="PCTrachNhiem" />
-                <ScalarProperty Name="PCKhuVuc" ColumnName="PCKhuVuc" />
-                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+                <ScalarProperty Name="QuaTrinhCongTacID" ColumnName="QuaTrinhCongTacID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXH.Store.DBA_RestoreDB" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BHXH.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BHXH.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BHXH.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BHXH.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BHXH.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BHXH.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BHXH.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BHXH.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BHXH.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
