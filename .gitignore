@@ -7,3 +7,4 @@ BHXH.DB/BHXH.DB.dbmdl
 *.pdb
 *.msl
 *.force
+*.cache
