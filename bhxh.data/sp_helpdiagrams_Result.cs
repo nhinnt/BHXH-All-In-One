@@ -10,16 +10,13 @@
 namespace BHXH.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class HrQuaTrinhCongTac
+    public partial class sp_helpdiagrams_Result
     {
-        public System.Guid MaNhanVien { get; set; }
-        public Nullable<decimal> STT { get; set; }
-        public string ThoiGian { get; set; }
-        public string CongViec { get; set; }
-        public Nullable<System.Guid> QuaTrinhCongTacID { get; set; }
-    
-        public virtual HrNhanVien HrNhanVien { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

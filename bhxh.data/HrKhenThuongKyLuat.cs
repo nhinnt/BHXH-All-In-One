@@ -20,8 +20,10 @@ namespace BHXH.Data
         public string Nam { get; set; }
         public string GhiChu { get; set; }
         public string MaPhongBan { get; set; }
+        public System.Guid KhenThuongKyLuat { get; set; }
+        public System.Guid KhenThuongKyLuatID { get; set; }
     
-        public virtual HrNhanVien HrNhanVien { get; set; }
         public virtual ListKTKL ListKTKL { get; set; }
+        public virtual HrNhanVien HrNhanVien { get; set; }
     }
 }

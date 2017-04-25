@@ -20,6 +20,7 @@ namespace BHXH.Data
         public string HoTen { get; set; }
         public string NamSinh { get; set; }
         public string ChiTiet { get; set; }
+        public System.Guid QuanHeGiaDinhID { get; set; }
     
         public virtual HrNhanVien HrNhanVien { get; set; }
         public virtual ListQuanHeGD ListQuanHeGD { get; set; }

@@ -12,14 +12,14 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class HrQuaTrinhCongTac
+    public partial class SysUserSettings
     {
-        public System.Guid MaNhanVien { get; set; }
-        public Nullable<decimal> STT { get; set; }
-        public string ThoiGian { get; set; }
-        public string CongViec { get; set; }
-        public Nullable<System.Guid> QuaTrinhCongTacID { get; set; }
+        public System.Guid UserSettingID { get; set; }
+        public string UserID { get; set; }
+        public string Setting1 { get; set; }
+        public string Setting2 { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
     
-        public virtual HrNhanVien HrNhanVien { get; set; }
+        public virtual SysUser SysUser { get; set; }
     }
 }

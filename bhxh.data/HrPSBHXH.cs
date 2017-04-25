@@ -32,6 +32,7 @@ namespace BHXH.Data
         public string MaPhongBan { get; set; }
         public string DotPS { get; set; }
         public Nullable<System.DateTime> NgayNangLuong { get; set; }
+        public System.Guid PSBHXHID { get; set; }
     
         public virtual HrNhanVien HrNhanVien { get; set; }
         public virtual HrThangBangLuong HrThangBangLuong { get; set; }

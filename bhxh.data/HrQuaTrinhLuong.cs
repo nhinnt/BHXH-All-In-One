@@ -28,6 +28,7 @@ namespace BHXH.Data
         public Nullable<decimal> PCTrachNhiem { get; set; }
         public Nullable<decimal> PCKhuVuc { get; set; }
         public string CongViec { get; set; }
+        public System.Guid QuaTrinhLuongID { get; set; }
     
         public virtual HrNhanVien HrNhanVien { get; set; }
     }
