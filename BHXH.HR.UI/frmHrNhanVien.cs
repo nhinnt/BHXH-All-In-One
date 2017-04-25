@@ -52,6 +52,7 @@ namespace BHXH.HR.UI
         }
         private void frmHrNhanVien_Load(object sender, EventArgs e)
         {
+            //kgghtkhjtkjh fdf
             string MaPhongBan;
             MaPhongBan = "";
             BHXH.Data.BHXHEntities ctx = new BHXH.Data.BHXHEntities();
@@ -87,15 +88,19 @@ namespace BHXH.HR.UI
                 }
             }
         }
-
         private void NavBarControlDSNhanVien_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
-           this.LoadTabThongTinNhanVien(e.Link.Item.Tag.ToString());
+            this.LoadTabThongTinNhanVien(e.Link.Item.Tag.ToString());
+
+            this.GridControlQuaTrinhCongTac.DataSource = BHXH.HR.Business.HrQuaTrinhCongTac.GetData(e.Link.Item.Tag.ToString());
+            this.GridControlQuanHeGiaDinh.DataSource = BHXH.HR.Business.HrQuanHeGiaDinh.GetData(e.Link.Item.Tag.ToString());
+
+
         }
         void LoadTabThongTinNhanVien(string NhanVienID)
         {
 
-           
+
             //MessageBox.Show(NhanVienID);
             MruEditSoHieuNV.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).SoHieuNV;
             MruEditTenNhanVien.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).TenNhanVien;
@@ -104,10 +109,7 @@ namespace BHXH.HR.UI
             ////////Chức vụ Đảng
             MruEditMaChucVuDang.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaCapUy;
             MruEditTenChucVuDang.EditValue = BHXH.List.Business.ListChucVuDang.GetData(MruEditMaChucVuDang.Text).TenChucVu;
-
-            //  MruEditTenChucVuDang.EditValue = BHXH.List.Business.ListChucVuDang..GetChucVuDang(MruEditMaChucVuDang.Text).TenChucVu;
-
-
+            
             ///////////////Chức vu Đảng kiêm
             MruEditMaCVDangKiem.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaCapUyKiem;
             MruEditTenCVDangKiem.EditValue = BHXH.List.Business.ListChucVuDang.GetData(MruEditMaCVDangKiem.Text).TenChucVu;
@@ -168,8 +170,18 @@ namespace BHXH.HR.UI
             DateEditNgay_CM.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayCM;
             DateEditNgay_Dang.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayDang;
             DateEditNgay_DangCT.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayDangCT;
+            //chi bộ
             MruEditMaChiBo.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaChiBo;
-            MruEditTenChiBo.EditValue = BHXH.List.Business.ListChiBo.GetData(MruEditMaChiBo.Text).TenChiBo;
+            if (!string.IsNullOrEmpty(MruEditMaChiBo.Text))
+            {
+                MruEditTenChiBo.EditValue = BHXH.List.Business.ListChiBo.GetData(MruEditMaChiBo.Text).TenChiBo;
+            }
+            else
+            {
+                MruEditTenChiBo.EditValue = "";
+            }
+        
+            //////
             DateEditNgay_TCXH.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayTCXH;
             DateEditNgayNhapNgu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayNhapNgu;
             DateEditNgayXuatNgu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayXuatNgu;
@@ -214,8 +226,53 @@ namespace BHXH.HR.UI
             {
                 MruEditTenLoaiTB.EditValue = BHXH.List.Business.ListLoaiTB.GetData(MruEditMaLoaiTB.Text).TenLoaiTB;
             }
+            //ảnh
+            //try
+            //{
+            //    byte[] img = RetrieveImage();
+            //    MemoryStream str = new MemoryStream(img);
+
+            //    this.PictureEdit1.Image = Image.FromStream(str);
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    this.PictureEdit1.Image = null;
+            //}
 
 
         }
+
+        private void XtraTabPageQuaTrinhCongTac_Paint()
+        {
+
+        }
+
+        private void NavBarControlDSNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+        //public byte[] RetrieveImage()
+        //{
+        //    byte[] imageData = null;
+        //    SqlCommand cmd = new SqlCommand(" select AnhNV from dsnhanvien where idnhanvien = " + mIDChon.ToString, SoLieu);
+        //    using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SequentialAccess))
+        //    {
+        //        reader.Read();
+        //        long bytesize = reader.GetBytes(0, 0, null, 0, 0);
+        //        // Allocate byte array to hold image data
+        //        imageData = new byte[bytesize];
+        //        long bytesread = 0;
+        //        int curpos = 0;
+        //        int chunkSize = 1;
+        //        while (bytesread < bytesize)
+        //        {
+        //            bytesread += reader.GetBytes(0, curpos, imageData, curpos, chunkSize);
+        //            curpos += chunkSize;
+        //        }
+        //    }
+        //    return imageData;
+        //}
+
     }
 }
