@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -41,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,7 +55,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListNationality.cs" />
+    <Compile Include="ListNoiKCB.cs" />
+    <Compile Include="ListQuanHuyen.cs" />
+    <Compile Include="ListQuocGia.cs" />
+    <Compile Include="ListTinh.cs" />
+    <Compile Include="ListTDVanHoa.cs" />
+    <Compile Include="ListTDQLNN.cs" />
+    <Compile Include="ListTDNgoaiNgu.cs" />
+    <Compile Include="ListTDLLCT.cs" />
+    <Compile Include="ListTDDaoTao.cs" />
+    <Compile Include="ListQuanHeGD.cs" />
+    <Compile Include="ListPhongBan.cs" />
+    <Compile Include="ListNgoaiNgu.cs" />
+    <Compile Include="ListNghiepVu.cs" />
+    <Compile Include="ListNganHang.cs" />
+    <Compile Include="ListLoaiTB.cs" />
+    <Compile Include="ListLHDaoTao.cs" />
+    <Compile Include="ListKTKL.cs" />
+    <Compile Include="ListHopDong.cs" />
+    <Compile Include="ListHonNhan.cs" />
+    <Compile Include="ListDienCS.cs" />
+    <Compile Include="ListDanToc.cs" />
+    <Compile Include="ListCMDaoTao.cs" />
+    <Compile Include="ListChucVuDang.cs" />
+    <Compile Include="ListChucVu.cs" />
+    <Compile Include="ListChucDanh.cs" />
+    <Compile Include="ListChiBo.cs" />
+    <Compile Include="ListCapKTKL.cs" />
+    <Compile Include="ListBangCap.cs" />
+    <Compile Include="ListThanhPhanGD.cs" />
+    <Compile Include="ListTonGiao.cs" />
+    <Compile Include="ListXaPhuong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

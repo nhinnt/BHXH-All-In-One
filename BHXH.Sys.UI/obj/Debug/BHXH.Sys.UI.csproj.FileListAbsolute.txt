@@ -1,0 +1,22 @@
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.dll.config
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.pdb
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\EntityFramework.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\EntityFramework.xml
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.Login.resources
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\obj\Debug\BHXH.Sys.UI.csproj.GenerateResource.Cache
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.dll
+C:\Users\lenho\Downloads\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH-All-In-One-4bdea7380b383931284b251981827747733f357c\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.dll.config
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\BHXH.Common.UI.pdb
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\EntityFramework.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\EntityFramework.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.Login.resources
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\obj\Debug\BHXH.Sys.UI.csproj.GenerateResource.Cache
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.dll
+D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Sys.UI\obj\Debug\BHXH.Common.UI.pdb

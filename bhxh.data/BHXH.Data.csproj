@@ -75,6 +75,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BHXH.edmx</DependentUpon>
     </Compile>
+    <Compile Include="HrKhenThuongKyLuat.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrNhanVien.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrPSBHXH.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrPSLuong.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrQuanHeGiaDinh.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrQuaTrinhBHXH.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrQuaTrinhCongTac.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrQuaTrinhLuong.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrThangBangLuong.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="ListBangCap.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
@@ -96,16 +123,10 @@
     <Compile Include="ListCMDaoTao.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
-    <Compile Include="ListCommunes.cs">
+    <Compile Include="ListDanToc.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="ListDienCS.cs">
-      <DependentUpon>BHXH.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ListDistricts.cs">
-      <DependentUpon>BHXH.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ListEthnics.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="ListHonNhan.cs">
@@ -123,9 +144,6 @@
     <Compile Include="ListLoaiTB.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
-    <Compile Include="ListNationality.cs">
-      <DependentUpon>BHXH.tt</DependentUpon>
-    </Compile>
     <Compile Include="ListNganHang.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
@@ -141,13 +159,10 @@
     <Compile Include="ListPhongBan.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
-    <Compile Include="ListProvinces.cs">
-      <DependentUpon>BHXH.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ListQuan.cs">
-      <DependentUpon>BHXH.tt</DependentUpon>
-    </Compile>
     <Compile Include="ListQuanHeGD.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListQuanHuyen.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="ListQuocGia.cs">
@@ -171,10 +186,40 @@
     <Compile Include="ListThanhPhanGD.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListTinh.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="ListTonGiao.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListXaPhuong.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysLogs.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysRoles.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysUserRoles.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysUsers.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysUserSettings.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -208,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BHXH.Context.tt">

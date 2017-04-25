@@ -14,8 +14,17 @@ namespace BHXH.Data
     
     public partial class ListKTKL
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ListKTKL()
+        {
+            this.HrKhenThuongKyLuat = new HashSet<HrKhenThuongKyLuat>();
+        }
+    
         public string MaKTKL { get; set; }
         public string TenKTKL { get; set; }
         public string LoaiKTKL { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrKhenThuongKyLuat> HrKhenThuongKyLuat { get; set; }
     }
 }

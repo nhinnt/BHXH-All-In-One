@@ -14,7 +14,25 @@ namespace BHXH.Data
     
     public partial class ListTonGiao
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ListTonGiao()
+        {
+            this.HrNhanVien = new HashSet<HrNhanVien>();
+            this.HrNhanVien1 = new HashSet<HrNhanVien>();
+            this.HrNhanVien2 = new HashSet<HrNhanVien>();
+            this.HrNhanVien3 = new HashSet<HrNhanVien>();
+        }
+    
         public string MaTonGiao { get; set; }
         public string TenTonGiao { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrNhanVien> HrNhanVien3 { get; set; }
     }
 }

@@ -59,7 +59,12 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BHXH.sql" />
-    <None Include="ConvertData.sql" />
+    <None Include="BHXH_Sys.sql" />
+    <None Include="Convert_List.sql" />
+    <None Include="BHXH_HR_List.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Database_NhanSu.sql" />
+    <Build Include="Convert_Hr.sql" />
   </ItemGroup>
 </Project>

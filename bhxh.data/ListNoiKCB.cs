@@ -16,5 +16,9 @@ namespace BHXH.Data
     {
         public string MaNoiKCB { get; set; }
         public string TenNoiKCB { get; set; }
+        public string MaTinh { get; set; }
+        public string MaKCBDayDu { get; set; }
+    
+        public virtual ListTinh ListTinh { get; set; }
     }
 }

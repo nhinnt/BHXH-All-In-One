@@ -2,5 +2,7 @@
 *.cache
 BHXH.DB/BHXH.DB.dbmdl
 *.dbmdl
-*.dbmdl
-*.force
+*.dll
+*.exe
+*.pdb
+*.msl

@@ -32,5 +32,13 @@ namespace BHXH.App
         {
             Application.Exit();
         }
+
+        private void bbtnQuocTich_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            List.UI.frmListQuocGia f = new BHXH.List.UI.frmListQuocGia();
+            //f.StartPosition =  FormStartPosition.CenterParent;
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
