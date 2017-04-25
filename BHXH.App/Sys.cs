@@ -8,7 +8,8 @@ namespace BHXH.App
 {
   public  class Sys
     {
-    //    public static BHXH.Data.List
+        public static BHXH.Data.SysUsers LoginedUser;
+        public static BHXH.Data.SysUserSettings UserSettings;
 
     }
 }
