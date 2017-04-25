@@ -14,6 +14,12 @@ namespace BHXH.Data
     
     public partial class HrNhanVien
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HrNhanVien()
+        {
+            this.SysUsers = new HashSet<SysUsers>();
+        }
+    
         public System.Guid MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }
         public string MaPhongBan { get; set; }
@@ -184,5 +190,7 @@ namespace BHXH.Data
         public virtual HrQuaTrinhCongTac HrQuaTrinhCongTac { get; set; }
         public virtual HrQuaTrinhBHXH HrQuaTrinhBHXH { get; set; }
         public virtual HrQuaTrinhLuong HrQuaTrinhLuong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SysUsers> SysUsers { get; set; }
     }
 }

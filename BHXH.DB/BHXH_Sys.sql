@@ -5,7 +5,7 @@ Created Date : 20170328
 Edited Date
 */
 
-CREATE DATABASE BHXH
+--CREATE DATABASE BHXH
 USE BHXH
 ------------
 CREATE TABLE [SysUsers]
