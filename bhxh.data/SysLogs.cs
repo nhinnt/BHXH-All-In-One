@@ -22,6 +22,6 @@ namespace BHXH.Data
         public string UserID { get; set; }
         public string Postion { get; set; }
     
-        public virtual SysUsers SysUsers { get; set; }
+        public virtual SysUser SysUser { get; set; }
     }
 }

@@ -62,6 +62,7 @@
     <None Include="BHXH_Sys.sql" />
     <None Include="Convert_List.sql" />
     <None Include="BHXH_HR_List.sql" />
+    <None Include="BHXHDB.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Database_NhanSu.sql" />

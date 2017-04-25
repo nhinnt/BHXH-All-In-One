@@ -14,7 +14,7 @@ namespace BHXH.Common.Business
         /// <param name="LoginName"></param>
         /// <param name="Password"></param>
         /// <returns>True: Đăng nhập thành công - False: Đăng nhập thất bại</returns>
-        public static BHXH.Data.SysUsers Login(string LoginName, string Password)
+        public static BHXH.Data.SysUser Login(string LoginName, string Password)
 
         {
             // Ghi lại ngày login vào LastLogin 
@@ -49,7 +49,7 @@ namespace BHXH.Common.Business
         /// <param name="NhanVienID"></param>
         /// <param name=""></param>
         /// <returns></returns>
-        public static BHXH.Data.SysUsers NewUser(Guid NhanVienID,  string UserID, string Password)    // Nam tự thêm các tham số
+        public static BHXH.Data.SysUser NewUser(Guid NhanVienID,  string UserID, string Password)    // Nam tự thêm các tham số
         {
          
             return null;
@@ -59,7 +59,7 @@ namespace BHXH.Common.Business
 
 
         }
-        public static IEnumerable<BHXH.Data.SysUsers> GetUserInPhongBan(string MaPhongBan)
+        public static IEnumerable<BHXH.Data.SysUser> GetUserInPhongBan(string MaPhongBan)
         {
             return null;
         }

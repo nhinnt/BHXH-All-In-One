@@ -20,6 +20,6 @@ namespace BHXH.Data
         public string Setting2 { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
     
-        public virtual SysUsers SysUsers { get; set; }
+        public virtual SysUser SysUser { get; set; }
     }
 }

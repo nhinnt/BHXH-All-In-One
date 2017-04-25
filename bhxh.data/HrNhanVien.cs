@@ -17,7 +17,13 @@ namespace BHXH.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HrNhanVien()
         {
-            this.SysUsers = new HashSet<SysUsers>();
+            this.HrKhenThuongKyLuat = new HashSet<HrKhenThuongKyLuat>();
+            this.HrPSBHXH = new HashSet<HrPSBHXH>();
+            this.HrPSLuong = new HashSet<HrPSLuong>();
+            this.HrQuanHeGiaDinh = new HashSet<HrQuanHeGiaDinh>();
+            this.HrQuaTrinhBHXH = new HashSet<HrQuaTrinhBHXH>();
+            this.HrQuaTrinhLuong = new HashSet<HrQuaTrinhLuong>();
+            this.SysUser = new HashSet<SysUser>();
         }
     
         public System.Guid MaNhanVien { get; set; }
@@ -99,7 +105,8 @@ namespace BHXH.Data
         public byte[] AnhNV { get; set; }
         public string MaChiBo { get; set; }
     
-        public virtual HrKhenThuongKyLuat HrKhenThuongKyLuat { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrKhenThuongKyLuat> HrKhenThuongKyLuat { get; set; }
         public virtual ListChucVuDang ListChucVuDang { get; set; }
         public virtual ListChucVuDang ListChucVuDang1 { get; set; }
         public virtual ListChucVuDang ListChucVuDang2 { get; set; }
@@ -184,13 +191,18 @@ namespace BHXH.Data
         public virtual ListXaPhuong ListXaPhuong5 { get; set; }
         public virtual ListXaPhuong ListXaPhuong6 { get; set; }
         public virtual ListXaPhuong ListXaPhuong7 { get; set; }
-        public virtual HrPSBHXH HrPSBHXH { get; set; }
-        public virtual HrPSLuong HrPSLuong { get; set; }
-        public virtual HrQuanHeGiaDinh HrQuanHeGiaDinh { get; set; }
-        public virtual HrQuaTrinhCongTac HrQuaTrinhCongTac { get; set; }
-        public virtual HrQuaTrinhBHXH HrQuaTrinhBHXH { get; set; }
-        public virtual HrQuaTrinhLuong HrQuaTrinhLuong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SysUsers> SysUsers { get; set; }
+        public virtual ICollection<HrPSBHXH> HrPSBHXH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrPSLuong> HrPSLuong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
+        public virtual HrQuaTrinhCongTac HrQuaTrinhCongTac { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrQuaTrinhBHXH> HrQuaTrinhBHXH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrQuaTrinhLuong> HrQuaTrinhLuong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SysUser> SysUser { get; set; }
     }
 }
