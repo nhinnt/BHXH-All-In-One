@@ -18,11 +18,7 @@ namespace BHXH.HR.Business
             return query.ToList().First();
 
         }
-        
-        
-        
-       
-       
+           
         public static BHXH.Data.HrNhanVien  GetAnhNV(string MaNhanVien)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();

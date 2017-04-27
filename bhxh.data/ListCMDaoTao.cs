@@ -14,8 +14,17 @@ namespace BHXH.Data
     
     public partial class ListCMDaoTao
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ListCMDaoTao()
+        {
+            this.HrChiTietDaoTao = new HashSet<HrChiTietDaoTao>();
+        }
+    
         public string MaCMDaoTao { get; set; }
         public string TenCMDaoTao { get; set; }
         public string LoaiCMDaoTao { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrChiTietDaoTao> HrChiTietDaoTao { get; set; }
     }
 }

@@ -77,6 +77,14 @@ namespace BHXH.Sys.UI
         }
 
 
+<<<<<<< HEAD
+=======
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+          //  txtUser.Text = BHXH.Util.TextUtil.TrimAccent(txtUser.Text.ToUpper());
+          //  txtHoten.Text = BHXH.Sys.Business.Users;
+        }
+>>>>>>> origin/master
 
        
 
