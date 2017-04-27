@@ -11,17 +11,18 @@ using System.Windows.Forms;
 namespace BHXH.Sys.UI
 {
     public partial class frmLogin : Form
-    {
+    {   
         public frmLogin()
         {
             InitializeComponent();
             cbMaPB.DropDownStyle = ComboBoxStyle.DropDownList;
+            
         }
 
         private void ButtonChon_Click(object sender, EventArgs e)
         {
             string pwd = BHXH.Util.MyMD5.Encrypt(txtPwd.Text);
-            
+
             
 
             if(txtPwd.Text.Trim()=="")

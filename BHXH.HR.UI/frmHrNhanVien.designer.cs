@@ -580,6 +580,7 @@
             this.NavBarControlDSNhanVien.Text = "NavBarControl1";
             this.NavBarControlDSNhanVien.View = new DevExpress.XtraNavBar.ViewInfo.VSToolBoxViewInfoRegistrator();
             this.NavBarControlDSNhanVien.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBarControlDSNhanVien_LinkClicked);
+            this.NavBarControlDSNhanVien.Click += new System.EventHandler(this.NavBarControlDSNhanVien_Click);
             // 
             // XtraTabControlHoSoNhanVien
             // 

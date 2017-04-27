@@ -217,5 +217,10 @@ namespace BHXH.HR.UI
 
 
         }
+
+        private void NavBarControlDSNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

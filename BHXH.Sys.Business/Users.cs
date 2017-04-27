@@ -8,6 +8,7 @@ namespace BHXH.Sys.Business
 {
     public class Users
     {
+        public static string bien;
 
         /// <summary>
         /// Thay đổi mật khẩu người sử dụng
@@ -17,6 +18,38 @@ namespace BHXH.Sys.Business
         /// <param name="NewPassword"></param>
         public static bool ChangePassword(string LoginName, string OldPassword, string NewPassword)
         {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            var query = from c in ctx.SysUser
+                        where c.UserID == LoginName && c.Pwd==OldPassword
+                        select c;
+            BHXH.Data.SysUser n = query.First();
+            n.Pwd = NewPassword;
+        
+
+            try
+            {
+                ctx.SaveChanges();
+            }
+            finally
+            { }
+            return false;
+        }
+        public static bool Resetpass(string LoginName)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            var query = from c in ctx.SysUser
+                        where c.UserID == LoginName
+                        select c;
+            BHXH.Data.SysUser n = query.First();
+            n.Pwd = "1" ;
+
+
+            try
+            {
+                ctx.SaveChanges();
+            }
+            finally
+            { }
             return false;
         }
         /// <summary>
@@ -141,19 +174,16 @@ namespace BHXH.Sys.Business
             else
                 return null;
         }
-        public void GetName(string UserID)
+
+        public static BHXH.Data.HrNhanVien GetName(string UserID)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.SysUser
                         join p in ctx.HrNhanVien on c.MaNhanVien equals p.MaNhanVien
                         where c.UserID == UserID
-                        select new
-                        {
-                            p.TenNhanVien
-                        };
+                        select p;
 
             return query.ToList().First();
-
 
 
         }
