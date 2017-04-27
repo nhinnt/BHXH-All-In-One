@@ -4,156 +4,160 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b2f308efcace46729f153b13bd19bd00" Name="Diagram1">
-        <EntityTypeShape EntityType="BHXH.HrNhanVien" Width="1.5" PointX="7.5" PointY="26.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrThangBangLuong" Width="1.5" PointX="5.25" PointY="23.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListBangCap" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListCapKTKL" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListCMDaoTao" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChiBo" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChucDanh" Width="1.5" PointX="5.25" PointY="28.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChucVu" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChucVuDang" Width="1.5" PointX="5.25" PointY="31.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListDanToc" Width="1.5" PointX="5.25" PointY="35.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListDienCS" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListHonNhan" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListHopDong" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListKTKL" Width="1.5" PointX="7.5" PointY="61.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListLHDaoTao" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListLoaiTB" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNoiKCB" Width="1.5" PointX="3" PointY="56.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNganHang" Width="1.5" PointX="5.25" PointY="38.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNghiepVu" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNgoaiNgu" Width="1.5" PointX="5.25" PointY="41.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListPhongBan" Width="1.5" PointX="5.25" PointY="44.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListQuanHeGD" Width="1.5" PointX="7.5" PointY="23.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListQuanHuyen" Width="1.5" PointX="3" PointY="59.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListQuocGia" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDDaoTao" Width="1.5" PointX="5.25" PointY="47.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDLLCT" Width="1.5" PointX="5.25" PointY="50.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDNgoaiNgu" Width="1.5" PointX="5.25" PointY="53.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDQLNN" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDVanHoa" Width="1.5" PointX="5.25" PointY="56.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTinh" Width="1.5" PointX="0.75" PointY="23.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTonGiao" Width="1.5" PointX="5.25" PointY="64.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListThanhPhanGD" Width="1.5" PointX="5.25" PointY="67" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListXaPhuong" Width="1.5" PointX="5.25" PointY="59.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysLogs" Width="1.5" PointX="12" PointY="31" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysRoles" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysUserRoles" Width="1.5" PointX="12" PointY="34.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysUsers" Width="1.5" PointX="9.75" PointY="33.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysUserSettings" Width="1.5" PointX="12" PointY="37.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrKhenThuongKyLuat" Width="1.5" PointX="9.75" PointY="42.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrPSBHXH" Width="1.5" PointX="12.75" PointY="41.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrPSLuong" Width="1.5" PointX="9.75" PointY="49.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuanHeGiaDinh" Width="1.5" PointX="9.75" PointY="38.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuaTrinhBHXH" Width="1.5" PointX="9.75" PointY="57.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuaTrinhCongTac" Width="1.5" PointX="9.75" PointY="62.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuaTrinhLuong" Width="1.5" PointX="9.75" PointY="64.75" IsExpanded="true" />
-        <AssociationConnector Association="BHXH.FK__HrKhenThu__MaNha__119F9925" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__02284B6B" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__031C6FA4" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__041093DD" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__0504B816" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__5832119F" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__592635D8" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__5A1A5A11" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaCap__5B0E7E4A" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaChu__05F8DC4F" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaChu__06ED0088" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaChu__5C02A283" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaChu__5CF6C6BC" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaDan__07E124C1" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaDan__08D548FA" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaDan__5DEAEAF5" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaDan__5EDF0F2E" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__09C96D33" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__0ABD916C" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__0BB1B5A5" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__0CA5D9DE" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__5FD33367" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__60C757A0" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__61BB7BD9" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNga__62AFA012" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNgo__0D99FE17" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNgo__0E8E2250" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNgo__63A3C44B" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaNgo__6497E884" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaPho__0F824689" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaPho__10766AC2" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaPho__658C0CBD" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaPho__668030F6" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDD__116A8EFB" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDD__125EB334" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDD__6774552F" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDD__68687968" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDL__1352D76D" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDL__1446FBA6" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDL__695C9DA1" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDL__6A50C1DA" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDN__153B1FDF" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDN__162F4418" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDN__6B44E613" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDN__6C390A4C" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDV__17236851" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDV__18178C8A" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDV__6D2D2E85" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTDV__6E2152BE" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTin__1AF3F935" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__1BE81D6E" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__1CDC41A7" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTin__1DD065E0" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__1EC48A19" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__1FB8AE52" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTin__70FDBF69" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__71F1E3A2" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__72E607DB" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTin__73DA2C14" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__74CE504D" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__Matin__75C27486" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTon__20ACD28B" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTon__21A0F6C4" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTon__76B698BF" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTon__77AABCF8" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTha__190BB0C3" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTha__19FFD4FC" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTha__6F1576F7" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__MaTha__70099B30" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__22951AFD" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__23893F36" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__247D636F" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__257187A8" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__789EE131" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__7993056A" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__7A8729A3" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__QuanH__7B7B4DDC" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__2665ABE1" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__2759D01A" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__284DF453" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__2942188C" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__7C6F7215" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__7D63964E" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__7E57BA87" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrNhanVie__XaPhu__7F4BDEC0" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrPSBHXH__MaNhan__035179CE" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrPSLuong__MaNha__07220AB2" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrQuanHeG__MaNha__0AF29B96" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrQuaTrin__MaNha__0EC32C7A" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrQuaTrin__MaNha__0FB750B3" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrQuaTrin__MaNha__10AB74EC" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__SysUsers__MaNhan__5DB5E0CB" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrPSBHXH__MaNgac__0539C240" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrKhenThu__MaKTK__16644E42" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__ListNoiKC__MaTin__54968AE5" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrPSBHXH__MaPhon__062DE679" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__HrQuanHeG__MaQua__0DCF0841" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__ListQuanH__MaTin__30242045" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__ListQuanH__QuanH__3118447E" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__ListXaPhu__QuanH__320C68B7" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__SysLogs__UserID__7A521F79" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__SysUserRo__UserI__72B0FDB1" ManuallyRouted="false" />
-        <AssociationConnector Association="BHXH.FK__SysUserSe__UserI__6462DE5A" ManuallyRouted="false" />
+      <Diagram DiagramId="047a46cbd5894a779161ab117b73b22d" Name="Diagram1">
+        <EntityTypeShape EntityType="BHXHModel.HrHSLTangThem" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrKhenThuongKyLuat" Width="1.5" PointX="12.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrLuongToiThieu" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrNgayCong" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrNhanVien" Width="1.5" PointX="7.5" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrPSBHXH" Width="1.5" PointX="12.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrPSLuong" Width="1.5" PointX="9.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrQuanHeGiaDinh" Width="1.5" PointX="12.75" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrQuaTrinhBHXH" Width="1.5" PointX="9.75" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrQuaTrinhLuong" Width="1.5" PointX="9.75" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrTyLeBHXH" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrThangBangLuong" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListBangCap" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListCapKTKL" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListCMDaoTao" Width="1.5" PointX="6.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListChiBo" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListChucDanh" Width="1.5" PointX="5.25" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListChucVu" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListChucVuDang" Width="1.5" PointX="5.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListDanToc" Width="1.5" PointX="5.25" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListDienCS" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListHonNhan" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListHopDong" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListKTKL" Width="1.5" PointX="10.5" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListLHDaoTao" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListLoaiTB" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListNoiKCB" Width="1.5" PointX="3" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListNganHang" Width="1.5" PointX="5.25" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListNghiepVu" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListNgoaiNgu" Width="1.5" PointX="5.25" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListPhongBan" Width="1.5" PointX="5.25" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListQuanHeGD" Width="1.5" PointX="10.5" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListQuanHuyen" Width="1.5" PointX="3" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListQuocGia" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTDDaoTao" Width="1.5" PointX="5.25" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTDLLCT" Width="1.5" PointX="5.25" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTDNgoaiNgu" Width="1.5" PointX="5.25" PointY="46.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTDQLNN" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTDVanHoa" Width="1.5" PointX="5.25" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTinh" Width="1.5" PointX="0.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListTonGiao" Width="1.5" PointX="5.25" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListThanhPhanGD" Width="1.5" PointX="5.25" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.ListXaPhuong" Width="1.5" PointX="5.25" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.SysLogs" Width="1.5" PointX="12" PointY="50.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.SysRoles" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.SysUser" Width="1.5" PointX="9.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.SysUserRoles" Width="1.5" PointX="12" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.SysUserSettings" Width="1.5" PointX="12" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXHModel.HrQuaTrinhCongTac" Width="1.5" PointX="9.75" PointY="58.625" IsExpanded="true" />
+        <AssociationConnector Association="BHXHModel.FK__HrKhenThu__MaKTK__16644E42" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrKhenThu__MaNha__119F9925" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__02284B6B" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__031C6FA4" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__041093DD" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__0504B816" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__5832119F" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__592635D8" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__5A1A5A11" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaCap__5B0E7E4A" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaChu__05F8DC4F" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaChu__06ED0088" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaChu__5C02A283" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaChu__5CF6C6BC" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaDan__07E124C1" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaDan__08D548FA" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaDan__5DEAEAF5" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaDan__5EDF0F2E" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__09C96D33" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__0ABD916C" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__0BB1B5A5" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__0CA5D9DE" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__5FD33367" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__60C757A0" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__61BB7BD9" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNga__62AFA012" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNgo__0D99FE17" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNgo__0E8E2250" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNgo__63A3C44B" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaNgo__6497E884" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaPho__0F824689" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaPho__10766AC2" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaPho__658C0CBD" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaPho__668030F6" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDD__116A8EFB" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDD__125EB334" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDD__6774552F" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDD__68687968" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDL__1352D76D" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDL__1446FBA6" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDL__695C9DA1" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDL__6A50C1DA" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDN__153B1FDF" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDN__162F4418" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDN__6B44E613" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDN__6C390A4C" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDV__17236851" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDV__18178C8A" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDV__6D2D2E85" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTDV__6E2152BE" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTin__1AF3F935" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__1BE81D6E" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__1CDC41A7" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTin__1DD065E0" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__1EC48A19" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__1FB8AE52" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTin__70FDBF69" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__71F1E3A2" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__72E607DB" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTin__73DA2C14" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__74CE504D" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__Matin__75C27486" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTon__20ACD28B" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTon__21A0F6C4" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTon__76B698BF" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTon__77AABCF8" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTha__190BB0C3" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTha__19FFD4FC" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTha__6F1576F7" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__MaTha__70099B30" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__22951AFD" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__23893F36" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__247D636F" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__257187A8" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__789EE131" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__7993056A" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__7A8729A3" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__QuanH__7B7B4DDC" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__2665ABE1" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__2759D01A" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__284DF453" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__2942188C" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__7C6F7215" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__7D63964E" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__7E57BA87" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrNhanVie__XaPhu__7F4BDEC0" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrPSBHXH__MaNhan__035179CE" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrPSLuong__MaNha__07220AB2" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrQuanHeG__MaNha__0AF29B96" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrQuaTrin__MaNha__0EC32C7A" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrQuaTrin__MaNha__0FB750B3" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrQuaTrin__MaNha__10AB74EC" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__SysUser__MaNhanV__2724C5F0" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrPSBHXH__MaNgac__0539C240" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrPSBHXH__MaPhon__062DE679" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__HrQuanHeG__MaQua__0DCF0841" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__ListNoiKC__MaTin__54968AE5" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__ListQuanH__MaTin__30242045" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__ListQuanH__QuanH__3118447E" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__ListXaPhu__QuanH__320C68B7" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__SysLogs__UserID__43C1049E" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__SysUserRo__UserI__3C1FE2D6" ManuallyRouted="false" />
+        <AssociationConnector Association="BHXHModel.FK__SysUserSe__UserI__2DD1C37F" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,15 +12,11 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class SysUserRoles
+    public partial class HrLuongToiThieu
     {
-        public System.Guid UserRoleID { get; set; }
-        public string UserID { get; set; }
-        public string RoleID { get; set; }
-        public string Descriptions { get; set; }
-        public Nullable<System.Guid> GrantedUserID { get; set; }
-        public Nullable<System.DateTime> GrantedDate { get; set; }
-    
-        public virtual SysUser SysUser { get; set; }
+        public Nullable<System.DateTime> NgayTu { get; set; }
+        public Nullable<System.DateTime> NgayDen { get; set; }
+        public Nullable<decimal> MucLuong { get; set; }
+        public System.Guid LuongToiThieuID { get; set; }
     }
 }

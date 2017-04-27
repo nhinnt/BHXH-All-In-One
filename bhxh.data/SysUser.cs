@@ -12,10 +12,10 @@ namespace BHXH.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class SysUsers
+    public partial class SysUser
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SysUsers()
+        public SysUser()
         {
             this.SysLogs = new HashSet<SysLogs>();
             this.SysUserRoles = new HashSet<SysUserRoles>();

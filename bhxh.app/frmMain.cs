@@ -40,5 +40,10 @@ namespace BHXH.App
             f.MdiParent = this;
             f.Show();
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
     }
 }

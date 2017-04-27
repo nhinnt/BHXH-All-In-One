@@ -19,11 +19,11 @@ namespace BHXH.List.UI
 
         private void SimpleButtonGhi_Click(object sender, EventArgs e)
         {
-             DialogResult d = MessageBox.Show("Bạn có muốn thêm mới quốc gia?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+             DialogResult d = MessageBox.Show("Bạn có muốn thêm mới tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
               if (d == DialogResult.OK)
             {
                   if (BHXH.List.Business.ListQuocGia.IsExisted(txtMa.Text, txtTen.Text) != null)
-                          MessageBox.Show("Đã tồn tại quốc gia", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                          MessageBox.Show("Đã tồn tại tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else if (BHXH.List.Business.ListQuocGia.New(txtMa.Text, txtTen.Text) != null)
                   {                   
                 MessageBox.Show("Bạn đã thêm mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

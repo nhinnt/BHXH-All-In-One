@@ -27,7 +27,17 @@ namespace BHXH.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<HrHSLTangThem> HrHSLTangThem { get; set; }
+        public virtual DbSet<HrKhenThuongKyLuat> HrKhenThuongKyLuat { get; set; }
+        public virtual DbSet<HrLuongToiThieu> HrLuongToiThieu { get; set; }
+        public virtual DbSet<HrNgayCong> HrNgayCong { get; set; }
         public virtual DbSet<HrNhanVien> HrNhanVien { get; set; }
+        public virtual DbSet<HrPSBHXH> HrPSBHXH { get; set; }
+        public virtual DbSet<HrPSLuong> HrPSLuong { get; set; }
+        public virtual DbSet<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
+        public virtual DbSet<HrQuaTrinhBHXH> HrQuaTrinhBHXH { get; set; }
+        public virtual DbSet<HrQuaTrinhLuong> HrQuaTrinhLuong { get; set; }
+        public virtual DbSet<HrTyLeBHXH> HrTyLeBHXH { get; set; }
         public virtual DbSet<HrThangBangLuong> HrThangBangLuong { get; set; }
         public virtual DbSet<ListBangCap> ListBangCap { get; set; }
         public virtual DbSet<ListCapKTKL> ListCapKTKL { get; set; }
@@ -63,16 +73,10 @@ namespace BHXH.Data
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<SysLogs> SysLogs { get; set; }
         public virtual DbSet<SysRoles> SysRoles { get; set; }
+        public virtual DbSet<SysUser> SysUser { get; set; }
         public virtual DbSet<SysUserRoles> SysUserRoles { get; set; }
-        public virtual DbSet<SysUsers> SysUsers { get; set; }
         public virtual DbSet<SysUserSettings> SysUserSettings { get; set; }
-        public virtual DbSet<HrKhenThuongKyLuat> HrKhenThuongKyLuat { get; set; }
-        public virtual DbSet<HrPSBHXH> HrPSBHXH { get; set; }
-        public virtual DbSet<HrPSLuong> HrPSLuong { get; set; }
-        public virtual DbSet<HrQuanHeGiaDinh> HrQuanHeGiaDinh { get; set; }
-        public virtual DbSet<HrQuaTrinhBHXH> HrQuaTrinhBHXH { get; set; }
         public virtual DbSet<HrQuaTrinhCongTac> HrQuaTrinhCongTac { get; set; }
-        public virtual DbSet<HrQuaTrinhLuong> HrQuaTrinhLuong { get; set; }
     
         public virtual int DBA_RestoreDB(string p_strDBNameTo, string p_strDBNameFrom, string p_strFQNRestoreFileName)
         {

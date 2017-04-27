@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BHXH.App
+namespace BHXH.Sys.Business
 {
   public  class Sys
     {

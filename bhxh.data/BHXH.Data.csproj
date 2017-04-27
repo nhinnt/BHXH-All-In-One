@@ -75,7 +75,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BHXH.edmx</DependentUpon>
     </Compile>
+    <Compile Include="HrHSLTangThem.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="HrKhenThuongKyLuat.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrLuongToiThieu.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrNgayCong.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="HrNhanVien.cs">
@@ -100,6 +109,9 @@
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="HrThangBangLuong.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HrTyLeBHXH.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="ListBangCap.cs">
@@ -211,10 +223,10 @@
     <Compile Include="SysRoles.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
-    <Compile Include="SysUserRoles.cs">
+    <Compile Include="SysUser.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
-    <Compile Include="SysUsers.cs">
+    <Compile Include="SysUserRoles.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
     <Compile Include="SysUserSettings.cs">
@@ -229,11 +241,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.Config" />
     <EntityDeploy Include="BHXH.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BHXH.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="BHXH.edmx.diagram">
       <DependentUpon>BHXH.edmx</DependentUpon>
     </None>
