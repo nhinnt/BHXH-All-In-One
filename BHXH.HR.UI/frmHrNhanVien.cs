@@ -52,6 +52,7 @@ namespace BHXH.HR.UI
         }
         private void frmHrNhanVien_Load(object sender, EventArgs e)
         {
+            //kgghtkhjtkjh fdf
             string MaPhongBan;
             MaPhongBan = "";
             BHXH.Data.BHXHEntities ctx = new BHXH.Data.BHXHEntities();
@@ -87,46 +88,47 @@ namespace BHXH.HR.UI
                 }
             }
         }
-
         private void NavBarControlDSNhanVien_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
-           this.LoadTabThongTinNhanVien(e.Link.Item.Tag.ToString());
+            this.LoadTabThongTinNhanVien(e.Link.Item.Tag.ToString());
+
+            this.GridControlQuaTrinhCongTac.DataSource = BHXH.HR.Business.HrQuaTrinhCongTac.GetData(e.Link.Item.Tag.ToString());
+            this.GridControlQuanHeGiaDinh.DataSource = BHXH.HR.Business.HrQuanHeGiaDinh.GetData(e.Link.Item.Tag.ToString());
+
+
         }
         void LoadTabThongTinNhanVien(string NhanVienID)
         {
 
-           
+            BHXH.Data.HrNhanVien nv = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID);
             //MessageBox.Show(NhanVienID);
-            MruEditSoHieuNV.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).SoHieuNV;
-            MruEditTenNhanVien.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).TenNhanVien;
-            cboEditGioiTinh.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).GioiTinh;
-            MruEditTenKhac.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).TenKhac;
+            MruEditSoHieuNV.EditValue = nv.SoHieuNV;
+            MruEditTenNhanVien.EditValue = nv.TenNhanVien;
+            cboEditGioiTinh.EditValue = nv.GioiTinh;
+            MruEditTenKhac.EditValue = nv.TenKhac;
             ////////Chức vụ Đảng
-            MruEditMaChucVuDang.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaCapUy;
+            MruEditMaChucVuDang.EditValue = nv.MaCapUy;
             MruEditTenChucVuDang.EditValue = BHXH.List.Business.ListChucVuDang.GetData(MruEditMaChucVuDang.Text).TenChucVu;
-
-            //  MruEditTenChucVuDang.EditValue = BHXH.List.Business.ListChucVuDang..GetChucVuDang(MruEditMaChucVuDang.Text).TenChucVu;
-
-
+            
             ///////////////Chức vu Đảng kiêm
-            MruEditMaCVDangKiem.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaCapUyKiem;
+            MruEditMaCVDangKiem.EditValue = nv.MaCapUyKiem;
             MruEditTenCVDangKiem.EditValue = BHXH.List.Business.ListChucVuDang.GetData(MruEditMaCVDangKiem.Text).TenChucVu;
 
             ////////////CHức vụ
-            MruEditMaChucVu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaChucVu;
+            MruEditMaChucVu.EditValue = nv.MaChucVu;
             MruEditTenChucVu.EditValue = BHXH.List.Business.ListChucVu.GetData(MruEditMaChucVu.Text).TenChucVu;
             ////////////CHức danh
-            MruEditMaChucDanh.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaChucDanh;
+            MruEditMaChucDanh.EditValue = nv.MaChucDanh;
             MruEditTenChucDanh.EditValue = BHXH.List.Business.ListChucDanh.GetData(MruEditMaChucDanh.Text).TenChucDanh;
             ////
-            CalcEditPCChucVu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).PCChucVu;
-            DateEditNgayBoNhiem.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayBoNhiem;
-            DateEditNgaySinh.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgaySinh;
-            MruEditNoiSinh.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NoiSinh;
+            CalcEditPCChucVu.EditValue = nv.PCChucVu;
+            DateEditNgayBoNhiem.EditValue = nv.NgayBoNhiem;
+            DateEditNgaySinh.EditValue = nv.NgaySinh;
+            MruEditNoiSinh.EditValue = nv.NoiSinh;
             //Quê quán
-            MruEditMaTinhQQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaTinhQQ;
-            MruEditMaQuanQQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).QuanHuyenIDQQ;
-            MruEditMaPhuongQQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).XaPhuongIDQQ;
+            MruEditMaTinhQQ.EditValue = nv.MaTinhQQ;
+            MruEditMaQuanQQ.EditValue = nv.QuanHuyenIDQQ;
+            MruEditMaPhuongQQ.EditValue = nv.XaPhuongIDQQ;
             string mTenPhuongQQ = "";
             string mTenQuanQQ = "";
             string mTenTinhQQ = "";
@@ -136,9 +138,9 @@ namespace BHXH.HR.UI
             TenQueQuan(mTenPhuongQQ, mTenQuanQQ, mTenTinhQQ);
             MruEditQueQuan.EditValue = mTenPhuongQQ + ", " + mTenQuanQQ + ", " + mTenTinhQQ;
             ///Trú quán (nơi ở hiện nay)
-            MruEditMaTinhTQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MatinhTQ;
-            MruEditMaQuanTQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).QuanHuyenIDTQ;
-            MruEditMaPhuongTQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).XaPhuongIDTQ;
+            MruEditMaTinhTQ.EditValue = nv.MatinhTQ;
+            MruEditMaQuanTQ.EditValue = nv.QuanHuyenIDTQ;
+            MruEditMaPhuongTQ.EditValue = nv.XaPhuongIDTQ;
             string mTenPhuongTQ = "";
             string mTenQuanTQ = "";
             string mTenTinhTQ = "";
@@ -147,75 +149,131 @@ namespace BHXH.HR.UI
             mTenTinhTQ = BHXH.List.Business.ListTinh.GetTinh(MruEditMaTinhTQ.Text).TenTinh;
             MruEditTruQuan.EditValue = mTenPhuongTQ + ", " + mTenQuanTQ + ", " + mTenTinhTQ;
             /////////////////////
-            MruEditSoNha.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).SoNha;
+            MruEditSoNha.EditValue = nv.SoNha;
             MruEditTruQuan.EditValue = mTenPhuongTQ + ", " + mTenQuanTQ + ", " + mTenTinhTQ;
             ///////////
-            MruEditDTNha.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).DTNha;
-            MruEditDTCoQuan.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).DTCoQuan;
-            MruEditDTDiDong.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).DTDiDong;
-            MruEditEmail.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).Email;
-            MruEditDTNguoiNha.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).DTNguoiNha;
-            MruEditTenNguoiNha.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).DTNguoiNha;
+            MruEditDTNha.EditValue = nv.DTNha;
+            MruEditDTCoQuan.EditValue = nv.DTCoQuan;
+            MruEditDTDiDong.EditValue = nv.DTDiDong;
+            MruEditEmail.EditValue = nv.Email;
+            MruEditDTNguoiNha.EditValue = nv.DTNguoiNha;
+            MruEditTenNguoiNha.EditValue = nv.DTNguoiNha;
             /////Dân tộc
-            MruEditMaDanToc.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaDanToc;
+            MruEditMaDanToc.EditValue = nv.MaDanToc;
             MruEditTenDanToc.EditValue = BHXH.List.Business.ListDanToc.GetData(MruEditMaDanToc.Text).TenDanToc;
             /////Tôn giáo
-            MruEditMaTonGiao.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaTonGiao;
+            MruEditMaTonGiao.EditValue = nv.MaTonGiao;
             MruEditTenTonGiao.EditValue = BHXH.List.Business.ListTonGiao.GetTonGiao(MruEditMaTonGiao.Text).TenTonGiao;
             /////////
-            DateEditNgay_TD.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayTD;
-            DateEditNgay_CQ.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayCQ;
-            DateEditNgay_CM.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayCM;
-            DateEditNgay_Dang.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayDang;
-            DateEditNgay_DangCT.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayDangCT;
-            MruEditMaChiBo.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaChiBo;
-            MruEditTenChiBo.EditValue = BHXH.List.Business.ListChiBo.GetData(MruEditMaChiBo.Text).TenChiBo;
-            DateEditNgay_TCXH.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayTCXH;
-            DateEditNgayNhapNgu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayNhapNgu;
-            DateEditNgayXuatNgu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NgayXuatNgu;
-            MruEditQuanHam.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).QuanHam;
+            DateEditNgay_TD.EditValue = nv.NgayTD;
+            DateEditNgay_CQ.EditValue = nv.NgayCQ;
+            DateEditNgay_CM.EditValue = nv.NgayCM;
+            DateEditNgay_Dang.EditValue = nv.NgayDang;
+            DateEditNgay_DangCT.EditValue = nv.NgayDangCT;
+            //chi bộ
+            MruEditMaChiBo.EditValue = nv.MaChiBo;
+            if (!string.IsNullOrEmpty(MruEditMaChiBo.Text))
+            {
+                MruEditTenChiBo.EditValue = BHXH.List.Business.ListChiBo.GetData(MruEditMaChiBo.Text).TenChiBo;
+            }
+            else
+            {
+                MruEditTenChiBo.EditValue = "";
+            }
+        
+            //////
+            DateEditNgay_TCXH.EditValue = nv.NgayTCXH;
+            DateEditNgayNhapNgu.EditValue = nv.NgayNhapNgu;
+            DateEditNgayXuatNgu.EditValue = nv.NgayXuatNgu;
+            MruEditQuanHam.EditValue = nv.QuanHam;
             //Trình độ văn hóa
-            MruEditMaTDVanHoa.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaTDVanHoa;
+            MruEditMaTDVanHoa.EditValue = nv.MaTDVanHoa;
             MruEditTenTDVanHoa.EditValue = BHXH.List.Business.ListTDVanHoa.GetTDVanHoa(MruEditMaTDVanHoa.Text).TenTDVanHoa;
             ///Trình độ đào tạo
-            MruEditMaTDDaoTao.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaTDDaoTao;
+            MruEditMaTDDaoTao.EditValue = nv.MaTDDaoTao;
             MruEditTenTDDaoTao.EditValue = BHXH.List.Business.ListTDDaoTao.GetData(MruEditMaTDDaoTao.Text).TenTDDaoTao;
             //Trình độ lí luận chính trị
-            MruEditMaTDLLCT.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaTDLLCT;
+            MruEditMaTDLLCT.EditValue = nv.MaTDLLCT;
             MruEditTenTDLLCT.EditValue = BHXH.List.Business.ListTDLLCT.GetData(MruEditMaTDLLCT.Text).TenTDLLCT;
             //Ngoại ngữ
-            MruEditMaNgoaiNgu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaNgoaiNgu;
+            MruEditMaNgoaiNgu.EditValue = nv.MaNgoaiNgu;
             MruEditTenNgoaiNgu.EditValue = BHXH.List.Business.ListNgoaiNgu.GetData(MruEditMaNgoaiNgu.Text).TenNgoaiNgu;
 
             //Trình độ ngoại ngữ
-            MruEditMaTDNgoaiNgu.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaTDNgoaiNgu;
+            MruEditMaTDNgoaiNgu.EditValue = nv.MaTDNgoaiNgu;
             MruEditTenTDNgoaiNgu.EditValue = BHXH.List.Business.ListTDNgoaiNgu.GetData(MruEditMaTDNgoaiNgu.Text).TenTDNgoaiNgu;
             ////
-            MruEditCVDangLam.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).CVDangLam;
-            MruEditMaNgach.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaNgach;
-            MruEditBac.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).Bac;
-            MruEditHSL.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).HSL;
+            MruEditCVDangLam.EditValue = nv.CVDangLam;
+            MruEditMaNgach.EditValue = nv.MaNgach;
+            MruEditBac.EditValue = nv.Bac;
+            MruEditHSL.EditValue = nv.HSL;
             //tên ngạch
             MruEditTenNgach.EditValue = BHXH.HR.Business.HrThangBangLuong.GetTenNgach(MruEditMaNgach.Text).TenNgach;
-            MruEditDHDuocPhong.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).DHDuocPhong;
-            MruEditSoTruongCT.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).SoTruongCT;
-            MruEditCVLamLN.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).CVLamLN;
-            MruEditKhenThuong.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).KhenThuong;
-            MruEditKyLuat.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).KyLuat;
-            MruEditSucKhoe.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).SucKhoe;
-            MruEditChieuCao.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).ChieuCao;
-            MruEditCanNang.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).CanNang;
-            cboEditNhomMau.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).NhomMau;
-            MruEditSoCMND.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).SoCMND;
-            CheckEditGDLietSy.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).GDLietSy;
+            MruEditDHDuocPhong.EditValue = nv.DHDuocPhong;
+            MruEditSoTruongCT.EditValue = nv.SoTruongCT;
+            MruEditCVLamLN.EditValue = nv.CVLamLN;
+            MruEditKhenThuong.EditValue = nv.KhenThuong;
+            MruEditKyLuat.EditValue = nv.KyLuat;
+            MruEditSucKhoe.EditValue = nv.SucKhoe;
+            MruEditChieuCao.EditValue = nv.ChieuCao;
+            MruEditCanNang.EditValue = nv.CanNang;
+            cboEditNhomMau.EditValue = nv.NhomMau;
+            MruEditSoCMND.EditValue = nv.SoCMND;
+            CheckEditGDLietSy.EditValue = nv.GDLietSy;
             //thương binh
-            MruEditMaLoaiTB.EditValue = BHXH.HR.Business.HrNhanVien.GetNhanVien(NhanVienID).MaLoaiTB;
+            MruEditMaLoaiTB.EditValue = nv.MaLoaiTB;
             if (!string.IsNullOrEmpty(MruEditMaLoaiTB.Text))
             {
                 MruEditTenLoaiTB.EditValue = BHXH.List.Business.ListLoaiTB.GetData(MruEditMaLoaiTB.Text).TenLoaiTB;
             }
+            //ảnh
+            //try
+            //{
+            //    byte[] img = RetrieveImage();
+            //    MemoryStream str = new MemoryStream(img);
+
+            //    this.PictureEdit1.Image = Image.FromStream(str);
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    this.PictureEdit1.Image = null;
+            //}
+            this.PictureEdit1.Image = BHXH.Util.Image.BinaryToImage(nv.AnhNV);
 
 
         }
+
+        private void XtraTabPageQuaTrinhCongTac_Paint()
+        {
+
+        }
+
+        private void NavBarControlDSNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+        //public byte[] RetrieveImage()
+        //{
+        //    byte[] imageData = null;
+        //    SqlCommand cmd = new SqlCommand(" select AnhNV from dsnhanvien where idnhanvien = " + mIDChon.ToString, SoLieu);
+        //    using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SequentialAccess))
+        //    {
+        //        reader.Read();
+        //        long bytesize = reader.GetBytes(0, 0, null, 0, 0);
+        //        // Allocate byte array to hold image data
+        //        imageData = new byte[bytesize];
+        //        long bytesread = 0;
+        //        int curpos = 0;
+        //        int chunkSize = 1;
+        //        while (bytesread < bytesize)
+        //        {
+        //            bytesread += reader.GetBytes(0, curpos, imageData, curpos, chunkSize);
+        //            curpos += chunkSize;
+        //        }
+        //    }
+        //    return imageData;
+        //}
+
     }
 }

@@ -8,7 +8,7 @@ Edited Date
 --CREATE DATABASE BHXH
 USE BHXH
 ------------
-CREATE TABLE [SysUsers]
+CREATE TABLE [SysUser]
 ( UserID  NVARCHAR(255)  PRIMARY KEY,
 Pwd VARCHAR(32),
 LastLogin DATETIME,
@@ -21,7 +21,7 @@ IsActive BIT ,
 CREATE TABLE SysUserSettings
 (
 UserSettingID  uniqueidentifier  DEFAULT (NEWID()) PRIMARY KEY,
-UserID   NVARCHAR(255)  FOREIGN KEY REFERENCES [SysUsers] (UserID),
+UserID   NVARCHAR(255)  FOREIGN KEY REFERENCES [SysUser] (UserID),
 Setting1 NVARCHAR,
 Setting2 NVARCHAR,
 CreatedDate DATETIME DEFAULT GETDATE()
@@ -38,7 +38,7 @@ CreatedDate Datetime DEFAULT (GETDATE())
 CREATE TABLE SysUserRoles
 (
 UserRoleID   uniqueidentifier  DEFAULT (NEWID()) PRIMARY KEY,
-UserID   NVARCHAR(255)  FOREIGN KEY REFERENCES [SysUsers] (UserID),
+UserID   NVARCHAR(255)  FOREIGN KEY REFERENCES [SysUser] (UserID),
 RoleID  NVARCHAR (255) ,
 Descriptions NVARCHAR(255),
 GrantedUserID uniqueidentifier ,
@@ -51,6 +51,6 @@ ErrorMessage NVARCHAR(MAX),
 EventType NVARCHAR(255),
 Descriptions NVARCHAR(255),
 EventDate DATETIME DEFAULT GETDATE(),
-UserID NVARCHAR(255)  FOREIGN KEY REFERENCES [SysUsers] (UserID),
+UserID NVARCHAR(255)  FOREIGN KEY REFERENCES [SysUser] (UserID),
 Postion NVARCHAR(255)
 )

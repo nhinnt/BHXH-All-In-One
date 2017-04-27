@@ -14,7 +14,16 @@ namespace BHXH.Data
     
     public partial class ListBangCap
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ListBangCap()
+        {
+            this.HrChiTietDaoTao = new HashSet<HrChiTietDaoTao>();
+        }
+    
         public string MaBangCap { get; set; }
         public string TenBangCap { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HrChiTietDaoTao> HrChiTietDaoTao { get; set; }
     }
 }

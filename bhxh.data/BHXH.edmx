@@ -5,6 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="BHXHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HrChiTietDaoTao">
+          <Key>
+            <PropertyRef Name="QuaTrinhDaoTaoID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="MaCMDaoTao" Type="nvarchar" MaxLength="255" />
+          <Property Name="TenTruong" Type="nvarchar" MaxLength="100" />
+          <Property Name="NganhHoc" Type="nvarchar" MaxLength="100" />
+          <Property Name="ThoiGian" Type="nvarchar" MaxLength="100" />
+          <Property Name="MaLHDaoTao" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaBangCap" Type="nvarchar" MaxLength="255" />
+          <Property Name="XepLoai" Type="nvarchar" MaxLength="20" />
+          <Property Name="QuaTrinhDaoTaoID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="HrHSLTangThem">
           <Key>
             <PropertyRef Name="HSLTangThemID" />
@@ -224,17 +239,15 @@
           <Property Name="CongViec" Type="nvarchar" MaxLength="255" />
           <Property Name="QuaTrinhBHXHID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="HrQuaTrinhCongTac">
           <Key>
-            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="QuaTrinhCongTacID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
           <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
           <Property Name="ThoiGian" Type="nvarchar" MaxLength="50" />
           <Property Name="CongViec" Type="nvarchar" MaxLength="300" />
-          <Property Name="QuaTrinhCongTacID" Type="uniqueidentifier" />
+          <Property Name="QuaTrinhCongTacID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="HrQuaTrinhLuong">
           <Key>
@@ -584,6 +597,54 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="Setting2" Type="nvarchar" MaxLength="1" />
           <Property Name="CreatedDate" Type="datetime" />
         </EntityType>
+        <Association Name="FK__HrChiTiet__MaBan__4F32B74A">
+          <End Role="ListBangCap" Type="Self.ListBangCap" Multiplicity="0..1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListBangCap">
+              <PropertyRef Name="MaBangCap" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaBangCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HrChiTiet__MaCMD__511AFFBC">
+          <End Role="ListCMDaoTao" Type="Self.ListCMDaoTao" Multiplicity="0..1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListCMDaoTao">
+              <PropertyRef Name="MaCMDaoTao" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaCMDaoTao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HrChiTiet__MaLHD__4E3E9311">
+          <End Role="ListLHDaoTao" Type="Self.ListLHDaoTao" Multiplicity="0..1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListLHDaoTao">
+              <PropertyRef Name="MaLHDaoTao" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaLHDaoTao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HrChiTiet__MaNha__4C564A9F">
+          <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HrNhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__HrKhenThu__MaKTK__16644E42">
           <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
           <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
@@ -1690,7 +1751,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__0EC32C7A">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -1915,6 +1976,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BHXHModelStoreContainer">
+          <EntitySet Name="HrChiTietDaoTao" EntityType="Self.HrChiTietDaoTao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrHSLTangThem" EntityType="Self.HrHSLTangThem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrLuongToiThieu" EntityType="Self.HrLuongToiThieu" Schema="dbo" store:Type="Tables" />
@@ -1924,6 +1986,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" Schema="dbo" store:Type="Tables" />
@@ -1964,15 +2027,22 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUserRoles" EntityType="Self.SysUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUserSettings" EntityType="Self.SysUserSettings" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [HrQuaTrinhCongTac].[MaNhanVien] AS [MaNhanVien], 
-    [HrQuaTrinhCongTac].[STT] AS [STT], 
-    [HrQuaTrinhCongTac].[ThoiGian] AS [ThoiGian], 
-    [HrQuaTrinhCongTac].[CongViec] AS [CongViec], 
-    [HrQuaTrinhCongTac].[QuaTrinhCongTacID] AS [QuaTrinhCongTacID]
-    FROM [dbo].[HrQuaTrinhCongTac] AS [HrQuaTrinhCongTac]</DefiningQuery>
-          </EntitySet>
+          <AssociationSet Name="FK__HrChiTiet__MaBan__4F32B74A" Association="Self.FK__HrChiTiet__MaBan__4F32B74A">
+            <End Role="ListBangCap" EntitySet="ListBangCap" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HrChiTiet__MaCMD__511AFFBC" Association="Self.FK__HrChiTiet__MaCMD__511AFFBC">
+            <End Role="ListCMDaoTao" EntitySet="ListCMDaoTao" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HrChiTiet__MaLHD__4E3E9311" Association="Self.FK__HrChiTiet__MaLHD__4E3E9311">
+            <End Role="ListLHDaoTao" EntitySet="ListLHDaoTao" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HrChiTiet__MaNha__4C564A9F" Association="Self.FK__HrChiTiet__MaNha__4C564A9F">
+            <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
           <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
             <End Role="ListKTKL" EntitySet="ListKTKL" />
             <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
@@ -2391,6 +2461,25 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BHXHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HrChiTietDaoTao">
+          <Key>
+            <PropertyRef Name="QuaTrinhDaoTaoID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="MaCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TenTruong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NganhHoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ThoiGian" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MaLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MaBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="XepLoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="QuaTrinhDaoTaoID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="ListBangCap" Relationship="Self.FK__HrChiTiet__MaBan__4F32B74A" FromRole="HrChiTietDaoTao" ToRole="ListBangCap" />
+          <NavigationProperty Name="ListCMDaoTao" Relationship="Self.FK__HrChiTiet__MaCMD__511AFFBC" FromRole="HrChiTietDaoTao" ToRole="ListCMDaoTao" />
+          <NavigationProperty Name="ListLHDaoTao" Relationship="Self.FK__HrChiTiet__MaLHD__4E3E9311" FromRole="HrChiTietDaoTao" ToRole="ListLHDaoTao" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrChiTiet__MaNha__4C564A9F" FromRole="HrChiTietDaoTao" ToRole="HrNhanVien" />
+        </EntityType>
         <EntityType Name="HrHSLTangThem">
           <Key>
             <PropertyRef Name="HSLTangThemID" />
@@ -2535,6 +2624,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="DaNLTruocTH" Type="Boolean" />
           <Property Name="AnhNV" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="MaChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HrChiTietDaoTao" Relationship="Self.FK__HrChiTiet__MaNha__4C564A9F" FromRole="HrNhanVien" ToRole="HrChiTietDaoTao" />
           <NavigationProperty Name="HrKhenThuongKyLuat" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrNhanVien" ToRole="HrKhenThuongKyLuat" />
           <NavigationProperty Name="ListChucVuDang" Relationship="Self.FK__HrNhanVie__MaCap__02284B6B" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
           <NavigationProperty Name="ListChucVuDang1" Relationship="Self.FK__HrNhanVie__MaCap__031C6FA4" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
@@ -2711,6 +2801,17 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="QuaTrinhBHXHID" Type="Guid" Nullable="false" />
           <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0FB750B3" FromRole="HrQuaTrinhBHXH" ToRole="HrNhanVien" />
         </EntityType>
+        <EntityType Name="HrQuaTrinhCongTac">
+          <Key>
+            <PropertyRef Name="QuaTrinhCongTacID" />
+          </Key>
+          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="QuaTrinhCongTacID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrQuaTrinhCongTac" ToRole="HrNhanVien" />
+        </EntityType>
         <EntityType Name="HrQuaTrinhLuong">
           <Key>
             <PropertyRef Name="QuaTrinhLuongID" />
@@ -2780,6 +2881,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           </Key>
           <Property Name="MaBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HrChiTietDaoTao" Relationship="Self.FK__HrChiTiet__MaBan__4F32B74A" FromRole="ListBangCap" ToRole="HrChiTietDaoTao" />
         </EntityType>
         <EntityType Name="ListCapKTKL">
           <Key>
@@ -2795,6 +2897,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="MaCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="LoaiCMDaoTao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HrChiTietDaoTao" Relationship="Self.FK__HrChiTiet__MaCMD__511AFFBC" FromRole="ListCMDaoTao" ToRole="HrChiTietDaoTao" />
         </EntityType>
         <EntityType Name="ListChiBo">
           <Key>
@@ -2884,6 +2987,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           </Key>
           <Property Name="MaLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenLHDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HrChiTietDaoTao" Relationship="Self.FK__HrChiTiet__MaLHD__4E3E9311" FromRole="ListLHDaoTao" ToRole="HrChiTietDaoTao" />
         </EntityType>
         <EntityType Name="ListLoaiTB">
           <Key>
@@ -3163,17 +3267,54 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="SysUser" Relationship="Self.FK__SysUserSe__UserI__2DD1C37F" FromRole="SysUserSettings" ToRole="SysUser" />
         </EntityType>
-        <EntityType Name="HrQuaTrinhCongTac">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
-          <Property Name="ThoiGian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CongViec" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="QuaTrinhCongTacID" Type="Guid" />
-          <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrQuaTrin__MaNha__0EC32C7A" FromRole="HrQuaTrinhCongTac" ToRole="HrNhanVien" />
-        </EntityType>
+        <Association Name="FK__HrChiTiet__MaBan__4F32B74A">
+          <End Role="ListBangCap" Type="Self.ListBangCap" Multiplicity="0..1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListBangCap">
+              <PropertyRef Name="MaBangCap" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaBangCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HrChiTiet__MaCMD__511AFFBC">
+          <End Role="ListCMDaoTao" Type="Self.ListCMDaoTao" Multiplicity="0..1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListCMDaoTao">
+              <PropertyRef Name="MaCMDaoTao" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaCMDaoTao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HrChiTiet__MaLHD__4E3E9311">
+          <End Role="ListLHDaoTao" Type="Self.ListLHDaoTao" Multiplicity="0..1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListLHDaoTao">
+              <PropertyRef Name="MaLHDaoTao" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaLHDaoTao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HrChiTiet__MaNha__4C564A9F">
+          <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
+          <End Role="HrChiTietDaoTao" Type="Self.HrChiTietDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HrNhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="HrChiTietDaoTao">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__HrKhenThu__MaKTK__16644E42">
           <End Role="ListKTKL" Type="Self.ListKTKL" Multiplicity="0..1" />
           <End Role="HrKhenThuongKyLuat" Type="Self.HrKhenThuongKyLuat" Multiplicity="*" />
@@ -4244,7 +4385,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
         </Association>
         <Association Name="FK__HrQuaTrin__MaNha__0EC32C7A">
           <End Role="HrNhanVien" Type="Self.HrNhanVien" Multiplicity="1" />
-          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="0..1" />
+          <End Role="HrQuaTrinhCongTac" Type="Self.HrQuaTrinhCongTac" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HrNhanVien">
               <PropertyRef Name="MaNhanVien" />
@@ -4411,6 +4552,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="BHXHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HrChiTietDaoTao" EntityType="Self.HrChiTietDaoTao" />
           <EntitySet Name="HrHSLTangThem" EntityType="Self.HrHSLTangThem" />
           <EntitySet Name="HrKhenThuongKyLuat" EntityType="Self.HrKhenThuongKyLuat" />
           <EntitySet Name="HrLuongToiThieu" EntityType="Self.HrLuongToiThieu" />
@@ -4420,6 +4562,7 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="HrPSLuong" EntityType="Self.HrPSLuong" />
           <EntitySet Name="HrQuanHeGiaDinh" EntityType="Self.HrQuanHeGiaDinh" />
           <EntitySet Name="HrQuaTrinhBHXH" EntityType="Self.HrQuaTrinhBHXH" />
+          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
           <EntitySet Name="HrQuaTrinhLuong" EntityType="Self.HrQuaTrinhLuong" />
           <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" />
@@ -4460,7 +4603,22 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
           <EntitySet Name="SysUser" EntityType="Self.SysUser" />
           <EntitySet Name="SysUserRoles" EntityType="Self.SysUserRoles" />
           <EntitySet Name="SysUserSettings" EntityType="Self.SysUserSettings" />
-          <EntitySet Name="HrQuaTrinhCongTac" EntityType="Self.HrQuaTrinhCongTac" />
+          <AssociationSet Name="FK__HrChiTiet__MaBan__4F32B74A" Association="Self.FK__HrChiTiet__MaBan__4F32B74A">
+            <End Role="ListBangCap" EntitySet="ListBangCap" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HrChiTiet__MaCMD__511AFFBC" Association="Self.FK__HrChiTiet__MaCMD__511AFFBC">
+            <End Role="ListCMDaoTao" EntitySet="ListCMDaoTao" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HrChiTiet__MaLHD__4E3E9311" Association="Self.FK__HrChiTiet__MaLHD__4E3E9311">
+            <End Role="ListLHDaoTao" EntitySet="ListLHDaoTao" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HrChiTiet__MaNha__4C564A9F" Association="Self.FK__HrChiTiet__MaNha__4C564A9F">
+            <End Role="HrNhanVien" EntitySet="HrNhanVien" />
+            <End Role="HrChiTietDaoTao" EntitySet="HrChiTietDaoTao" />
+          </AssociationSet>
           <AssociationSet Name="FK__HrKhenThu__MaKTK__16644E42" Association="Self.FK__HrKhenThu__MaKTK__16644E42">
             <End Role="ListKTKL" EntitySet="ListKTKL" />
             <End Role="HrKhenThuongKyLuat" EntitySet="HrKhenThuongKyLuat" />
@@ -4926,6 +5084,22 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BHXHModelStoreContainer" CdmEntityContainer="BHXHEntities">
+          <EntitySetMapping Name="HrChiTietDaoTao">
+            <EntityTypeMapping TypeName="BHXHModel.HrChiTietDaoTao">
+              <MappingFragment StoreEntitySet="HrChiTietDaoTao">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaCMDaoTao" ColumnName="MaCMDaoTao" />
+                <ScalarProperty Name="TenTruong" ColumnName="TenTruong" />
+                <ScalarProperty Name="NganhHoc" ColumnName="NganhHoc" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="MaLHDaoTao" ColumnName="MaLHDaoTao" />
+                <ScalarProperty Name="MaBangCap" ColumnName="MaBangCap" />
+                <ScalarProperty Name="XepLoai" ColumnName="XepLoai" />
+                <ScalarProperty Name="QuaTrinhDaoTaoID" ColumnName="QuaTrinhDaoTaoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HrHSLTangThem">
             <EntityTypeMapping TypeName="BHXHModel.HrHSLTangThem">
               <MappingFragment StoreEntitySet="HrHSLTangThem">
@@ -5151,6 +5325,17 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
                 <ScalarProperty Name="PCKhuVuc" ColumnName="PCKhuVuc" />
                 <ScalarProperty Name="CongViec" ColumnName="CongViec" />
                 <ScalarProperty Name="QuaTrinhBHXHID" ColumnName="QuaTrinhBHXHID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HrQuaTrinhCongTac">
+            <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhCongTac">
+              <MappingFragment StoreEntitySet="HrQuaTrinhCongTac">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+                <ScalarProperty Name="QuaTrinhCongTacID" ColumnName="QuaTrinhCongTacID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5539,17 +5724,6 @@ warning 6002: The table/view 'BHXH.dbo.HrQuaTrinhCongTac' does not have a primar
                 <ScalarProperty Name="Setting1" ColumnName="Setting1" />
                 <ScalarProperty Name="Setting2" ColumnName="Setting2" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HrQuaTrinhCongTac">
-            <EntityTypeMapping TypeName="BHXHModel.HrQuaTrinhCongTac">
-              <MappingFragment StoreEntitySet="HrQuaTrinhCongTac">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
-                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
-                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
-                <ScalarProperty Name="QuaTrinhCongTacID" ColumnName="QuaTrinhCongTacID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

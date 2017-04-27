@@ -75,6 +75,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BHXH.edmx</DependentUpon>
     </Compile>
+    <Compile Include="HrChiTietDaoTao.cs">
+      <DependentUpon>BHXH.tt</DependentUpon>
+    </Compile>
     <Compile Include="HrHSLTangThem.cs">
       <DependentUpon>BHXH.tt</DependentUpon>
     </Compile>
@@ -245,7 +248,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BHXH.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="BHXH.edmx.diagram">
       <DependentUpon>BHXH.edmx</DependentUpon>
     </None>
