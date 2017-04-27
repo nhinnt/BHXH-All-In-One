@@ -89,7 +89,7 @@ namespace BHXH.List.UI
             {
                 string code = gridviewListNationlity.GetRowCellValue(gridviewListNationlity.GetSelectedRows().First(), "MaQuocGia").ToString();
                 //"NationlityCode").ToString();
-                DialogResult d = MessageBox.Show("Bạn có muốn xóa quốc gia", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult d = MessageBox.Show("Bạn có muốn xóa tài khoản", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (d == DialogResult.Yes)
                 {
                     BHXH.List.Business.ListQuocGia.Delete(code);
