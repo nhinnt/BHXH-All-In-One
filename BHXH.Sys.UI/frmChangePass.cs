@@ -87,8 +87,8 @@ namespace BHXH.Sys.UI
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
-            txtUser.Text = BHXH.Util.TextUtil.TrimAccent(txtUser.Text.ToUpper());
-            txtHoten.Text=BHXH.Sys.Business.Users
+          //  txtUser.Text = BHXH.Util.TextUtil.TrimAccent(txtUser.Text.ToUpper());
+          //  txtHoten.Text = BHXH.Sys.Business.Users;
         }
 
         private void cbKhoa_CheckedChanged(object sender, EventArgs e)
