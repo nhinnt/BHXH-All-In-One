@@ -17,8 +17,7 @@ namespace BHXH.Sys.UI
         {
             InitializeComponent();
             txtPwd.UseSystemPasswordChar = true;
-            cbMaPB.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
+            
                 }
 
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,14 +32,14 @@ namespace BHXH.Sys.UI
         }
         void InitData()
         {
-            LoadPhongBan();
+          //  LoadPhongBan();
 
         }
    
       
         private void cbMaPB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadNhanVien();
+          //  LoadNhanVien();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -50,26 +49,26 @@ namespace BHXH.Sys.UI
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            Guid g = new Guid(cbMaNV.SelectedValue.ToString());
+            //Guid g = new Guid(cbMaNV.SelectedValue.ToString());
             
-            DialogResult d = MessageBox.Show("Bạn có muốn thêm mới tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (d == DialogResult.OK)
-            {
-                if (BHXH.Sys.Business.Users.IsExisted(txtUser.Text) != null)
-                    MessageBox.Show("Đã tồn tại tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //DialogResult d = MessageBox.Show("Bạn có muốn thêm mới tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            //if (d == DialogResult.OK)
+            //{
+            //    if (BHXH.Sys.Business.Users.IsExisted(txtUser.Text) != null)
+            //        MessageBox.Show("Đã tồn tại tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
-                else if (BHXH.Sys.Business.Users.ChangePass(g, txtUser.Text, BHXH.Util.MyMD5.Encrypt( txtPwd.Text),true) != null)
-                {
-                    MessageBox.Show("Bạn đã thêm mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Có lỗi xảy ra\n Thêm mới không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    else if (BHXH.Sys.Business.Users.ChangePass(g, txtUser.Text, BHXH.Util.MyMD5.Encrypt( txtPwd.Text),true) != null)
+            //    {
+            //        MessageBox.Show("Bạn đã thêm mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Có lỗi xảy ra\n Thêm mới không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
+            //    }
 
-            }
+            //}
 
 
            

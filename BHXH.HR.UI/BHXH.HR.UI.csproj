@@ -89,9 +89,6 @@
     <Compile Include="PersistentClasses1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmHrNhanVien.resx">
       <DependentUpon>frmHrNhanVien.cs</DependentUpon>
     </EmbeddedResource>

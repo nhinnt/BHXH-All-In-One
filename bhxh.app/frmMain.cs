@@ -11,7 +11,7 @@ using DevExpress.XtraBars;
 
 namespace BHXH.App
 {
-    public partial class frmMain: DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmMain()
         {
@@ -97,7 +97,7 @@ namespace BHXH.App
 
         }
 
-       
+
         private void bbtnDanToc_ItemClick(object sender, ItemClickEventArgs e)
         {
             List.UI.frmListDanToc f = new BHXH.List.UI.frmListDanToc();
@@ -116,7 +116,7 @@ namespace BHXH.App
 
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
         }
 
         private void bbtNghiepVu_ItemClick(object sender, ItemClickEventArgs e)
@@ -245,11 +245,11 @@ namespace BHXH.App
 
         private void bbtnTBLuong_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
         }
         private void bbtNangNhoc_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+
         }
         private void bbtNoiKCB_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -275,7 +275,7 @@ namespace BHXH.App
 
         private void bbtHTKTKL_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+
         }
 
         private void bbtHDLDong_ItemClick(object sender, ItemClickEventArgs e)
@@ -318,6 +318,29 @@ namespace BHXH.App
             //f.StartPosition =  FormStartPosition.CenterParent;
             f.MdiParent = this;
             f.Show();
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            Login();
+            DoSecurity();
+        }
+        void Login()
+        {
+            BHXH.Sys.UI.frmLogin f = new BHXH.Sys.UI.frmLogin();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.ShowDialog();
+            if (BHXH.Sys.Business.Sys.LoginedUser != null)
+                DoSecurity();
+            else Application.Exit();
+        }
+        /// <summary>
+        /// Load menu theo phân quyền
+        /// </summary>
+        void DoSecurity()
+        {
+
 
         }
     }

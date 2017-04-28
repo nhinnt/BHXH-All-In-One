@@ -870,6 +870,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "HỆ THỐNG PHẦN MỀM TÍCH HỢP - BHXH TP ĐÀ NẴNG";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

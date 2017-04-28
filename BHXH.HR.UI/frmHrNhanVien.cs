@@ -342,9 +342,7 @@ namespace BHXH.HR.UI
 
         private void MruEditMaChucVu_Click(object sender, EventArgs e)
         {
-            BHXH.HR.UI.frmChonDanhMuc f = new BHXH.HR.UI.frmChonDanhMuc();
-            f.ShowDialog(this);
-            f.DataGridViewDanhMuc.DataSource = BHXH.List.Business.ListChucVu.GetAll();
+          
         }
 
         private void GridViewChiTietDaoTao_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
