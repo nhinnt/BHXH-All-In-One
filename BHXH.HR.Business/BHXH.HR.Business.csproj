@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,9 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HrKhenThuongKyLuat.cs" />
     <Compile Include="HrNhanVien.cs" />
     <Compile Include="HrQuanHeGiaDinh.cs" />
+    <Compile Include="HrQuaTrinhBHXH.cs" />
     <Compile Include="HrQuaTrinhCongTac.cs" />
+    <Compile Include="HrChiTietDaoTao.cs" />
+    <Compile Include="HrQuaTrinhLuong.cs" />
     <Compile Include="HrThangBangLuong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

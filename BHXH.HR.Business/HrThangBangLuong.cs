@@ -18,5 +18,16 @@ public    class HrThangBangLuong
             return query.ToList().First();
 
         }
+        public static IEnumerable<BHXH.Data.HrThangBangLuong> GetAll()
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+
+            IEnumerable<BHXH.Data.HrThangBangLuong> list;
+
+            var query = from c in ctx.HrThangBangLuong select c;
+
+            list = query.ToList();
+            return list;
+        }
     }
 }
