@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Collections;
 
 namespace BHXH.Sys.Business
 {
@@ -10,6 +12,9 @@ namespace BHXH.Sys.Business
     {
         public static BHXH.Data.SysUser LoginedUser;
         public static BHXH.Data.SysUserSettings UserSettings;
+
+   
+        
 
     }
 }

@@ -92,7 +92,18 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Settings.xml" />
+    <ProjectReference Include="..\BHXH.Data\BHXH.Data.csproj">
+      <Project>{330b2510-d272-4ca8-835b-127c9c759db0}</Project>
+      <Name>BHXH.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Sys.Business\BHXH.Sys.Business.csproj">
+      <Project>{b7335292-dd3a-4626-ba2f-bbe952c39d86}</Project>
+      <Name>BHXH.Sys.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
+      <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
+      <Name>BHXH.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -152,7 +152,7 @@ namespace BHXH.Sys.Business
                             p.TenNhanVien
                         };
 
-            return query.ToList().First();
+            //return query.ToList().First();
 
 
 

@@ -17,9 +17,14 @@ namespace BHXH.Test
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            BHXH.Sys.Business.Security.SaveConnectionString("", "", "", "");
         }
 
         private void ribbonControl1_Click(object sender, EventArgs e)

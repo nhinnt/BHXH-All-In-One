@@ -7,24 +7,22 @@ using System.Windows.Forms;
 
 namespace BHXH.HR.Business
 {
-    public class HrQuanHeGiaDinh
+   public class HrKhenThuongKyLuat
     {
-        //public static IEnumerable<BHXH.Data.HrQuanHeGiaDinh> GetData(string code)
         public static BindingSource GetData(string data)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
-               var query = (from c in ctx.HrQuanHeGiaDinh
-                         join d in ctx.ListQuanHeGD on c.MaQuanHeGD equals d.MaQuanHeGD
-                         where c.MaNhanVien.ToString() == data
+           // IEnumerable<BHXH.Data.HrKhenThuongKyLuat> list;
+            var query = (from a in ctx.HrKhenThuongKyLuat
+                         join b in ctx.ListKTKL on a.MaKTKL equals b.MaKTKL 
+                         where a.MaNhanVien.ToString ()  == data 
                          select new
                          {
-                             c.STT,
-                             d.TenQuanHeGD,
-                             c.HoTen,
-                             c.NamSinh,
-                             c.ChiTiet
-
+                             a.STT,
+                             b.LoaiKTKL,
+                             b.TenKTKL,
+                             a.Nam 
                          }
                         ).ToList();
 

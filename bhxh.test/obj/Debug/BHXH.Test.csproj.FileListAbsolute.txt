@@ -203,4 +203,3 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\obj\Debug\BHXH.Test.csproj.GenerateRe
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\obj\Debug\BHXH.Test.exe.licenses
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\obj\Debug\BHXH.Test.exe
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Test\obj\Debug\BHXH.Test.pdb
-D:\Dropbox\Projects\BHXH\BHXH.Test\bin\Debug\BHXH.Test.exe.config
