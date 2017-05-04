@@ -17,6 +17,7 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListBangCap select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
         }
 
@@ -36,6 +37,7 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
             }
             catch (Exception)
@@ -64,7 +66,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListBangCap IsExisted(string MaBangCap, string TenBangCap)
         {
@@ -77,7 +81,7 @@ namespace BHXH.List.Business
             else
                 return null;
 
-
+            //ctx.Dispose();
 
         }
 
@@ -92,7 +96,7 @@ namespace BHXH.List.Business
 
           ctx.SaveChanges();
 
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListBangCap GetData(string MaBangCap)
@@ -103,6 +107,7 @@ namespace BHXH.List.Business
                         select c;
 
             return query.ToList().First();
+            //ctx.Dispose();
 
         }
         // public void STT()

@@ -17,6 +17,7 @@ namespace BHXH.Sys.UI
         {
             InitializeComponent();
             txtPwd.UseSystemPasswordChar = true;
+            
         }
 
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,28 +49,40 @@ namespace BHXH.Sys.UI
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            //string oldPass = BHXH.Util.MyMD5.Encrypt(txtPwd.Text);
-            //MessageBox.Show(oldPass);
-            //string newPass = BHXH.Util.MyMD5.Encrypt(txtPwdNew.Text);
-            //if (txtPwdNew.Text == "")
-            //    MessageBox.Show("Bạn chưa nhập mật khẩu mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //else
-            //{
+            BHXH.Sys.Business.Users.Login("ABC","2");
 
+            string userID = BHXH.Sys.Business.Sys.LoginedUser.UserID.ToString();
+       //     if(Sys.Business.Sys.LoginedUser !=null)
+               
 
-            //    DialogResult d = MessageBox.Show("Bạn có muốn thay đổi mật khẩu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //    if (d == DialogResult.Yes)
-            //    {
-            //        if (BHXH.Sys.Business.Users.Login(txtUser.Text, oldPass) != null)
-            //        {
-            //            BHXH.Sys.Business.Users.ChangePassword(BHXH.Sys.Business.Users, oldPass, newPass);
+            string oldPass = BHXH.Util.MyMD5.Encrypt(txtPwd.Text);
+           
+            string newPass = BHXH.Util.MyMD5.Encrypt(txtPwdNew.Text);
+            string PassAgain = BHXH.Util.MyMD5.Encrypt(txtPassAgain.Text);
+            if (txtPwdNew.Text == "")
+                MessageBox.Show("Bạn chưa nhập mật khẩu mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                
+                
+                DialogResult d = MessageBox.Show("Bạn có muốn thay đổi mật khẩu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (d == DialogResult.Yes)
+                {
+                    if (oldPass== BHXH.Sys.Business.Users.GetData(userID).Pwd.ToString())
+                    {
+                        if (newPass == PassAgain)
+                        {
+                            BHXH.Sys.Business.Users.ChangePassword(userID, oldPass, newPass);
 
-            //            MessageBox.Show("Bạn đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //        else
-            //            MessageBox.Show("Thay đổi mật khẩu thất bại\n Kiểm tra lại tên đăng nhập hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+                            MessageBox.Show("Bạn đã thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                            MessageBox.Show("Thay đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                        MessageBox.Show("Thay đổi mật khẩu thất bại\n Kiểm tra lại tên đăng nhập hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
 
 
@@ -77,14 +90,13 @@ namespace BHXH.Sys.UI
         }
 
 
-<<<<<<< HEAD
-=======
+
         private void txtUser_Leave(object sender, EventArgs e)
         {
           //  txtUser.Text = BHXH.Util.TextUtil.TrimAccent(txtUser.Text.ToUpper());
           //  txtHoten.Text = BHXH.Sys.Business.Users;
         }
->>>>>>> origin/master
+
 
        
 

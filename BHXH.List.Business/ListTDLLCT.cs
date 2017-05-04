@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListTDLLCT select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+          
         }
 
         public static BHXH.Data.ListTDLLCT New(string MaTDLLCT, string TenTDLLCT)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+               
             }
             catch (Exception)
             {
@@ -64,7 +68,7 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            { ctx.Dispose(); }
         }
         public static Data.ListTDLLCT IsExisted(string MaTDLLCT, string TenTDLLCT)
         {
@@ -73,10 +77,13 @@ namespace BHXH.List.Business
                         where c.MaTDLLCT == MaTDLLCT && c.TenTDLLCT == TenTDLLCT
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+           
 
 
         }
@@ -89,8 +96,7 @@ namespace BHXH.List.Business
             ctx.ListTDLLCT.Attach(obj);
             ctx.ListTDLLCT.Remove(obj);
 
-            ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -100,9 +106,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListTDLLCT
                         where c.MaTDLLCT == MaTDLLCT
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+     
 
         }
        // public void STT()

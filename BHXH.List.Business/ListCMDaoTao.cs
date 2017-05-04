@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListCMDaoTao select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+       
         }
 
         public static BHXH.Data.ListCMDaoTao New(string MaCMDaoTao, string TenCMDaoTao, string LoaiCMDaoTao)
@@ -37,6 +39,7 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
             }
             catch (Exception)
@@ -65,7 +68,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListCMDaoTao IsExisted(string MaCMDaoTao, string TenCMDaoTao, string LoaiCMDaoTao)
         {
@@ -74,12 +79,14 @@ namespace BHXH.List.Business
                         where c.MaCMDaoTao == MaCMDaoTao && c.TenCMDaoTao == TenCMDaoTao && c.LoaiCMDaoTao== LoaiCMDaoTao
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
 
-
-
+      
         }
 
         public static void Delete(string MaCMDaoTao)
@@ -92,7 +99,7 @@ namespace BHXH.List.Business
             
             ctx.SaveChanges();
 
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListCMDaoTao GetData(string MaCMDaoTao)
@@ -101,9 +108,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListCMDaoTao
                         where c.MaCMDaoTao == MaCMDaoTao
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+           
 
         }
        // public void STT()

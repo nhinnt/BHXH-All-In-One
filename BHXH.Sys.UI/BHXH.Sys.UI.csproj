@@ -30,13 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-<<<<<<< HEAD
-    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-=======
->>>>>>> origin/master
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -58,27 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmChangePass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChangePass.Designer.cs">
-      <DependentUpon>frmChangePass.cs</DependentUpon>
-    </Compile>
-<<<<<<< HEAD
     <Compile Include="frmMaster.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaster.Designer.cs">
       <DependentUpon>frmMaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewUser.cs">
+    <Compile Include="frmChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewUser.Designer.cs">
-      <DependentUpon>frmNewUser.cs</DependentUpon>
+    <Compile Include="frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> origin/master
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,30 +86,43 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmChangePass.resx">
-      <DependentUpon>frmChangePass.cs</DependentUpon>
-    </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmMaster.resx">
       <DependentUpon>frmMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewUser.resx">
-      <DependentUpon>frmNewUser.cs</DependentUpon>
+    <EmbeddedResource Include="frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> origin/master
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewUser.resx">
       <DependentUpon>frmNewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BHXH.Data\BHXH.Data.csproj">
+      <Project>{330b2510-d272-4ca8-835b-127c9c759db0}</Project>
+      <Name>BHXH.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Sys.Business\BHXH.Sys.Business.csproj">
+      <Project>{b7335292-dd3a-4626-ba2f-bbe952c39d86}</Project>
+      <Name>BHXH.Sys.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
+      <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
+      <Name>BHXH.UIHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
+      <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
+      <Name>BHXH.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

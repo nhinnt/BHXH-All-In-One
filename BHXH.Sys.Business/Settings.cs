@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace BHXH.Sys.Business
 {
-    class Settings
+   public class Settings
     {
         public static bool GetPasswordSetting()
         {
@@ -30,7 +30,6 @@ namespace BHXH.Sys.Business
             return false;
 
         }
-
         public static string GetSavedUserID()
         {
             try

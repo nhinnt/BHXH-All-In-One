@@ -787,6 +787,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.MruEditSoHieuNV.Size = new System.Drawing.Size(167, 20);
             this.MruEditSoHieuNV.TabIndex = 0;
+            this.MruEditSoHieuNV.SelectedIndexChanged += new System.EventHandler(this.MruEditSoHieuNV_SelectedIndexChanged);
             // 
             // PictureEdit1
             // 

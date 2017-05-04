@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListHopDong select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+          
         }
 
         public static BHXH.Data.ListHopDong New(string MaHopDong, string TenHopDong, string LoaiHopDong)
@@ -37,7 +39,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+              
             }
             catch (Exception)
             {
@@ -65,7 +69,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListHopDong IsExisted(string MaHopDong, string TenHopDong, string LoaiHopDong)
         {
@@ -74,7 +80,10 @@ namespace BHXH.List.Business
                         where c.MaHopDong == MaHopDong && c.TenHopDong == TenHopDong && c.LoaiHopDong== LoaiHopDong
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
 
@@ -91,7 +100,7 @@ namespace BHXH.List.Business
             ctx.ListHopDong.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListHopDong GetData(string MaHopDong)
@@ -100,9 +109,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListHopDong
                         where c.MaHopDong == MaHopDong
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+           ;
 
         }
        // public void STT()

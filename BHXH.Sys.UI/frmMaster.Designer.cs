@@ -28,180 +28,198 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnKhoa = new System.Windows.Forms.Button();
+            this.navBarControlDSUser = new DevExpress.XtraNavBar.NavBarControl();
+            this.tabQuanlyTK = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnMo = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.lblMaNV = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.btnKhoa = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblHoTen = new System.Windows.Forms.Label();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.NavBarControlDSNhanVien = new DevExpress.XtraNavBar.NavBarControl();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NavBarControlDSNhanVien)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlDSUser)).BeginInit();
+            this.tabQuanlyTK.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // xtraTabControl1
+            // navBarControlDSUser
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(1, 2);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(821, 410);
-            this.xtraTabControl1.TabIndex = 0;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
-            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
+            this.navBarControlDSUser.ActiveGroup = null;
+            this.navBarControlDSUser.Location = new System.Drawing.Point(-4, -2);
+            this.navBarControlDSUser.Name = "navBarControlDSUser";
+            this.navBarControlDSUser.OptionsNavPane.ExpandedWidth = 134;
+            this.navBarControlDSUser.Size = new System.Drawing.Size(134, 269);
+            this.navBarControlDSUser.TabIndex = 0;
+            this.navBarControlDSUser.Text = "navBarControlDSUser";
+            this.navBarControlDSUser.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarControlDSUser_LinkClicked);
+            this.navBarControlDSUser.Click += new System.EventHandler(this.navBarControlDSUser_Click);
             // 
-            // xtraTabPage1
+            // tabQuanlyTK
             // 
-            this.xtraTabPage1.Controls.Add(this.btnThoat);
-            this.xtraTabPage1.Controls.Add(this.btnKhoa);
-            this.xtraTabPage1.Controls.Add(this.btnReset);
-            this.xtraTabPage1.Controls.Add(this.lblMaNV);
-            this.xtraTabPage1.Controls.Add(this.txtMaNV);
-            this.xtraTabPage1.Controls.Add(this.label1);
-            this.xtraTabPage1.Controls.Add(this.textBox1);
-            this.xtraTabPage1.Controls.Add(this.lblHoTen);
-            this.xtraTabPage1.Controls.Add(this.txtHoTen);
-            this.xtraTabPage1.Controls.Add(this.NavBarControlDSNhanVien);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(815, 382);
-            this.xtraTabPage1.Text = "Danh sách tài khoản";
-            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
+            this.tabQuanlyTK.Controls.Add(this.tabPage1);
+            this.tabQuanlyTK.Controls.Add(this.tabPage2);
+            this.tabQuanlyTK.Location = new System.Drawing.Point(136, -2);
+            this.tabQuanlyTK.Name = "tabQuanlyTK";
+            this.tabQuanlyTK.SelectedIndex = 0;
+            this.tabQuanlyTK.Size = new System.Drawing.Size(485, 269);
+            this.tabQuanlyTK.TabIndex = 10;
             // 
-            // btnThoat
+            // tabPage1
             // 
-            this.btnThoat.Location = new System.Drawing.Point(512, 204);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(83, 23);
-            this.btnThoat.TabIndex = 9;
-            this.btnThoat.Text = "&Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.tabPage1.Controls.Add(this.btnMo);
+            this.tabPage1.Controls.Add(this.btnReset);
+            this.tabPage1.Controls.Add(this.btnKhoa);
+            this.tabPage1.Controls.Add(this.btnThoat);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.txtMaNV);
+            this.tabPage1.Controls.Add(this.txtUser);
+            this.tabPage1.Controls.Add(this.txtHoTen);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(477, 243);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Quản lý tài khoản";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnKhoa
+            // btnMo
             // 
-            this.btnKhoa.Location = new System.Drawing.Point(365, 204);
-            this.btnKhoa.Name = "btnKhoa";
-            this.btnKhoa.Size = new System.Drawing.Size(87, 23);
-            this.btnKhoa.TabIndex = 8;
-            this.btnKhoa.Text = "&Khóa";
-            this.btnKhoa.UseVisualStyleBackColor = true;
+            this.btnMo.Location = new System.Drawing.Point(149, 161);
+            this.btnMo.Name = "btnMo";
+            this.btnMo.Size = new System.Drawing.Size(93, 23);
+            this.btnMo.TabIndex = 19;
+            this.btnMo.Text = "Mở tài khoản";
+            this.btnMo.UseVisualStyleBackColor = true;
+            this.btnMo.Click += new System.EventHandler(this.btnMo_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(365, 250);
+            this.btnReset.Location = new System.Drawing.Point(149, 201);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(230, 26);
-            this.btnReset.TabIndex = 7;
-            this.btnReset.Text = "&Cấp lại mật khẩu";
+            this.btnReset.Size = new System.Drawing.Size(219, 23);
+            this.btnReset.TabIndex = 18;
+            this.btnReset.Text = "Đặt lại mật khẩu";
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click_1);
             // 
-            // lblMaNV
+            // btnKhoa
             // 
-            this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Location = new System.Drawing.Point(274, 152);
-            this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(71, 13);
-            this.lblMaNV.TabIndex = 6;
-            this.lblMaNV.Text = "Mã nhân viên";
+            this.btnKhoa.Location = new System.Drawing.Point(149, 161);
+            this.btnKhoa.Name = "btnKhoa";
+            this.btnKhoa.Size = new System.Drawing.Size(93, 23);
+            this.btnKhoa.TabIndex = 17;
+            this.btnKhoa.Text = "Khóa tài khoản";
+            this.btnKhoa.UseVisualStyleBackColor = true;
+            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click_1);
             // 
-            // txtMaNV
+            // btnThoat
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(365, 149);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(230, 21);
-            this.txtMaNV.TabIndex = 5;
+            this.btnThoat.Location = new System.Drawing.Point(293, 161);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 16;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(274, 107);
+            this.label1.Location = new System.Drawing.Point(14, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Tên đăng nhập";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Mã nhân viên";
             // 
-            // textBox1
+            // txtMaNV
             // 
-            this.textBox1.Location = new System.Drawing.Point(365, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 21);
-            this.textBox1.TabIndex = 3;
+            this.txtMaNV.Location = new System.Drawing.Point(149, 128);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(219, 20);
+            this.txtMaNV.TabIndex = 14;
             // 
-            // lblHoTen
+            // txtUser
             // 
-            this.lblHoTen.AutoSize = true;
-            this.lblHoTen.Location = new System.Drawing.Point(274, 74);
-            this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(54, 13);
-            this.lblHoTen.TabIndex = 2;
-            this.lblHoTen.Text = "Họ và tên";
+            this.txtUser.Location = new System.Drawing.Point(149, 85);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(219, 20);
+            this.txtUser.TabIndex = 13;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(365, 71);
+            this.txtHoTen.Location = new System.Drawing.Point(149, 42);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(230, 21);
-            this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.Size = new System.Drawing.Size(219, 20);
+            this.txtHoTen.TabIndex = 12;
             // 
-            // NavBarControlDSNhanVien
+            // label2
             // 
-            this.NavBarControlDSNhanVien.ActiveGroup = null;
-            this.NavBarControlDSNhanVien.Location = new System.Drawing.Point(-1, 3);
-            this.NavBarControlDSNhanVien.Name = "NavBarControlDSNhanVien";
-            this.NavBarControlDSNhanVien.OptionsNavPane.ExpandedWidth = 152;
-            this.NavBarControlDSNhanVien.Size = new System.Drawing.Size(152, 376);
-            this.NavBarControlDSNhanVien.TabIndex = 0;
-            this.NavBarControlDSNhanVien.Text = "NavBarControlDSNhanVien";
-            this.NavBarControlDSNhanVien.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBarControlDSNhanVien_LinkClicked);
-            this.NavBarControlDSNhanVien.Click += new System.EventHandler(this.NavBarControlDSNhanVien_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Tên đăng nhập";
             // 
-            // xtraTabPage2
+            // label3
             // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(815, 382);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Họ và tên";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(477, 243);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Phân Quyền chức năng";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // frmMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 405);
-            this.Controls.Add(this.xtraTabControl1);
+            this.ClientSize = new System.Drawing.Size(616, 263);
+            this.Controls.Add(this.tabQuanlyTK);
+            this.Controls.Add(this.navBarControlDSUser);
             this.Name = "frmMaster";
-            this.Text = "frmMaster";
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NavBarControlDSNhanVien)).EndInit();
+            this.Text = "Quản lý tài khoản";
+            this.Load += new System.EventHandler(this.frmMaster_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlDSUser)).EndInit();
+            this.tabQuanlyTK.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraNavBar.NavBarControl NavBarControlDSNhanVien;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private System.Windows.Forms.Label lblHoTen;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.Button btnThoat;
+        private DevExpress.XtraNavBar.NavBarControl navBarControlDSUser;
+        private System.Windows.Forms.TabControl tabQuanlyTK;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnKhoa;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Label lblMaNV;
-        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnMo;
     }
 }

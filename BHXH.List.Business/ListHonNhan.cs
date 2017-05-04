@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListHonNhan select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+       
         }
 
         public static BHXH.Data.ListHonNhan New(string MaHonNhan, string TenHonNhan)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+             
             }
             catch (Exception)
             {
@@ -64,7 +68,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListHonNhan IsExisted(string MaHonNhan, string TenHonNhan)
         {
@@ -73,10 +79,13 @@ namespace BHXH.List.Business
                         where c.MaHonNhan == MaHonNhan && c.TenHonNhan == TenHonNhan
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+         
 
 
         }
@@ -90,7 +99,7 @@ namespace BHXH.List.Business
             ctx.ListHonNhan.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -100,9 +109,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListHonNhan
                         where c.MaHonNhan == MaHonNhan
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+          
 
         }
        // public void STT()

@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListChiBo select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+            //
         }
 
         public static BHXH.Data.ListChiBo New(string MaChiBo, string TenChiBo)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+               
             }
             catch (Exception)
             {
@@ -64,7 +68,7 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            { ctx.Dispose(); }
         }
         public static Data.ListChiBo IsExisted(string MaChiBo, string TenChiBo)
         {
@@ -73,11 +77,15 @@ namespace BHXH.List.Business
                         where c.MaChiBo == MaChiBo && c.TenChiBo == TenChiBo
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+                
+            }
             else
                 return null;
 
-
+            
 
         }
 
@@ -90,7 +98,7 @@ namespace BHXH.List.Business
             ctx.ListChiBo.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -100,9 +108,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListChiBo
                         where c.MaChiBo == MaChiBo
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+            
 
         }
        // public void STT()

@@ -253,8 +253,12 @@ namespace BHXH.HR.UI
         {
 
         }
-<<<<<<< HEAD
-=======
+
+        private void MruEditSoHieuNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //public byte[] RetrieveImage()
         //{
         //    byte[] imageData = null;
@@ -277,6 +281,6 @@ namespace BHXH.HR.UI
         //    return imageData;
         //}
 
->>>>>>> origin/master
+
     }
 }

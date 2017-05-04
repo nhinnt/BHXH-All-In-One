@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListDienCS select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+       
         }
 
         public static BHXH.Data.ListDienCS New(string MaDienCS, string TenDienCS)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+               
             }
             catch (Exception)
             {
@@ -64,7 +68,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListDienCS IsExisted(string MaDienCS, string TenDienCS)
         {
@@ -73,12 +79,15 @@ namespace BHXH.List.Business
                         where c.MaDienCS == MaDienCS && c.TenDienCS == TenDienCS
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
 
 
-
+           
         }
 
         public static void Delete(string MaDienCS)
@@ -90,7 +99,7 @@ namespace BHXH.List.Business
             ctx.ListDienCS.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -100,9 +109,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListDienCS
                         where c.MaDienCS == MaDienCS
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+   
 
         }
        // public void STT()

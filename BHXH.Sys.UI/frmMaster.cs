@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraNavBar;
+
 namespace BHXH.Sys.UI
 {
     public partial class frmMaster : Form
@@ -15,9 +16,15 @@ namespace BHXH.Sys.UI
         public frmMaster()
         {
             InitializeComponent();
+            
         }
 
-        private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
+        private void navBarControlDSUser_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void frmMaster_Load(object sender, EventArgs e)
         {
             string MaPhongBan;
             MaPhongBan = "";
@@ -34,61 +41,133 @@ namespace BHXH.Sys.UI
             foreach (var qPB in queryPhongBan)
             {
                 NavBarGroup group = new NavBarGroup();
+
                 group.Caption = qPB.TenPhongBan;
                 group.Tag = qPB.MaPhongBan;
                 MaPhongBan = qPB.MaPhongBan;
-                NavBarControlDSNhanVien.Groups.Add(group);
-                var queryNhanVien = from c in ctx.HrNhanVien join p in ctx.SysUser on c.MaNhanVien equals p.MaNhanVien
-                                
+                navBarControlDSUser.Groups.Add(group);
+                var queryNhanVien = from c in ctx.HrNhanVien
+                                    join p in ctx.SysUser on c.MaNhanVien equals p.MaNhanVien
+
                                     where c.MaPhongBan == MaPhongBan
                                     select new
                                     {
-                                        c.MaNhanVien,
+                                        p.UserID,
                                         c.TenNhanVien
                                     };
                 foreach (var qNV in queryNhanVien)
                 {
                     NavBarItem item = new NavBarItem();
                     item.Caption = qNV.TenNhanVien;
-                    item.Tag = qNV.MaNhanVien;
+                    item.Tag = qNV.UserID;
                     group.ItemLinks.Add(item);
                 }
             }
 
         }
 
-      
-        private void xtraTabControl1_Click(object sender, EventArgs e)
+        private void btnKhoa_Click(object sender, EventArgs e)
         {
 
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void lbMaNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaNV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbHoTen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navBarControlDSUser_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+
+            loadThongTin(e.Link.Item.Tag.ToString());
+            bool isActive = BHXH.Sys.Business.Users.GetData(e.Link.Item.Tag.ToString()).IsActive.Value;
+         //   MessageBox.Show();
+            if (isActive == true)
+            {
+                btnKhoa.Visible = true;
+                btnMo.Visible = false;
+            }
+
+            else
+            {
+                btnKhoa.Visible = false;
+                btnMo.Visible = true;
+            }
+               
+           
+        }
+        void loadThongTin (string userID)
+        {
+           
+            txtHoTen.Text = BHXH.Sys.Business.Users.GetName(userID).TenNhanVien.ToString();
+            txtUser.Text = userID;
+            txtMaNV.Text = BHXH.Sys.Business.Users.GetData(userID).MaNhanVien.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            BHXH.Sys.Business.Users.Resetpass(txtHoTen.Text);
+            BHXH.Sys.Business.Users.Resetpass(txtUser.Text);
+            MessageBox.Show(BHXH.Sys.Business.Users.GetData(txtUser.Text).Pwd.ToString());
         }
 
-        private void NavBarControlDSNhanVien_Click(object sender, EventArgs e)
+        private void btnKhoa_Click_1(object sender, EventArgs e)
         {
-          
+            BHXH.Sys.Business.Users.KhoaTK(txtUser.Text, false);
+            MessageBox.Show("Khóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
-        private void NavBarControlDSNhanVien_LinkClicked(object sender, NavBarLinkEventArgs e)
+        private void btnMo_Click(object sender, EventArgs e)
         {
-            string UserID = e.Link.Item.Tag.ToString();
+           
+            {
+                BHXH.Sys.Business.Users.KhoaTK(txtUser.Text, true);
+                MessageBox.Show("Mở khóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+       
 
-            txtHoTen.Text = BHXH.Sys.Business.Users.GetName(UserID).TenNhanVien;
+        }
+
+        private void btnReset_Click_1(object sender, EventArgs e)
+        {
+            BHXH.Sys.Business.Users.Resetpass(txtUser.Text);
         }
     }
 }
- 

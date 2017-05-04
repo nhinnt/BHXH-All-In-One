@@ -16,7 +16,7 @@ namespace BHXH.Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new BHXH.Sys.UI.frmChangePass ());
+           Application.Run(new BHXH.List.UI.frmListDanToc ());
         }
     }
 }

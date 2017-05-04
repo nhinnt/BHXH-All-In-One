@@ -20,7 +20,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListTinh select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+            
         }
 
         public static BHXH.Data.ListTinh New(string MaTinh, string TenTinh)
@@ -39,7 +41,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+               
             }
             catch (Exception)
             {
@@ -67,7 +71,7 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            { ctx.Dispose(); }
         }
         public static Data.ListTinh IsExisted(string MaTinh, string TenTinh)
         {
@@ -76,10 +80,13 @@ namespace BHXH.List.Business
                         where c.MaTinh == MaTinh && c.TenTinh == TenTinh
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+          
         }
 
         public static void Delete(string MaTinh)
@@ -91,17 +98,18 @@ namespace BHXH.List.Business
             ctx.ListTinh.Remove(obj);
             
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
         public static BHXH.Data.ListTinh GetTinh(string MaTinh)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            ctx.Dispose();
+
             return ctx.ListTinh.SingleOrDefault(x => x.MaTinh == MaTinh);
-          //  return query.ToList().First();
-
-
+            //  return query.ToList().First();
+     
         }
        // public void STT()
        // { }

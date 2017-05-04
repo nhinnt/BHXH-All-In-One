@@ -19,8 +19,9 @@ namespace BHXH.List.Business
                         select c;
 
             list = query.ToList();
-
+            ctx.Dispose();
             return list;
+      
         }
 
         //public static BHXH.Data.ListXaPhuong New(int XaPhuongID, string MaXaPhuong, string TenXaPhuong, int QuanHuyenID)
@@ -104,9 +105,9 @@ namespace BHXH.List.Business
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
-
+            ctx.Dispose();
             return ctx.ListXaPhuong.SingleOrDefault(x => x.XaPhuongID == XaPhuongID);
-
+      
 
         }
         //public void STT()

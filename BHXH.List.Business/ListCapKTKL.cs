@@ -19,6 +19,7 @@ namespace BHXH.List.Business
             list = query.ToList();
 
             return list;
+         // //  ctx.Dispose();
         }
 
         public static BHXH.Data.ListCapKTKL New(string MaCapKTKL, string TenCapKTKL)
@@ -37,6 +38,7 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
             }
             catch (Exception)
@@ -65,7 +67,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListCapKTKL IsExisted(string MaCapKTKL, string TenCapKTKL)
         {
@@ -78,7 +82,7 @@ namespace BHXH.List.Business
             else
                 return null;
 
-
+            //ctx.Dispose();
 
         }
 
@@ -92,7 +96,7 @@ namespace BHXH.List.Business
 
             ctx.SaveChanges();
 
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListCapKTKL GetData(string MaCapKTKL)
@@ -103,7 +107,7 @@ namespace BHXH.List.Business
                         select c;
 
             return query.ToList().First();
-
+            //ctx.Dispose();
 
         }
        // public void STT()
