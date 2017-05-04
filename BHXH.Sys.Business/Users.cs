@@ -20,11 +20,11 @@ namespace BHXH.Sys.Business
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.SysUser
-                        where c.UserID == LoginName && c.Pwd == OldPassword
+                        where c.UserID == LoginName && c.Pwd==OldPassword
                         select c;
             BHXH.Data.SysUser n = query.First();
             n.Pwd = NewPassword;
-
+        
 
             try
             {
@@ -34,14 +34,14 @@ namespace BHXH.Sys.Business
             { }
             return false;
         }
-        public static bool Resetpass(string LoginName)
+        public static bool Resetpass(string UserID)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.SysUser
-                        where c.UserID == LoginName
+                        where c.UserID == UserID
                         select c;
             BHXH.Data.SysUser n = query.First();
-            n.Pwd = "1";
+            n.Pwd = BHXH.Util.MyMD5.Encrypt("1").ToString();
 
 
             try
@@ -162,15 +162,21 @@ namespace BHXH.Sys.Business
 
 
         }
-        public static BHXH.Data.SysUser Login(string user, string pass)
+        public static BHXH.Data.SysUser Login(string userID, string pass)
         {
             //Guid g = new Guid(user.ToString());
+            string encryptedPwd = BHXH.Util.MyMD5.Encrypt(pass);
+
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.SysUser
-                        where (c.UserID.ToString() == user) && (c.Pwd == pass) && c.IsActive == true
+                        where (c.UserID.ToString() == userID) && (c.Pwd == encryptedPwd ) && c.IsActive == true
                         select c;
             if (query.Count() > 0)
-                return query.First();
+            {
+                BHXH.Sys.Business.Sys.LoginedUser = query.SingleOrDefault();
+           //     BHXH.Sys.Business.Settings.SavePasswordSetting(userID, encryptedPwd);
+                return query.SingleOrDefault();
+            }
             else
                 return null;
         }
@@ -187,7 +193,35 @@ namespace BHXH.Sys.Business
 
 
         }
+        public static BHXH.Data.SysUser GetData(string UserID)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            var query = from c in ctx.SysUser
+                        where c.UserID == UserID                 
+                        select c;
 
+            return query.ToList().First();
+
+
+        }
+        public static bool KhoaTK(string UserID, bool isActive)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            var query = from c in ctx.SysUser
+                        where c.UserID == UserID
+                        select c;
+            BHXH.Data.SysUser n = query.First();
+            n.IsActive = isActive;
+
+
+            try
+            {
+                ctx.SaveChanges();
+            }
+            finally
+            { }
+            return false;
+        }
     }
 
 }

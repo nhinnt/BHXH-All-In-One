@@ -73,6 +73,10 @@
       <Project>{6377e52a-af1f-43d5-8c9f-6f694feeab77}</Project>
       <Name>BHXH.HR.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
+      <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
+      <Name>BHXH.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Settings.xml">

@@ -92,6 +92,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BHXH.Sys.UI.csproj.user" />
     <Content Include="Settings.xml" />
   </ItemGroup>
   <ItemGroup>

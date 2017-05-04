@@ -18,7 +18,7 @@ namespace BHXH.Sys.UI
             InitializeComponent();
             txtPwd.UseSystemPasswordChar = true;
             
-                }
+        }
 
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -32,14 +32,14 @@ namespace BHXH.Sys.UI
         }
         void InitData()
         {
-          //  LoadPhongBan();
+   
 
         }
    
       
         private void cbMaPB_SelectedIndexChanged(object sender, EventArgs e)
         {
-          //  LoadNhanVien();
+           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -49,40 +49,47 @@ namespace BHXH.Sys.UI
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            //Guid g = new Guid(cbMaNV.SelectedValue.ToString());
-            
-            //DialogResult d = MessageBox.Show("Bạn có muốn thêm mới tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            //if (d == DialogResult.OK)
-            //{
-            //    if (BHXH.Sys.Business.Users.IsExisted(txtUser.Text) != null)
-            //        MessageBox.Show("Đã tồn tại tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            BHXH.Sys.Business.Users.Login("ABC","2");
 
+            string userID = BHXH.Sys.Business.Sys.LoginedUser.UserID.ToString();
+       //     if(Sys.Business.Sys.LoginedUser !=null)
+               
 
-            //    else if (BHXH.Sys.Business.Users.ChangePass(g, txtUser.Text, BHXH.Util.MyMD5.Encrypt( txtPwd.Text),true) != null)
-            //    {
-            //        MessageBox.Show("Bạn đã thêm mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Có lỗi xảy ra\n Thêm mới không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //    }
-
-            //}
-
-
+            string oldPass = BHXH.Util.MyMD5.Encrypt(txtPwd.Text);
            
+            string newPass = BHXH.Util.MyMD5.Encrypt(txtPwdNew.Text);
+            string PassAgain = BHXH.Util.MyMD5.Encrypt(txtPassAgain.Text);
+            if (txtPwdNew.Text == "")
+                MessageBox.Show("Bạn chưa nhập mật khẩu mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                
+                
+                DialogResult d = MessageBox.Show("Bạn có muốn thay đổi mật khẩu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (d == DialogResult.Yes)
+                {
+                    if (oldPass== BHXH.Sys.Business.Users.GetData(userID).Pwd.ToString())
+                    {
+                        if (newPass == PassAgain)
+                        {
+                            BHXH.Sys.Business.Users.ChangePassword(userID, oldPass, newPass);
+
+                            MessageBox.Show("Bạn đã thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                            MessageBox.Show("Thay đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                        MessageBox.Show("Thay đổi mật khẩu thất bại\n Kiểm tra lại tên đăng nhập hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-        private void txtUser_TextChanged(object sender, EventArgs e)
-        {
-           // txtUser.Text = txtUser.Text.ToUpper();
+
+
+
         }
 
-        private void txtUser_KeyDown(object sender, KeyEventArgs e)
-        {
-            //txtUser.Text = txtUser.Text.ToUpper();
-        }
+
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
@@ -90,10 +97,9 @@ namespace BHXH.Sys.UI
           //  txtHoten.Text = BHXH.Sys.Business.Users;
         }
 
-        private void cbKhoa_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
+       
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

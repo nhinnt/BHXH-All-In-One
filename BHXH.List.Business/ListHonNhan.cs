@@ -17,6 +17,7 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListHonNhan select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
         }
 
@@ -36,6 +37,7 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
             }
             catch (Exception)
@@ -64,7 +66,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListHonNhan IsExisted(string MaHonNhan, string TenHonNhan)
         {
@@ -91,7 +95,7 @@ namespace BHXH.List.Business
 
             ctx.SaveChanges();
 
-
+            
         }
 
         public static BHXH.Data.ListHonNhan GetData(string MaHonNhan)
