@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListKTKL select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+       
         }
 
         public static BHXH.Data.ListKTKL New(string MaKTKL, string TenKTKL, string LoaiKTKL)
@@ -37,7 +39,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+    
             }
             catch (Exception)
             {
@@ -65,7 +69,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListKTKL IsExisted(string MaKTKL, string TenKTKL, string LoaiKTKL)
         {
@@ -74,10 +80,13 @@ namespace BHXH.List.Business
                         where c.MaKTKL == MaKTKL && c.TenKTKL == TenKTKL && c.LoaiKTKL== LoaiKTKL
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+        
 
 
         }
@@ -91,7 +100,7 @@ namespace BHXH.List.Business
             ctx.ListKTKL.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -101,7 +110,7 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListKTKL
                         where c.MaKTKL == MaKTKL
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
 
 

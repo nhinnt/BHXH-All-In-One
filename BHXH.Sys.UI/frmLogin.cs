@@ -11,27 +11,33 @@ using System.Windows.Forms;
 namespace BHXH.Sys.UI
 {
     public partial class frmLogin : Form
-    {
+    {   
         public frmLogin()
         {
             InitializeComponent();
             cbMaPB.DropDownStyle = ComboBoxStyle.DropDownList;
+            
         }
 
         private void ButtonChon_Click(object sender, EventArgs e)
         {
-            string pwd = BHXH.Util.MyMD5.Encrypt(txtPwd.Text);
-            
-            
+                      
 
             if(txtPwd.Text.Trim()=="")
                 MessageBox.Show("Bạn chưa nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            Sys.Business.Sys.LoginedUser = BHXH.Sys.Business.Users.Login(txtUserID.Text.Trim(), pwd);
+            Sys.Business.Sys.LoginedUser = BHXH.Sys.Business.Users.Login(txtUserID.Text.Trim(), txtPwd.Text);
 
             if (Sys.Business.Sys.LoginedUser == null)
                 MessageBox.Show("Đăng nhập không thành công\n Kiểm tra lại tên đăng nhập hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else MessageBox.Show("OK");
+            else
+            {
+                if (CheckBoxGhiPassW.Checked == true)
+                {
+                    BHXH.Sys.Business.Settings.SavePasswordSetting(txtUserID.Text.Trim(), txtPwd.Text);
+                }
+                this.Close();
+            }
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -82,6 +88,11 @@ namespace BHXH.Sys.UI
         private void Label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUserID_Leave(object sender, EventArgs e)
+        {
+            txtUserID.Text = BHXH.Util.TextUtil.TrimAccent(txtUserID.Text.ToUpper());
         }
     }
 }

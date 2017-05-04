@@ -58,14 +58,14 @@
             this.CheckBoxGhiPassW.AutoSize = true;
             this.CheckBoxGhiPassW.Location = new System.Drawing.Point(276, 172);
             this.CheckBoxGhiPassW.Name = "CheckBoxGhiPassW";
-            this.CheckBoxGhiPassW.Size = new System.Drawing.Size(102, 17);
+            this.CheckBoxGhiPassW.Size = new System.Drawing.Size(104, 17);
             this.CheckBoxGhiPassW.TabIndex = 30;
-            this.CheckBoxGhiPassW.Text = "Ghi lại mật khẩu";
+            this.CheckBoxGhiPassW.Text = "Lưu lại mật khẩu";
             this.CheckBoxGhiPassW.UseVisualStyleBackColor = true;
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(276, 130);
+            this.txtPwd.Location = new System.Drawing.Point(277, 129);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(190, 20);
@@ -104,7 +104,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(347, 202);
+            this.btnThoat.Location = new System.Drawing.Point(390, 202);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 25);
             this.btnThoat.TabIndex = 32;
@@ -115,7 +115,7 @@
             // btnChon
             // 
             this.btnChon.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChon.Location = new System.Drawing.Point(266, 202);
+            this.btnChon.Location = new System.Drawing.Point(275, 202);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(75, 25);
             this.btnChon.TabIndex = 31;
@@ -144,15 +144,16 @@
             // 
             // txtUserID
             // 
-            this.txtUserID.Location = new System.Drawing.Point(275, 104);
+            this.txtUserID.Location = new System.Drawing.Point(276, 96);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(190, 20);
             this.txtUserID.TabIndex = 29;
+            this.txtUserID.Leave += new System.EventHandler(this.txtUserID_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(185, 107);
+            this.label3.Location = new System.Drawing.Point(185, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 33;

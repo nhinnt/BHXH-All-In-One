@@ -121,10 +121,6 @@
       <Project>{b7335292-dd3a-4626-ba2f-bbe952c39d86}</Project>
       <Name>BHXH.Sys.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BHXH.Sys.UI\BHXH.Sys.UI.csproj">
-      <Project>{135f85b0-df20-4d79-a0fb-3dd8deafcab6}</Project>
-      <Name>BHXH.Sys.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
       <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
       <Name>BHXH.UIHelpers</Name>

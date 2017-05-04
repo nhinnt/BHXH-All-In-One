@@ -327,6 +327,7 @@ namespace BHXH.HR.UI
         {
 
         }
+<<<<<<< HEAD
 
         private void GridViewChiTietDaoTao_MouseEnter(object sender, EventArgs e)
         {
@@ -522,5 +523,36 @@ namespace BHXH.HR.UI
             }
         }
     }
+=======
+
+        private void MruEditSoHieuNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //public byte[] RetrieveImage()
+        //{
+        //    byte[] imageData = null;
+        //    SqlCommand cmd = new SqlCommand(" select AnhNV from dsnhanvien where idnhanvien = " + mIDChon.ToString, SoLieu);
+        //    using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SequentialAccess))
+        //    {
+        //        reader.Read();
+        //        long bytesize = reader.GetBytes(0, 0, null, 0, 0);
+        //        // Allocate byte array to hold image data
+        //        imageData = new byte[bytesize];
+        //        long bytesread = 0;
+        //        int curpos = 0;
+        //        int chunkSize = 1;
+        //        while (bytesread < bytesize)
+        //        {
+        //            bytesread += reader.GetBytes(0, curpos, imageData, curpos, chunkSize);
+        //            curpos += chunkSize;
+        //        }
+        //    }
+        //    return imageData;
+        //}
+
+
+>>>>>>> 62e536db8663a031a5bff3d40de59bee4d944a0d
     }
     

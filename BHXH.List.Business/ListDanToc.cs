@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListDanToc select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+           
         }
 
         public static BHXH.Data.ListDanToc New(string MaDanToc, string TenDanToc)
@@ -36,7 +38,10 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+
+                ctx.Dispose();
                 return n;
+              
             }
             catch (Exception)
             {
@@ -64,7 +69,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListDanToc IsExisted(string MaDanToc, string TenDanToc)
         {
@@ -73,10 +80,13 @@ namespace BHXH.List.Business
                         where c.MaDanToc == MaDanToc && c.TenDanToc == TenDanToc
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+      
 
 
         }
@@ -91,7 +101,7 @@ namespace BHXH.List.Business
 
             ctx.SaveChanges();
 
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListDanToc GetData(string MaDanToc)
@@ -100,10 +110,10 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListDanToc
                         where c.MaDanToc == MaDanToc
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
 
-
+          
         }
        // public void STT()
        // { }

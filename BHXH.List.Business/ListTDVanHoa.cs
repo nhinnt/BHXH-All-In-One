@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListTDVanHoa select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+          
         }
 
         public static BHXH.Data.ListTDVanHoa New(string MaTDVanHoa, string TenTDVanHoa)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+             
             }
             catch (Exception)
             {
@@ -64,7 +68,7 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            { ctx.Dispose(); }
         }
         public static Data.ListTDVanHoa IsExisted(string MaTDVanHoa, string TenTDVanHoa)
         {
@@ -73,10 +77,13 @@ namespace BHXH.List.Business
                         where c.MaTDVanHoa == MaTDVanHoa && c.TenTDVanHoa == TenTDVanHoa
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+           
 
 
         }
@@ -90,7 +97,7 @@ namespace BHXH.List.Business
             ctx.ListTDVanHoa.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -100,9 +107,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListTDVanHoa
                         where c.MaTDVanHoa== MaTDVanHoa
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+          
 
         }
        // public void STT()

@@ -19,7 +19,9 @@ namespace BHXH.List.Business
                         select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+           
         }
 
         public static BHXH.Data.ListQuanHuyen New( string MaQuanHuyen, string TenQuanHuyen)
@@ -38,7 +40,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+                
             }
             catch (Exception)
             {
@@ -66,7 +70,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListQuanHuyen IsExisted(string MaQuanHuyen, string TenQuanHuyen)
         {
@@ -75,10 +81,13 @@ namespace BHXH.List.Business
                         where c.MaQuanHuyen == MaQuanHuyen && c.TenQuanHuyen == TenQuanHuyen
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+         
 
 
         }
@@ -92,16 +101,16 @@ namespace BHXH.List.Business
             ctx.ListQuanHuyen.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
         public static BHXH.Data.ListQuanHuyen GetData(int QuanHuyenID)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-
-                        return ctx.ListQuanHuyen.SingleOrDefault(x=>x.QuanHuyenID== QuanHuyenID);
-
+            ctx.Dispose();
+            return ctx.ListQuanHuyen.SingleOrDefault(x=>x.QuanHuyenID== QuanHuyenID);
+        
 
         }
        // public void STT()

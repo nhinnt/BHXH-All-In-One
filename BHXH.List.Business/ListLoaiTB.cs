@@ -17,6 +17,8 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListLoaiTB select c;
 
             list = query.ToList();
+        
+            ctx.Dispose();
             return list;
         }
 
@@ -36,6 +38,8 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+              
+                ctx.Dispose();
                 return n;
             }
             catch (Exception)
@@ -64,7 +68,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListLoaiTB IsExisted(string MaLoaiTB, string TenLoaiTB)
         {
@@ -73,10 +79,13 @@ namespace BHXH.List.Business
                         where c.MaLoaiTB == MaLoaiTB && c.TenLoaiTB == TenLoaiTB
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+           
 
 
         }
@@ -90,7 +99,7 @@ namespace BHXH.List.Business
             ctx.ListLoaiTB.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
 
         }
 
@@ -100,9 +109,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListLoaiTB
                         where c.MaLoaiTB == MaLoaiTB
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+           
 
         }
        // public void STT()

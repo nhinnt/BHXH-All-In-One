@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListNghiepVu select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+           
         }
 
         public static BHXH.Data.ListNghiepVu New(string MaNghiepVu, string TenNghiepVu)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+              
             }
             catch (Exception)
             {
@@ -64,7 +68,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListNghiepVu IsExisted(string MaNghiepVu, string TenNghiepVu)
         {
@@ -73,10 +79,13 @@ namespace BHXH.List.Business
                         where c.MaNghiepVu == MaNghiepVu && c.TenNghiepVu == TenNghiepVu
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+        
 
 
         }
@@ -91,7 +100,7 @@ namespace BHXH.List.Business
 
             ctx.SaveChanges();
 
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListNghiepVu GetData(string MaNghiepVu)
@@ -100,9 +109,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListNghiepVu
                         where c.MaNghiepVu == MaNghiepVu
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+           
 
         }
        // public void STT()

@@ -17,7 +17,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListNgoaiNgu select c;
 
             list = query.ToList();
+            ctx.Dispose();
             return list;
+            
         }
 
         public static BHXH.Data.ListNgoaiNgu New(string MaNgoaiNgu, string TenNgoaiNgu)
@@ -36,7 +38,9 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
+                ctx.Dispose();
                 return n;
+             
             }
             catch (Exception)
             {
@@ -64,7 +68,9 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            { }
+            {
+                ctx.Dispose();
+            }
         }
         public static Data.ListNgoaiNgu IsExisted(string MaNgoaiNgu, string TenNgoaiNgu)
         {
@@ -73,10 +79,13 @@ namespace BHXH.List.Business
                         where c.MaNgoaiNgu == MaNgoaiNgu && c.TenNgoaiNgu == TenNgoaiNgu
                         select c;
             if (query.Count() > 0)
+            {
+                ctx.Dispose();
                 return query.First();
+            }
             else
                 return null;
-
+          
 
 
         }
@@ -90,7 +99,7 @@ namespace BHXH.List.Business
             ctx.ListNgoaiNgu.Remove(obj);
 
             ctx.SaveChanges();
-
+            ctx.Dispose();
         }
 
         public static BHXH.Data.ListNgoaiNgu GetData(string MaNgoaiNgu)
@@ -99,9 +108,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListNgoaiNgu
                         where c.MaNgoaiNgu == MaNgoaiNgu
                         select c;
-
+            ctx.Dispose();
             return query.ToList().First();
-
+           
 
         }
        // public void STT()
