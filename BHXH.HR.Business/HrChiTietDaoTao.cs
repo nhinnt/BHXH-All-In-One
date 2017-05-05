@@ -23,6 +23,7 @@ namespace BHXH.HR.Business
                              b.STT,
                              b.NganhHoc,
                              c.TenCMDaoTao,
+                             b.TenTruong,
                              b.ThoiGian,
                              d.TenLHDaoTao,
                              e.TenBangCap,
@@ -35,5 +36,30 @@ namespace BHXH.HR.Business
             bs.DataSource = query;
             return bs;
         }
+        //public static BHXH.Data.HrChiTietDaoTao  New(string MaCMDaoTao, string TenTruong, string NganhHoc)
+
+        //{
+
+        //    BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+        //    BHXH.Data.HrChiTietDaoTao n = new Data.HrChiTietDaoTao();
+        //    n.QuaTrinhDaoTaoID  = Guid.NewGuid();
+        //    n.MaCMDaoTao = MaCMDaoTao;
+        //    n.TenTruong = TenTruong;
+        //    n.NganhHoc = NganhHoc;
+        //    ctx.HrNhanVien.Add(n);
+
+        //    try
+        //    {
+        //        ctx.SaveChanges();
+        //        return n;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+
+        //    finally
+        //    { }
+        //}
     }
 }

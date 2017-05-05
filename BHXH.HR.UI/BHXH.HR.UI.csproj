@@ -41,11 +41,19 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Design, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Common Files\Business Objects\2.7\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Common Files\Business Objects\2.7\Managed\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.TreeMap.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -87,12 +95,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Report\rptLyLich2C.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptLyLich2C.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="frmChonDanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,19 +113,9 @@
     <Compile Include="frmHrNhanVien.designer.cs">
       <DependentUpon>frmHrNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLyLich2C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLyLich2C.Designer.cs">
-      <DependentUpon>frmLyLich2C.cs</DependentUpon>
-    </Compile>
     <Compile Include="PersistentClasses1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Report\rptLyLich2C.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptLyLich2C.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmChonDanhMuc.resx">
       <DependentUpon>frmChonDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHrNhanVien.resx">
       <DependentUpon>frmHrNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLyLich2C.resx">
-      <DependentUpon>frmLyLich2C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -18,7 +18,8 @@ namespace BHXH.HR.Business
             return query.ToList().First();
 
         }
-           
+       
+
         public static BHXH.Data.HrNhanVien  GetAnhNV(string MaNhanVien)
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
@@ -29,17 +30,15 @@ namespace BHXH.HR.Business
             return query.ToList().First();
 
         }
-        public static BHXH.Data.HrNhanVien New(string GioiTinh)
+        public static BHXH.Data.HrNhanVien New(string TenNhanVien, string MaPhongBan)
 
         {
-            //if (MaChucVu == "" || TenChucVu == "")
-            //    return null;
-            //if (IsExisted(MaChucVu, TenChucVu) != null)
-            //    return IsExisted(MaChucVu, TenChucVu);
+          
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             BHXH.Data.HrNhanVien n = new Data.HrNhanVien();
-            n.MaPhongBan = GioiTinh;
-            //n.TenChucVu = TenChucVu;
+            n.MaNhanVien = Guid.NewGuid();
+            n.TenNhanVien = TenNhanVien;
+            n.MaPhongBan = MaPhongBan;
             ctx.HrNhanVien.Add(n);
 
             try
@@ -52,6 +51,34 @@ namespace BHXH.HR.Business
                 return null;
             }
 
+            finally
+            { }
+        }
+        public static void Delete(string MaNhanVien)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+           
+            var DeleteNV = (from c in ctx.HrNhanVien 
+                                where c.MaNhanVien.ToString () == MaNhanVien
+                                select c).SingleOrDefault();
+
+            //I am trying to delete the record like below
+            ctx.HrNhanVien.Remove(DeleteNV);
+            ctx.SaveChanges();
+        }
+        public static void Edit(string TenNhanVien)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            var query = from c in ctx.HrNhanVien 
+                        where c.TenNhanVien  == TenNhanVien
+                        select c;
+            BHXH.Data.HrNhanVien n = query.First();
+            n.TenNhanVien = TenNhanVien;
+
+            try
+            {
+                ctx.SaveChanges();
+            }
             finally
             { }
         }
@@ -131,20 +158,45 @@ namespace BHXH.HR.Business
             { }
 
         }
-        //public static Data.HrNhanVien  IsExisted(string GioiTinh)
-        //{
-        //    BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
-        //    var query = from c in ctx.HrNhanVien 
-        //                where c.GioiTinh  == MaChucVu && c.TenChucVu == TenChucVu
-        //                select c;
-        //    if (query.Count() > 0)
-        //        return query.First();
-        //    else
-        //        return null;
+        public static IEnumerable<BHXH.Data.HrNhanVien> GetAll()
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
+            IEnumerable<BHXH.Data.HrNhanVien > list;
 
+            var query = from c in ctx.HrNhanVien  select c;
 
-        //}
+            list = query.ToList();
+            return list;
+        }
+        public static IEnumerable<BHXH.Data.HrNhanVien> GetNhanVienPhongBan(string MaPhongBan)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
+            IEnumerable<BHXH.Data.HrNhanVien> list;
+
+            var query = from c in ctx.HrNhanVien
+                        where c.MaPhongBan ==MaPhongBan
+                        select c;
+
+            list = query.ToList();
+            return list;
+        }
+        public static void EditNhanVienPhongBan(string MaNhanVien, string TenNhanVien, string MaPhongBan)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            var query = from c in ctx.HrNhanVien 
+                        where c.MaNhanVien.ToString() == MaNhanVien //|| c.MaPhongBan == MaPhongBan
+                        select c;
+            BHXH.Data.HrNhanVien  n = query.First();
+            n.TenNhanVien  = TenNhanVien;
+            n.MaPhongBan = MaPhongBan;
+            try
+            {
+                ctx.SaveChanges();
+            }
+            finally
+            { }
+        }
     }
 }

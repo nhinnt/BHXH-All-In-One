@@ -16,3 +16,13 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.SqlServer.xml
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.pdb
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\BHXH.Util.dll.config
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\BHXH.Util.dll
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\BHXH.Util.pdb
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.dll
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.xml
+D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nam\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.csprojResolveAssemblyReference.cache
+D:\Nam\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.dll
+D:\Nam\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.pdb

@@ -95,10 +95,18 @@ namespace BHXH.HR.UI
             this.lookUpEditBangCap.Properties.ValueMember = "MaBangCap";
             //Quá trình công tác
             this.GridControlQuaTrinhCongTac.DataSource = BHXH.HR.Business.HrQuaTrinhCongTac.GetData(e.Link.Item.Tag.ToString());
-            this.GridControlQuanHeGiaDinh.DataSource = BHXH.HR.Business.HrQuanHeGiaDinh.GetData(e.Link.Item.Tag.ToString());
 
+            //Quan hệ gia đình
+            this.GridControlQuanHeGiaDinh.DataSource = BHXH.HR.Business.HrQuanHeGiaDinh.GetData(e.Link.Item.Tag.ToString());
+            
+            this.lookUpEditQuanHeGiaDinh.Properties.DataSource = BHXH.List.Business.ListQuanHeGD.GetAll();
+            this.lookUpEditQuanHeGiaDinh.Properties.DisplayMember = "TenQuanHeGD";
+            this.lookUpEditQuanHeGiaDinh.Properties.ValueMember = "MaQuanHeGD";
+            //Khen thưởng kỹ luật
             this.GridControlKhenThuongKyLuat.DataSource = BHXH.HR.Business.HrKhenThuongKyLuat.GetData(e.Link.Item.Tag.ToString());
+            //Quá trình lương
             this.GridControlQuaTrinhLuong.DataSource = BHXH.HR.Business.HrQuaTrinhLuong.GetData(e.Link.Item.Tag.ToString());
+            //Quá trình BHXH
             this.GridControlQuaTrinhBHXH.DataSource = BHXH.HR.Business.HrQuaTrinhBHXH.GetData(e.Link.Item.Tag.ToString());
             
 
@@ -585,8 +593,7 @@ namespace BHXH.HR.UI
 
         private void DropDownButtonIn_Click(object sender, EventArgs e)
         {
-            frmLyLich2C frm = new frmLyLich2C();
-            frm.ShowDialog();
+          
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -661,6 +668,44 @@ namespace BHXH.HR.UI
             this.GridControlChiTietDaoTao.DataSource = BHXH.HR.Business.HrChiTietDaoTao.GetData(bientoancuc.MaNhanVien);
             GridControlChiTietDaoTao.Enabled = true;
         }
+
+        private void GridControlQuaTrinhCongTac_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void GridViewQuaTrinhCongTac_MouseEnter(object sender, EventArgs e)
+        {
+            MruEditThoiGianQTCT.Text = GridViewQuaTrinhCongTac.GetRowCellValue(GridViewQuaTrinhCongTac.GetSelectedRows().First(), "ThoiGian").ToString();
+            MruEditChiTietQTCT.Text = GridViewQuaTrinhCongTac.GetRowCellValue(GridViewQuaTrinhCongTac.GetSelectedRows().First(), "CongViec").ToString();
+        }
+
+        private void GridViewQuanHeGiaDinh_MouseEnter(object sender, EventArgs e)
+        {
+            lookUpEditQuanHeGiaDinh.Text = GridViewQuanHeGiaDinh.GetRowCellValue(GridViewQuanHeGiaDinh.GetSelectedRows().First(), "TenQuanHeGD").ToString();
+            MruEditHoTen.Text = GridViewQuanHeGiaDinh.GetRowCellValue(GridViewQuanHeGiaDinh.GetSelectedRows().First(), "HoTen").ToString();
+            MruEditNamSinh.Text= GridViewQuanHeGiaDinh.GetRowCellValue(GridViewQuanHeGiaDinh.GetSelectedRows().First(), "NamSinh").ToString();
+            MemoEditChiTiet.Text = GridViewQuanHeGiaDinh.GetRowCellValue(GridViewQuanHeGiaDinh.GetSelectedRows().First(), "ChiTiet").ToString();
+        }
+
+        private void lookUpEditQuanHeGiaDinh_EditValueChanged(object sender, EventArgs e)
+        {
+            this.lookUpEditQuanHeGiaDinh.Properties.DataSource = BHXH.List.Business.ListQuanHeGD.GetAll();
+            this.lookUpEditQuanHeGiaDinh.Properties.DisplayMember = "TenQuanHeGD";
+            this.lookUpEditQuanHeGiaDinh.Properties.ValueMember = "MaQuanHeGD";
+        }
+
+        private void GridViewKhenThuongKyLuat_MouseEnter(object sender, EventArgs e)
+        {
+            lookUpEditKTKL.Text = GridViewKhenThuongKyLuat.GetRowCellValue(GridViewKhenThuongKyLuat.GetSelectedRows().First(), "TenKTKL").ToString();
+            ComboBoxEditLoaiKTKL.Text = GridViewKhenThuongKyLuat.GetRowCellValue(GridViewKhenThuongKyLuat.GetSelectedRows().First(), "LoaiKTKL").ToString();
+            MruEditNam.Text = GridViewKhenThuongKyLuat.GetRowCellValue(GridViewKhenThuongKyLuat.GetSelectedRows().First(), "Nam").ToString();
+            MruEditGhiChu.Text = GridViewKhenThuongKyLuat.GetRowCellValue(GridViewKhenThuongKyLuat.GetSelectedRows().First(), "GhiChu").ToString();
+        }
+
+        private void MruEditTenKTKL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                   }
     }
     }
     
