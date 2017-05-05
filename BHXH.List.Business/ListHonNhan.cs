@@ -99,13 +99,13 @@ namespace BHXH.List.Business
             ctx.ListHonNhan.Remove(obj);
 
             ctx.SaveChanges();
-<<<<<<< HEAD
+
 
             
-=======
+
             ctx.Dispose();
 
->>>>>>> 62e536db8663a031a5bff3d40de59bee4d944a0d
+
         }
 
         public static BHXH.Data.ListHonNhan GetData(string MaHonNhan)

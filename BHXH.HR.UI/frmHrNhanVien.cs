@@ -58,7 +58,7 @@ namespace BHXH.HR.UI
         }
         private void frmHrNhanVien_Load(object sender, EventArgs e)
         {
-            
+
             string MaPhongBan;
             MaPhongBan = "";
             BHXH.Data.BHXHEntities ctx = new BHXH.Data.BHXHEntities();
@@ -93,12 +93,12 @@ namespace BHXH.HR.UI
                     group.ItemLinks.Add(item);
                 }
             }
-           
+
         }
         private void NavBarControlDSNhanVien_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
 
-            nv= BHXH.HR.Business.HrNhanVien.GetNhanVien( e.Link.Item.Tag.ToString());
+            nv = BHXH.HR.Business.HrNhanVien.GetNhanVien(e.Link.Item.Tag.ToString());
             this.LoadTabThongTinNhanVien(e.Link.Item.Tag.ToString());
             this.GridControlChiTietDaoTao.DataSource = BHXH.HR.Business.HrChiTietDaoTao.GetData(e.Link.Item.Tag.ToString());
 
@@ -115,7 +115,7 @@ namespace BHXH.HR.UI
         }
         void LoadTabThongTinNhanVien(string NhanVienID)
         {
-           
+
             //MessageBox.Show(NhanVienID);
             MruEditSoHieuNV.EditValue = nv.SoHieuNV;
             MruEditTenNhanVien.EditValue = nv.TenNhanVien;
@@ -131,19 +131,19 @@ namespace BHXH.HR.UI
             this.lookUpEditChucVuDangKiem.Properties.DataSource = BHXH.List.Business.ListChucVuDang.GetAll();
             this.lookUpEditChucVuDangKiem.Properties.DisplayMember = "TenChucVu";
             this.lookUpEditChucVuDangKiem.Properties.ValueMember = "MaChucVu";
-            lookUpEditChucVuDangKiem.EditValue = nv.MaCapUyKiem ;
+            lookUpEditChucVuDangKiem.EditValue = nv.MaCapUyKiem;
 
             ////////////CHức vụ
             this.lookUpEditChucVu.Properties.DataSource = BHXH.List.Business.ListChucVu.GetAll();
             this.lookUpEditChucVu.Properties.DisplayMember = "TenChucVu";
             this.lookUpEditChucVu.Properties.ValueMember = "MaChucVu";
-            lookUpEditChucVu.EditValue= nv.MaChucVu;
+            lookUpEditChucVu.EditValue = nv.MaChucVu;
 
             ////////////CHức danh
             this.lookUpEditChucDanh.Properties.DataSource = BHXH.List.Business.ListChucDanh.GetAll();
             this.lookUpEditChucDanh.Properties.DisplayMember = "TenChucDanh";
             this.lookUpEditChucDanh.Properties.ValueMember = "MaChucDanh";
-            lookUpEditChucDanh.EditValue = nv.MaChucDanh ;
+            lookUpEditChucDanh.EditValue = nv.MaChucDanh;
             ////
             CalcEditPCChucVu.EditValue = nv.PCChucVu;
             DateEditNgayBoNhiem.EditValue = nv.NgayBoNhiem;
@@ -196,7 +196,7 @@ namespace BHXH.HR.UI
             this.lookUpEditThanhPhanGD.Properties.DataSource = BHXH.List.Business.ListThanhPhanGD.GetAll();
             this.lookUpEditThanhPhanGD.Properties.DisplayMember = "TenThanhPhanGD";
             this.lookUpEditThanhPhanGD.Properties.ValueMember = "MaThanhPhanGD";
-            lookUpEditThanhPhanGD.EditValue = nv.MaThanhPhanGD ;
+            lookUpEditThanhPhanGD.EditValue = nv.MaThanhPhanGD;
             /////////
             DateEditNgayTD.EditValue = nv.NgayTD;
             DateEditNgayCQ.EditValue = nv.NgayCQ;
@@ -211,7 +211,7 @@ namespace BHXH.HR.UI
                 lookUpEditChiBo.EditValue = nv.MaChiBo;
             else
                 lookUpEditChiBo.EditValue = "";
-            
+
             //////
             DateEditNgayTCXH.EditValue = nv.NgayTCXH;
             DateEditNgayNhapNgu.EditValue = nv.NgayNhapNgu;
@@ -226,12 +226,12 @@ namespace BHXH.HR.UI
             this.lookUpEditTDDaoTao.Properties.DataSource = BHXH.List.Business.ListTDDaoTao.GetAll();
             this.lookUpEditTDDaoTao.Properties.DisplayMember = "TenTDDaoTao";
             this.lookUpEditTDDaoTao.Properties.ValueMember = "MaTDDaoTao";
-            lookUpEditTDDaoTao.EditValue = nv.MaTDDaoTao ;
+            lookUpEditTDDaoTao.EditValue = nv.MaTDDaoTao;
             //Trình độ lí luận chính trị
             this.lookUpEditTDLLCT.Properties.DataSource = BHXH.List.Business.ListTDLLCT.GetAll();
             this.lookUpEditTDLLCT.Properties.DisplayMember = "TenTDLLCT";
             this.lookUpEditTDLLCT.Properties.ValueMember = "MaTDLLCT";
-            lookUpEditTDLLCT.EditValue = nv.MaTDLLCT ;
+            lookUpEditTDLLCT.EditValue = nv.MaTDLLCT;
             //Ngoại ngữ
             this.lookUpEditNgoaiNgu.Properties.DataSource = BHXH.List.Business.ListNgoaiNgu.GetAll();
             this.lookUpEditNgoaiNgu.Properties.DisplayMember = "TenNgoaiNgu";
@@ -246,7 +246,7 @@ namespace BHXH.HR.UI
 
             ////
             MruEditCVDangLam.EditValue = nv.CVDangLam;
-            
+
             MruEditBac.EditValue = nv.Bac;
             MruEditHSL.EditValue = nv.HSL;
             //tên ngạch
@@ -254,7 +254,7 @@ namespace BHXH.HR.UI
             this.lookUpEditNgach.Properties.DisplayMember = "TenNgach";
             this.lookUpEditNgach.Properties.ValueMember = "MaNgach";
             lookUpEditNgach.EditValue = nv.MaNgach;
-            
+
             ///////////////
             MruEditDHDuocPhong.EditValue = nv.DHDuocPhong;
             MruEditSoTruongCT.EditValue = nv.SoTruongCT;
@@ -291,7 +291,7 @@ namespace BHXH.HR.UI
             if (!string.IsNullOrEmpty(MruEditMaKCB.Text))
                 MruEditTenKCB.EditValue = BHXH.List.Business.ListNoiKCB.GetNoiKCB(MruEditMaKCB.Text).TenNoiKCB.ToString();
         }
-   private void XtraTabPageQuaTrinhCongTac_Paint()
+        private void XtraTabPageQuaTrinhCongTac_Paint()
         {
 
         }
@@ -300,17 +300,17 @@ namespace BHXH.HR.UI
         {
 
         }
-           
+
 
         private void MruEditMaChucVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void MruEditMaChucVu_TextChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -321,49 +321,49 @@ namespace BHXH.HR.UI
 
         private void GridControlChiTietDaoTao_MouseEnter(object sender, EventArgs e)
         {
-                   }
+        }
 
         private void GridControlQuaTrinhCongTac_Click(object sender, EventArgs e)
         {
 
         }
-<<<<<<< HEAD
+
 
         private void GridViewChiTietDaoTao_MouseEnter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void GridViewChiTietDaoTao_CustomRowCellEdit(object sender, CustomRowCellEditEventArgs e)
 
         {
-            
+
             //MessageBox.Show( GridViewChiTietDaoTao.GetRowCellValue(GridViewChiTietDaoTao.GetSelectedRows().First(), "MaCMDaoTao").ToString());
         }
 
         private void MruEditMaChucVu_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void GridViewChiTietDaoTao_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-           
+
         }
 
         private void GridViewChiTietDaoTao_RowCellClick(object sender, RowCellClickEventArgs e)
         {
-             
+
         }
 
         private void lookUpEditTenChucVu_EditValueChanged(object sender, EventArgs e)
-                    {
+        {
 
-                   }
+        }
 
         private void lookUpEditTenChucVu_ListChanged(object sender, ListChangedEventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -381,7 +381,7 @@ namespace BHXH.HR.UI
             this.lookUpEditChucVu.Enabled = true;
             this.lookUpEditChucDanh.Enabled = true;
             this.CalcEditPCChucVu.Enabled = true;
-            this.DateEditNgayBoNhiem.Enabled  = true;
+            this.DateEditNgayBoNhiem.Enabled = true;
             this.DateEditNgaySinh.Enabled = true;
             this.MruEditNoiSinh.Enabled = true;
             //QQ,TQ
@@ -515,44 +515,43 @@ namespace BHXH.HR.UI
 
                 BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
-                
-                
-                ctx. SaveChanges();
-                
+
+
+                ctx.SaveChanges();
+
                 MessageBox.Show("Bạn đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-    }
-=======
 
         private void MruEditSoHieuNV_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        //public byte[] RetrieveImage()
-        //{
-        //    byte[] imageData = null;
-        //    SqlCommand cmd = new SqlCommand(" select AnhNV from dsnhanvien where idnhanvien = " + mIDChon.ToString, SoLieu);
-        //    using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SequentialAccess))
-        //    {
-        //        reader.Read();
-        //        long bytesize = reader.GetBytes(0, 0, null, 0, 0);
-        //        // Allocate byte array to hold image data
-        //        imageData = new byte[bytesize];
-        //        long bytesread = 0;
-        //        int curpos = 0;
-        //        int chunkSize = 1;
-        //        while (bytesread < bytesize)
-        //        {
-        //            bytesread += reader.GetBytes(0, curpos, imageData, curpos, chunkSize);
-        //            curpos += chunkSize;
-        //        }
-        //    }
-        //    return imageData;
-        //}
-
-
->>>>>>> 62e536db8663a031a5bff3d40de59bee4d944a0d
     }
-    
+
+    //public byte[] RetrieveImage()
+    //{
+    //    byte[] imageData = null;
+    //    SqlCommand cmd = new SqlCommand(" select AnhNV from dsnhanvien where idnhanvien = " + mIDChon.ToString, SoLieu);
+    //    using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SequentialAccess))
+    //    {
+    //        reader.Read();
+    //        long bytesize = reader.GetBytes(0, 0, null, 0, 0);
+    //        // Allocate byte array to hold image data
+    //        imageData = new byte[bytesize];
+    //        long bytesread = 0;
+    //        int curpos = 0;
+    //        int chunkSize = 1;
+    //        while (bytesread < bytesize)
+    //        {
+    //            bytesread += reader.GetBytes(0, curpos, imageData, curpos, chunkSize);
+    //            curpos += chunkSize;
+    //        }
+    //    }
+    //    return imageData;
+    //}
+
+
+
+}
+
