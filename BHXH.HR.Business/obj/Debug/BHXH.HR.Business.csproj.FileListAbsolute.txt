@@ -13,19 +13,19 @@ D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.pdb
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.csprojResolveAssemblyReference.cache
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.dll
 D:\Nam\Cong viec\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.pdb
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll.config
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.pdb
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Data.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.List.Business.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Util.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.SqlServer.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Data.pdb
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.List.Business.pdb
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Util.pdb
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.xml
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.SqlServer.xml
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.csprojResolveAssemblyReference.cache
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.dll
-D:\Nam\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.pdb
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll.config
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.HR.Business.pdb
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Data.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.List.Business.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Util.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Data.pdb
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.List.Business.pdb
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\BHXH.Util.pdb
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.xml
+D:\BHXH-All-In-One\BHXH.HR.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.csprojResolveAssemblyReference.cache
+D:\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.dll
+D:\BHXH-All-In-One\BHXH.HR.Business\obj\Debug\BHXH.HR.Business.pdb

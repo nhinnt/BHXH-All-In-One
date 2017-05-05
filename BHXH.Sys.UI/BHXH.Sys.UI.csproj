@@ -107,6 +107,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BHXH.Sys.UI.csproj.user" />
     <Content Include="Settings.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -118,10 +119,12 @@
       <Project>{b7335292-dd3a-4626-ba2f-bbe952c39d86}</Project>
       <Name>BHXH.Sys.Business</Name>
     </ProjectReference>
+
     <ProjectReference Include="..\BHXH.UIHelpers\BHXH.UIHelpers.csproj">
       <Project>{ec7643e2-1d54-459b-b7d0-da490ba78a20}</Project>
       <Name>BHXH.UIHelpers</Name>
     </ProjectReference>
+
     <ProjectReference Include="..\BHXH.Util\BHXH.Util.csproj">
       <Project>{0ae919e2-c617-4d57-a2a3-0cd4a3b32804}</Project>
       <Name>BHXH.Util</Name>

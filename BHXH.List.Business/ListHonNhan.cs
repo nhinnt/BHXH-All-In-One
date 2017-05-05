@@ -99,7 +99,12 @@ namespace BHXH.List.Business
             ctx.ListHonNhan.Remove(obj);
 
             ctx.SaveChanges();
+
+
+            
+
             ctx.Dispose();
+
 
         }
 

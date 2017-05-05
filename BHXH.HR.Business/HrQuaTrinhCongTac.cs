@@ -23,5 +23,29 @@ namespace BHXH.HR.Business
             list = query.ToList();
             return list;
         }
+        //public static BHXH.Data.HrQuaTrinhCongTac New(string TenNhanVien, string MaPhongBan)
+
+        //{
+
+        //    BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+        //    BHXH.Data.HrQuaTrinhCongTac n = new Data.HrQuaTrinhCongTac();
+        //    n.MaNhanVien = Guid.NewGuid();
+        //    n. = TenNhanVien;
+        //    n.MaPhongBan = MaPhongBan;
+        //    ctx.HrNhanVien.Add(n);
+
+        //    try
+        //    {
+        //        ctx.SaveChanges();
+        //        return n;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+
+        //    finally
+        //    { }
+        //}
     }
 }

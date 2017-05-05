@@ -8,5 +8,6 @@ namespace BHXH.HR.Business
 {
     public class Class1
     {
+      
     }
 }
