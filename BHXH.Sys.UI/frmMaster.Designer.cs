@@ -31,7 +31,6 @@
             this.navBarControlDSUser = new DevExpress.XtraNavBar.NavBarControl();
             this.tabQuanlyTK = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnMo = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnKhoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -41,10 +40,14 @@
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnMo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.treeListPhanQuyen = new DevExpress.XtraTreeList.TreeList();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlDSUser)).BeginInit();
             this.tabQuanlyTK.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListPhanQuyen)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarControlDSUser
@@ -71,7 +74,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnMo);
             this.tabPage1.Controls.Add(this.btnReset);
             this.tabPage1.Controls.Add(this.btnKhoa);
             this.tabPage1.Controls.Add(this.btnThoat);
@@ -81,6 +83,7 @@
             this.tabPage1.Controls.Add(this.txtHoTen);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.btnMo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -88,16 +91,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý tài khoản";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnMo
-            // 
-            this.btnMo.Location = new System.Drawing.Point(149, 161);
-            this.btnMo.Name = "btnMo";
-            this.btnMo.Size = new System.Drawing.Size(93, 23);
-            this.btnMo.TabIndex = 19;
-            this.btnMo.Text = "Mở tài khoản";
-            this.btnMo.UseVisualStyleBackColor = true;
-            this.btnMo.Click += new System.EventHandler(this.btnMo_Click);
             // 
             // btnReset
             // 
@@ -177,8 +170,19 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Họ và tên";
             // 
+            // btnMo
+            // 
+            this.btnMo.Location = new System.Drawing.Point(149, 161);
+            this.btnMo.Name = "btnMo";
+            this.btnMo.Size = new System.Drawing.Size(93, 23);
+            this.btnMo.TabIndex = 19;
+            this.btnMo.Text = "Mở tài khoản";
+            this.btnMo.UseVisualStyleBackColor = true;
+            this.btnMo.Click += new System.EventHandler(this.btnMo_Click);
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.treeListPhanQuyen);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -186,6 +190,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Phân Quyền chức năng";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // treeListPhanQuyen
+            // 
+            this.treeListPhanQuyen.Cursor = System.Windows.Forms.Cursors.Default;
+            this.treeListPhanQuyen.Location = new System.Drawing.Point(3, 6);
+            this.treeListPhanQuyen.Name = "treeListPhanQuyen";
+            this.treeListPhanQuyen.Size = new System.Drawing.Size(400, 200);
+            this.treeListPhanQuyen.TabIndex = 0;
+            this.treeListPhanQuyen.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListPhanQuyen_FocusedNodeChanged);
             // 
             // frmMaster
             // 
@@ -201,6 +214,8 @@
             this.tabQuanlyTK.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.treeListPhanQuyen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +236,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnMo;
+        private DevExpress.XtraTreeList.TreeList treeListPhanQuyen;
     }
 }

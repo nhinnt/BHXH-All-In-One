@@ -169,5 +169,11 @@ namespace BHXH.Sys.UI
         {
             BHXH.Sys.Business.Users.Resetpass(txtUser.Text);
         }
+
+        private void treeListPhanQuyen_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
+        {
+            treeListPhanQuyen.DataSource = BHXH.Sys.Business.Master.GetAll();
+
+        }
     }
 }
