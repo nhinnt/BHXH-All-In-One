@@ -19,9 +19,7 @@ namespace BHXH.List.Business
                         select c;
 
             list = query.ToList();
-            ctx.Dispose();
             return list;
-            
         }
 
         public static BHXH.Data.ListNoiKCB New(string MaNoiKCB, string TenNoiKCB)
@@ -40,9 +38,7 @@ namespace BHXH.List.Business
             try
             {
                 ctx.SaveChanges();
-                ctx.Dispose();
                 return n;
-               
             }
             catch (Exception)
             {
@@ -70,9 +66,7 @@ namespace BHXH.List.Business
                 ctx.SaveChanges();
             }
             finally
-            {
-                ctx.Dispose();
-            }
+            { }
         }
         public static Data.ListNoiKCB IsExisted(string MaNoiKCB, string TenNoiKCB)
         {
@@ -81,13 +75,10 @@ namespace BHXH.List.Business
                         where c.MaNoiKCB == MaNoiKCB && c.TenNoiKCB == TenNoiKCB
                         select c;
             if (query.Count() > 0)
-            {
-                ctx.Dispose();
                 return query.First();
-            }
             else
                 return null;
-          
+
 
 
         }
@@ -101,7 +92,7 @@ namespace BHXH.List.Business
             ctx.ListNoiKCB.Remove(obj);
             
             ctx.SaveChanges();
-            ctx.Dispose();
+
 
         }
 
@@ -111,9 +102,11 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListNoiKCB
                         where c.MaNoiKCB == MaNoiKCB
                         select c;
-            ctx.Dispose();
-            return query.ToList().First();
-            
+            if (query.Count() > 0)
+                return query.ToList().First();
+            else
+                return null;
+
 
         }
         public static BHXH.Data.ListNoiKCB GetNoiKCBTinh(string MaTinh)
@@ -122,9 +115,9 @@ namespace BHXH.List.Business
             var query = from c in ctx.ListNoiKCB 
                         where c.MaTinh == MaTinh
                         select c ;
-            ctx.Dispose();
-            return query.ToList().First();
           
+                return query.ToList().First();
+            
 
         }
         // public void STT()
