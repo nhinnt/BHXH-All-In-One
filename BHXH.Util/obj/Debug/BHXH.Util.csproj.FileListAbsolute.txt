@@ -26,3 +26,12 @@ D:\Nam\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.SqlServer.xml
 D:\Nam\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.csprojResolveAssemblyReference.cache
 D:\Nam\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.dll
 D:\Nam\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.pdb
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\BHXH.Util.dll.config
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\BHXH.Util.dll
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\BHXH.Util.pdb
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.dll
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.SqlServer.dll
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.xml
+D:\BHXH-All-In-One\BHXH.Util\bin\Debug\EntityFramework.SqlServer.xml
+D:\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.dll
+D:\BHXH-All-In-One\BHXH.Util\obj\Debug\BHXH.Util.pdb
