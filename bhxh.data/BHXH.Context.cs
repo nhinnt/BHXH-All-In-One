@@ -12,6 +12,8 @@ namespace BHXH.Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class BHXHEntities : DbContext
     {
@@ -40,6 +42,7 @@ namespace BHXH.Data
         public virtual DbSet<HrTyLeBHXH> HrTyLeBHXH { get; set; }
         public virtual DbSet<HrThangBangLuong> HrThangBangLuong { get; set; }
         public virtual DbSet<ListBangCap> ListBangCap { get; set; }
+        public virtual DbSet<ListBoPhan> ListBoPhan { get; set; }
         public virtual DbSet<ListCapKTKL> ListCapKTKL { get; set; }
         public virtual DbSet<ListCMDaoTao> ListCMDaoTao { get; set; }
         public virtual DbSet<ListChiBo> ListChiBo { get; set; }
@@ -76,5 +79,159 @@ namespace BHXH.Data
         public virtual DbSet<SysUser> SysUser { get; set; }
         public virtual DbSet<SysUserRoles> SysUserRoles { get; set; }
         public virtual DbSet<SysUserSettings> SysUserSettings { get; set; }
+    
+        public virtual int DBA_RestoreDB(string p_strDBNameTo, string p_strDBNameFrom, string p_strFQNRestoreFileName)
+        {
+            var p_strDBNameToParameter = p_strDBNameTo != null ?
+                new ObjectParameter("p_strDBNameTo", p_strDBNameTo) :
+                new ObjectParameter("p_strDBNameTo", typeof(string));
+    
+            var p_strDBNameFromParameter = p_strDBNameFrom != null ?
+                new ObjectParameter("p_strDBNameFrom", p_strDBNameFrom) :
+                new ObjectParameter("p_strDBNameFrom", typeof(string));
+    
+            var p_strFQNRestoreFileNameParameter = p_strFQNRestoreFileName != null ?
+                new ObjectParameter("p_strFQNRestoreFileName", p_strFQNRestoreFileName) :
+                new ObjectParameter("p_strFQNRestoreFileName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DBA_RestoreDB", p_strDBNameToParameter, p_strDBNameFromParameter, p_strFQNRestoreFileNameParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual ObjectResult<XemQuaTrinhNew_Result> XemQuaTrinhNew(string fullName, Nullable<System.DateTime> birthday)
+        {
+            var fullNameParameter = fullName != null ?
+                new ObjectParameter("FullName", fullName) :
+                new ObjectParameter("FullName", typeof(string));
+    
+            var birthdayParameter = birthday.HasValue ?
+                new ObjectParameter("Birthday", birthday) :
+                new ObjectParameter("Birthday", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<XemQuaTrinhNew_Result>("XemQuaTrinhNew", fullNameParameter, birthdayParameter);
+        }
+    
+        public virtual ObjectResult<XemQuaTrinhNewAll_Result> XemQuaTrinhNewAll(string fullName, Nullable<System.DateTime> birthday, string soBHXH, string sOCMND)
+        {
+            var fullNameParameter = fullName != null ?
+                new ObjectParameter("FullName", fullName) :
+                new ObjectParameter("FullName", typeof(string));
+    
+            var birthdayParameter = birthday.HasValue ?
+                new ObjectParameter("Birthday", birthday) :
+                new ObjectParameter("Birthday", typeof(System.DateTime));
+    
+            var soBHXHParameter = soBHXH != null ?
+                new ObjectParameter("SoBHXH", soBHXH) :
+                new ObjectParameter("SoBHXH", typeof(string));
+    
+            var sOCMNDParameter = sOCMND != null ?
+                new ObjectParameter("SOCMND", sOCMND) :
+                new ObjectParameter("SOCMND", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<XemQuaTrinhNewAll_Result>("XemQuaTrinhNewAll", fullNameParameter, birthdayParameter, soBHXHParameter, sOCMNDParameter);
+        }
     }
 }

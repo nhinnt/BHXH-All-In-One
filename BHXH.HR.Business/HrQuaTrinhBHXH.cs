@@ -16,6 +16,7 @@ namespace BHXH.HR.Business
 
             var query = (from c in ctx.HrQuaTrinhBHXH
                          where c.MaNhanVien.ToString() == code
+                         orderby c.STT ascending 
                          select c);
 
             list = query.ToList();

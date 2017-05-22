@@ -323,8 +323,9 @@ namespace BHXH.App
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Login();
-            DoSecurity();
+          
+            //Login();
+            //DoSecurity();
         }
         void Login()
         {
@@ -341,6 +342,32 @@ namespace BHXH.App
         void DoSecurity()
         {
 
+
+        }
+
+        private void ListNhanVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HR.UI.frmDanhSachNhanVien  f = new HR.UI.frmDanhSachNhanVien();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void HoSoCaNhan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HR.UI.frmHrNhanVien f = new HR.UI.frmHrNhanVien();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void TrinhDoChuyenMon_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HR.UI.frmSearchOnRequest  f = new HR.UI.frmSearchOnRequest();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
 
         }
     }

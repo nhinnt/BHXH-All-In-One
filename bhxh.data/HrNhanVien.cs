@@ -106,6 +106,7 @@ namespace BHXH.Data
         public Nullable<bool> DaNLTruocTH { get; set; }
         public byte[] AnhNV { get; set; }
         public string MaChiBo { get; set; }
+        public string MaBoPhan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HrChiTietDaoTao> HrChiTietDaoTao { get; set; }

@@ -36,25 +36,28 @@
             this.LabelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.SplitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.lookUpEditDMPhongBan = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEditBoPhan = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelBoPhan = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEditPhongBan = new DevExpress.XtraEditors.LookUpEdit();
+            this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
+            this.txtTenNhanVien = new System.Windows.Forms.TextBox();
+            this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.LabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.LabelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.SimpleButtonThoat = new DevExpress.XtraEditors.SimpleButton();
             this.SimpleButtonXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.SimpleButtonGhiSua = new DevExpress.XtraEditors.SimpleButton();
             this.SimpleButtonSua = new DevExpress.XtraEditors.SimpleButton();
             this.SimpleButtonMoi = new DevExpress.XtraEditors.SimpleButton();
             this.SimpleButtonQua = new DevExpress.XtraEditors.SimpleButton();
             this.SimpleButtonGhi = new DevExpress.XtraEditors.SimpleButton();
-            this.txtMaNhanVien = new System.Windows.Forms.TextBox();
-            this.txtTenNhanVien = new System.Windows.Forms.TextBox();
-            this.lookUpEditPhongBan = new DevExpress.XtraEditors.LookUpEdit();
-            this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
-            this.cmdGhi = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewDSNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControlDSNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerControl1)).BeginInit();
             this.SplitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDMPhongBan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditBoPhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPhongBan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +123,7 @@
             this.GridControlDSNhanVien.Location = new System.Drawing.Point(0, 51);
             this.GridControlDSNhanVien.MainView = this.GridViewDSNhanVien;
             this.GridControlDSNhanVien.Name = "GridControlDSNhanVien";
-            this.GridControlDSNhanVien.Size = new System.Drawing.Size(917, 301);
+            this.GridControlDSNhanVien.Size = new System.Drawing.Size(917, 298);
             this.GridControlDSNhanVien.TabIndex = 0;
             this.GridControlDSNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridViewDSNhanVien,
@@ -153,6 +156,8 @@
             this.SplitContainerControl1.Panel1.Controls.Add(this.LabelControl3);
             this.SplitContainerControl1.Panel1.Controls.Add(this.GridControlDSNhanVien);
             this.SplitContainerControl1.Panel1.Text = "Panel1";
+            this.SplitContainerControl1.Panel2.Controls.Add(this.lookUpEditBoPhan);
+            this.SplitContainerControl1.Panel2.Controls.Add(this.labelBoPhan);
             this.SplitContainerControl1.Panel2.Controls.Add(this.lookUpEditPhongBan);
             this.SplitContainerControl1.Panel2.Controls.Add(this.lblPhongBan);
             this.SplitContainerControl1.Panel2.Controls.Add(this.txtTenNhanVien);
@@ -161,14 +166,14 @@
             this.SplitContainerControl1.Panel2.Controls.Add(this.LabelControl1);
             this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonThoat);
             this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonXoa);
-            this.SplitContainerControl1.Panel2.Controls.Add(this.cmdGhi);
+            this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonGhiSua);
             this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonSua);
             this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonMoi);
             this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonQua);
             this.SplitContainerControl1.Panel2.Controls.Add(this.SimpleButtonGhi);
             this.SplitContainerControl1.Panel2.Text = "Panel2";
             this.SplitContainerControl1.Size = new System.Drawing.Size(917, 494);
-            this.SplitContainerControl1.SplitterPosition = 126;
+            this.SplitContainerControl1.SplitterPosition = 128;
             this.SplitContainerControl1.TabIndex = 1;
             this.SplitContainerControl1.Text = "SplitContainerControl1";
             // 
@@ -190,6 +195,81 @@
             this.lookUpEditDMPhongBan.TabIndex = 145;
             this.lookUpEditDMPhongBan.EditValueChanged += new System.EventHandler(this.lookUpEditDMPhongBan_EditValueChanged);
             // 
+            // lookUpEditBoPhan
+            // 
+            this.lookUpEditBoPhan.AllowDrop = true;
+            this.lookUpEditBoPhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lookUpEditBoPhan.EditValue = "";
+            this.lookUpEditBoPhan.Location = new System.Drawing.Point(504, 66);
+            this.lookUpEditBoPhan.Name = "lookUpEditBoPhan";
+            this.lookUpEditBoPhan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditBoPhan.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenBoPhan", 40, "Tên bộ phận")});
+            this.lookUpEditBoPhan.Properties.DropDownRows = 20;
+            this.lookUpEditBoPhan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpEditBoPhan.Size = new System.Drawing.Size(405, 20);
+            this.lookUpEditBoPhan.TabIndex = 146;
+            this.lookUpEditBoPhan.Visible = false;
+            this.lookUpEditBoPhan.EditValueChanged += new System.EventHandler(this.lookUpEditBoPhan_EditValueChanged);
+            // 
+            // labelBoPhan
+            // 
+            this.labelBoPhan.Location = new System.Drawing.Point(459, 69);
+            this.labelBoPhan.Name = "labelBoPhan";
+            this.labelBoPhan.Size = new System.Drawing.Size(39, 13);
+            this.labelBoPhan.TabIndex = 13;
+            this.labelBoPhan.Text = "Bộ phận";
+            this.labelBoPhan.Visible = false;
+            // 
+            // lookUpEditPhongBan
+            // 
+            this.lookUpEditPhongBan.AllowDrop = true;
+            this.lookUpEditPhongBan.EditValue = "";
+            this.lookUpEditPhongBan.Location = new System.Drawing.Point(91, 66);
+            this.lookUpEditPhongBan.Name = "lookUpEditPhongBan";
+            this.lookUpEditPhongBan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditPhongBan.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenPhongBan", 40, "Tên phòng ban")});
+            this.lookUpEditPhongBan.Properties.DropDownRows = 20;
+            this.lookUpEditPhongBan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpEditPhongBan.Size = new System.Drawing.Size(352, 20);
+            this.lookUpEditPhongBan.TabIndex = 146;
+            this.lookUpEditPhongBan.Visible = false;
+            this.lookUpEditPhongBan.EditValueChanged += new System.EventHandler(this.lookUpEditPhongBan_EditValueChanged);
+            this.lookUpEditPhongBan.Leave += new System.EventHandler(this.lookUpEditPhongBan_Leave);
+            // 
+            // lblPhongBan
+            // 
+            this.lblPhongBan.Location = new System.Drawing.Point(7, 69);
+            this.lblPhongBan.Name = "lblPhongBan";
+            this.lblPhongBan.Size = new System.Drawing.Size(51, 13);
+            this.lblPhongBan.TabIndex = 13;
+            this.lblPhongBan.Text = "Phòng ban";
+            this.lblPhongBan.Visible = false;
+            // 
+            // txtTenNhanVien
+            // 
+            this.txtTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenNhanVien.Enabled = false;
+            this.txtTenNhanVien.Location = new System.Drawing.Point(91, 39);
+            this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.Size = new System.Drawing.Size(818, 21);
+            this.txtTenNhanVien.TabIndex = 27;
+            // 
+            // txtMaNhanVien
+            // 
+            this.txtMaNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaNhanVien.Enabled = false;
+            this.txtMaNhanVien.Location = new System.Drawing.Point(91, 8);
+            this.txtMaNhanVien.Name = "txtMaNhanVien";
+            this.txtMaNhanVien.Size = new System.Drawing.Size(818, 21);
+            this.txtMaNhanVien.TabIndex = 26;
+            // 
             // LabelControl2
             // 
             this.LabelControl2.Location = new System.Drawing.Point(7, 39);
@@ -208,7 +288,7 @@
             // 
             // SimpleButtonThoat
             // 
-            this.SimpleButtonThoat.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SimpleButtonThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SimpleButtonThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.SimpleButtonThoat.Appearance.Options.UseFont = true;
             this.SimpleButtonThoat.Location = new System.Drawing.Point(834, 92);
@@ -219,7 +299,7 @@
             // 
             // SimpleButtonXoa
             // 
-            this.SimpleButtonXoa.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SimpleButtonXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SimpleButtonXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.SimpleButtonXoa.Appearance.Options.UseFont = true;
             this.SimpleButtonXoa.Location = new System.Drawing.Point(753, 92);
@@ -229,9 +309,22 @@
             this.SimpleButtonXoa.Text = "Xoá";
             this.SimpleButtonXoa.Click += new System.EventHandler(this.SimpleButtonXoa_Click);
             // 
+            // SimpleButtonGhiSua
+            // 
+            this.SimpleButtonGhiSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SimpleButtonGhiSua.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.SimpleButtonGhiSua.Appearance.Options.UseFont = true;
+            this.SimpleButtonGhiSua.Enabled = false;
+            this.SimpleButtonGhiSua.Location = new System.Drawing.Point(665, 94);
+            this.SimpleButtonGhiSua.Name = "SimpleButtonGhiSua";
+            this.SimpleButtonGhiSua.Size = new System.Drawing.Size(75, 24);
+            this.SimpleButtonGhiSua.TabIndex = 18;
+            this.SimpleButtonGhiSua.Text = "Ghi";
+            this.SimpleButtonGhiSua.Click += new System.EventHandler(this.cmdGhi_Click);
+            // 
             // SimpleButtonSua
             // 
-            this.SimpleButtonSua.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SimpleButtonSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SimpleButtonSua.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.SimpleButtonSua.Appearance.Options.UseFont = true;
             this.SimpleButtonSua.Location = new System.Drawing.Point(584, 94);
@@ -243,7 +336,7 @@
             // 
             // SimpleButtonMoi
             // 
-            this.SimpleButtonMoi.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SimpleButtonMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SimpleButtonMoi.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.SimpleButtonMoi.Appearance.Options.UseFont = true;
             this.SimpleButtonMoi.Location = new System.Drawing.Point(6, 94);
@@ -255,7 +348,7 @@
             // 
             // SimpleButtonQua
             // 
-            this.SimpleButtonQua.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SimpleButtonQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SimpleButtonQua.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.SimpleButtonQua.Appearance.Options.UseFont = true;
             this.SimpleButtonQua.Location = new System.Drawing.Point(168, 94);
@@ -267,7 +360,7 @@
             // 
             // SimpleButtonGhi
             // 
-            this.SimpleButtonGhi.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SimpleButtonGhi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SimpleButtonGhi.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.SimpleButtonGhi.Appearance.Options.UseFont = true;
             this.SimpleButtonGhi.Enabled = false;
@@ -277,66 +370,6 @@
             this.SimpleButtonGhi.TabIndex = 15;
             this.SimpleButtonGhi.Text = "Ghi";
             this.SimpleButtonGhi.Click += new System.EventHandler(this.SimpleButtonGhi_Click);
-            // 
-            // txtMaNhanVien
-            // 
-            this.txtMaNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMaNhanVien.Enabled = false;
-            this.txtMaNhanVien.Location = new System.Drawing.Point(91, 8);
-            this.txtMaNhanVien.Name = "txtMaNhanVien";
-            this.txtMaNhanVien.Size = new System.Drawing.Size(818, 21);
-            this.txtMaNhanVien.TabIndex = 26;
-            // 
-            // txtTenNhanVien
-            // 
-            this.txtTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTenNhanVien.Enabled = false;
-            this.txtTenNhanVien.Location = new System.Drawing.Point(91, 39);
-            this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.Size = new System.Drawing.Size(818, 21);
-            this.txtTenNhanVien.TabIndex = 27;
-            // 
-            // lookUpEditPhongBan
-            // 
-            this.lookUpEditPhongBan.AllowDrop = true;
-            this.lookUpEditPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lookUpEditPhongBan.EditValue = "";
-            this.lookUpEditPhongBan.Location = new System.Drawing.Point(91, 66);
-            this.lookUpEditPhongBan.Name = "lookUpEditPhongBan";
-            this.lookUpEditPhongBan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditPhongBan.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenPhongBan", 40, "Tên phòng ban")});
-            this.lookUpEditPhongBan.Properties.DropDownRows = 20;
-            this.lookUpEditPhongBan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEditPhongBan.Size = new System.Drawing.Size(818, 20);
-            this.lookUpEditPhongBan.TabIndex = 146;
-            this.lookUpEditPhongBan.Visible = false;
-            // 
-            // lblPhongBan
-            // 
-            this.lblPhongBan.Location = new System.Drawing.Point(7, 69);
-            this.lblPhongBan.Name = "lblPhongBan";
-            this.lblPhongBan.Size = new System.Drawing.Size(51, 13);
-            this.lblPhongBan.TabIndex = 13;
-            this.lblPhongBan.Text = "Phòng ban";
-            this.lblPhongBan.Visible = false;
-            // 
-            // cmdGhi
-            // 
-            this.cmdGhi.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cmdGhi.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cmdGhi.Appearance.Options.UseFont = true;
-            this.cmdGhi.Enabled = false;
-            this.cmdGhi.Location = new System.Drawing.Point(665, 94);
-            this.cmdGhi.Name = "cmdGhi";
-            this.cmdGhi.Size = new System.Drawing.Size(75, 24);
-            this.cmdGhi.TabIndex = 18;
-            this.cmdGhi.Text = "Ghi";
-            this.cmdGhi.Click += new System.EventHandler(this.cmdGhi_Click);
             // 
             // frmDanhSachNhanVien
             // 
@@ -354,6 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerControl1)).EndInit();
             this.SplitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDMPhongBan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditBoPhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPhongBan.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -380,6 +414,8 @@
         private System.Windows.Forms.TextBox txtMaNhanVien;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditPhongBan;
         internal DevExpress.XtraEditors.LabelControl lblPhongBan;
-        internal DevExpress.XtraEditors.SimpleButton cmdGhi;
+        internal DevExpress.XtraEditors.SimpleButton SimpleButtonGhiSua;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditBoPhan;
+        internal DevExpress.XtraEditors.LabelControl labelBoPhan;
     }
 }

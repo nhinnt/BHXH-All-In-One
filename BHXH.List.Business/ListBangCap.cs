@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BHXH.List.Business
 {
-    public class ListBangCap   
+    public class ListBangCap
     {
         public static IEnumerable<BHXH.Data.ListBangCap> GetAll()
         {
@@ -22,16 +22,16 @@ namespace BHXH.List.Business
         }
 
         public static BHXH.Data.ListBangCap New(string MaBangCap, string TenBangCap)
-           
+
         {
-            if (MaBangCap== "" || TenBangCap== "")
+            if (MaBangCap == "" || TenBangCap == "")
                 return null;
-            if ( IsExisted (MaBangCap, TenBangCap) != null)
-                return IsExisted (MaBangCap, TenBangCap);
-              BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+            if (IsExisted(MaBangCap, TenBangCap) != null)
+                return IsExisted(MaBangCap, TenBangCap);
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             BHXH.Data.ListBangCap n = new Data.ListBangCap();
-            n.MaBangCap= MaBangCap;
-            n.TenBangCap= TenBangCap;
+            n.MaBangCap = MaBangCap;
+            n.TenBangCap = TenBangCap;
             ctx.ListBangCap.Add(n);
 
             try
@@ -55,11 +55,11 @@ namespace BHXH.List.Business
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListBangCap
-                        where c.MaBangCap== MaBangCap
+                        where c.MaBangCap == MaBangCap
                         select c;
             BHXH.Data.ListBangCap n = query.First();
-            n.MaBangCap= MaBangCap;
-            n.TenBangCap= TenBangCap;
+            n.MaBangCap = MaBangCap;
+            n.TenBangCap = TenBangCap;
 
             try
             {
@@ -74,7 +74,7 @@ namespace BHXH.List.Business
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var query = from c in ctx.ListBangCap
-                        where c.MaBangCap== MaBangCap&& c.TenBangCap== TenBangCap
+                        where c.MaBangCap == MaBangCap && c.TenBangCap == TenBangCap
                         select c;
             if (query.Count() > 0)
                 return query.First();
@@ -89,12 +89,12 @@ namespace BHXH.List.Business
         {
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
             var obj = new Data.ListBangCap { MaBangCap = MaBangCap };
-           
+
             ctx.ListBangCap.Attach(obj);
-        ctx.ListBangCap.Remove(obj);
+            ctx.ListBangCap.Remove(obj);
 
 
-          ctx.SaveChanges();
+            ctx.SaveChanges();
 
             ctx.Dispose();
         }

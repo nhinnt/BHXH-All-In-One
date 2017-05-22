@@ -10,7 +10,6 @@
             <PropertyRef Name="QuaTrinhDaoTaoID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
           <Property Name="MaCMDaoTao" Type="nvarchar" MaxLength="255" />
           <Property Name="TenTruong" Type="nvarchar" MaxLength="100" />
           <Property Name="NganhHoc" Type="nvarchar" MaxLength="100" />
@@ -19,6 +18,7 @@
           <Property Name="MaBangCap" Type="nvarchar" MaxLength="255" />
           <Property Name="XepLoai" Type="nvarchar" MaxLength="20" />
           <Property Name="QuaTrinhDaoTaoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
         </EntityType>
         <EntityType Name="HrHSLTangThem">
           <Key>
@@ -44,13 +44,12 @@
             <PropertyRef Name="KhenThuongKyLuatID" />
           </Key>
           <Property Name="MaNhanVien" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
           <Property Name="MaKTKL" Type="nvarchar" MaxLength="255" />
           <Property Name="Nam" Type="varchar" MaxLength="4" />
           <Property Name="GhiChu" Type="ntext" />
           <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" />
-          <Property Name="KhenThuongKyLuat" Type="uniqueidentifier" Nullable="false" />
           <Property Name="KhenThuongKyLuatID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="STT" Type="numeric" Precision="5" Scale="0" />
         </EntityType>
         <EntityType Name="HrLuongToiThieu">
           <Key>
@@ -162,6 +161,7 @@
           <Property Name="DaNLTruocTH" Type="bit" />
           <Property Name="AnhNV" Type="image" />
           <Property Name="MaChiBo" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaBoPhan" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="HrPSBHXH">
           <Key>
@@ -313,6 +313,14 @@
           <Property Name="MaBangCap" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="TenBangCap" Type="nvarchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="ListBoPhan">
+          <Key>
+            <PropertyRef Name="MaBoPhan" />
+          </Key>
+          <Property Name="MaBoPhan" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TenBoPhan" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="ListCapKTKL">
           <Key>
             <PropertyRef Name="MaCapKTKL" />
@@ -443,6 +451,7 @@
           </Key>
           <Property Name="MaPhongBan" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="TenPhongBan" Type="nvarchar" MaxLength="255" />
+          <Property Name="BoPhan" Type="bit" />
         </EntityType>
         <EntityType Name="ListQuanHeGD">
           <Key>
@@ -1882,6 +1891,110 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="DBA_RestoreDB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_strDBNameTo" Type="nvarchar" Mode="In" />
+          <Parameter Name="p_strDBNameFrom" Type="nvarchar" Mode="In" />
+          <Parameter Name="p_strFQNRestoreFileName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="f_Check5Years" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_Check5Years_1Database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="maquan" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_Check5Years_1Database_New" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="maquan" Type="nvarchar" Mode="In" />
+          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+          <Parameter Name="SoCMND" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_Check5Years_1Database_SoBHXH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="maquan" Type="nvarchar" Mode="In" />
+          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_Check5Years2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="f_Check5YearsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+          <Parameter Name="SoCMND" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_KhongDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+          <Parameter Name="inputVar" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="f_KhongDau_TCVN3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar(max)">
+          <Parameter Name="inputVar" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="f_TCVN3ToUnicode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="strInput" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="f_ToCamelCase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="input" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_TraCuuSoSo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="f_TraCuuSoSoNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+          <Parameter Name="SoCMND" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="f_Unicode2TCVN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="strInput" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="XemQuaTrinhNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="XemQuaTrinhNewAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Birthday" Type="datetime" Mode="In" />
+          <Parameter Name="SoBHXH" Type="nvarchar" Mode="In" />
+          <Parameter Name="SOCMND" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="BHXHStoreContainer">
           <EntitySet Name="HrChiTietDaoTao" EntityType="Self.HrChiTietDaoTao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrHSLTangThem" EntityType="Self.HrHSLTangThem" Schema="dbo" store:Type="Tables" />
@@ -1898,6 +2011,7 @@
           <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListBoPhan" EntityType="Self.ListBoPhan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListChiBo" EntityType="Self.ListChiBo" Schema="dbo" store:Type="Tables" />
@@ -2373,7 +2487,6 @@
             <PropertyRef Name="QuaTrinhDaoTaoID" />
           </Key>
           <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
           <Property Name="MaCMDaoTao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="TenTruong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="NganhHoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -2382,6 +2495,7 @@
           <Property Name="MaBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="XepLoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="QuaTrinhDaoTaoID" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
           <NavigationProperty Name="ListBangCap" Relationship="Self.FK__HrChiTiet__MaBan__4F32B74A" FromRole="HrChiTietDaoTao" ToRole="ListBangCap" />
           <NavigationProperty Name="ListCMDaoTao" Relationship="Self.FK__HrChiTiet__MaCMD__511AFFBC" FromRole="HrChiTietDaoTao" ToRole="ListCMDaoTao" />
           <NavigationProperty Name="ListLHDaoTao" Relationship="Self.FK__HrChiTiet__MaLHD__4E3E9311" FromRole="HrChiTietDaoTao" ToRole="ListLHDaoTao" />
@@ -2411,13 +2525,12 @@
             <PropertyRef Name="KhenThuongKyLuatID" />
           </Key>
           <Property Name="MaNhanVien" Type="Guid" Nullable="false" />
-          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
           <Property Name="MaKTKL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="KhenThuongKyLuat" Type="Guid" Nullable="false" />
           <Property Name="KhenThuongKyLuatID" Type="Guid" Nullable="false" />
+          <Property Name="STT" Type="Decimal" Precision="5" Scale="0" />
           <NavigationProperty Name="ListKTKL" Relationship="Self.FK__HrKhenThu__MaKTK__16644E42" FromRole="HrKhenThuongKyLuat" ToRole="ListKTKL" />
           <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrKhenThuongKyLuat" ToRole="HrNhanVien" />
         </EntityType>
@@ -2531,6 +2644,7 @@
           <Property Name="DaNLTruocTH" Type="Boolean" />
           <Property Name="AnhNV" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="MaChiBo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MaBoPhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HrChiTietDaoTao" Relationship="Self.FK__HrChiTiet__MaNha__4C564A9F" FromRole="HrNhanVien" ToRole="HrChiTietDaoTao" />
           <NavigationProperty Name="HrKhenThuongKyLuat" Relationship="Self.FK__HrKhenThu__MaNha__119F9925" FromRole="HrNhanVien" ToRole="HrKhenThuongKyLuat" />
           <NavigationProperty Name="ListChucVuDang" Relationship="Self.FK__HrNhanVie__MaCap__02284B6B" FromRole="HrNhanVien" ToRole="ListChucVuDang" />
@@ -2790,6 +2904,14 @@
           <Property Name="TenBangCap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HrChiTietDaoTao" Relationship="Self.FK__HrChiTiet__MaBan__4F32B74A" FromRole="ListBangCap" ToRole="HrChiTietDaoTao" />
         </EntityType>
+        <EntityType Name="ListBoPhan">
+          <Key>
+            <PropertyRef Name="MaBoPhan" />
+          </Key>
+          <Property Name="MaBoPhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenBoPhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="ListCapKTKL">
           <Key>
             <PropertyRef Name="MaCapKTKL" />
@@ -2948,6 +3070,7 @@
           </Key>
           <Property Name="MaPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenPhongBan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BoPhan" Type="Boolean" />
           <NavigationProperty Name="HrNhanVien" Relationship="Self.FK__HrNhanVie__MaPho__0F824689" FromRole="ListPhongBan" ToRole="HrNhanVien" />
           <NavigationProperty Name="HrNhanVien1" Relationship="Self.FK__HrNhanVie__MaPho__10766AC2" FromRole="ListPhongBan" ToRole="HrNhanVien" />
           <NavigationProperty Name="HrNhanVien2" Relationship="Self.FK__HrNhanVie__MaPho__658C0CBD" FromRole="ListPhongBan" ToRole="HrNhanVien" />
@@ -4475,6 +4598,7 @@
           <EntitySet Name="HrTyLeBHXH" EntityType="Self.HrTyLeBHXH" />
           <EntitySet Name="HrThangBangLuong" EntityType="Self.HrThangBangLuong" />
           <EntitySet Name="ListBangCap" EntityType="Self.ListBangCap" />
+          <EntitySet Name="ListBoPhan" EntityType="Self.ListBoPhan" />
           <EntitySet Name="ListCapKTKL" EntityType="Self.ListCapKTKL" />
           <EntitySet Name="ListCMDaoTao" EntityType="Self.ListCMDaoTao" />
           <EntitySet Name="ListChiBo" EntityType="Self.ListChiBo" />
@@ -4939,7 +5063,85 @@
             <End Role="SysUser" EntitySet="SysUser" />
             <End Role="SysUserSettings" EntitySet="SysUserSettings" />
           </AssociationSet>
+          <FunctionImport Name="DBA_RestoreDB">
+            <Parameter Name="p_strDBNameTo" Mode="In" Type="String" />
+            <Parameter Name="p_strDBNameFrom" Mode="In" Type="String" />
+            <Parameter Name="p_strFQNRestoreFileName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BHXH.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BHXH.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="XemQuaTrinhNew" ReturnType="Collection(BHXH.XemQuaTrinhNew_Result)">
+            <Parameter Name="FullName" Mode="In" Type="String" />
+            <Parameter Name="Birthday" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="XemQuaTrinhNewAll" ReturnType="Collection(BHXH.XemQuaTrinhNewAll_Result)">
+            <Parameter Name="FullName" Mode="In" Type="String" />
+            <Parameter Name="Birthday" Mode="In" Type="DateTime" />
+            <Parameter Name="SoBHXH" Mode="In" Type="String" />
+            <Parameter Name="SOCMND" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="XemQuaTrinhNew_Result">
+          <Property Type="Int32" Name="NumOfMonth" Nullable="true" />
+          <Property Type="String" Name="SOBHXH" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="SOKCB" Nullable="false" MaxLength="16" />
+          <Property Type="DateTime" Name="BeginDate" Nullable="false" Precision="16" />
+          <Property Type="DateTime" Name="Enddate" Nullable="false" Precision="16" />
+          <Property Type="String" Name="MADVI" Nullable="false" MaxLength="7" />
+          <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="MaPB" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="XemQuaTrinhNewAll_Result">
+          <Property Type="Int32" Name="NumOfMonth" Nullable="true" />
+          <Property Type="String" Name="SOBHXH" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="SOKCB" Nullable="false" MaxLength="16" />
+          <Property Type="DateTime" Name="BeginDate" Nullable="false" Precision="16" />
+          <Property Type="DateTime" Name="Enddate" Nullable="false" Precision="16" />
+          <Property Type="String" Name="MADVI" Nullable="false" MaxLength="7" />
+          <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="MaPB" Nullable="true" MaxLength="30" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -4950,7 +5152,6 @@
             <EntityTypeMapping TypeName="BHXH.HrChiTietDaoTao">
               <MappingFragment StoreEntitySet="HrChiTietDaoTao">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="MaCMDaoTao" ColumnName="MaCMDaoTao" />
                 <ScalarProperty Name="TenTruong" ColumnName="TenTruong" />
                 <ScalarProperty Name="NganhHoc" ColumnName="NganhHoc" />
@@ -4959,6 +5160,7 @@
                 <ScalarProperty Name="MaBangCap" ColumnName="MaBangCap" />
                 <ScalarProperty Name="XepLoai" ColumnName="XepLoai" />
                 <ScalarProperty Name="QuaTrinhDaoTaoID" ColumnName="QuaTrinhDaoTaoID" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4986,13 +5188,12 @@
             <EntityTypeMapping TypeName="BHXH.HrKhenThuongKyLuat">
               <MappingFragment StoreEntitySet="HrKhenThuongKyLuat">
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="MaKTKL" ColumnName="MaKTKL" />
                 <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
-                <ScalarProperty Name="KhenThuongKyLuat" ColumnName="KhenThuongKyLuat" />
                 <ScalarProperty Name="KhenThuongKyLuatID" ColumnName="KhenThuongKyLuatID" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5107,6 +5308,7 @@
                 <ScalarProperty Name="DaNLTruocTH" ColumnName="DaNLTruocTH" />
                 <ScalarProperty Name="AnhNV" ColumnName="AnhNV" />
                 <ScalarProperty Name="MaChiBo" ColumnName="MaChiBo" />
+                <ScalarProperty Name="MaBoPhan" ColumnName="MaBoPhan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5269,6 +5471,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ListBoPhan">
+            <EntityTypeMapping TypeName="BHXH.ListBoPhan">
+              <MappingFragment StoreEntitySet="ListBoPhan">
+                <ScalarProperty Name="MaBoPhan" ColumnName="MaBoPhan" />
+                <ScalarProperty Name="TenBoPhan" ColumnName="TenBoPhan" />
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ListCapKTKL">
             <EntityTypeMapping TypeName="BHXH.ListCapKTKL">
               <MappingFragment StoreEntitySet="ListCapKTKL">
@@ -5415,6 +5626,7 @@
               <MappingFragment StoreEntitySet="ListPhongBan">
                 <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
                 <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+                <ScalarProperty Name="BoPhan" ColumnName="BoPhan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5590,6 +5802,61 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DBA_RestoreDB" FunctionName="BHXH.Store.DBA_RestoreDB" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BHXH.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BHXH.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BHXH.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BHXH.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BHXH.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BHXH.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BHXH.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BHXH.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BHXH.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="XemQuaTrinhNew" FunctionName="BHXH.Store.XemQuaTrinhNew">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BHXH.XemQuaTrinhNew_Result">
+                <ScalarProperty Name="NumOfMonth" ColumnName="NumOfMonth" />
+                <ScalarProperty Name="SOBHXH" ColumnName="SOBHXH" />
+                <ScalarProperty Name="SOKCB" ColumnName="SOKCB" />
+                <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="MADVI" ColumnName="MADVI" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+                <ScalarProperty Name="MaPB" ColumnName="MaPB" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="XemQuaTrinhNewAll" FunctionName="BHXH.Store.XemQuaTrinhNewAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BHXH.XemQuaTrinhNewAll_Result">
+                <ScalarProperty Name="NumOfMonth" ColumnName="NumOfMonth" />
+                <ScalarProperty Name="SOBHXH" ColumnName="SOBHXH" />
+                <ScalarProperty Name="SOKCB" ColumnName="SOKCB" />
+                <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="MADVI" ColumnName="MADVI" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+                <ScalarProperty Name="MaPB" ColumnName="MaPB" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

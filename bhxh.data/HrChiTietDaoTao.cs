@@ -15,7 +15,6 @@ namespace BHXH.Data
     public partial class HrChiTietDaoTao
     {
         public System.Guid MaNhanVien { get; set; }
-        public Nullable<decimal> STT { get; set; }
         public string MaCMDaoTao { get; set; }
         public string TenTruong { get; set; }
         public string NganhHoc { get; set; }
@@ -24,6 +23,7 @@ namespace BHXH.Data
         public string MaBangCap { get; set; }
         public string XepLoai { get; set; }
         public System.Guid QuaTrinhDaoTaoID { get; set; }
+        public Nullable<decimal> STT { get; set; }
     
         public virtual ListBangCap ListBangCap { get; set; }
         public virtual ListCMDaoTao ListCMDaoTao { get; set; }

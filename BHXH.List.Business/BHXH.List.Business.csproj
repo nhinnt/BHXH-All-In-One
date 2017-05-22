@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListBoPhan.cs" />
     <Compile Include="ListNoiKCB.cs" />
     <Compile Include="ListQuanHuyen.cs" />
     <Compile Include="ListQuocGia.cs" />

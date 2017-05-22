@@ -95,11 +95,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmChonDanhMuc.cs">
+    <Compile Include="DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChonDanhMuc.Designer.cs">
-      <DependentUpon>frmChonDanhMuc.cs</DependentUpon>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDanhSachNhanVien.cs">
       <SubType>Form</SubType>
@@ -113,17 +121,59 @@
     <Compile Include="frmHrNhanVien.designer.cs">
       <DependentUpon>frmHrNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInLyLich2C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInLyLich2C.Designer.cs">
+      <DependentUpon>frmInLyLich2C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchOnRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchOnRequest.Designer.cs">
+      <DependentUpon>frmSearchOnRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersistentClasses1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmChonDanhMuc.resx">
-      <DependentUpon>frmChonDanhMuc.cs</DependentUpon>
+    <Compile Include="Report\CrystalReportLyLich2C.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLyLich2C.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SubReportLyLich2CCTDT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportLyLich2CCTDT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SubReportLyLich2CQTCT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportLyLich2CQTCT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SubReportLyLich2CQHGD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportLyLich2CQHGD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhSachNhanVien.resx">
       <DependentUpon>frmDanhSachNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHrNhanVien.resx">
       <DependentUpon>frmHrNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInLyLich2C.resx">
+      <DependentUpon>frmInLyLich2C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchOnRequest.resx">
+      <DependentUpon>frmSearchOnRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +185,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\CrystalReportLyLich2C.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLyLich2C.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SubReportLyLich2CCTDT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportLyLich2CCTDT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SubReportLyLich2CQTCT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportLyLich2CQTCT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SubReportLyLich2CQHGD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportLyLich2CQHGD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -26,6 +26,7 @@ namespace BHXH.Data
     
         public string MaPhongBan { get; set; }
         public string TenPhongBan { get; set; }
+        public Nullable<bool> BoPhan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HrNhanVien> HrNhanVien { get; set; }

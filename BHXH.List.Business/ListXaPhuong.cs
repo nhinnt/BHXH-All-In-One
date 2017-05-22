@@ -9,7 +9,8 @@ namespace BHXH.List.Business
     public class ListXaPhuong    
     {
         public static IEnumerable<BHXH.Data.ListXaPhuong> GetAll(string XaPhuong)
-        { int a = int.Parse(XaPhuong);
+        {
+            int a = int.Parse(XaPhuong);
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
             IEnumerable<BHXH.Data.ListXaPhuong> list;
@@ -109,6 +110,19 @@ namespace BHXH.List.Business
             return ctx.ListXaPhuong.SingleOrDefault(x => x.XaPhuongID == XaPhuongID);
 
 
+        }
+        public static IEnumerable<BHXH.Data.ListXaPhuong > GetToQuan(string QuanHuyenID)
+        {
+            BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
+
+            IEnumerable<BHXH.Data.ListXaPhuong> list;
+
+            var query = from c in ctx.ListXaPhuong
+                        where c.QuanHuyenID.ToString ()  == QuanHuyenID
+                        select c;
+
+            list = query.ToList();
+            return list;
         }
         //public void STT()
         //{ }

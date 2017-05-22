@@ -10,6 +10,7 @@ namespace BHXH.List.Business
     {
         public static IEnumerable<BHXH.Data.ListChucDanh> GetAll()
         {
+            
             BHXH.Data.BHXHEntities ctx = new Data.BHXHEntities();
 
             IEnumerable<BHXH.Data.ListChucDanh> list;

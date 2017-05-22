@@ -4,58 +4,59 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fc12969531354a19b37765eee7f5172c" Name="Diagram1">
+      <Diagram DiagramId="3dc0b0ceecf448749592ecc5575110d7" Name="Diagram1">
         <EntityTypeShape EntityType="BHXH.HrChiTietDaoTao" Width="1.5" PointX="9.75" PointY="43.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrHSLTangThem" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrKhenThuongKyLuat" Width="1.5" PointX="12.75" PointY="45.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrLuongToiThieu" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrNgayCong" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrNhanVien" Width="1.5" PointX="7.5" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.HrNhanVien" Width="1.5" PointX="7.5" PointY="30" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrPSBHXH" Width="1.5" PointX="12.75" PointY="39.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrPSLuong" Width="1.5" PointX="9.75" PointY="48.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.HrPSLuong" Width="1.5" PointX="9.75" PointY="48" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrQuanHeGiaDinh" Width="1.5" PointX="12.75" PointY="49.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuaTrinhBHXH" Width="1.5" PointX="9.75" PointY="56.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuaTrinhCongTac" Width="1.5" PointX="9.75" PointY="61.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrQuaTrinhLuong" Width="1.5" PointX="9.75" PointY="64.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.HrQuaTrinhBHXH" Width="1.5" PointX="9.75" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.HrQuaTrinhCongTac" Width="1.5" PointX="9.75" PointY="61.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.HrQuaTrinhLuong" Width="1.5" PointX="9.75" PointY="64.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.HrTyLeBHXH" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.HrThangBangLuong" Width="1.5" PointX="5.25" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.HrThangBangLuong" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListBangCap" Width="1.5" PointX="7.5" PointY="26.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListCapKTKL" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListBoPhan" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListCapKTKL" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListCMDaoTao" Width="1.5" PointX="7.5" PointY="24.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChiBo" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListChiBo" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListChucDanh" Width="1.5" PointX="5.25" PointY="32.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChucVu" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListChucVuDang" Width="1.5" PointX="5.25" PointY="35.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListDanToc" Width="1.5" PointX="5.25" PointY="38.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListDienCS" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListHonNhan" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListHopDong" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListChucVu" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListChucVuDang" Width="1.5" PointX="5.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListDanToc" Width="1.5" PointX="5.25" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListDienCS" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListHonNhan" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListHopDong" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListKTKL" Width="1.5" PointX="10.5" PointY="40.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListLHDaoTao" Width="1.5" PointX="7.5" PointY="65.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListLoaiTB" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNoiKCB" Width="1.5" PointX="3" PointY="60.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNganHang" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNghiepVu" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListNgoaiNgu" Width="1.5" PointX="5.25" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListLoaiTB" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListNoiKCB" Width="1.5" PointX="3" PointY="60.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListNganHang" Width="1.5" PointX="5.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListNghiepVu" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListNgoaiNgu" Width="1.5" PointX="5.25" PointY="44.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListPhongBan" Width="1.5" PointX="5.25" PointY="47.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListQuanHeGD" Width="1.5" PointX="10.5" PointY="54.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListQuanHuyen" Width="1.5" PointX="3" PointY="63" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListQuocGia" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDDaoTao" Width="1.5" PointX="5.25" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListQuanHeGD" Width="1.5" PointX="10.5" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListQuanHuyen" Width="1.5" PointX="3" PointY="63.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListQuocGia" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListTDDaoTao" Width="1.5" PointX="5.25" PointY="50.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListTDLLCT" Width="1.5" PointX="5.25" PointY="53.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDNgoaiNgu" Width="1.5" PointX="5.25" PointY="56.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTDQLNN" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListTDNgoaiNgu" Width="1.5" PointX="5.25" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListTDQLNN" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BHXH.ListTDVanHoa" Width="1.5" PointX="5.25" PointY="59.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTinh" Width="1.5" PointX="0.75" PointY="27" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListTonGiao" Width="1.5" PointX="5.25" PointY="68.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListThanhPhanGD" Width="1.5" PointX="5.25" PointY="71.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.ListXaPhuong" Width="1.5" PointX="5.25" PointY="63.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.sysdiagrams" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysLogs" Width="1.5" PointX="12" PointY="69.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysRoles" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysUser" Width="1.5" PointX="9.75" PointY="71.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysUserRoles" Width="1.5" PointX="12" PointY="72.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BHXH.SysUserSettings" Width="1.5" PointX="12" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListTinh" Width="1.5" PointX="0.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListTonGiao" Width="1.5" PointX="5.25" PointY="68.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListThanhPhanGD" Width="1.5" PointX="5.25" PointY="71.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.ListXaPhuong" Width="1.5" PointX="5.25" PointY="63.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.sysdiagrams" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.SysLogs" Width="1.5" PointX="12" PointY="68.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.SysRoles" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.SysUser" Width="1.5" PointX="9.75" PointY="71.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.SysUserRoles" Width="1.5" PointX="12" PointY="72.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHXH.SysUserSettings" Width="1.5" PointX="12" PointY="75.375" IsExpanded="true" />
         <AssociationConnector Association="BHXH.FK__HrChiTiet__MaBan__4F32B74A" ManuallyRouted="false" />
         <AssociationConnector Association="BHXH.FK__HrChiTiet__MaCMD__511AFFBC" ManuallyRouted="false" />
         <AssociationConnector Association="BHXH.FK__HrChiTiet__MaLHD__4E3E9311" ManuallyRouted="false" />
